@@ -63,7 +63,8 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
 4. **Voz:**
    - `creative_generate_speech` con voice_id `5egO01tkUjEzu7xSSE8M` (Carmelo), modelo `eleven_v4`, **generations_count=1**.
    - Guarda el flow_id y los session_ids en `jobs/TEMA.json`.
-   - Haz poll de `creative_get_flow_run_status` hasta tener la URL del audio.
+   - Haz poll de `creative_get_flow_run_status` (espera ~20 s entre llamadas para no provocar un 429) hasta `all_completed`; la URL está en `generations[0].content_url` (firmada, caduca en 2 h).
+   - Plan de Efrén: ElevenLabs Starter (30 000 créditos al mes, uso comercial). Una toma ≈ 875 créditos.
 5. **Bajar la voz** (aquí ElevenLabs y storage.googleapis.com están bloqueados):
    - Escribe la URL en `jobs/narr_TEMA.mp3.url`, haz commit y push a `main`.
    - El workflow `fetch` la deja en `inbox/narr_TEMA.mp3` en 1–2 min.
@@ -92,6 +93,8 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
 **Texto del reel:** una pregunta-gancho, una línea de valor, la invitación ("Guárdalo y compártelo con alguien que…") y de 3 a 5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
 
 ## 4. Créditos y límites
-- **ElevenLabs:** unos 900 créditos por video. Si responde 429 o falta cuota, avísale a Efrén. Plan B: él descarga el mp3 desde ElevenLabs y lo manda al chat.
+- **ElevenLabs:** unos 900 créditos por video. Si responde 429 o falta cuota, avísale a Efrén.
+  - Plan B automático: voz gratis Chatterbox (MIT) con el workflow `voz_hq`. Crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, haz push y espera `inbox/narr_TEMA.mp3` (en CPU tarda 15–40 min).
+  - Plan C: Efrén descarga el mp3 desde ElevenLabs y lo manda al chat.
 - **vidIQ:** 150 créditos renovables al mes. `vidiq_video_upload` y `vidiq_instagram_publish_reel` cuestan 0. No uses `vidiq_compose` ni `vidiq_voiceover_generate` (gastan créditos).
 - **Red:** solo GitHub y registros de paquetes. Para cualquier descarga externa usa el workflow `fetch`.
