@@ -1,0 +1,25 @@
+name: limpieza
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  push:
+    branches: [main]
+    paths: ['jobs/limpiar*']
+permissions:
+  contents: write
+jobs:
+  limpiar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Borrar ramas temporales de videos ya publicados (pub-*) con más de 1 día
+        run: |
+          now=$(date +%s)
+          for b in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | grep '^origin/pub-' | sed 's#^origin/##'); do
+            t=$(git log -1 --format=%ct "origin/$b")
+            if [ $((now - t)) -gt 86400 ] || [ -f jobs/limpiar-ya ]; then
+              git push origin --delete "$b" && echo "borrada $b"
+            fi
+          done
