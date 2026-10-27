@@ -1,0 +1,32 @@
+name: fetch
+on:
+  push:
+    branches: [main]
+    paths: ['jobs/**']
+permissions:
+  contents: write
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar archivos pedidos
+        run: |
+          mkdir -p inbox
+          for f in jobs/*.url; do
+            [ -e "$f" ] || continue
+            n=$(basename "$f" .url)
+            [ -f "inbox/$n" ] && continue
+            curl -fsSL --retry 3 -o "inbox/$n" "$(head -n1 "$f")" && echo "ok $n" || echo "fallo $n" > "inbox/$n.error"
+          done
+      - name: Guardar en el repo
+        run: |
+          git config user.name "mente-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add inbox
+          git commit -m "inbox: archivos descargados" || exit 0
+          git pull --rebase
+          git push
