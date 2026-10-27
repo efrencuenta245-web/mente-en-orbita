@@ -11,3 +11,4 @@
 | 2026-10-26 19:20 | Relatividad (tiempo en satélites) | — | 67 s | https://www.instagram.com/reel/De-qVw0ROMB/ |
 | 2026-10-26 21:45 | Satélites que no chocan | "Sobre tu cabeza giran casi 16 mil satélites…" | 67 s | https://www.instagram.com/reel/De-6zqQx3fV/ |
 | 2026-10-27 08:56 | Vasectomía | "Dos tubitos del grosor de un espagueti…" | 66 s | https://www.instagram.com/reel/DfAHeA_RdAq/ |
+| 2026-10-27 19:00 | Popocatépetl por dentro (programado, aprobado por Efrén) | "A 72 kilómetros de la Ciudad de México, un volcán exhaló 42 veces en un solo día." | 64 s | pendiente |
