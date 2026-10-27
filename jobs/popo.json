@@ -1,1 +1,13 @@
-{"tema": "popocatepetl", "flow_id": "5cCNnBQXX3DTuvjgipta", "session_ids": ["DXQsRWzYsEiO13NORLjh"], "node_id": "kK3pJin4w20KaDIiWxis"}
+{
+ "tema": "popocatepetl",
+ "flow_id": "5cCNnBQXX3DTuvjgipta",
+ "session_ids": [
+  "DXQsRWzYsEiO13NORLjh"
+ ],
+ "node_id": "kK3pJin4w20KaDIiWxis",
+ "uploadId": "4b0b8f8a-e46f-4dce-a7e6-39c6724e9d32",
+ "branch": "pub-20261027-popocatepetl",
+ "sha": "c919a5541ef7a5f58152dc1273176ea5a2de7e28",
+ "duracion": 63.9,
+ "estado": "esperando aprobación"
+}

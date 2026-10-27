@@ -1111,7 +1111,7 @@ def hud(l2, c, t, env, info):
         if a > 0:
             label("CRÁTER", P3(info['crater']), (1020, 560), "rm", a)
             DARK.append((330, 1580, 750, 1720, a))
-            l2.text(P(540, 1625), f"EXHALACIÓN #{42 + info.get('puff_count', 0)}", font=F(B, 36), fill=sc3((240, 240, 250), a), anchor="mm")
+            l2.text(P(540, 1625), f"EXHALACIÓN {min(42, 1 + info.get('puff_count', 0))} DE 42", font=F(B, 36), fill=sc3((240, 240, 250), a), anchor="mm")
             l2.text(P(540, 1685), "GAS QUE ESCAPA", font=F(B, 28), fill=sc3(CYAN, a), anchor="mm")
         note("ESQUEMA SIMPLIFICADO", win(11.6, 18.4))
     if env == 'tomo':
