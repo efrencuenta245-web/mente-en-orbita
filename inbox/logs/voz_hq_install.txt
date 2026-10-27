@@ -1,0 +1,7 @@
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+Name: chatterbox-tts
+Version: 0.1.7
+Name: torch
+Version: 2.6.0+cpu
