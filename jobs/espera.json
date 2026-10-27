@@ -1,1 +1,13 @@
-{"tema": "espera vasectomía (extra, responde a menkultrx)", "flow_id": "4asoanoiNClkjOuQDp7d", "session_ids": ["GWQ8aZUDeCzkZYyWeTPn"]}
+{
+ "tema": "espera vasectomía (extra, responde a menkultrx)",
+ "flow_id": "4asoanoiNClkjOuQDp7d",
+ "session_ids": [
+  "GWQ8aZUDeCzkZYyWeTPn"
+ ],
+ "uploadId": "8813b2d7-5c40-4951-9eff-a32d6bc7e34a",
+ "branch": "pub-20261027-espera",
+ "sha": "1c05e6e437cdc5f3f7549e097af9dc1b82baef42",
+ "duracion": 61.8,
+ "tipo": "extra",
+ "estado": "esperando aprobación"
+}
