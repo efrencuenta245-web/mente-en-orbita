@@ -93,9 +93,17 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
    - Si aprueba antes, programa `send_later` para esa hora en la misma sesión. Si ya pasó la hora, publica en cuanto apruebe.
    - `vidiq_instagram_publish_reel` con platformAccountId `39432107649769379`, `videoUrl` y `caption`. Si la URL caducó, renuévala con `vidiq_video_upload uploadId=…`.
    - Continúa con `containerId`/`mcpJobId` hasta `PUBLISHED`.
-10. **Registrar** en `publicados.md`: fecha, tema, gancho, duración y permalink. Haz commit y push.
+10. **Registrar** en `publicados.md`: fecha, tipo (diario o extra), tema, gancho, duración y permalink. Haz commit y push.
 
 **Texto del reel:** una pregunta-gancho, una línea de valor, la invitación ("Guárdalo y compártelo con alguien que…") y de 3 a 5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
+
+## 3b. Videos extra (pedidos por Efrén)
+Efrén a veces pide en el chat videos fuera de lo programado, por ejemplo para contestar un comentario o probar una idea suya.
+- **No alteran lo programado.** El video diario de las 4:35 pm se hace igual, y la cola de `estrategia.md` no se reordena por un extra. Solo si el extra cubre la idea #1, esa idea sale de la cola.
+- **Mismo pipeline y misma calidad** (pasos 1–8), con la misma aprobación obligatoria.
+- **Hora:** se publica cuando Efrén lo apruebe. Si no da hora, sugiere una que quede al menos 3 h antes o después del reel diario de las 19:00 (por ejemplo 13:00 o 15:00), para que no compitan entre sí.
+- Se registra en `publicados.md` con tipo **extra**. Los reels que Efrén sube por su cuenta no se anotan; todo reel de la cuenta que no esté en `publicados.md` es suyo.
+- **Todos cuentan para las estadísticas** (diarios, extra y los suyos): el estratega los analiza igual y aprende de ellos.
 
 ## 4. Créditos y límites
 - **ElevenLabs:** unos 900 créditos por video. Si responde 429 o falta cuota, avísale a Efrén.
