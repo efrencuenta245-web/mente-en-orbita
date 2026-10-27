@@ -1,0 +1,37 @@
+name: tts
+on:
+  push:
+    branches: [main]
+    paths: ['tts/**']
+permissions:
+  contents: write
+concurrency:
+  group: tts
+  cancel-in-progress: false
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/mente_tts
+          key: mente-tts-v1
+      - name: Instalar motores de voz
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng > /dev/null
+          pip install -q numpy piper-tts kokoro-onnx soundfile
+      - name: Generar narraciones
+        run: python kit/tts_runner.py
+      - name: Guardar en el repo
+        run: |
+          git config user.name "mente-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add inbox
+          git commit -m "inbox: narraciones generadas" || exit 0
+          git pull --rebase
+          git push
