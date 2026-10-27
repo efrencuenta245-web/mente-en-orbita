@@ -31,7 +31,7 @@ jobs:
            pip install -q chatterbox-tts soundfile huggingface_hub pandas pyarrow) > inbox/logs/voz_hq_install.txt 2>&1 || (tail -50 inbox/logs/voz_hq_install.txt; exit 0)
           pip show chatterbox-tts torch | grep -E "Name|Version" >> inbox/logs/voz_hq_install.txt
       - name: Generar voces
-        run: python kit/tts_hq.py 2>&1 | tee inbox/logs/voz_hq_run.txt
+        run: python -P kit/tts_hq.py 2>&1 | tee inbox/logs/voz_hq_run.txt
       - name: Guardar en el repo
         if: always()
         run: |

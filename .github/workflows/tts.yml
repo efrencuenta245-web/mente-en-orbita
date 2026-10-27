@@ -26,7 +26,7 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng > /dev/null
           pip install -q numpy piper-tts kokoro-onnx soundfile
       - name: Generar narraciones
-        run: python kit/tts_runner.py
+        run: python -P kit/tts_runner.py
       - name: Guardar en el repo
         run: |
           git config user.name "mente-bot"
