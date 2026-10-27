@@ -12,7 +12,7 @@ python3 -c "import numpy, PIL, scipy" || pip install --break-system-packages num
 Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebase`.
 
 ## 1. Formato (obligatorio)
-- 1080×1920, 24 fps. Con narración, **70 s como máximo**.
+- 1080×1920, 24 fps. Con narración, entre **61 y 68 s** (TikTok solo paga videos de más de 1 min; nunca más de 70 s).
 - **Estructura:**
   - Gancho (0–3 s): un objeto concreto más un dato que parece imposible.
   - Escáner de rayos X ("Así se ve por dentro").
@@ -48,6 +48,9 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
 - La tecnología de todos los días se comparte más.
 - La hora de publicación pesa menos que el gancho. Publicamos a las **19:00 (CDMX)** y se ajusta con los datos.
 
+## 2b. Estrategia viral
+Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se están haciendo virales, las reglas nuevas (gancho en segunda persona, música de fondo, 61–68 s para TikTok, final en loop) y la cola de ideas ordenada. Produce la idea #1 salvo que los datos del día digan claramente otra cosa.
+
 ## 3. Pipeline diario
 1. **Tema.**
    - Revisa `vidiq_instagram_owner_insights` (platformAccountId `39432107649769379`) y `vidiq_instagram_tiktok_outlier_search`, más `ideas.md`.
@@ -74,7 +77,8 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
    - `python3 TEMA_sync.py map` → revisa que cada frase empiece en su tramo.
    - `python3 TEMA_sync.py voz` → voz editada (si pasa de 70 s, sube `TEMPO` hasta 1.04 o baja las pausas).
    - `./render_varg.sh TEMA_sync`, luego `python3 sfx_TEMA.py` (el script detecta `TEMA_sync`).
-   - Mezcla con la plantilla `mix_tie.sh` (sed de las rutas) → `TEMA_con_narracion.mp4`.
+   - Música: `python3 musica.py NEWDUR musica_TEMA.wav SEMILLA 96` (cambia la semilla y el BPM, 90–110, en cada video).
+   - Mezcla: `./mix_musica.sh TEMA_sync_sin_audio.mp4 narr_TEMA_editada.wav efectos_TEMA_sync.wav musica_TEMA.wav /mnt/user-data/outputs/TEMA_con_narracion.mp4`.
    - Revisa la hoja de contacto (`check_popo.sh VIDEO`) y los niveles de audio.
 7. **Alojar:**
    - Crea una rama huérfana `pub-AAAAMMDD-tema` que solo tenga el mp4 y haz push.
@@ -82,6 +86,7 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
    - El workflow `limpieza` borra las ramas `pub-*` después de 1 día. Desde la sesión no se pueden borrar ramas ni crear releases.
 8. **Aprobación (obligatoria):**
    - Manda a Efrén el video (SendUserFile), el texto propuesto y la hora, con PushNotification.
+   - Incluye también un título y una descripción cortos para que él lo suba a **TikTok** y **YouTube Shorts** desde el celular.
    - **Nunca publiques sin un "sí" explícito suyo para ese video exacto.**
    - Ajustes fijos: Reel normal (sin Trial) y sin etiqueta de IA (omitir `isAiGenerated`; lo eligió Efrén).
 9. **Publicar a las 19:00 CDMX:**
