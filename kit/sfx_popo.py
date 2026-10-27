@@ -246,7 +246,7 @@ for ct in CUTS:
     add(whoosh(0.6), ct - 0.3, 0.7)
 
 # ================= MASTER =================
-buf = fade(buf, 0.05, 1.0)
+buf = fade(buf, 0.05, 0.4)
 peak = np.abs(buf).max()
 ref = np.percentile(np.abs(buf), 99.9)
 buf = np.tanh(buf / ref * 0.8)

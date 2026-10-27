@@ -1,5 +1,5 @@
 """Pista musical de fondo generada 100 % por código (sin derechos de autor de terceros).
-Uso: python3 musica.py DURACION_S salida.wav [semilla] [bpm]
+Uso: python3 musica.py DURACION_S salida.wav [semilla] [bpm] [fin_de_la_voz_s]
 Estilo: electrónica suave y curiosa (pad + arpegio pluck + bajo + golpe ligero), pensada para ir
 muy por debajo de la voz (la mezcla la baja aún más cuando habla el narrador)."""
 import sys
@@ -49,7 +49,7 @@ def pluck(f, n, rng, damp=0.996):
     return out
 
 
-def main(dur, out, seed=3, bpm=96):
+def main(dur, out, seed=3, bpm=96, outro_t=None):
     rng = np.random.RandomState(seed)
     N = int(dur * SR)
     L = np.zeros(N); R = np.zeros(N)
@@ -113,8 +113,14 @@ def main(dur, out, seed=3, bpm=96):
     # eco sencillo para dar espacio
     d = int(beat * 0.75 * SR)
     L[d:] += 0.22 * R[:-d]; R[d:] += 0.22 * L[:-d]
-    # fundido de salida
-    fo = int(min(2.5, dur * 0.1) * SR)
+    # cierre: cuando la voz termina (outro_t), la música sube para que nunca quede en silencio
+    if outro_t is not None and outro_t < dur:
+        i0 = int(outro_t * SR)
+        ramp = np.clip((np.arange(N - i0) / SR) / 0.5, 0, 1)
+        g = 1.0 + 0.8 * ramp
+        L[i0:] *= g; R[i0:] *= g
+    # fundido de salida corto (solo el final)
+    fo = int(0.5 * SR)
     L[-fo:] *= np.linspace(1, 0, fo); R[-fo:] *= np.linspace(1, 0, fo)
     st = np.stack([L, R], 1)
     rms = np.sqrt(np.mean(st ** 2)) + 1e-9
@@ -125,4 +131,5 @@ def main(dur, out, seed=3, bpm=96):
 
 
 if __name__ == '__main__':
-    main(float(sys.argv[1]), sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 3, float(sys.argv[4]) if len(sys.argv) > 4 else 96)
+    main(float(sys.argv[1]), sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 3, float(sys.argv[4]) if len(sys.argv) > 4 else 96,
+         float(sys.argv[5]) if len(sys.argv) > 5 else None)

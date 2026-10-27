@@ -6,7 +6,7 @@ VOZ=/home/claude/narr_popo_editada.wav
 FX=/home/claude/efectos_popo_sync.wav
 OUT=/mnt/user-data/outputs/popocatepetl_con_narracion.mp4
 ffmpeg -y -v error -i "$V" -i "$VOZ" -i "$FX" -filter_complex \
-"[1:a]aresample=48000,aformat=channel_layouts=stereo,loudnorm=I=-16:TP=-1.5:LRA=11,asplit=2[voz][key];\
+"[1:a]aresample=48000,aformat=channel_layouts=stereo,apad=pad_dur=6,loudnorm=I=-16:TP=-1.5:LRA=11,asplit=2[voz][key];\
 [2:a]aresample=48000,volume=0.6[fx];\
 [fx][key]sidechaincompress=threshold=0.04:ratio=5:attack=15:release=350:makeup=1[fxd];\
 [voz][fxd]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.95[a]" \
