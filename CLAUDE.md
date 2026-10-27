@@ -77,9 +77,10 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
    - `python3 TEMA_sync.py map` → revisa que cada frase empiece en su tramo.
    - `python3 TEMA_sync.py voz` → voz editada (si pasa de 70 s, sube `TEMPO` hasta 1.04 o baja las pausas).
    - `./render_varg.sh TEMA_sync`, luego `python3 sfx_TEMA.py` (el script detecta `TEMA_sync`).
-   - Música: `python3 musica.py NEWDUR musica_TEMA.wav SEMILLA 96` (cambia la semilla y el BPM, 90–110, en cada video).
+   - Música: `python3 musica.py NEWDUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (FIN_VOZ = segundo en que termina la voz editada; cambia la semilla y el BPM, 90–110, en cada video). Al terminar la voz, la música sube para que el final nunca quede en silencio.
    - Mezcla: `./mix_musica.sh TEMA_sync_sin_audio.mp4 narr_TEMA_editada.wav efectos_TEMA_sync.wav musica_TEMA.wav /mnt/user-data/outputs/TEMA_con_narracion.mp4`.
    - Revisa la hoja de contacto (`check_popo.sh VIDEO`) y los niveles de audio.
+   - **Revisa el final del audio:** `ffprobe -show_entries stream=codec_type,duration` debe dar la misma duración para audio y video, y los últimos 3 s no pueden estar en silencio (más fuerte que −35 dB con `volumedetect`). Antes, `loudnorm` cortaba ~3 s del final; por eso las mezclas llevan `apad` antes de `loudnorm`. Nunca quites ese `apad`.
 7. **Alojar:**
    - Crea una rama huérfana `pub-AAAAMMDD-tema` que solo tenga el mp4 y haz push.
    - Pasa la URL `https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/<sha>/<archivo>.mp4` a `vidiq_video_upload` → `videoUrl` y `uploadId`.
