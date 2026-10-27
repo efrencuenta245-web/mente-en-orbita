@@ -107,6 +107,14 @@ Efrén a veces pide en el chat videos fuera de lo programado, por ejemplo para c
 - Se registra en `publicados.md` con tipo **extra**. Los reels que Efrén sube por su cuenta no se anotan; todo reel de la cuenta que no esté en `publicados.md` es suyo.
 - **Todos cuentan para las estadísticas** (diarios, extra y los suyos): el estratega los analiza igual y aprende de ellos.
 
+## 3c. Avisos a Efrén (siempre por notificación push + mensaje)
+Efrén pidió que le llegue un aviso a su barra de notificaciones en cada uno de estos momentos, para todos los reels (diarios y extra):
+1. **Reel terminado:** "Tu reel de hoy está listo: <tema>. ¿Lo publico a las 7 pm?" (con el video y el texto en el chat).
+2. **No se pudo hacer el reel:** "No pude terminar el reel de hoy: <motivo>", más qué necesitas de él.
+3. **Reel publicado:** "Ya se publicó tu reel: <tema>", con el enlace.
+4. **No se pudo publicar:** "No se pudo publicar el reel de las 7 pm: <motivo>", más qué hacer y el video para que él lo suba.
+Usa `PushNotification` (mensaje de menos de 200 caracteres) y además `SendUserMessage` con los detalles.
+
 ## 4. Créditos y límites
 - **ElevenLabs:** unos 900 créditos por video. Si responde 429 o falta cuota, avísale a Efrén.
   - Plan B automático: voz gratis Chatterbox (MIT) con el workflow `voz_hq`. Crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, haz push y espera `inbox/narr_TEMA.mp3` (en CPU tarda 15–40 min).
