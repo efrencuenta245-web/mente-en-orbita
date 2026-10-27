@@ -94,6 +94,7 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
    - Si aprueba antes, programa `send_later` para esa hora en la misma sesión. Si ya pasó la hora, publica en cuanto apruebe.
    - `vidiq_instagram_publish_reel` con platformAccountId `39432107649769379`, `videoUrl` y `caption`. Si la URL caducó, renuévala con `vidiq_video_upload uploadId=…`.
    - Continúa con `containerId`/`mcpJobId` hasta `PUBLISHED`.
+   - **Si la publicación falla** (error, permiso, video rechazado): manda en ese momento un **PushNotification** ("No se pudo publicar el reel de las 7 pm: <motivo>. <qué hacer>") y un SendUserMessage con el motivo, qué hacer y el video para que él lo suba si hace falta. No reintentes en automático. Antes de publicar, `vidiq_instagram_connected_accounts` debe decir `publishingAvailable: true`; si dice false, pídele reconectar Instagram en app.vidiq.com aceptando el permiso de publicar.
 10. **Registrar** en `publicados.md`: fecha, tipo (diario o extra), tema, gancho, duración y permalink. Haz commit y push.
 
 **Texto del reel:** una pregunta-gancho, una línea de valor, la invitación ("Guárdalo y compártelo con alguien que…") y de 3 a 5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
