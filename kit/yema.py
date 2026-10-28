@@ -11,6 +11,7 @@ import math
 import numpy as np
 import escenas as S
 from PIL import ImageDraw
+import entornos as EN
 from escenas import *  # noqa: F401,F403
 from starlink import scan_ring, lab, bigc, cnt, CYAN, ICE, LASER, LGREEN, AMBER, PINK, CREAM, WHITE
 
@@ -41,14 +42,22 @@ def table(w=6.0, d=4.0, y=-0.12):
 
 
 def fried_egg(s=1.0, yc=YOLK, wob=0.0, x=0.0, z=0.0, y=0.0):
-    """Huevo estrellado: clara irregular + yema brillante."""
+    """Huevo estrellado: clara de orilla irregular con borde dorado + yema brillante con reflejo."""
     def cw(i, j):
-        return ALB if j < 9 else (238, 232, 220)
-    w = sphere(1.0, ALB, nu=36, nv=10, shadow=0.35, gloss=0.5, cols=cw).tf(s=(1.0 * s, 0.05 * s, 0.82 * s), t=(x, y + 0.05 * s, z))
+        return (232, 196, 130) if j == 4 else (ALB if j < 4 else (238, 232, 220))
+    w = sphere(1.0, ALB, nu=56, nv=10, shadow=0.35, gloss=0.55, cols=cw)
+    V = np.array(w.V, float)
+    th = np.arctan2(V[:, 2], V[:, 0])
+    f = 1 + 0.10 * np.sin(3 * th + 0.5) + 0.06 * np.sin(5 * th + 2.0) + 0.035 * np.sin(9 * th + 1.0)
+    V[:, 0] *= f
+    V[:, 2] *= f
+    w.V = V
+    w = w.tf(s=(1.0 * s, 0.05 * s, 0.82 * s), t=(x, y + 0.05 * s, z))
     w.sh_r = 1.0 * s
-    yy = sphere(1.0, yc, nu=26, nv=14, shadow=0.0, gloss=0.95).tf(
+    yy = sphere(1.0, yc, nu=40, nv=20, shadow=0.0, gloss=0.95).tf(
         s=(0.36 * s * (1 + 0.04 * wob), 0.2 * s * (1 - 0.06 * wob), 0.36 * s * (1 + 0.04 * wob)), t=(x + 0.1 * s, y + 0.09 * s, z - 0.05 * s))
-    return [w, yy]
+    hl = sphere(1.0, (255, 250, 230), nu=10, nv=6, shadow=0, gloss=1.0).tf(s=(0.08 * s, 0.03 * s, 0.05 * s), t=(x + 0.02 * s, y + 0.27 * s, z - 0.12 * s))
+    return [w, yy, hl]
 
 
 def comal_under(fr, r=1.5, x=0.0):
@@ -67,70 +76,74 @@ def comal(r=1.5):
 
 
 def egg(s=1.0, a=1.0, x=0.0, y=0.0, z=0.0, col=SHELL):
-    m = sphere(1.0, col, nu=28, nv=16, shadow=0.35, gloss=0.4).tf(s=(0.62 * s, 0.82 * s, 0.62 * s), t=(x, y + 0.82 * s, z))
+    m = sphere(1.0, col, nu=40, nv=24, shadow=0.35, gloss=0.45).tf(s=(0.62 * s, 0.82 * s, 0.62 * s), t=(x, y + 0.82 * s, z))
     m.alpha = a
     m.sh_r = 0.6 * s
     return m
 
 
 def flower(s=1.0, x=0.0, y=0.0, z=0.0, ry=0.0, open_=1.0, rich=True, stem=0.0):
-    """Flor de cempasúchil: pompón de pétalos en capas (recreación)."""
+    """Flor de cempasúchil: pompón de pétalos ondulados en capas (recreación)."""
     out = []
     if rich:
-        out.append(sphere(0.16, MARI, nu=12, nv=8, shadow=0, gloss=0.3).tf(s=(1, 0.8, 1), t=(0, 0.12, 0)))
-        rings = ((12, 0.36, 10, MARI2), (10, 0.27, 35, MARI), (8, 0.17, 60, MARI2), (6, 0.08, 80, MARI))
-        for n, rr, tilt, col in rings:
+        out.append(sphere(0.15, MARI, nu=14, nv=9, shadow=0, gloss=0.3).tf(s=(1, 0.9, 1), t=(0, 0.16, 0)))
+        rings = ((16, 0.40, 8, MARI2), (14, 0.33, 25, (250, 150, 24)), (12, 0.26, 42, MARI), (10, 0.19, 58, MARI2), (8, 0.12, 72, MARI), (6, 0.06, 84, (236, 110, 10)))
+        for r_i, (n, rr, tilt, col) in enumerate(rings):
             for i in range(n):
-                th = 360 * i / n + rr * 90
-                p = sphere(0.1, col, nu=8, nv=5, shadow=0, gloss=0.25).tf(s=(1.35, 0.32, 0.9))
-                p = p.tf(rz=tilt * open_).tf(t=(rr * open_, 0.08 + (0.36 - rr) * 0.25, 0)).tf(ry=th)
+                th = 360 * i / n + r_i * 17
+                ruf = 12 * math.sin(i * 2.7 + r_i)
+                p = sphere(0.1, col, nu=10, nv=6, shadow=0, gloss=0.3).tf(s=(1.3, 0.28, 0.85))
+                p = p.tf(rx=ruf, rz=tilt * open_).tf(t=(rr * open_, 0.06 + (0.40 - rr) * 0.32, 0)).tf(ry=th)
                 out.append(p)
+        out.append(cyl(0.16, 0.08, STEM, n=12, r2=0.06, shadow=0).tf(t=(0, -0.02, 0)))
     else:
         def cc(i, j):
             v = math.sin(i * 2.1 + j * 1.3) * math.sin(i * 1.1 - j * 2.7)
-            return MARI if v > 0.2 else MARI2
-        out.append(sphere(0.38, MARI2, nu=14, nv=9, shadow=0.0, gloss=0.2, cols=cc).tf(s=(1, 0.7, 1), t=(0, 0.2, 0)))
+            return MARI if v > 0.2 else (MARI2 if v > -0.4 else (236, 110, 10))
+        out.append(sphere(0.38, MARI2, nu=22, nv=12, shadow=0.0, gloss=0.2, cols=cc).tf(s=(1, 0.72, 1), t=(0, 0.2, 0)))
     if stem > 0:
         out.append(cyl(0.03, stem, STEM, n=6, shadow=0).tf(t=(0, -stem, 0)))
+        for sg in (-1, 1):
+            out.append(sphere(0.12, (70, 140, 60), nu=8, nv=5, shadow=0).tf(s=(1.4, 0.15, 0.5), rz=sg * 25, t=(sg * 0.14, -stem * 0.55, 0)))
     return [m.tf(s=s).tf(ry=ry).tf(t=(x, y, z)) for m in out]
 
 
 def hen(x=0.0, z=0.0, ry=0.0, s=1.0, peck=0.0):
-    """Gallina sencilla (recreación)."""
+    """Gallina (recreación): cuerpo, ala, cola de plumas, cresta, barbilla, pico y patas con dedos."""
     ms = []
-    ms.append(sphere(1.0, HEN, nu=20, nv=12, shadow=0.0, gloss=0.3).tf(s=(0.62, 0.48, 0.44), t=(0, 0.72, 0)))
-    ms.append(sphere(1.0, HEN2, nu=14, nv=8, shadow=0.0, gloss=0.2).tf(s=(0.3, 0.32, 0.2), rz=40, t=(-0.6, 0.98, 0)))
-    hx, hy = 0.5 + 0.18 * peck, 1.22 - 0.5 * peck
-    neck = cyl(0.13, 0.42, HEN, n=10, shadow=0).tf(rz=-30 - 50 * peck, t=(0.38, 0.85, 0))
-    ms.append(neck)
-    ms.append(sphere(0.17, HEN, nu=14, nv=10, shadow=0, gloss=0.3).tf(t=(hx, hy, 0)))
-    for k in range(3):
-        ms.append(sphere(0.06, COMB, nu=8, nv=6, shadow=0, gloss=0.4).tf(t=(hx - 0.06 + k * 0.06, hy + 0.17, 0)))
-    ms.append(sphere(0.05, COMB, nu=8, nv=6, shadow=0).tf(s=(0.8, 1.4, 0.8), t=(hx + 0.08, hy - 0.16, 0)))
-    ms.append(cyl(0.05, 0.14, BEAK, n=8, r2=0.0, shadow=0).tf(rz=-90 - 30 * peck, t=(hx + 0.13, hy - 0.02, 0)))
-    for sz in (-0.12, 0.12):
-        ms.append(sphere(0.025, (20, 20, 20), nu=6, nv=4, shadow=0).tf(t=(hx + 0.07, hy + 0.05, sz * 0.9)))
-        ms.append(cyl(0.025, 0.3, BEAK, n=6, shadow=0).tf(t=(0.05, 0.0, sz)))
+    def body_c(i, j):
+        return HEN if (i + j) % 5 else (196, 104, 56)
+    ms.append(sphere(1.0, HEN, nu=30, nv=18, shadow=0.0, gloss=0.35, cols=body_c).tf(s=(0.62, 0.5, 0.45), t=(0, 0.74, 0)))
+    ms.append(sphere(1.0, (196, 112, 60), nu=20, nv=12, shadow=0.0, gloss=0.3).tf(s=(0.36, 0.3, 0.38), t=(0.2, 0.62, 0)))
+    for sz in (-1, 1):
+        ms.append(sphere(1.0, HEN2, nu=18, nv=10, shadow=0, gloss=0.35).tf(s=(0.42, 0.24, 0.08), rz=-12, t=(-0.05, 0.8, sz * 0.43)))
+    for k in range(6):
+        ang = 25 + k * 14
+        c = (40, 52, 46) if k % 2 else (26, 34, 30)
+        ms.append(sphere(1.0, c, nu=12, nv=6, shadow=0, gloss=0.7).tf(s=(0.34, 0.07, 0.12), rz=ang, t=(-0.62, 1.0 + 0.04 * k, (k - 2.5) * 0.05)))
+    hx, hy = 0.52 + 0.18 * peck, 1.24 - 0.5 * peck
+    ms.append(cyl(0.15, 0.42, HEN, n=14, r2=0.11, shadow=0).tf(rz=-30 - 50 * peck, t=(0.36, 0.86, 0)))
+    ms.append(sphere(0.18, (190, 98, 50), nu=18, nv=12, shadow=0, gloss=0.35).tf(s=(1.1, 1, 0.9), t=(hx, hy, 0)))
+    for k in range(5):
+        r = 0.05 + 0.02 * (k % 2)
+        ms.append(sphere(r, COMB, nu=10, nv=7, shadow=0, gloss=0.5).tf(s=(0.9, 1.3, 0.5), t=(hx - 0.1 + k * 0.05, hy + 0.18 + 0.02 * (k % 2), 0)))
+    for sz in (-0.03, 0.03):
+        ms.append(sphere(0.05, COMB, nu=10, nv=7, shadow=0, gloss=0.5).tf(s=(0.7, 1.5, 0.5), t=(hx + 0.1, hy - 0.17, sz)))
+    ms.append(cyl(0.055, 0.15, BEAK, n=10, r2=0.0, shadow=0, gloss=0.5).tf(rz=-90 - 30 * peck, t=(hx + 0.15, hy - 0.02, 0)))
+    for sz in (-0.13, 0.13):
+        ms.append(sphere(0.035, (250, 200, 60), nu=8, nv=6, shadow=0).tf(t=(hx + 0.08, hy + 0.05, sz * 0.95)))
+        ms.append(sphere(0.02, (15, 15, 15), nu=6, nv=4, shadow=0, gloss=0.9).tf(t=(hx + 0.095, hy + 0.05, sz * 1.08)))
+        ms.append(cyl(0.028, 0.32, BEAK, n=8, shadow=0).tf(t=(0.05, 0.0, sz)))
+        for a in (-35, 0, 35):
+            ms.append(cyl(0.015, 0.13, BEAK, n=6, shadow=0).tf(rz=-90, ry=a, t=(0.05, 0.01, sz)))
     out = [m.tf(s=s).tf(ry=ry).tf(t=(x, 0, z)) for m in ms]
     out[0].shadow = 0.35
     out[0].sh_r = 0.5 * s
     return out
 
 
-def wood_floor(fr, f=0.5):
-    fr.floor = f
-
-    def tb(d, cam):
-        if not isinstance(d, ImageDraw.ImageDraw):
-            return
-        for i in range(-6, 6):
-            x0, x1 = i * 0.7, (i + 1) * 0.7
-            P = np.array([(x0, 0, -5), (x1, 0, -5), (x1, 0, 5), (x0, 0, 5)])
-            s, z = cam.proj(P)
-            if (z < 0.2).any():
-                continue
-            d.polygon([tuple(p) for p in s], fill=WOOD if i % 2 else (150, 100, 62), outline=WOOD2)
-    fr.under.append(tb)
+def wood_floor(fr, f=0.5, name='cocina'):
+    EN.env(fr, name)
 
 
 # ================================================================== escenas
@@ -166,7 +179,7 @@ def s_hook(fr, t, lt, dur, loop=False):
 def s_xray(fr, t, lt, dur):
     """Escáner de rayos X sobre un huevo entero: cascarón transparente, clara y yema llena de gotitas de pigmento."""
     t0 = t - lt
-    wood_floor(fr)
+    wood_floor(fr, name='laboratorio')
     fr.cam = Cam(target=(0, 0.85, 0), dist=vfit(4.4), yaw=-20 + lt * 10, pitch=12)
     ts, te = t0 + 0.15, t0 + 1.3
     ys, k = scan_ring(fr, t, ts, te, 1.75, 0.0, center=(0, 0, 0), r=0.85)
@@ -196,7 +209,7 @@ def s_xray(fr, t, lt, dur):
 def s_hen(fr, t, lt, dur):
     """La gallina come: su cuerpo no puede fabricar el color, lo saca del alimento."""
     t0 = t - lt
-    fr.floor = 0.6
+    wood_floor(fr, name='granja')
     fr.cam = Cam(target=(0.2, 0.7, 0), dist=vfit(4.6), yaw=10 + lt * 5, pitch=10)
     peck = max(0.0, math.sin(lt * 5)) ** 3
     fr.meshes += hen(-0.2, 0, s=1.0, peck=peck)
@@ -218,7 +231,7 @@ def s_hen(fr, t, lt, dur):
 def s_feed(fr, t, lt, dur):
     """Pétalos de cempasúchil que se secan, se muelen y caen como polvo naranja al alimento."""
     t0 = t - lt
-    wood_floor(fr)
+    wood_floor(fr, name='granja')
     fr.cam = Cam(target=(0, 0.7, 0), dist=vfit(4.8), yaw=-30 + lt * 8, pitch=20)
     for i, (x, z) in enumerate(((-1.4, -0.6), (-0.9, 0.5), (-1.7, 0.3))):
         fr.meshes += flower(0.8, x=x, y=0.9, z=z, ry=lt * 15 + i * 40, stem=0.9, rich=(i == 0))
@@ -247,7 +260,7 @@ def s_feed(fr, t, lt, dur):
 def s_lutein(fr, t, lt, dur):
     """Acercamiento a una flor: la luteína es hasta el 90 % de su color."""
     t0 = t - lt
-    fr.floor = 0.5
+    wood_floor(fr, name='campo')
     fr.cam = Cam(target=(0, 0.3, 0), dist=vfit(2.6) - lt * 0.1, yaw=lt * 14, pitch=48)
     fr.meshes += flower(1.6, y=0.0, ry=lt * 6)
     v = cnt(90, t, t0 + 0.6, 1.8)
@@ -269,7 +282,7 @@ def s_lutein(fr, t, lt, dur):
 def s_blood(fr, t, lt, dur):
     """Del alimento a la sangre: un vaso con glóbulos rojos y gotitas doradas que llegan a la yema y la llenan."""
     t0 = t - lt
-    fr.floor = 0.2
+    wood_floor(fr, name='cuerpo')
     fr.cam = Cam(target=(0.0, 0.6, 0), dist=vfit(5.8), yaw=-8 + lt * 4, pitch=14)
     tube = cyl(0.32, 3.1, (226, 120, 120), n=24, shadow=0, gloss=0.5).tf(rz=-90, t=(-2.0, 0.6, 0))
     tube.alpha = 0.32
@@ -337,7 +350,7 @@ def s_pale(fr, t, lt, dur):
 def s_mexico(fr, t, lt, dur):
     """Contador en vivo: 410 huevos por persona al año; una pila de huevos que crece."""
     t0 = t - lt
-    wood_floor(fr, 0.6)
+    wood_floor(fr, name='tienda')
     fr.cam = Cam(target=(0, 0.6, 0), dist=vfit(5.6), yaw=30 + lt * 6, pitch=26)
     v = cnt(410, t, t0 + 0.3, 2.6)
     n = int(v / 410 * 60)
@@ -360,7 +373,7 @@ def s_mexico(fr, t, lt, dur):
 def s_ofrenda(fr, t, lt, dur):
     """Ofrenda de Día de Muertos con cempasúchil, velas y papel picado; un camino de pétalos llega al plato con huevo."""
     t0 = t - lt
-    fr.floor = 0.6
+    wood_floor(fr, name='ofrenda')
     fr.cam = Cam(target=(0, 1.0, 0), dist=vfit(6.4) - lt * 0.2, yaw=-18 + lt * 5, pitch=12)
     for i, (w, h, z) in enumerate(((3.6, 0.6, -0.4), (2.8, 0.6, -0.8), (2.0, 0.6, -1.2))):
         fr.meshes.append(box(w, h, 0.9, (236, 236, 240) if i % 2 else (120, 60, 140), shadow=0.3, base=True, edge=False).tf(t=(0, i * 0.6, z)))
@@ -396,7 +409,7 @@ def s_ofrenda(fr, t, lt, dur):
 def s_mexica(fr, t, lt, dur):
     """Cempoalxóchitl: flor de veinte pétalos; los pétalos aparecen y se cuentan del 1 al 20."""
     t0 = t - lt
-    fr.floor = 0.5
+    wood_floor(fr, name='campo')
     fr.cam = Cam(target=(0, 0.3, 0), dist=vfit(3.4), yaw=lt * 5, pitch=62)
     k = clamp((lt - 0.3) / 2.6)
     n = int(round(20 * k))

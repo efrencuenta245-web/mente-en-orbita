@@ -20,6 +20,8 @@ Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebas
   - Cierre "Mente en órbita" más una pregunta Sí/No o "¿Qué quieres que explique después?".
 - **Visual:**
   - Entornos reales con objetos 3D y colores reales; el neón solo en efectos.
+  - **Escenario según lo que dice cada escena (pedido de Efrén, 28-oct-2026):** nada de usar el mismo fondo (espacio/estudio azul) en todo el video. Si se habla de una gallina → granja; de un huevo → cocina; de una flor → campo; de la sangre → dentro del cuerpo; del espacio → espacio. Usa `kit/entornos.py` (`EN.env(fr, 'granja')`) y agrega escenarios nuevos cuando el guion lo pida. El fondo azul de "Mente en órbita" solo va en el escáner de rayos X y en temas del espacio.
+  - **3D cuidado:** mallas con suficientes caras (esferas de 30+ segmentos en objetos principales), detalles reales (plumas, bordes, reflejos) y nada de figuras burdas.
   - Subtítulos palabra por palabra, pastillas HUD y etiquetas honestas ("Recreación", "Escala exagerada").
 - **Sello de marca:**
   - El anillo escáner de rayos X con su sonido.
