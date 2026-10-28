@@ -6,13 +6,14 @@
   "QdL5ZIPlLGib9KazBMCt"
  ],
  "node_id": "xAmqWgcOS0l2LyMFjcFP",
- "estado": "listo, esperando aprobación de Efrén",
+ "estado": "aprobado por Efrén, programado 29-oct 13:00 CDMX",
  "duracion_voz_cruda": 64.24,
  "duracion": 64.17,
  "duracion_voz": 61.66,
  "branch": "pub-20261028-tsuru",
  "sha": "71725deac7110ba39de0e87f67fc51b0b7c5738c",
  "uploadId": "67249ac8-08f6-47af-86d0-9057f87b1244",
- "hora_sugerida": "15:00 CDMX (extra)",
- "caption": "¿Por qué el Tsuru fue el auto más famoso de México? 🚕\n0 estrellas en choques… y aun así se vendieron 2.4 millones: lo armaron 33 años en CIVAC, Morelos, fue el taxi de la CDMX y le ganó al Vocho.\nGuárdalo y mándaselo a quien tuvo un Tsuru.\n#curiosidades #ciencia #mexico #menteenorbita #tsuru"
+ "caption": "¿Por qué el Tsuru fue el auto más famoso de México? 🚕\n0 estrellas en choques… y aun así se vendieron 2.4 millones: lo armaron 33 años en CIVAC, Morelos, fue el taxi de la CDMX y le ganó al Vocho.\nGuárdalo y mándaselo a quien tuvo un Tsuru.\n#curiosidades #ciencia #mexico #menteenorbita #tsuru",
+ "hora_pedida": "2026-10-29 13:00 CDMX",
+ "trigger_id": "trig_0171Gr6HY6RtZmfYuWfYPjVz"
 }
