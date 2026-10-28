@@ -1,0 +1,59 @@
+Reel extra (pedido por Efrén): por qué el Tsuru fue tan conocido en México. Serie "Lo que no ves".
+Gancho (estrategia 28-oct): segunda persona + objeto concreto ("Mira este coche") + dato imposible (0 estrellas y aun así 2.4 millones vendidos). Final en loop: el taxi vuelve a llegar por la misma avenida del segundo 0.
+Voz: Carmelo (ElevenLabs eleven_v4), 64.2 s cruda → 61.7 s editada; video 64.16 s.
+
+GUION (subtítulos, con cifras) — versión de voz en 2026-10-28_tsuru_voz.txt
+1. Mira este coche: sacó 0 estrellas en choques… y aun así México compró más de 2,400,000.
+2. Es el Tsuru. Así se ve por dentro.
+3. Un motor tan sencillo que lo arreglaba cualquier mecánico de colonia.
+4. Lo armaron en CIVAC, Morelos, durante 33 años.
+5. Casi no cambió en 25 años: hay refacciones en cualquier esquina.
+6. Por eso reemplazó al Vocho como el taxi de la Ciudad de México.
+7. Y le ganó en ventas: 2.4 millones contra 1.7.
+8. Pero el escáner revela lo que no tenía: ni bolsas de aire ni frenos ABS.
+9. En la prueba de choque, la cabina casi se colapsó.
+10. Entre 2007 y 2012, más de 4,000 personas murieron en choques donde iba un Tsuru.
+11. Una norma exigió bolsas de aire, y en 2017 salió el último.
+12. Y este año cerró CIVAC, la planta que lo vio nacer, tras 60 años.
+13. Mándaselo a quien tuvo un Tsuru: ¿te subirías hoy a uno? Sí o no.
+
+FUENTES (consultadas el 28-oct-2026)
+- 2.4 millones vendidos (cifra de Nissan), producción 1984–mayo 2017 en CIVAC (Morelos), edición final "Buen Camino" de 1,000 unidades, precio final 172,500 pesos, NOM-194 exige ABS y bolsas de aire:
+  El Universal, "Termina la era del Tsuru" (27-oct-2016): https://www.eluniversal.com.mx/articulo/cartera/negocios/2016/10/27/termina-la-era-del-tsuru/
+  El Universal, "Nissan anuncia el fin de la producción del Tsuru en México": https://www.eluniversal.com.mx/articulo/autopistas/2016/10/26/nissan-anuncia-el-fin-de-la-produccion-del-tsuru-en-mexico/
+  Xataka México, "Por qué dejaron de vender el Tsuru en México": https://www.xataka.com.mx/automovil/que-dejaron-vender-tsuru-mexico-ultimo-carro-barato-todo-pais
+- Tsuru vs Vocho (Vocho ≈ 1.7 millones en México; el Tsuru reemplazó al Vocho como taxi de la CDMX; último Tsuru en mayo de 2017 tras 33 años):
+  Motorpasión México (14-abr-2026): https://www.motorpasion.com.mx/industria/pocos-saben-auto-vendido-historia-mexico-no-vocho-uno-japones
+  (Motorpasión estima "poco más de 2.8 millones" de Tsuru; usamos la cifra oficial de Nissan, 2.4 M, la más conservadora.)
+- Mecánica sencilla, bajo costo de mantenimiento, motor 1.6 L; la generación B13 se fabricó sin cambios de 1992 a 2017 (25 años):
+  Motorpasión, "Nos sumergimos en el pasado del Nissan Tsuru" (2018): https://www.motorpasion.com.mx/industria/nos-sumergimos-en-el-pasado-del-nissan-tsuru-y-descubrimos-el-motivo-de-su-longevidad-y-popularidad
+  Gigazine (2022), "Nissan Tsuru, which has never undergone a model change for 26 years": https://gigazine.net/gsc_news/en/20220215-nissan-tsuru-mexico-taxi
+- Latin NCAP: 0 estrellas adulto e infantil, colapso casi total de la cabina, sin bolsas de aire:
+  Motorpasión, "LatinNCAP presenta resultados de la Fase IV": https://www.motorpasion.com.mx/seguridad/latinncap-presenta-resultados-de-la-fase-iv-de-pruebas-de-impacto-nissan-tsuru-incluido
+- 4,102 muertes en 2,011 siniestros (2007–2012) donde estuvo involucrado un Tsuru (involucrado, no causado por el auto):
+  El Universal (7-abr-2016): https://www.eluniversal.com.mx/articulo/autopistas/2016/04/7/nissan-tsuru-involucra-mas-de-4-mil-muertes-en-mexico-por-accidentes/
+  Motorpasión: https://www.motorpasion.com.mx/nissan/nissan-tsuru-autos-mas-inseguros-mexico
+- Cierre de la planta CIVAC el 27-mar-2026 tras 60 años (inaugurada el 12-may-1966):
+  Expansión (27-mar-2026): https://expansion.mx/empresas/2026/03/27/nissan-cierra-historica-planta-civac-en-morelos-tras-60-anos
+
+IMÁGENES REALES (Wikimedia Commons, se acreditan en pantalla "Fotos reales · Wikimedia Commons (CC BY-SA)")
+- Nissan Tsuru taxi Mexico Ciudad.jpg — Gzzz, CC BY-SA 4.0
+- Taxis fuera del Metro San Cosme.jpg — ProtoplasmaKid, CC BY-SA 4.0
+- Taxi Ciudad de Mexico 2014.jpg — ProtoplasmaKid, CC BY-SA 3.0
+- Taxi de la Ciudad de México en 2007.jpg — ProtoplasmaKid, CC BY-SA 4.0
+- Avenida Aztecas, Santo Domingo, Coyoacán.jpg — ProtoplasmaKid, CC BY-SA 4.0
+- Nissan Tsuru Taxis.jpg (Cancún) — Bull-Doser, dominio público
+- Nissan, Tsuru, Mexcio-city Taxi.jpg — Mj-bird, CC BY-SA 3.0 (bajada, no usada)
+Ensamblaje: no hay fotos libres de la línea del Tsuru en CIVAC (Commons ni prensa con licencia); la línea va como recreación 3D etiquetada.
+
+ETIQUETAS HONESTAS: "Recreación 3D", "Recreación de la línea de ensamble", "Recreación · no es video real" (choque), "Esquema simplificado".
+
+TEXTO DEL REEL (Instagram)
+¿Por qué el Tsuru fue el auto más famoso de México? 🚕
+0 estrellas en choques… y aun así se vendieron 2.4 millones: lo armaron 33 años en CIVAC, Morelos, fue el taxi de la CDMX y le ganó al Vocho.
+Guárdalo y mándaselo a quien tuvo un Tsuru.
+#curiosidades #ciencia #mexico #menteenorbita #tsuru
+
+TIKTOK / YOUTUBE SHORTS
+Título: Por qué el Tsuru fue el auto más famoso de México 🚕
+Descripción: 0 estrellas de seguridad y aun así 2.4 millones vendidos. Así se ve por dentro el Tsuru, el taxi de la CDMX. ¿Te subirías hoy a uno? #tsuru #mexico #autos #curiosidades #menteenorbita
