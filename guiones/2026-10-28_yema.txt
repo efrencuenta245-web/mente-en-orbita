@@ -1,0 +1,30 @@
+Reel diario 28-oct-2026: Lo que no ves — la yema de tu huevo y el cempasúchil (idea #1 de estrategia.md).
+Gancho en segunda persona + objeto de tu casa (huevo) + Día de Muertos. Loop: termina con "mira la yema de tu huevo".
+
+GUION (subtítulos, con cifras)
+1. Mira la yema de tu huevo: ese amarillo… salió de una flor de cempasúchil.
+2. Así se ve por dentro.
+3. La gallina no puede fabricar ese color: lo saca de lo que come.
+4. Por eso a su alimento le ponen polvo de pétalos de cempasúchil.
+5. El pigmento se llama luteína, y es hasta el 90 % del color de la flor.
+6. Pasa del alimento a la sangre de la gallina… y se guarda en la grasa de la yema.
+7. Más luteína, yema más naranja. Lo miden con un abanico de 16 tonos.
+8. Sin pigmento, la yema saldría casi blanca.
+9. Y en México cada persona come unos 410 huevos al año. Nadie come más.
+10. O sea que, sin saberlo, te comes la misma flor que pones en la ofrenda.
+11. Los mexicas la llamaban cempoalxóchitl: flor de 20 pétalos.
+12. Mándaselo a quien está poniendo la ofrenda. ¿Lo sabías? Sí o no.
+13. Y la próxima vez… mira la yema de tu huevo.
+
+FUENTES (consultadas el 28-oct-2026)
+- Las aves no sintetizan carotenoides; el extracto de marigold (Tagetes erecta) es la fuente de luteína más usada en alimento avícola para pigmentar yema y piel; la luteína es hasta el 90 % de los pigmentos del pétalo; hoy compite con pigmentos sintéticos (por eso "muchas granjas", no todas):
+  Feedipedia (INRAE/CIRAD/AFZ/FAO), "Marigold (Tagetes erecta)": https://feedipedia.review.fao.org/node/90
+- Pigmentos del cempasúchil usados para la yema amarilla y la piel de las aves; nombre cempoalxóchitl; producción industrial movida a Perú y Asia desde 2001 con fase industrial en México:
+  Ciencia y Desarrollo (Conacyt), "Cempoalxóchitl": https://www.cyd.conacyt.gob.mx/archivo/177/articulos/pdf/Cempoalxochit.pdf
+- 410 huevos (24 kg) por persona en 2025, México primer lugar mundial per cápita:
+  Crónica, 7-oct-2026: https://www.cronica.com.mx/nacional/2026/10/07/en-2025-cada-mexicano-en-promedio-consumio-24-kilos-de-huevo-es-decir-unas-410-piezas-mexico-es-el-pais-con-mayor-consumo-de-huevo-per-capita-en-el-mundo-y-representa-una-industria-con-un-valor-de-produccion-cercano-a-los-100-mil-millones-de-pesos/
+  UnoTV: https://www.unotv.com/negocios/por-que-mexico-consume-tanto-huevo-410-piezas-lidera-consumo-mundial/
+- Abanico de color de yema de 16 tonos (DSM YolkFan, escala 1–16), estándar de la industria.
+- Sin xantofilas en la dieta (p. ej. trigo o maíz blanco) la yema sale muy pálida (Feedipedia, misma ficha; literatura de pigmentación avícola).
+
+ETIQUETAS HONESTAS: "Recreación", "Esquema simplificado", "Escala exagerada", "Promedio 2025".
