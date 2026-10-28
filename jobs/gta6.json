@@ -17,15 +17,16 @@
  "reelA": {
   "tema": "13 años de espera",
   "duracion": 67.1,
-  "branch": "pub-20261028-gta6-reela",
-  "sha": "9ef2569b5280aa58de2c15777987565a2846f04a",
-  "uploadId": "7a9fcb85-356f-482f-9262-0bccf0444930"
+  "branch": "pub-20261028-gta6-reela-v2",
+  "sha": "6d7773581c1af62274376d0bb40aef01dcc17a8e",
+  "uploadId": "a000faed-dedd-4df0-ae36-7db0e66d3b2c"
  },
  "reelB": {
   "tema": "hackeo desde un hotel",
   "duracion": 63.9,
-  "branch": "pub-20261028-gta6-reelb",
-  "sha": "9e0531a63bbb7084b19709d9c3dd0cd0756d4c23",
-  "uploadId": "4b38d724-b3b4-41bb-bd51-dcdf147062ae"
- }
+  "branch": "pub-20261028-gta6-reelb-v2",
+  "sha": "aa9671420a5796139bd6320cc7cf64dd602be410",
+  "uploadId": "a9189ce9-0868-4839-82c4-043c9c36a9ad"
+ },
+ "imagenes": "Oficiales de rockstargames.com/VI (portada, key art, capturas) + portadas de GTA V y RDR2 (Wikipedia); en kit se esperan en /home/claude/img (descargadas con fetch: inbox/gta_*)"
 }

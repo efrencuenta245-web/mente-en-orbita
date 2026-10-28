@@ -74,8 +74,34 @@ PAPER = (246, 244, 238)
 _TX = {}
 
 
+IMG = '/home/claude/img/'
+REAL_COVER = {'V': 'cover_v.png', 'VI': 'box.jpg', 'RDR': 'cover_rdr2.jpg'}
+
+
+def real_img(name, w, h, border=0):
+    """Imagen oficial recortada a w x h (RGBA), con marco blanco opcional."""
+    key = ('real', name, w, h, border)
+    if key in _TX:
+        return _TX[key]
+    im = Image.open(IMG + name).convert('RGB')
+    iw, ih = im.size
+    r = w / h
+    if iw / ih > r:
+        nw = int(ih * r); im = im.crop(((iw - nw) // 2, 0, (iw - nw) // 2 + nw, ih))
+    else:
+        nh = int(iw / r); im = im.crop((0, (ih - nh) // 2, iw, (ih - nh) // 2 + nh))
+    im = im.resize((w - 2 * border, h - 2 * border), Image.LANCZOS)
+    out = Image.new('RGBA', (w, h), (255, 255, 255, 255))
+    out.paste(im, (border, border))
+    _TX[key] = out
+    return out
+
+
 def cover_tex(kind):
     if kind in _TX:
+        return _TX[kind]
+    if kind in REAL_COVER and os.path.exists(IMG + REAL_COVER[kind]):
+        _TX[kind] = real_img(REAL_COVER[kind], 270, 340)
         return _TX[kind]
     w, h = 270, 340
     if kind == 'V':
@@ -119,6 +145,14 @@ def screen_tex(kind, w=320, h=180):
         d.polygon([(cx - 10, cy - 16), (cx - 10, cy + 16), (cx + 18, cy)], fill=(30, 30, 40))
         d.rectangle((16, h - 20, w - 16, h - 16), fill=(90, 90, 100))
         d.rectangle((16, h - 20, w * 0.62, h - 16), fill=(255, 90, 130))
+    elif kind == 'trailer':  # imagen oficial del tráiler + botón de play
+        img = real_img('featured.jpg', w, h).copy()
+        d = ImageDraw.Draw(img)
+        cx, cy = w / 2, h / 2
+        d.ellipse((cx - 30, cy - 30, cx + 30, cy + 30), fill=(255, 255, 255, 235))
+        d.polygon([(cx - 9, cy - 14), (cx - 9, cy + 14), (cx + 16, cy)], fill=(30, 30, 40))
+        d.rectangle((14, h - 14, w - 14, h - 10), fill=(220, 220, 225))
+        d.rectangle((14, h - 14, w * 0.62, h - 10), fill=(255, 90, 130))
     elif kind == 'vc':  # cuadro de video filtrado (gráficos a medio hacer)
         img = grad_tex(w, h, (255, 140, 170), (60, 170, 190))
         d = ImageDraw.Draw(img)
@@ -327,6 +361,20 @@ def calendar(top, big, sub, x=0.0, z=0.0, ry=0.0, col=(220, 60, 60), cross=0.0, 
     m = box(1.2 * s, 1.36 * s, 0.08 * s, PAPER, shadow=0.4)
     decal(m, m.FACE['front'], cal_tex(top, big, sub, col, cross))
     return m.tf(ry=ry, t=(x, y, z))
+
+
+def photo(name, w=1.6, x=0.0, y=0.0, z=0.0, ry=0.0, rx=0.0, rz=0.0, ar=16 / 9, a=1.0):
+    """Tarjeta flotante con una imagen oficial (marco blanco, como foto impresa)."""
+    h = w / ar
+    m = box(w, h, 0.03, (250, 250, 250), shadow=0.25, base=False)
+    decal(m, m.FACE['front'], real_img(name, 480, int(480 / ar), border=12))
+    m.alpha = a
+    return m.tf(rx=rx, ry=ry, rz=rz, t=(x, y, z))
+
+
+def credit(fr, a=1.0):
+    """Etiqueta honesta para imágenes oficiales."""
+    ui_pill(fr, 'Imagen oficial: Rockstar Games', a, where='bl', dotc=(240, 88, 138))
 
 
 # ------------------------------------------------------------------ ayudas de escena
@@ -1061,7 +1109,8 @@ def s_money(fr, t, lt, dur):
 def s_trailer(fr, t, lt, dur):
     t0 = t - lt
     fr.cam = Cam(target=(0, 1.1, 0), dist=vfit(6.4), yaw=-14 + lt * 3, pitch=10)
-    fr.meshes += tv(0.4, 0, ry=-6, kind='play', w=2.4, h=1.35, y=0.45)
+    fr.meshes += tv(0.4, 0, ry=-6, kind='trailer', w=2.4, h=1.35, y=0.45)
+    credit(fr, clamp(lt / 0.4))
     # gotas de "fuga"
     for i in range(4):
         ph = (lt * 0.8 + i * 0.25) % 1
@@ -1077,10 +1126,16 @@ def s_hype(fr, t, lt, dur):
     fr.cam = Cam(target=(0, 1.0, 0), dist=vfit(6.6) - lt * 0.2, yaw=-10 + lt * 5, pitch=12)
     fr.meshes.append(cyl(0.9, 0.3, (236, 236, 240), n=36, gloss=0.3))
     fr.meshes.append(case_at('VI', 0, 0.3, 0, ry=lt * 25))
-    for i in range(6):
-        a = math.radians(i * 60 + 20)
-        x, z = 2.3 * math.cos(a), 2.3 * math.sin(a) * 0.8
-        fr.meshes += phone(x, 0.75 + 0.1 * math.sin(lt * 2 + i), z, ry=-math.degrees(a) - 90, rx=-70, s=0.55)
+    shots = ['s1.jpg', 's2.jpg', 's5.jpg', 's7.jpg']
+    for i, nm in enumerate(shots):
+        k = eback((lt - 0.3 - i * 0.25) / 0.5)
+        if k <= 0:
+            continue
+        side = -1 if i % 2 == 0 else 1
+        x = side * (1.7 + 0.35 * (i // 2))
+        y = 1.55 - 0.85 * (i // 2) + 0.06 * math.sin(lt * 1.5 + i)
+        fr.meshes.append(photo(nm, 1.35 * max(0.01, k), x, y, -0.5 - 0.3 * (i // 2), ry=-side * 18))
+    credit(fr, clamp((lt - 0.4) / 0.4))
     def under(d, cam, lt=lt):
         for j in range(3):
             r = 1.0 + ((lt * 0.6 + j / 3) % 1) * 1.8
@@ -1095,7 +1150,8 @@ def s_views(fr, t, lt, dur):
     k3 = ease((t - t3) / 0.45) if t3 is not None else 0
     fr.cam = Cam(target=(0 + k3 * 0.2, 1.1, 0), dist=vfit(6.8, wide=True) + k3 * 0.6, yaw=-10 + lt * 2, pitch=10)
     if k3 < 0.5:
-        ms = tv(0, 0, ry=0, kind='play', w=2.6, h=1.46, y=0.35)
+        ms = tv(0, 0, ry=0, kind='trailer', w=2.6, h=1.46, y=0.35)
+        credit(fr, 1 - k3 * 2)
         for m in ms:
             m.alpha = 1 - k3
         fr.meshes += ms
@@ -1164,6 +1220,12 @@ def s_map(fr, t, lt, dur):
     ui_text3(fr, (ll(28.0, -81.8)[0], 0.5, ll(28.0, -81.8)[1]), 'Leonida', 30, fk='xb', col=(200, 40, 100))
     ui_text3(fr, (ll(28.0, -81.8)[0], 0.5, ll(28.0, -81.8)[1]), '(inspirada en Florida)', 17, fk='sb', col=(110, 110, 116), dy=30)
     ui_pill(fr, 'Mapa aproximado', clamp(lt / 0.5))
+    fl = ll(28.0, -81.8)
+    for i, nm in enumerate(('s1.jpg', 's5.jpg', 's3.jpg')):
+        k = eback((lt - 1.0 - i * 0.3) / 0.5) * (1 - k5)
+        if k > 0.01:
+            fr.meshes.append(photo(nm, 1.4 * k, fl[0] + 2.0 + i * 0.35, 0.55 + i * 0.5, fl[1] + 0.2 + i * 0.55, rx=-40, ry=-10))
+    credit(fr, clamp((lt - 1.0) / 0.4) * (1 - k5))
     if t5 is not None and t >= t5:
         head(fr, ['Era aún', 'más grande.'], PINK, t, t5, kicker='Según Bloomberg (2022)')
     else:
@@ -1190,8 +1252,14 @@ def s_dates(fr, t, lt, dur):
 def s_polish(fr, t, lt, dur):
     t0 = t - lt
     fr.cam = Cam(target=(0, 1.0, 0), dist=vfit(5.8), yaw=-10 + lt * 3, pitch=10)
-    fr.meshes.append(case_at('VI', 0, 0.12, 0, ry=lt * 30))
+    fr.meshes.append(case_at('VI', 0, 0.12, 0, ry=18 * math.sin(lt * 0.9)))
     fr.meshes.append(cyl(0.9, 0.12, (236, 236, 240), n=30))
+    for i, nm in enumerate(('s2.jpg', 's4.jpg', 's6.jpg', 's8.jpg')):
+        u = (lt * 0.22 + i / 4) % 1
+        a = math.radians(-70 + 140 * u)
+        fr.meshes.append(photo(nm, 1.3, 2.4 * math.sin(a), 1.1 + 0.25 * math.cos(i), -1.0 - 1.2 * math.cos(a), ry=-math.degrees(a) * 0.6,
+                               a=clamp(math.sin(u * math.pi) * 2)))
+    credit(fr, clamp(lt / 0.4))
     def over(d, cam, lt=lt):
         for i in range(6):
             ph = (lt * 0.9 + i / 6) % 1
@@ -1237,7 +1305,9 @@ def s_nov19(fr, t, lt, dur):
     t0 = t - lt
     fr.cam = Cam(target=(0, 0.8, 0), dist=vfit(5.4) - lt * 0.15, yaw=-12 + lt * 4, pitch=10)
     a = eback(lt / 0.5)
-    fr.meshes.append(calendar('NOVIEMBRE', '19', '2026', 0, 0, col=PINK, s=max(0.01, 1.2 * a)))
+    fr.meshes.append(photo('featured.jpg', 3.4, 0.0, 1.35, -1.6, ry=0, a=clamp(lt / 0.6)))
+    fr.meshes.append(calendar('NOVIEMBRE', '19', '2026', 0, 0.3, col=PINK, s=max(0.01, 1.0 * a)))
+    credit(fr, clamp(lt / 0.5))
     def under(d, cam, lt=lt):
         for j in range(3):
             ph = (lt * 0.5 + j / 3) % 1

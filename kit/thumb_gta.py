@@ -11,6 +11,7 @@ fr.cam = Cam(target=(0.9, 1.0, 0), dist=6.2, yaw=-14, pitch=10, cx=0.62, cy=0.58
 fr.meshes.append(V.case_at('V', -0.2, 0, -0.6, ry=22, s=0.9))
 fr.meshes.append(V.case_at('VI', 1.6, 0, 0.2, ry=-16, s=1.25))
 fr.meshes += V.hourglass(0.55, 1.2, 0.5, k=0.8)
+fr.meshes.append(V.photo('featured.jpg', 3.0, 3.0, 1.5, -2.4, ry=-14))
 def under(d, cam):
     for j in range(3):
         E.ring3(d, cam, (1.6, 0.01, 0.2), 1.3 + j * 0.45, (30, 30, 34), 2.2 - j * 0.5, 1 - j * 0.3)
