@@ -155,7 +155,7 @@ def big_counter(fr, txt, a=1.0, sub=None, pos=None, size=None, col=INK):
 
 
 def card(fr, t, lt, dur, c):
-    title, sub, style = CARD[c]
+    title, sub, style = CARD[c][:3]
     fr.mono = True
     fr.floor = 1.0
     fr.floor_g = 0.28

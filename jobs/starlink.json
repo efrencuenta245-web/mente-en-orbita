@@ -3,7 +3,38 @@
  "tema_visual": "orbita",
  "por_que_tema_visual": "Satélites, láseres y señales: la esencia del canal; el video anterior (GTA 6) fue estudio.",
  "flow_id": "4uGqbbcy52zMuRvv3IMR",
- "node_ids": {"c0": "KT4bSmKQp8Y5tn11gOds", "c1": "4uGF0I595ZDSmBO7Yk30", "c2": "slZpJyveT5dbjoXDuc85", "c3": "QEK7BUyfvLkwnqMfsj6N", "c4": "UQeyL0OU4zw6ecXuMOrt", "c5": "JFGoydb9I1xQArhUFawI", "c6": "nJlmTEg6KFhxXZYq1sM3", "out": "DYFcKy0kSFep8nEOucPJ"},
- "session_ids": {"c0": "ppgmbo9SBJgC0UFMfqJ5", "c1": "HUg2iKlGaeXSPJpdKlD0", "c2": "zRV4MjZZaHexsxAaqnSJ", "c3": "6aobYTZzN8tKL43UdxXc", "c4": "XluV6PhVveyHJMNSABur", "c5": "gOdXsAsidLnwEHga3QIJ", "c6": "tolBl6PAcMvVaLAyJsQC", "out": "NlRZGwvX411KWQ19YahY"},
- "creditos": 3549
+ "node_ids": {
+  "c0": "KT4bSmKQp8Y5tn11gOds",
+  "c1": "4uGF0I595ZDSmBO7Yk30",
+  "c2": "slZpJyveT5dbjoXDuc85",
+  "c3": "QEK7BUyfvLkwnqMfsj6N",
+  "c4": "UQeyL0OU4zw6ecXuMOrt",
+  "c5": "JFGoydb9I1xQArhUFawI",
+  "c6": "nJlmTEg6KFhxXZYq1sM3",
+  "out": "DYFcKy0kSFep8nEOucPJ"
+ },
+ "session_ids": {
+  "c0": "ppgmbo9SBJgC0UFMfqJ5",
+  "c1": "HUg2iKlGaeXSPJpdKlD0",
+  "c2": "zRV4MjZZaHexsxAaqnSJ",
+  "c3": "6aobYTZzN8tKL43UdxXc",
+  "c4": "XluV6PhVveyHJMNSABur",
+  "c5": "gOdXsAsidLnwEHga3QIJ",
+  "c6": "tolBl6PAcMvVaLAyJsQC",
+  "out": "NlRZGwvX411KWQ19YahY"
+ },
+ "creditos": 3549,
+ "duracion_largo": 267.7,
+ "reelA": {
+  "tema": "11 mil satélites sobre ti",
+  "duracion": 67.6
+ },
+ "reelB": {
+  "tema": "150 mil choques esquivados",
+  "duracion": 63.5
+ },
+ "branch": "pub-yt-20261028-starlink",
+ "sha": "150e7be0a8d0dd367e2f2214618a298e737a8b3b",
+ "titulo": "Starlink por dentro: así llega internet desde el espacio",
+ "estado": "listo; esperando que Efrén lo suba (jue 29-oct) y apruebe el texto"
 }
