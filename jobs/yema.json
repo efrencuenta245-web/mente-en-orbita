@@ -2,7 +2,19 @@
  "tema": "yema",
  "tipo": "diario",
  "flow_id": "bV53PFAbvy4QlC2yhOvc",
- "session_ids": ["0ziWDpJ8xKDi8MO9YMex"],
+ "session_ids": [
+  "0ziWDpJ8xKDi8MO9YMex"
+ ],
  "node_id": "V6RYOiuFJc9tQcIKueIg",
- "duracion_voz_cruda": 64.24
+ "duracion_voz_cruda": 64.24,
+ "duracion_final": 64.42,
+ "rama": "pub-20261028-yema",
+ "sha": "31e04f4b53ef76f84f9fe326f4bdd8b109249e73",
+ "uploadId": "7e3acd46-2eb7-42ef-9718-12f6a23866e7",
+ "musica": {
+  "semilla": 2810,
+  "bpm": 104,
+  "fin_voz": 61.9
+ },
+ "estado": "esperando aprobación"
 }
