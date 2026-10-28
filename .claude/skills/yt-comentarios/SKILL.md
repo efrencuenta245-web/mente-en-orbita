@@ -1,8 +1,11 @@
 ---
-name: comentarios
-description: Gestiona la comunidad de Mente en órbita - lee y clasifica comentarios de YouTube (preguntas, pedidos de tema, críticas, elogios, spam), redacta respuestas con el tono del canal, publica solo con aprobación y convierte las mejores preguntas en ideas para la serie "Respuestas". Úsala 1-2 veces por semana o cuando Efrén pregunte por comentarios.
+name: yt-comentarios
+description: Solo para YouTube. Gestiona los comentarios del canal de YouTube - los clasifica, redacta respuestas con el tono del canal, publica solo con aprobación y convierte las mejores preguntas en ideas.
 ---
 # Comentarios
+
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+
 
 ## Presupuesto
 `vidiq_video_comments` con `channelId` del canal y `order='time'` (5 créditos, 1 página por semana). Responder: `vidiq_reply_to_comment` (1 crédito) **solo con aprobación** del texto exacto. Instagram: vidIQ no lee comentarios de Instagram; Efrén puede pegarlos en el chat y se tratan igual.
@@ -13,7 +16,7 @@ description: Gestiona la comunidad de Mente en órbita - lee y clasifica comenta
 3. Respuestas (máx. 2 líneas, tú, español de México, sin emojis de más):
    - Pregunta → respuesta corta y verificada + "¿te hago un video de esto?".
    - Corrección → agradece y, si tiene razón, reconoce el error y anota la corrección en el guion.
-   - Pedido de tema → "Anotado 🚀" y súmalo a `ideas.md` con el usuario.
+   - Pedido de tema → "Anotado 🚀" y súmalo a `youtube/ideas.md` con el usuario.
    - Spam/odio → no responder; sugerir ocultarlo.
 4. Manda a Efrén la lista con las respuestas propuestas numeradas y espera "sí" (todas o por número) antes de publicar. Nunca respondas dos veces si el resultado fue dudoso.
-5. Las 1–2 mejores preguntas van a `ideas.md` como "Respuestas: @usuario …" (fórmula 20 de la skill `guionista`).
+5. Las 1–2 mejores preguntas van a `youtube/ideas.md` como "Respuestas: @usuario …" (fórmula 20 de la skill `yt-guionista`).

@@ -5,8 +5,8 @@ Tipos:
 - **extra**: los pide Efrén en el chat para contestar comentarios o probar ideas suyas. No cuentan para el límite diario.
 - **efrén**: los sube él por su cuenta. No hace falta anotarlos: todo reel de la cuenta que no esté aquí es suyo.
 
-| Fecha (CDMX) | Tipo | Tema | Gancho | Duración | Enlace | Tema visual |
-|---|---|---|---|---|---|---|
+| Fecha (CDMX) | Tipo | Tema | Gancho | Duración | Enlace |
+|---|---|---|---|---|---|
 | 2026-10-25 21:04 | extra | Carga inalámbrica | — | 29 s | https://www.instagram.com/reel/De8P20AxdS_/ |
 | 2026-10-25 22:57 | extra | Cancelación de ruido | — | 48 s | https://www.instagram.com/reel/De8d0qYx_ov/ |
 | 2026-10-26 11:52 | extra | Fibra óptica | — | 64 s | https://www.instagram.com/reel/De92_P0p-lS/ |

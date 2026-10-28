@@ -1,8 +1,11 @@
 ---
-name: editor
-description: Revisa una transcripción con tiempos (voz de ElevenLabs Scribe o una grabación de Efrén) y marca con minuto y segundo exactos los silencios largos, muletillas, palabras repetidas, tomas repetidas y diferencias contra el guion, con la acción de corte recomendada. Úsala después de generar la voz o cuando Efrén mande audio o video grabado.
+name: yt-editor
+description: Solo para YouTube. Revisa una transcripción con tiempos (voz generada o grabación de Efrén) y marca con minuto y segundo exactos silencios, muletillas, repeticiones, tomas repetidas y diferencias contra el guion, con la acción de corte.
 ---
 # Editor
+
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+
 
 ## Entrada
 - Voz generada: `words_TEMA_cN.json` (Scribe) + el texto de voz del guion.
@@ -21,5 +24,5 @@ description: Revisa una transcripción con tiempos (voz de ElevenLabs Scribe o u
 ## Salida
 Tabla en el chat y en `guiones/AAAA-MM-DD_tema_edicion.md`:
 `mm:ss.s – mm:ss.s · tipo · texto · acción (cortar / acortar a 0.3 s / regenerar capítulo / dejar)`.
-Al final: duración actual, duración tras cortes y si queda dentro de 61–68 s (reels).
+Al final: duración actual, duración tras cortes y si queda dentro de 50–70 s (Shorts).
 Para la voz generada, `timeline.py` ya recorta pausas (`GAP_MAX`); el editor solo decide si hace falta regenerar un capítulo.
