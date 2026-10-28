@@ -11,5 +11,5 @@ description: Solo para YouTube. Deja listo cada video de YouTube para publicar -
 2. **Aprobación:** manda todo a Efrén con PushNotification («Tu video de YouTube está listo: <tema>») y SendUserFile. Propón día y hora (largo jueves; Shorts viernes y sábado).
 3. **Subida:** Efrén sube el video y los Shorts desde su celular (vidIQ no sube videos a YouTube). Para que los descargue fácil, aloja los mp4 en ramas `pub-yt-*`.
 4. **Metadatos:** cuando Efrén confirme que ya subió el video y apruebe el texto exacto, aplica título, descripción, etiquetas u hora programada (`privacyStatus='private'` + `publishAt`) con `vidiq_update_video` (5 créditos, canal `UCHk6ZxeFa204iyNser0ALJg`).
-5. **Registro:** `youtube/publicados.md` (fecha, formato largo/Short, tema, gancho, duración, tema visual, enlace), commit y push, y aviso «Ya está en YouTube: <tema>».
+5. **Registro:** `youtube/publicados.md` (fecha, tipo semanal o extra, formato largo/Short, tema, gancho, duración, tema visual, enlace), commit y push, y aviso «Ya está en YouTube: <tema>».
 6. **Nunca** publiques en Instagram desde estas skills ni toques `publicados.md`: eso es del flujo de Instagram.

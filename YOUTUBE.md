@@ -8,6 +8,14 @@ Este archivo y las skills `yt-*` son **solo para YouTube**. El flujo de Instagra
 - **2 Shorts por semana** sacados del largo (vertical, 50–70 s), viernes y sábado.
 - Efrén sube todo desde su celular (vidIQ no sube videos a YouTube). Con su aprobación, vidIQ puede cambiar título, descripción, etiquetas u hora programada.
 
+## Videos extra (pedidos por Efrén en el chat)
+Igual que en Instagram: Efrén puede pedir en el chat un video largo o un Short **extra** para probar una idea suya o responder comentarios.
+- **No alteran lo programado:** el video largo semanal y sus 2 Shorts se hacen igual, y `youtube/semana.md` no se reordena por un extra. Solo si el extra cubre el tema planeado de la semana, ese tema sale del plan y se usa la idea de reserva.
+- **Mismo pipeline y misma calidad** (skills `yt-guionista` → `yt-publicador`), con aprobación de Efrén antes de cualquier cambio en YouTube.
+- **Día de subida:** el que diga Efrén; si no dice, sugiere uno que no caiga el mismo día que el largo programado (jueves), para que no compitan.
+- Se registra en `youtube/publicados.md` con tipo **extra**. Los videos que Efrén sube por su cuenta no se anotan, pero el analista y la auditoría los analizan igual.
+- Nada de esto toca Instagram: un video extra de YouTube no se publica como reel salvo que Efrén lo pida en el chat (y entonces se sigue CLAUDE.md §3b).
+
 ## Archivos
 | Archivo | Para qué |
 |---|---|

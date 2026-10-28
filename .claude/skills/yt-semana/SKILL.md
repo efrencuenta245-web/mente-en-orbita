@@ -21,4 +21,6 @@ Reglas:
 - No repitas temas de `youtube/publicados.md` de las últimas 4 semanas. Puedes leer `publicados.md` de Instagram solo para no chocar el mismo tema el mismo día, pero **nunca lo modifiques**.
 - Al final, 3 ideas de reserva en `youtube/ideas.md`.
 
+Los videos **extra** que Efrén pide en el chat no cambian este plan (ver `YOUTUBE.md`).
+
 Haz commit y push y manda a Efrén un resumen de 6 líneas.
