@@ -344,6 +344,8 @@ def subtitles(img, t):
         for w, wa, wb in ln:
             on = t >= wa - 0.03
             col = INK if on else mix(TH['bot'], MUTED, 0.75)
+            if on and t < wb + 0.05 and 'sub_hi' in TH:  # palabra que suena ahora
+                col = TH['sub_hi']
             draw_text(d, (x, y0 + li * lh), w, f, col, 'lm', a=a)
             x += f.getlength(w) + sp
 
@@ -382,6 +384,27 @@ def chunk(a, b, out):
 
 
 CREDIT = 'Imagen oficial'
+
+
+def s_marca(fr, t, lt, dur, sub=None):
+    """Sello de cierre de Mente en órbita (va en todos los temas): esfera con órbita y luna + nombre del canal."""
+    fr.cam = Cam(target=(0, 1.2, 0), dist=vfit(6.4), yaw=lt * 6, pitch=14)
+    dark = E.DARK
+    fr.meshes.append(sphere(0.55, (24, 24, 28) if not dark else (60, 110, 200), nu=32, nv=20, gloss=0.9).tf(t=(0, 1.2, 0)))
+    a = lt * 1.6
+    fr.meshes.append(sphere(0.1, (240, 88, 138) if not dark else (170, 230, 255), nu=12, nv=8, shadow=0, gloss=0.5).tf(
+        t=(1.25 * math.cos(a), 1.2 + 0.35 * math.sin(a), 1.25 * math.sin(a))))
+    ring_col = INK if not TH.get('hud') else (70, 175, 255)
+    fr.under.append(lambda d, cam: line3(d, cam, [(1.25 * math.cos(u), 1.2 + 0.35 * math.sin(u), 1.25 * math.sin(u))
+                                                  for u in np.linspace(0, 2 * math.pi, 90)], ring_col, 1.8))
+
+    def f(img, d, lt=lt):
+        k = ease(lt / 0.5)
+        y = H * (0.80 if not VERT else 0.27)
+        draw_text(d, (W / 2, y), 'MENTE EN ÓRBITA', font('mono', 64 if not VERT else 74), INK, 'mm', a=k, spacing=5)
+        if sub:
+            pill(img, d, W / 2, y + (70 if not VERT else 90), sub, k, dotc=(240, 88, 138))
+    fr.ui.append(f)
 
 
 def main(shots, cards, argv=None):

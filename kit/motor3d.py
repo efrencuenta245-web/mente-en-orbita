@@ -17,6 +17,11 @@ FPS = 24
 # ---------------------------------------------------------------- temas visuales
 # Cada video elige el tema que mejor cuenta su historia (ver .claude/skills/animador/temas.md).
 THEMES = {
+    # ESENCIA MENTE EN ÓRBITA: estudio azul marino con foco, estrellas, piso de puntos azules, neón solo en efectos,
+    # pastillas HUD con borde de neón y resplandor (el estilo original de los reels)
+    'orbita': dict(top=(10, 16, 34), bot=(4, 6, 14), spot=(28, 44, 70), floor='dots', fcol=(70, 175, 255), ink=(235, 240, 255),
+                   muted=(130, 150, 190), pill=(8, 14, 30), pborder=(70, 175, 255), shadow=(2, 3, 8), vig=0.2,
+                   stars=True, hud=True, glow=0.55, sub_hi=(170, 230, 255)),
     # fondo blanco, piso de puntos, objetos a color (tecnología, productos, videojuegos explicados, comparaciones)
     'estudio': dict(top=(250, 250, 248), bot=(244, 244, 242), floor='dots', fcol=(130, 130, 134), ink=(20, 20, 22),
                     muted=(150, 150, 154), pill=(255, 255, 255), pborder=(210, 210, 212), shadow=(175, 175, 178), vig=0.07),
@@ -46,6 +51,8 @@ THEMES = {
                  muted=(140, 120, 96), pill=(250, 246, 236), pborder=(210, 196, 170), shadow=(190, 175, 150), vig=0.08),
 }
 TEMA = os.environ.get('MOTOR_TEMA', 'estudio')
+THEMES['espacio']['glow'] = 0.35
+THEMES['neon']['glow'] = 0.45
 TH = THEMES[TEMA]
 DARK = sum(TH['top']) < 300
 BG = np.array(TH['bot'], float)
@@ -625,12 +632,15 @@ def bg_img():
         r = np.hypot((x - w / 2) / w, (y - h * 0.45) / h)
         v = 1 - TH['vig'] * np.clip(r - 0.2, 0, 1) ** 1.2 * 2
         img = img * v[..., None]
+        if 'spot' in TH:  # foco azul al centro (estudio de Mente en órbita)
+            dsp = np.clip(1 - np.sqrt(((x - w / 2) / (w / 2)) ** 2 * 0.8 + ((y / h) - 0.48) ** 2 * 2.2), 0, 1) ** 2
+            img += np.array(TH['spot'], float)[None, None, :] * dsp[..., None]
         if TEMA == 'noir':  # foco de luz al centro
             img += 26 * np.exp(-((x - w / 2) ** 2 / (w * 0.25) ** 2 + (y - h * 0.55) ** 2 / (h * 0.35) ** 2))[..., None]
         im = Image.fromarray(img.clip(0, 255).astype(np.uint8)).resize((SW, SH), Image.BILINEAR)
         rng = np.random.RandomState(7)
         dd = ImageDraw.Draw(im)
-        if TH['floor'] == 'stars':
+        if TH['floor'] == 'stars' or TH.get('stars'):
             for _ in range(900):
                 sx, sy = rng.rand() * SW, rng.rand() * SH
                 rr = rng.choice([0.6, 0.9, 1.3, 2.0], p=[0.5, 0.3, 0.15, 0.05]) * SS
@@ -664,6 +674,31 @@ def render_frame(fr):
     for fn in fr.over:
         fn(d, cam)
     img = canvas.resize((W, H), Image.LANCZOS)
+    if TH.get('glow') and not fr.mono and (fr.over or fr.under):
+        # resplandor de neón SOLO en los efectos (anillos, líneas, escáner): se redibujan sobre negro y se difuminan
+        fx = Image.new('RGB', (SW // 2, SH // 2), (0, 0, 0))
+        dfx = ImageDraw.Draw(fx)
+
+        class _Half:  # dibuja a media resolución
+            def __getattr__(self, k):
+                fn = getattr(dfx, k)
+
+                def call(xy, *a, **kw):
+                    if isinstance(xy, (list, tuple)) and xy and isinstance(xy[0], (list, tuple)):
+                        xy = [(p[0] / 2, p[1] / 2) for p in xy]
+                    elif isinstance(xy, (list, tuple)):
+                        xy = [v / 2 for v in xy]
+                    if 'width' in kw:
+                        kw['width'] = max(1, int(kw['width']))
+                    return fn(xy, *a, **kw)
+                return call
+        for fn in fr.under + fr.over:
+            try:
+                fn(_Half(), cam)
+            except Exception:
+                pass
+        bl = np.asarray(fx.resize((W // 2, H // 2), Image.BILINEAR).filter(ImageFilter.GaussianBlur(5)).resize((W, H), Image.BILINEAR)).astype(np.float32)
+        img = Image.fromarray(np.clip(np.asarray(img).astype(np.float32) + bl * TH['glow'] * 2.2, 0, 255).astype(np.uint8))
     if fr.gray > 0 or fr.mono:
         g = img.convert('L').convert('RGB')
         img = Image.blend(img, g, 1.0 if fr.mono else clamp(fr.gray))
@@ -730,6 +765,10 @@ def pill(img, d, x, y, txt, a=1.0, fill=None, col=None, size=None, border=None, 
     fill = TH['pill'] if fill is None else fill
     col = INK if col is None else col
     border = TH['pborder'] if border is None else border
+    if TH.get('hud') and fnt == 'sb':  # estilo HUD de Mente en órbita: mayúsculas y borde de neón
+        txt = txt.upper()
+        if dotc:
+            border = dotc
     if a <= 0.01:
         return
     size = size or (19 if not VERT else 26)

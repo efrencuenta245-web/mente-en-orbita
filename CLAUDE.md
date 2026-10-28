@@ -60,7 +60,8 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
    - 11–14 frases y unos 900 caracteres como máximo.
    - Versión para la voz con los números escritos con letra; en los subtítulos (PHR), cifras.
 3. **Escenas** (`/home/claude/TEMA.py`), con la skill `animador`:
-   - **Elige el tema visual según el tema del video** (`MOTOR_TEMA`: estudio, espacio, medico, plano, neon, noir, naturaleza, micro, mapa; tabla en `.claude/skills/animador/temas.md`). No repitas el mismo tema visual dos videos seguidos.
+   - **Elige el tema visual según el tema del video** (`MOTOR_TEMA`: orbita, estudio, espacio, medico, plano, neon, noir, naturaleza, micro, mapa; tabla en `.claude/skills/animador/temas.md`). No repitas el mismo tema visual dos videos seguidos.
+   - **`orbita` es la esencia de Mente en órbita** (azul marino, estrellas, neón solo en efectos, HUD): al menos 1 de cada 3 videos. En todos los temas se conservan los sellos: escáner, HUD, contador, escala real, cierre `s_marca` y loop.
    - Motor nuevo: `kit/motor3d.py` (3D + temas) y `kit/escenas.py` (línea de tiempo, subtítulos, tarjetas B/N, render). Ejemplos: `kit/gta6.py` y `kit/demo_temas.py`. La línea de tiempo sale de `kit/timeline.py` con los tiempos por palabra de Scribe.
    - Los videos anteriores (`popo.py`, `vasec.py`) siguen sirviendo de referencia para paisajes y anatomía.
    - Revisa cuadros con `python3 TEMA.py sheet salida.jpg t1 t2 …` antes de renderizar.

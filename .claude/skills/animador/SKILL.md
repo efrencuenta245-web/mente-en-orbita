@@ -1,11 +1,11 @@
 ---
 name: animador
-description: Diseña y programa las escenas 3D de cada video de Mente en órbita. Primero identifica el tema y elige el tema visual (estudio, espacio, médico, plano, neón, noir, naturaleza, micro, mapa), después arma escenas nuevas con motor3d.py/escenas.py, tarjetas de transición y revisión con hojas de contacto. Úsala cada vez que haya que animar un guion (reel o video largo).
+description: Diseña y programa las escenas 3D de cada video de Mente en órbita. Primero identifica el tema y elige el tema visual (orbita = esencia de la marca, estudio, espacio, médico, plano, neón, noir, naturaleza, micro, mapa), después arma escenas nuevas con motor3d.py/escenas.py, tarjetas de transición y revisión con hojas de contacto. Úsala cada vez que haya que animar un guion (reel o video largo).
 ---
 # Animador
 
 ## 1. Elegir el tema visual (obligatorio, nunca el mismo por costumbre)
-Lee el guion y elige con la tabla de [temas.md](temas.md). Escribe en `jobs/TEMA.json` el campo `"tema_visual"` y una línea de por qué.
+Lee el guion y elige con la tabla de [temas.md](temas.md). `orbita` es la esencia del canal (azul marino, estrellas, neón solo en efectos, HUD): úsalo al menos 1 de cada 3 videos y siempre que el tema no pida otro mundo. En cualquier tema se conservan los sellos de la marca (escáner, HUD, contador, escala real, cierre `s_marca`, loop). Escribe en `jobs/TEMA.json` el campo `"tema_visual"` y una línea de por qué.
 - Si el mismo tema visual salió en los 2 videos anteriores (`publicados.md` → columna Tema visual), usa la segunda opción salvo que el tema lo exija (p. ej. anatomía → médico).
 - Un video largo puede cambiar de tema por capítulo (p. ej. noir en la historia del hackeo y estudio en el resto): exporta `MOTOR_TEMA` distinto por render de capítulo solo si la transición entre ellos es una tarjeta.
 
