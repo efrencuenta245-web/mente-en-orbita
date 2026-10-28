@@ -1,0 +1,32 @@
+Reel extra (pedido por Efrén): autos de rally — serie "Lo que no ves". Publicación pedida: 22:00 CDMX.
+
+GUION (subtítulos, con cifras)
+1. Vas a 170 km/h en un camino de tierra... y tu auto vuela 50 metros.
+2. Así se ve por dentro.
+3. Te rodea una jaula de tubos de acero: si vuelcas, ella aguanta el golpe.
+4. Las cuatro ruedas empujan a la vez, por eso agarra en la grava.
+5. Al caer, cada amortiguador frena el golpe con aceite, como un pistón.
+6. Y tu cuerpo siente hasta 5 veces su peso.
+7. ¿Y esas explosiones en el escape? Se llama antilag.
+8. Quema gasolina en el escape para que el turbo nunca deje de girar.
+9. A tu lado, el copiloto te canta cada curva y cada salto antes de que los veas.
+10. En el Rally de México, en Guanajuato, los tramos suben a casi 2,700 metros.
+11. Ahí el aire es tan delgado que el motor pierde hasta 20 % de fuerza.
+12. Mándaselo a quien maneja como piloto de rally. ¿Te subirías? Sí o no.
+
+FUENTES (consultadas el 28-oct-2026)
+- Saltos de 75 m, despegue a 170 km/h y más de 5 G en el habitáculo (Rally de Finlandia 2026): DH.be, 1-ago-2026
+  https://www.dhnet.be/sports/moteurs/wrc/2026/08/01/sauts-de-75-metres-decollage-a-170-kmh-plus-de-5g-dans-lhabitacle-les-chiffres-fous-du-rallye-wrc-de-finlandie-YJWJ54DNTBGSHD5N6NCJ6UMZV4/
+- Ford Fiesta WRC de Østberg: ~50 m en el salto Yellow House (2017): https://www.thedrive.com/watch-this/13066/watch-this-ford-fiesta-wrc-car-fly-160-feet-at-rally-finland
+- Märtin, 57 m en Ouninpohja (2003): https://www.auto.cz/jak-daleko-doskocil-markko-martin-17579
+- Antilag (gasolina que se quema en el múltiple de escape para mantener girando la turbina):
+  https://rallycars.com/technical-stuff/bang-bang-or-anti-lag-system/ · https://driver61.com/motorsport-engineering/anti-lag-rallying-turbo-boost/
+- Jaula de tubos de cromo-molibdeno (FIA fija posiciones, diámetros y espesores): https://rallysportmag.com/safety-first-the-anatomy-of-a-works-rally-car/
+  y Škoda (34–35 m de tubo, ~52 kg en un Rally2): https://www.skoda-storyboard.com/en/lifestyle/sports/fast-and-safe-what-protects-the-crew-of-the-works-fabia-rally2-evo/
+- Rally1 sin híbrido desde 2025, 1180 kg mínimo, ~380 hp, tracción 4x4 turbo 1.6: https://fia.com/node/54496 · https://dirtfish.com/?p=126189
+- Rally México (Guanajuato): tramos hasta ~2,700 m (2,737 m), el motor pierde hasta ~20 % de potencia:
+  https://www.pirelli.com/global/en-ww/race/racingspot/rally/rally-mexico-for-dummies-62680/
+  https://www.worldrallyblog.com/2014/02/28/wrc-news/mexican-altitude-eats-horsepower/
+  https://www.skoda-motorsport.com/en/rally-mexico-tough-gravel-and-thin-air/
+
+ETIQUETAS HONESTAS: "Recreación" (auto genérico sin marcas), "Esquema simplificado", "Escala exagerada" donde aplique.
