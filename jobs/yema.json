@@ -16,7 +16,8 @@
   "bpm": 104,
   "fin_voz": 61.9
  },
- "estado": "v2 (escenarios reales) esperando aprobación",
+ "estado": "aprobado por Efrén; programado para 19:00 CDMX",
  "archivo": "yema_v2.mp4",
- "version": 2
+ "version": 2,
+ "send_later": "trig_014BTCb3jQgsSrNP6DWrK5oU"
 }
