@@ -589,7 +589,7 @@ def plant_building(lit, gate=0.0):
         ms.append(box(0.6, 0.6, 0.04, mix((40, 48, 64), (255, 214, 130), on), shadow=0.0, base=True, gloss=0.5).tf(t=(-3.9 + i * 0.86, 1.9, 2.52)))
     sign = box(3.6, 0.6, 0.06, (30, 40, 60), shadow=0.0, base=True)
     decal(sign, sign.FACE['front'], tex(480, 80, (30, 40, 60, 255), lambda d, im: draw_text(d, (240, 42), 'PLANTA CIVAC', font('xb', 48), (240, 240, 240), 'mm')))
-    ms.append(sign.tf(t=(0, 2.55, 2.55)))
+    ms.append(sign.tf(t=(0, 2.35, 2.62)))
     ms.append(box(2.0 * (1 - gate) + 0.01, 1.6, 0.06, (90, 96, 106), shadow=0.0, base=True).tf(t=(-1.0 * gate, 0, 2.53)))
     return ms
 
