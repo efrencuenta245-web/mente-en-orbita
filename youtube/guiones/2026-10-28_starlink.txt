@@ -1,0 +1,161 @@
+STARLINK POR DENTRO — video largo quincenal de YouTube (28-oct-2026)
+Formato: largo horizontal 1920x1080 · 4:28 · tema visual orbita · voz Carmelo (ElevenLabs eleven_v4)
+
+GANCHOS (fórmulas de formulas.md)
+#1 · Fórmula 2+3 (Número imposible + tú dentro) · "Sobre tu cabeza vuelan más de 11 mil satélites de Starlink… y uno podría estar mandándote este video." · seg 0: horizonte de la Tierra con cientos de satélites cruzando y contador 0→11,150
+#2 · Fórmula 7 (Escala real) · "Tu internet sube tan alto como de la CDMX a Guadalajara… en 2 milésimas de segundo." · seg 0: mapa CDMX–GDL que se levanta en vertical
+#3 · Fórmula 4 (Lo que no ves) · "Esto pasa encima de tu casa cada vez que alguien con Starlink abre un video." · seg 0: casa con antena y haz subiendo
+#4 · Fórmula 14 (Antes/después) · "Antes el internet por satélite tardaba más de medio segundo; hoy, menos que un parpadeo." · seg 0: ojo que parpadea
+#5 · Fórmula 12 (Peligro cercano) · "Cada 6 meses, los satélites de Starlink esquivan casi 150 mil choques." · seg 0: dos satélites a punto de chocar
+
+| # | Concreto 20 | Sorpresa 20 | Tú 15 | Acción 15 | Curiosidad 20 | Cercanía 10 | Total |
+|---|---|---|---|---|---|---|---|
+| 1 | 18 | 18 | 15 | 14 | 18 | 6 | 89 |
+| 2 | 17 | 15 | 8 | 12 | 14 | 10 | 76 |
+| 3 | 16 | 10 | 12 | 12 | 14 | 7 | 71 |
+| 4 | 12 | 14 | 6 | 12 | 13 | 5 | 62 |
+| 5 | 16 | 18 | 4 | 15 | 15 | 3 | 71 |
+Elegido: #1 (89). El #5 abre el Short B y el #2 vive dentro de la Parte 1.
+
+GUION (pantalla / voz)
+
+== Gancho
+- Sobre tu cabeza vuelan más de 11 mil satélites de Starlink.
+    voz: Sobre tu cabeza vuelan más de once mil satélites de Starlink.
+- Y uno de ellos podría estar mandándote este video.
+    voz: Y uno de ellos podría estar mandándote este video.
+- Van a 27,000 km por hora.
+    voz: Van a veintisiete mil kilómetros por hora.
+- Le dan la vuelta a la Tierra en hora y media.
+    voz: Le dan la vuelta a la Tierra en hora y media.
+- Y aun así, tu señal sube, baja y llega en menos de lo que dura un parpadeo.
+    voz: Y aun así, tu señal sube, baja, y llega en menos de lo que dura un parpadeo.
+- ¿Cómo le hace un satélite para darte internet en tu casa? Hoy lo abrimos por dentro, en 5 partes.
+    voz: ¿Cómo le hace un satélite para darte internet en tu casa? Hoy lo abrimos por dentro, en cinco partes.
+
+== Parte 1 · El viaje de tu señal
+- Parte 1.
+    voz: Parte uno.
+- Tu señal viaja más lejos de lo que crees.
+    voz: Tu señal viaja más lejos de lo que crees.
+- Sale de una antena en tu techo y sube unos 500 km.
+    voz: Sale de una antena en tu techo, y sube unos quinientos kilómetros.
+- Es como ir de la Ciudad de México a Guadalajara… pero hacia arriba.
+    voz: Es como ir de la Ciudad de México a Guadalajara... pero hacia arriba.
+- Allá arriba, el satélite la recibe y la rebota a una estación en tierra.
+    voz: Allá arriba, el satélite la recibe, y la rebota a una estación en tierra.
+- De ahí entra al internet de siempre: a YouTube, a tu banco o a tu juego.
+    voz: De ahí entra al internet de siempre: a YouTube, a tu banco, o a tu juego.
+- A la velocidad de la luz, ese salto tarda menos de 2 milésimas de segundo.
+    voz: A la velocidad de la luz, ese salto tarda menos de dos milésimas de segundo.
+- Por eso Starlink tiene de 25 a 60 milisegundos de retraso.
+    voz: Por eso Starlink tiene de veinticinco a sesenta milisegundos de retraso.
+- El internet satelital de antes, a 36 mil km, tardaba 600 o más.
+    voz: El internet satelital de antes, a treinta y seis mil kilómetros, tardaba seiscientos o más.
+- Más de medio segundo: suficiente para perder una partida en línea.
+    voz: Más de medio segundo: suficiente para perder una partida en línea.
+
+== Parte 2 · La antena por dentro
+- Parte 2.
+    voz: Parte dos.
+- La antena no es un plato: es un radar plano.
+    voz: La antena no es un plato: es un radar plano.
+- Así se ve por dentro.
+    voz: Así se ve por dentro.
+- Cientos de antenas diminutas, acomodadas como las casillas de una lotería.
+    voz: Cientos de antenas diminutas, acomodadas como las casillas de una lotería.
+- Ninguna se mueve: apuntan con electrónica, retrasando su señal unas contra otras.
+    voz: Ninguna se mueve: apuntan con electrónica, retrasando su señal unas contra otras.
+- Así siguen a cada satélite mientras cruza el cielo en unos minutos.
+    voz: Así siguen a cada satélite mientras cruza el cielo en unos minutos.
+- Cuando uno se va por el horizonte, la antena salta al siguiente sin que lo notes.
+    voz: Cuando uno se va por el horizonte, la antena salta al siguiente, sin que lo notes.
+- Es la idea de los radares de los aviones de combate… pero cabe en tu azotea.
+    voz: Es la idea de los radares de los aviones de combate... pero cabe en tu azotea.
+
+== Parte 3 · Láseres en el vacío
+- Parte 3.
+    voz: Parte tres.
+- Los satélites de Starlink se hablan entre ellos con láseres.
+    voz: Los satélites de Starlink se hablan entre ellos con láseres.
+- A inicios de 2024 ya había más de 9 mil láseres conectados en órbita.
+    voz: A inicios de dos mil veinticuatro ya había más de nueve mil láseres conectados en órbita.
+- Cada enlace mueve hasta 100 gigabits por segundo.
+    voz: Cada enlace mueve hasta cien gigabits por segundo.
+- Y puede unir dos satélites a más de 5,400 km de distancia.
+    voz: Y puede unir dos satélites a más de cinco mil cuatrocientos kilómetros de distancia.
+- Así, tu señal puede cruzar un océano sin tocar un solo cable.
+    voz: Así, tu señal puede cruzar un océano sin tocar un solo cable.
+- En un solo día, esos láseres movían 42 millones de gigas.
+    voz: En un solo día, esos láseres movían cuarenta y dos millones de gigas.
+- Como si 42 millones de personas bajaran una película de 1 giga.
+    voz: Como si cuarenta y dos millones de personas bajaran una película de un giga.
+
+== Parte 4 · Cómo no chocan
+- Parte 4.
+    voz: Parte cuatro.
+- En solo 6 meses, los satélites de Starlink esquivaron casi 150 mil choques.
+    voz: En solo seis meses, los satélites de Starlink esquivaron casi ciento cincuenta mil choques.
+- Fueron 148,696 maniobras, de junio a noviembre de 2025.
+    voz: Fueron ciento cuarenta y ocho mil seiscientas noventa y seis maniobras, de junio a noviembre de dos mil veinticinco.
+- Se apartan cuando el riesgo de chocar pasa de 3 en 10 millones.
+    voz: Se apartan cuando el riesgo de chocar pasa de tres en diez millones.
+- Un riesgo diminuto… y aun así, se mueven.
+    voz: Un riesgo diminuto... y aun así, se mueven.
+- En 2026 empezaron a bajar sus satélites de 550 a 480 km.
+    voz: En dos mil veintiséis empezaron a bajar sus satélites, de quinientos cincuenta a cuatrocientos ochenta kilómetros.
+- Ahí abajo hay menos basura espacial, y el aire frena más rápido a los que fallan.
+    voz: Ahí abajo hay menos basura espacial, y el aire frena más rápido a los que fallan.
+- Un satélite muerto no se queda dando vueltas: cae y se quema en la atmósfera.
+    voz: Un satélite muerto no se queda dando vueltas: cae, y se quema en la atmósfera.
+
+== Parte 5 · Cuánto cuesta en México
+- Parte 5.
+    voz: Parte cinco.
+- ¿Y cuánto cuesta tenerlo en tu casa, en México?
+    voz: ¿Y cuánto cuesta tenerlo en tu casa, en México?
+- El plan Residencial Lite anda en 1,050 pesos al mes.
+    voz: El plan Residencial Lite anda en mil cincuenta pesos al mes.
+- El equipo, con antena y módem, en unos 3,499 pesos.
+    voz: El equipo, con antena y módem, en unos tres mil cuatrocientos noventa y nueve pesos.
+- Sin contar impuestos, y el precio cambia según tu dirección.
+    voz: Sin contar impuestos, y el precio cambia según tu dirección.
+- En 2024 ya tenía unos 150 mil clientes en México, según el IFT.
+    voz: En dos mil veinticuatro ya tenía unos ciento cincuenta mil clientes en México, según el Ifetel.
+- Donde no llega la fibra, en un rancho o en la sierra, puede ser la única opción.
+    voz: Donde no llega la fibra, en un rancho o en la sierra, puede ser la única opción.
+- En la ciudad, la fibra suele ser más barata… y más rápida.
+    voz: En la ciudad, la fibra suele ser más barata... y más rápida.
+
+== Cierre
+- Una antena que apunta sin moverse, láseres en el vacío y miles de satélites esquivándose.
+    voz: Una antena que apunta sin moverse, láseres en el vacío, y miles de satélites esquivándose.
+- Todo, para que un video llegue a tu mano.
+    voz: Todo, para que un video llegue a tu mano.
+- Esto fue Mente en órbita.
+    voz: Esto fue Mente en órbita.
+- ¿Tú cambiarías tu internet por uno que viene del espacio? Sí o no, en los comentarios.
+    voz: ¿Tú cambiarías tu internet por uno que viene del espacio? Sí o no, en los comentarios.
+- Porque sobre tu cabeza vuelan más de 11 mil satélites…
+    voz: Porque sobre tu cabeza vuelan más de once mil satélites...
+
+CIERRE DE SHORTS (REEL_OUT)
+- Mente en órbita. Las 5 partes completas, en nuestro canal.
+- Mándaselo a alguien que vive en un rancho. ¿Lo contratarías? Sí o no.
+
+EDITS (Shorts)
+- reelA (67.6 s): «11 mil satélites sobre tu cabeza» → viaje de la señal, CDMX–GDL hacia arriba, 25–60 ms vs 600 ms.
+- reelB (63.5 s): «En solo 6 meses esquivaron casi 150 mil choques» → 11 mil satélites a 27,000 km/h → 148,696 maniobras → bajan a 480 km → se queman.
+
+FUENTES (consultadas el 28-oct-2026)
+- ~11,150 satélites Starlink en órbita (23-oct-2026): https://www.highspeedinternet.com/resources/how-many-starlink-satellites-are-in-orbit-october-23-2026
+- 27,000 km/h y ~95 min por vuelta: mecánica orbital estándar para órbita baja a ~500 km (7.6 km/s).
+- Altura ~550 km y bajada a ~480 km durante 2026 (anuncio de SpaceX, 1-ene-2026): https://interestingengineering.com/space/spacex-starlink-orbit-lowering-2026 · https://www.timeslive.co.za/news/sci-tech/2026-01-02-starlink-to-lower-satellite-orbit-to-enhance-safety/
+- CDMX–Guadalajara ≈ 460 km en línea recta (≈ 540 km por carretera): «más o menos» / «≈ 500 km» en pantalla.
+- Luz: 500 km / 300,000 km/s ≈ 1.7 ms (cálculo).
+- Latencia Starlink 25–60 ms; geoestacionario a 35,786 km, ~600 ms o más: https://speedtesthq.com/guides/satellite/starlink-latency-explained
+- 9,000 láseres, 100 Gbps por enlace, >5,400 km, 42 PB (42 millones de GB) al día (SpaceX, ene-2024): https://gigazine.net/gsc_news/en/20240201-starlink-beaming-42-pb
+- 148,696 maniobras jun–nov 2025, umbral 3 en 10 millones (reporte SpaceX a la FCC, 31-dic-2025): https://www.altagrove.com/grovewire-news/spacex-148696-starlink-collision-maneuvers-in-6-months-ending-nov-30-continued-issues-with-operators-slipshod-reporting
+- Precios México: Residencial Lite $1,050/mes, kit $3,499, sin impuestos, varía por dirección (actualizado 26-oct-2026): https://selectra.mx/companias/starlink
+- ~150 mil clientes en México (datos del IFT, ago-2024): https://mexicobusiness.news/tech/news/starlink-surpasses-150000-users-mexico
+- Antena de fase (phased array) sin partes móviles: descripción general de la tecnología; número de elementos dicho como «cientos» (aproximado).
