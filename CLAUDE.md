@@ -59,10 +59,11 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
 2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`):
    - 11–14 frases y unos 900 caracteres como máximo.
    - Versión para la voz con los números escritos con letra; en los subtítulos (PHR), cifras.
-3. **Escenas** (`/home/claude/TEMA.py`):
-   - Usa como base `popo.py` (paisaje/ciencia) o `vasec.py` (anatomía); los ayudantes 3D están en `vasec.py`.
-   - Define `PHR`, `CUTS`, `ENVS`, `T_OUT`, `DUR`, `NF`, `render(t)`, `W`, `H` y `anim`.
-   - Revisa cuadros con `preview` y `csheet.py` antes de renderizar.
+3. **Escenas** (`/home/claude/TEMA.py`), con la skill `animador`:
+   - **Elige el tema visual según el tema del video** (`MOTOR_TEMA`: estudio, espacio, medico, plano, neon, noir, naturaleza, micro, mapa; tabla en `.claude/skills/animador/temas.md`). No repitas el mismo tema visual dos videos seguidos.
+   - Motor nuevo: `kit/motor3d.py` (3D + temas) y `kit/escenas.py` (línea de tiempo, subtítulos, tarjetas B/N, render). Ejemplos: `kit/gta6.py` y `kit/demo_temas.py`. La línea de tiempo sale de `kit/timeline.py` con los tiempos por palabra de Scribe.
+   - Los videos anteriores (`popo.py`, `vasec.py`) siguen sirviendo de referencia para paisajes y anatomía.
+   - Revisa cuadros con `python3 TEMA.py sheet salida.jpg t1 t2 …` antes de renderizar.
 4. **Voz:**
    - `creative_generate_speech` con voice_id `5egO01tkUjEzu7xSSE8M` (Carmelo), modelo `eleven_v4`, **generations_count=1**.
    - Guarda el flow_id y los session_ids en `jobs/TEMA.json`.
@@ -121,3 +122,27 @@ Usa `PushNotification` (mensaje de menos de 200 caracteres) y además `SendUserM
   - Plan C: Efrén descarga el mp3 desde ElevenLabs y lo manda al chat.
 - **vidIQ:** 150 créditos renovables al mes. `vidiq_video_upload` y `vidiq_instagram_publish_reel` cuestan 0. No uses `vidiq_compose` ni `vidiq_voiceover_generate` (gastan créditos).
 - **Red:** solo GitHub y registros de paquetes. Para cualquier descarga externa usa el workflow `fetch`.
+
+## 5. Skills (equipo del canal)
+Las skills viven en `.claude/skills/` y se cargan solas al registrar el repo. Úsalas en este orden:
+| Etapa | Skill |
+|---|---|
+| Qué hacer | `cazador` (lo que funciona en el nicho, por rendimiento e ingreso relativo) → `la-semana` (plan de 7 días) |
+| Escribir | `guionista` (5 ganchos con 21 fórmulas, puntaje, guion con fuentes) |
+| Animar | `animador` (elige tema visual, escenas 3D nuevas, revisión) |
+| Producir | `productor` (voz, tiempos, render, mezcla) → `editor` (silencios, errores de voz o grabaciones) |
+| Empacar | `empaquetador` (título + miniatura) → `seo` → `capitulos` → `shorts` (reels del video largo) |
+| Publicar | `publicador` (aprobación, Instagram, registro, avisos) |
+| Aprender | `analista` (segundo exacto del abandono) → `comentarios` → `auditoria` (mensual) |
+
+### Presupuesto de vidIQ (150 créditos/mes)
+Antes de cualquier llamada que cueste, revisa `vidiq_balance` (gratis). Si quedan menos de 40, solo se gastan créditos en la búsqueda de outliers del estratega.
+| Uso | Frecuencia | Créditos/mes |
+|---|---|---|
+| Estratega: outliers de Instagram/TikTok | lunes y jueves | ~40 |
+| Cazador: outliers de YouTube | 1 por semana | ~20 |
+| SEO: keyword research del video largo | 1 por semana | ~20 |
+| Analista: retención del video largo | 1 por semana | ~20 |
+| Comentarios de YouTube | 1 por semana | ~20 |
+| Auditoría | 1 al mes | ~15 |
+| Reserva (títulos, miniaturas, respuestas) | — | ~15 |
