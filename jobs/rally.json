@@ -8,10 +8,12 @@
  "node_id": "F4EA2FZtQMqxkNMFf2Pk",
  "duracion_voz": 58.24,
  "hora_pedida": "22:00 CDMX",
- "estado": "aprobado por Efrén; programado 22:00 CDMX",
+ "estado": "publicado",
  "uploadId": "d56cc73e-0328-4887-8f91-b86fafe7c6e0",
  "branch": "pub-20261028-rally",
  "sha": "500b61f5ba16a033dbdc6acfcaf5e2b46d30e8ef",
  "duracion": 62.46,
- "trigger_id": "trig_01FvhTHd1HpSHjD4vzZuJtV1"
+ "trigger_id": "trig_01FvhTHd1HpSHjD4vzZuJtV1",
+ "permalink": "https://www.instagram.com/reel/DfBhl-QitOw/",
+ "mediaId": "17924313924441131"
 }
