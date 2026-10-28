@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__vidIQ__vidiq_compose",
+      "mcp__vidIQ__vidiq_voiceover_generate",
+      "mcp__vidIQ__vidiq_generate_video",
+      "mcp__vidIQ__vidiq_generate_broll",
+      "mcp__vidIQ__vidiq_generate_music",
+      "mcp__vidIQ__vidiq_generate_thumbnail",
+      "mcp__vidIQ__vidiq_refine_thumbnail",
+      "mcp__vidIQ__vidiq_edit_media",
+      "mcp__vidIQ__vidiq_motion_graphics",
+      "mcp__vidIQ__vidiq_generate_script",
+      "mcp__vidIQ__vidiq_bookmarks_remove",
+      "mcp__vidIQ__vidiq_update_competitors",
+      "mcp__ElevenLabs__agents_delete",
+      "mcp__ElevenLabs__agents_delete_draft",
+      "mcp__ElevenLabs__agents_delete_kb_document",
+      "mcp__ElevenLabs__agents_bulk_delete_knowledge_base",
+      "mcp__ElevenLabs__agents_delete_mcp_server",
+      "mcp__ElevenLabs__agents_delete_phone_number",
+      "mcp__ElevenLabs__agents_delete_procedure",
+      "mcp__ElevenLabs__agents_delete_procedure_draft",
+      "mcp__ElevenLabs__agents_delete_test",
+      "mcp__ElevenLabs__agents_delete_tool",
+      "mcp__ElevenLabs__agents_delete_triage_ticket",
+      "mcp__ElevenLabs__agents_update_phone_number",
+      "mcp__ElevenLabs__agents_create",
+      "mcp__ElevenLabs__agents_duplicate",
+      "mcp__ElevenLabs__creative_delete_brand_kit",
+      "mcp__ElevenLabs__creative_delete_brand_kit_item",
+      "mcp__ElevenLabs__creative_design_voice",
+      "mcp__ElevenLabs__creative_save_designed_voice"
+    ],
+    "ask": [
+      "mcp__vidIQ__vidiq_update_video",
+      "mcp__vidIQ__vidiq_update_video_thumbnail",
+      "mcp__vidIQ__vidiq_reply_to_comment",
+      "mcp__vidIQ__vidiq_generate_clips"
+    ]
+  }
+}
