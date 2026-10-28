@@ -19,3 +19,4 @@ Tipos:
 | 2026-10-27 17:20 | extra | Por qué esperar 3 meses tras la vasectomía (responde a @menkultrx) | "Te hacen la vasectomía hoy... y todavía puedes embarazar a alguien." | 62 s | https://www.instagram.com/reel/DfBCPu-CYZr/ |
 | 2026-10-27 19:00 | diario | Popocatépetl por dentro | "A 72 kilómetros de la Ciudad de México, un volcán exhaló 42 veces en un solo día." | 64 s | https://www.instagram.com/reel/DfBNGQNDJ0p/ |
 | 2026-10-27 22:00 | extra | Autos de rally por dentro | "Vas a 170 km/h en un camino de tierra... y tu auto vuela 50 metros." | 62 s | https://www.instagram.com/reel/DfBhl-QitOw/ |
+| 2026-10-28 14:02 | extra | ¿Qué pasaría si la Tierra fuera plana? (y cómo evolucionaríamos) | "Agarra una tortilla: si la Tierra fuera así de plana, nunca podrías pararte derecho." | 66 s | https://www.instagram.com/reel/DfDPjsIgT2_/ |
