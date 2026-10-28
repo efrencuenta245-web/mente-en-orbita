@@ -8,13 +8,15 @@
  "node_id": "V6RYOiuFJc9tQcIKueIg",
  "duracion_voz_cruda": 64.24,
  "duracion_final": 64.42,
- "rama": "pub-20261028-yema",
- "sha": "31e04f4b53ef76f84f9fe326f4bdd8b109249e73",
- "uploadId": "7e3acd46-2eb7-42ef-9718-12f6a23866e7",
+ "rama": "pub-20261028-yema2",
+ "sha": "e62dc2e0b9afc0664ef377ab2e9334cb67282ad7",
+ "uploadId": "90ecef98-490d-4b43-8b98-26731e958aeb",
  "musica": {
   "semilla": 2810,
   "bpm": 104,
   "fin_voz": 61.9
  },
- "estado": "esperando aprobación"
+ "estado": "v2 (escenarios reales) esperando aprobación",
+ "archivo": "yema_v2.mp4",
+ "version": 2
 }
