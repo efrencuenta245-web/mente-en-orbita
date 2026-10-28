@@ -27,11 +27,17 @@
  "duracion_largo": 267.7,
  "reelA": {
   "tema": "11 mil satélites sobre ti",
-  "duracion": 67.6
+  "duracion": 67.6,
+  "instagram": "programado vie 30-oct 13:00 CDMX",
+  "uploadId": "2109387b-20ab-450c-8755-3af56dc3ae78",
+  "send_later": "trig_019higpZZjismVY7ykc1pBha"
  },
  "reelB": {
   "tema": "150 mil choques esquivados",
-  "duracion": 63.5
+  "duracion": 63.5,
+  "instagram": "programado sáb 31-oct 13:00 CDMX",
+  "uploadId": "1f1d4bd0-144a-41df-9ab8-97b0b6a695b9",
+  "send_later": "trig_015JndGuaYCHh1qQyMbq5fk3"
  },
  "branch": "pub-yt-20261028-starlink",
  "sha": "150e7be0a8d0dd367e2f2214618a298e737a8b3b",
