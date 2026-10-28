@@ -1,8 +1,32 @@
 {
  "tema": "gta6 (video largo YouTube + reels)",
  "flow_id": "oSm0SkdqGLo6Ir29JAnZ",
- "session_ids": {"c0": "OdYzxyM5ywW0DLr3fz5V", "c1": "D2SuscVBBkz5OPMOYxt8", "c2": "KTWEsSjYJNJ9aqUt7Pih", "c3": "M6rUMCknsCjE7Fvpltx2",
-  "c4": "xw2s6yJYgT0IMAB3JirP", "c5": "FaKrp9XLnVgJqVymywy2", "c6": "VyGEsAFrRoLbofU1dw16", "out": "Lk1DB6FjUJ2XLTCNzemx"},
+ "session_ids": {
+  "c0": "OdYzxyM5ywW0DLr3fz5V",
+  "c1": "D2SuscVBBkz5OPMOYxt8",
+  "c2": "KTWEsSjYJNJ9aqUt7Pih",
+  "c3": "M6rUMCknsCjE7Fvpltx2",
+  "c4": "xw2s6yJYgT0IMAB3JirP",
+  "c5": "FaKrp9XLnVgJqVymywy2",
+  "c6": "VyGEsAFrRoLbofU1dw16",
+  "out": "Lk1DB6FjUJ2XLTCNzemx"
+ },
  "creditos": 3223,
- "estado": "voz generada"
+ "estado": "reels programados 29-oct 12:00 CDMX (send_later trig_01Avxm2iwfH6ApFGoT1qZHWP)",
+ "duracion_largo": 242.6,
+ "reelA": {
+  "tema": "13 años de espera",
+  "duracion": 67.1,
+  "branch": "pub-20261028-gta6-reela-v2",
+  "sha": "6d7773581c1af62274376d0bb40aef01dcc17a8e",
+  "uploadId": "a000faed-dedd-4df0-ae36-7db0e66d3b2c"
+ },
+ "reelB": {
+  "tema": "hackeo desde un hotel",
+  "duracion": 63.9,
+  "branch": "pub-20261028-gta6-reelb-v2",
+  "sha": "aa9671420a5796139bd6320cc7cf64dd602be410",
+  "uploadId": "a9189ce9-0868-4839-82c4-043c9c36a9ad"
+ },
+ "imagenes": "Oficiales de rockstargames.com/VI (portada, key art, capturas) + portadas de GTA V y RDR2 (Wikipedia); en kit se esperan en /home/claude/img (descargadas con fetch: inbox/gta_*)"
 }
