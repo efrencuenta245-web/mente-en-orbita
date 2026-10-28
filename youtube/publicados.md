@@ -1,6 +1,6 @@
 # Videos publicados en YouTube
 
-Tipos: **semanal** (lo hace la tarea del miércoles), **extra** (lo pide Efrén en el chat), **efrén** (lo sube él; no se anota).
+Tipos: **quincenal** (lo hace la tarea del miércoles, cada 15 días), **extra** (lo pide Efrén en el chat), **efrén** (lo sube él; no se anota).
 
 | Fecha (CDMX) | Tipo | Formato | Tema | Gancho | Duración | Tema visual | Enlace |
 |---|---|---|---|---|---|---|---|

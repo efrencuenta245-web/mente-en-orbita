@@ -15,8 +15,8 @@ description: Solo para YouTube. Planifica la semana del canal de YouTube - 1 vid
 |---|---|---|---|---|---|
 
 Reglas:
-- **1 video largo** (horizontal, 3–8 min) que se produce el miércoles y Efrén sube el jueves.
-- **2 Shorts** sacados del largo (skill `yt-shorts`) para viernes y sábado; opcional 1 Short original si hay una tendencia fuerte.
+- **1 video largo cada 15 días** (horizontal, 3–8 min): mira `youtube/publicados.md`; si en los últimos 13 días ya hubo uno «quincenal», esta semana no lleva largo y el plan es solo de ideas para el siguiente (y, si hay una tendencia fuerte, 1 Short original).
+- En la semana con largo: **2 Shorts** sacados de él (skill `yt-shorts`) para viernes y sábado.
 - Tema visual distinto al del video largo anterior; al menos 1 de cada 3 en `orbita` (la esencia del canal).
 - No repitas temas de `youtube/publicados.md` de las últimas 4 semanas. Puedes leer `publicados.md` de Instagram solo para no chocar el mismo tema el mismo día, pero **nunca lo modifiques**.
 - Al final, 3 ideas de reserva en `youtube/ideas.md`.

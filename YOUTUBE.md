@@ -4,13 +4,14 @@ Canal: **@menteenorbita-t8b** · channelId `UCHk6ZxeFa204iyNser0ALJg` (conectado
 Este archivo y las skills `yt-*` son **solo para YouTube**. El flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md y sus tareas de las 8:57 y 4:35 pm) **no se toca** desde aquí.
 
 ## Qué se hace
-- **1 video largo por semana** (horizontal 1920×1080, 3–8 min, capítulos), producido el miércoles; Efrén lo sube el jueves.
-- **2 Shorts por semana** sacados del largo (vertical, 50–70 s), viernes y sábado.
+- **1 video largo cada 15 días** (horizontal 1920×1080, 3–8 min, capítulos), producido el miércoles que toca; Efrén lo sube el jueves. La tarea corre cada miércoles y se salta la semana si ya hubo uno «quincenal» en los últimos 13 días.
+- **2 Shorts** sacados de cada largo (vertical, 50–70 s), viernes y sábado de esa semana.
+- **Voz: siempre Carmelo (ElevenLabs).** Se eligió cada 15 días para que alcancen los créditos junto con los reels diarios de Instagram.
 - Efrén sube todo desde su celular (vidIQ no sube videos a YouTube). Con su aprobación, vidIQ puede cambiar título, descripción, etiquetas u hora programada.
 
 ## Videos extra (pedidos por Efrén en el chat)
 Igual que en Instagram: Efrén puede pedir en el chat un video largo o un Short **extra** para probar una idea suya o responder comentarios.
-- **No alteran lo programado:** el video largo semanal y sus 2 Shorts se hacen igual, y `youtube/semana.md` no se reordena por un extra. Solo si el extra cubre el tema planeado de la semana, ese tema sale del plan y se usa la idea de reserva.
+- **No alteran lo programado:** el video largo quincenal y sus 2 Shorts se hacen igual, y `youtube/semana.md` no se reordena por un extra. Solo si el extra cubre el tema planeado de la semana, ese tema sale del plan y se usa la idea de reserva.
 - **Mismo pipeline y misma calidad** (skills `yt-guionista` → `yt-publicador`), con aprobación de Efrén antes de cualquier cambio en YouTube.
 - **Día de subida:** el que diga Efrén; si no dice, sugiere uno que no caiga el mismo día que el largo programado (jueves), para que no compitan.
 - Se registra en `youtube/publicados.md` con tipo **extra**. Los videos que Efrén sube por su cuenta no se anotan, pero el analista y la auditoría los analizan igual.
@@ -23,7 +24,8 @@ Igual que en Instagram: Efrén puede pedir en el chat un video largo o un Short 
 | `youtube/cazador.md` | Lo que funciona en el nicho (skill `yt-cazador`) |
 | `youtube/ideas.md` | Ideas y preguntas del público |
 | `youtube/aprendizajes.md` | Lecciones del analista |
-| `youtube/publicados.md` | Registro de lo publicado en YouTube |
+| `youtube/publicados.md` | Registro de lo publicado en YouTube (tipos: quincenal, extra) |
+| `youtube/stats.csv` | Suscriptores y vistas diarias (lo llena el estratega de las 8:57) |
 | `youtube/guiones/` | Guiones, miniaturas, textos |
 | `youtube/auditorias/` | Auditoría mensual |
 

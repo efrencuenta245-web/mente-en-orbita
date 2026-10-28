@@ -9,7 +9,7 @@ description: Solo para YouTube. Produce audio y video final de los videos de You
 
 Usa las herramientas del kit de CLAUDE.md §3 pasos 4–7 (voz, fetch, mezcla) con este flujo de YouTube:
 
-1. **Voz:** una llamada `creative_generate_speech` por capítulo (voice_id `5egO01tkUjEzu7xSSE8M`, `eleven_v4`, `generations_count=1`), todas en el mismo `flow_id`. Guarda flow_id, node_id y session_ids en `jobs/TEMA.json`. Poll cada ~20 s.
+1. **Voz (siempre Carmelo; no usar la voz gratis en YouTube):** una llamada `creative_generate_speech` por capítulo (voice_id `5egO01tkUjEzu7xSSE8M`, `eleven_v4`, `generations_count=1`), todas en el mismo `flow_id`. Guarda flow_id, node_id y session_ids en `jobs/TEMA.json`. Poll cada ~20 s.
 2. **Tiempos por palabra (gratis):** `creative_transcribe_audio` (`eleven_scribe_v1`, `connect_from=[node_id]`) por capítulo. Del resultado toma `words_download_url`.
 3. **Descarga:** escribe en `main` los archivos `jobs/narr_TEMA_cN.mp3.url` (content_url de la voz) y `jobs/words_TEMA_cN.json.url` (words_download_url), commit y push; espera `inbox/` (1–2 min) y copia a `/home/claude/`. Las URLs caducan en 2 h: hazlo enseguida.
 4. **Revisión de voz:** corre la skill `yt-editor` sobre los words.json (silencios, palabras cambiadas, muletillas). Si hay un error de pronunciación grave, regenera solo ese capítulo.
