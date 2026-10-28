@@ -1,6 +1,6 @@
 # Mente en órbita — fábrica de videos
 
-Canal de Efrén (México) en Instagram `@mente_en_orbita1` (y YouTube, aún sin conectar a vidIQ).
+Canal de Efrén (México) en Instagram `@mente_en_orbita1` y YouTube `@menteenorbita-t8b` (channelId `UCHk6ZxeFa204iyNser0ALJg`, conectado a vidIQ).
 Videos educativos verticales 100 % generados con código, en español neutro de México.
 Habla con Efrén en español, corto y claro: casi siempre está en el celular.
 

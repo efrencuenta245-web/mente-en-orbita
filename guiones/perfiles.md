@@ -9,7 +9,7 @@
 🎬 Historias completas en YouTube 👇
 
 **Enlace** (Editar perfil → Enlaces → Agregar enlace externo):
-- URL: el enlace de tu canal, de preferencia https://www.youtube.com/@TU_HANDLE?sub_confirmation=1 (abre directo el botón de suscribirse)
+- URL: https://www.youtube.com/@menteenorbita-t8b?sub_confirmation=1 (abre directo el botón de suscribirse)
 - Título: Videos completos en YouTube
 
 **Extra:** fija el reel de GTA 6 (hackeo) en el perfil y en cada reel que salga de un video largo pon en el texto "Video completo: link en mi perfil".
