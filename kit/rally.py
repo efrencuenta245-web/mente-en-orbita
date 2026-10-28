@@ -1016,7 +1016,7 @@ def hud(l2, c, t, env, info):
     if env == 'gforce':
         a = win(19.9, 22.4)
         if a > 0:
-            gmax = max(g_load(tt) for tt in np.linspace(TAU_LAND - 0.1, info['tau'], 40))
+            gmax = max(1.0, max(g_load(tt) for tt in np.linspace(TAU_LAND - 0.1, info["tau"], 40)))
             label("TÚ", info['crew'], (60, 560), "lm", a, (220, 236, 255))
             DARK.append((150, 1460, 930, 1800, a))
             l2.text(P(540, 1545), f"{gmax:.1f} G", font=F(M, 104), fill=sc3((244, 246, 255), a), anchor="mm")
