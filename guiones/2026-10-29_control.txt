@@ -1,0 +1,7 @@
+Reel diario 29-oct-2026 — Lo que no ves: el control de la tele (idea #1 de estrategia.md)
+Fuentes:
+- IR de controles ~940 nm, fuera del visible: https://protosupplies.com/product/led-940nm-infrared-emitter-5mm/
+- Visible ~380–750 nm; las cámaras de celular ven el IR del control: https://van.physics.illinois.edu/ask/listing/26799 · https://spark.iop.org/invisible-wavelengths
+- Cámara frontal con poco o nada de filtro IR, trasera con filtro: https://knowledge.carolina.com/?p=189
+- Portadora 38 kHz (38 000 parpadeos/s) para distinguirse del IR ambiente: https://sbprojects.net/knowledge/ir/nec.php · https://hackernoon.com/how-does-a-remote-control-work-kpj313u
+- NEC: 32 bits (dirección y comando, dos veces), ráfaga inicial de 9 ms; trama ≈ 67.5 ms: https://techdocs.altium.com/display/FPGA/NEC%20Infrared%20Transmission%20Protocol
