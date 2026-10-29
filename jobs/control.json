@@ -1,1 +1,20 @@
-{"tema": "control", "tipo": "diario", "flow_id": "7RhDiFT3Bgi92dmmPgdo", "session_ids": ["2z8o2OQHFtG2l8Am2hOI"], "node_id": "ActK1ZMLV7naAamFE2Xs", "duracion_voz_cruda": 67.68}
+{
+ "tema": "control",
+ "tipo": "diario",
+ "flow_id": "7RhDiFT3Bgi92dmmPgdo",
+ "session_ids": [
+  "2z8o2OQHFtG2l8Am2hOI"
+ ],
+ "node_id": "ActK1ZMLV7naAamFE2Xs",
+ "duracion_voz_cruda": 67.68,
+ "duracion_final": 65.46,
+ "rama": "pub-20261029-control",
+ "sha": "d4819adca85c7b30c1d075d6dfba93c812edd091",
+ "archivo": "control.mp4",
+ "musica": {
+  "semilla": 2903,
+  "bpm": 98,
+  "fin_voz": 63.0
+ },
+ "estado": "esperando aprobación"
+}
