@@ -21,6 +21,7 @@ Todos los datos se verifican con fuentes actuales antes de usarlos. Marca con �
 - La alerta sísmica: le gana a la onda por ~60 s. Contador en vivo.
 - El Metro de CDMX: cuánta gente mueve en un día comparado con países enteros.
 - Chichén Itzá: el "chirrido de quetzal" del eco de la pirámide.
+- ~~Lo que no ves: la yema de tu huevo y el cempasúchil.~~ ✅ Publicado el 28-oct-2026 (diario): https://www.instagram.com/reel/DfDxzL9DbQj/
 
 ## Cuerpo (estilo ilustración médica)
 - **Mito o realidad:** ¿el estornudo sale a 160 km/h? (Los estudios miden mucho menos; verificar.)
