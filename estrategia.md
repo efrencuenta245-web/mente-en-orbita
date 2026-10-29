@@ -47,15 +47,14 @@ En común:
 9. **(28-oct)** Si el gancho no es un objeto que el espectador tiene en la mano o en el cuerpo, no va (lección del rally y el Popo: 30–36 % visto).
 
 ## Cola de ideas (la #1 se produce hoy; verifica cada dato antes)
-1. **Lo que no ves — la yema de tu huevo y el cempasúchil.** Gancho: "Mira la yema de tu huevo: ese amarillo… salió de una flor de cempasúchil." Luteína (carotenoide) del pétalo → alimento de gallinas → yema; escáner del pétalo y de la yema, final en loop con el huevo. Cierre: "mándaselo a quien está poniendo la ofrenda". *Por qué:* Día de Muertos es este fin de semana (la ventana cierra el 2-nov); objeto de tu casa + dato imposible, el combo que más se comparte (fibra óptica 25.7/1 000). Verificar: uso de extracto de cempasúchil (Tagetes erecta) en alimento avícola y su pigmento (Crónica/UNAM, 14-oct-2026, "la química del color, olor y sabor del Día de Muertos").
-2. **Lo que no ves — el control de la tele.** "Agarra el control de la tele y la cámara de tu celular: aprieta un botón… y verás una luz que tus ojos no pueden ver." Infrarrojo, escáner del control, escala de longitudes de onda. *Por qué:* interactivo (patrón de 2.4 M) y tecnología de casa. Sello: escáner + escala.
-3. **Tembló y tu alerta sísmica no sonó… y no fue una falla.** Cómo decide el SASMEX: sensores en la costa, umbral de intensidad esperada en tu ciudad, contador en vivo de la ventaja de segundos. *Por qué:* pasó el 13 y el 17-oct y vuelve a ser noticia cada sismo; mexicano y útil (se comparte). Verificar los criterios con el CIRES/SASMEX.
-4. **Te pica un alacrán: así se ve por dentro.** Veneno en tus nervios, estilo médico. Dato: picaduras al año en México (Secretaría de Salud). Cierre: "ve al centro de salud: el antiveneno existe". *Por qué:* "tu cuerpo por dentro" (1.1 M) + miedo cercano.
-5. **Respuestas — la mejor pregunta del reel de la vasectomía** (tiene 4 comentarios). Gancho: la pregunta tal cual, en segunda persona. *Por qué:* la respuesta anterior dio 7.2 compartidos/1 000, 3x la mediana.
-6. **Tu estufa de inducción calienta la olla… pero no tu mano.** Corrientes de Foucault con escáner; "por eso tu comal de barro no sirve". *Por qué:* tema viral en México.
-7. **El aire de tu cuarto pesa como un niño de 10 años.** En la CDMX pesa menos por la altura. *Por qué:* número imposible (2.2 M). Verificar densidad del aire en la CDMX.
-8. **¿Qué pasaría si cavas un hoyo desde la CDMX hasta el otro lado?** Verificar antípodas. *Por qué:* hipotético viral (568 K) con giro mexicano.
-9. **Mito o realidad:** ¿cargar el celular toda la noche lo daña? Tecnología de diario, muy compartible.
+1. **Lo que no ves — el control de la tele.** "Agarra el control de la tele y la cámara de tu celular: aprieta un botón… y verás una luz que tus ojos no pueden ver." Infrarrojo, escáner del control, escala de longitudes de onda. *Por qué:* interactivo (patrón de 2.4 M) y tecnología de casa. Sello: escáner + escala.
+2. **Tembló y tu alerta sísmica no sonó… y no fue una falla.** Cómo decide el SASMEX: sensores en la costa, umbral de intensidad esperada en tu ciudad, contador en vivo de la ventaja de segundos. *Por qué:* pasó el 13 y el 17-oct y vuelve a ser noticia cada sismo; mexicano y útil (se comparte). Verificar los criterios con el CIRES/SASMEX.
+3. **Te pica un alacrán: así se ve por dentro.** Veneno en tus nervios, estilo médico. Dato: picaduras al año en México (Secretaría de Salud). Cierre: "ve al centro de salud: el antiveneno existe". *Por qué:* "tu cuerpo por dentro" (1.1 M) + miedo cercano.
+4. **Respuestas — la mejor pregunta del reel de la vasectomía** (tiene 4 comentarios). Gancho: la pregunta tal cual, en segunda persona. *Por qué:* la respuesta anterior dio 7.2 compartidos/1 000, 3x la mediana.
+5. **Tu estufa de inducción calienta la olla… pero no tu mano.** Corrientes de Foucault con escáner; "por eso tu comal de barro no sirve". *Por qué:* tema viral en México.
+6. **El aire de tu cuarto pesa como un niño de 10 años.** En la CDMX pesa menos por la altura. *Por qué:* número imposible (2.2 M). Verificar densidad del aire en la CDMX.
+7. **¿Qué pasaría si cavas un hoyo desde la CDMX hasta el otro lado?** Verificar antípodas. *Por qué:* hipotético viral (568 K) con giro mexicano.
+8. **Mito o realidad:** ¿cargar el celular toda la noche lo daña? Tecnología de diario, muy compartible.
 
 ## Ruta a la monetización
 - **TikTok, Programa de Recompensas (México):** 10 000 seguidores, 100 000 vistas en 30 días, videos de **más de 1 min** y 18 años o más. Es la ruta más corta para formato de 61–68 s.
