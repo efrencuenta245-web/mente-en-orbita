@@ -23,3 +23,4 @@ Tipos:
 | 2026-10-28 19:01 | diario | La yema de tu huevo y el cempasúchil | "Mira la yema de tu huevo: ese amarillo… salió de una flor de cempasúchil." | 64 s | https://www.instagram.com/reel/DfDxzL9DbQj/ |
 | 2026-10-29 12:05 | extra | GTA 6: 13 años de espera (reel A) | "¿Naciste el día que salió GTA 5?" | 67 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfFnIvfiR6t/ |
 | 2026-10-29 12:21 | extra | GTA 6: hackeo desde un hotel (reel B; a las 12:00 falló IG, se repostó a las 12:21 y quedó doble en FB/TikTok/YT) | "¿Sabías que GTA 6 se filtró desde la tele de un hotel?" | 64 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfFpAbyDi1N/ |
+| 2026-10-29 14:18 | extra | Tsuru: 0 estrellas y 2.4 millones vendidos | "Mira este coche: sacó 0 estrellas en choques… y aun así México compró más de 2,400,000." | 64 s | FB/TikTok/YT 13:00 + IG 14:18 · https://www.instagram.com/reel/DfF2ZekCLbj/ |
