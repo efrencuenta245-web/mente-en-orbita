@@ -21,3 +21,5 @@ Tipos:
 | 2026-10-27 22:00 | extra | Autos de rally por dentro | "Vas a 170 km/h en un camino de tierra... y tu auto vuela 50 metros." | 62 s | https://www.instagram.com/reel/DfBhl-QitOw/ |
 | 2026-10-28 14:02 | extra | ¿Qué pasaría si la Tierra fuera plana? (y cómo evolucionaríamos) | "Agarra una tortilla: si la Tierra fuera así de plana, nunca podrías pararte derecho." | 66 s | https://www.instagram.com/reel/DfDPjsIgT2_/ |
 | 2026-10-28 19:01 | diario | La yema de tu huevo y el cempasúchil | "Mira la yema de tu huevo: ese amarillo… salió de una flor de cempasúchil." | 64 s | https://www.instagram.com/reel/DfDxzL9DbQj/ |
+| 2026-10-29 12:05 | extra | GTA 6: 13 años de espera (reel A) | "¿Naciste el día que salió GTA 5?" | 67 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfFnIvfiR6t/ |
+| 2026-10-29 12:21 | extra | GTA 6: hackeo desde un hotel (reel B; a las 12:00 falló IG, se repostó a las 12:21 y quedó doble en FB/TikTok/YT) | "¿Sabías que GTA 6 se filtró desde la tele de un hotel?" | 64 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfFpAbyDi1N/ |
