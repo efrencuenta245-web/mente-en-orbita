@@ -2,8 +2,21 @@
  "tema": "veladora",
  "tipo": "diario",
  "flow_id": "RmD87OeKBkjyuOdvoeCa",
- "session_ids": ["VA0kk2fu25tHWBkiJSY0"],
+ "session_ids": [
+  "VA0kk2fu25tHWBkiJSY0"
+ ],
  "node_id": "XpWJ29tGGdeRslGBM7vl",
  "duracion_voz_cruda": 71.12,
- "estado": "produciendo"
+ "estado": "programado 19:00",
+ "duracion_final": 67.08,
+ "rama": "pub-20261030-veladora",
+ "sha": "495a87df431b488707459f8d105ed094c04c6ad5",
+ "archivo": "veladora.mp4",
+ "musica": {
+  "semilla": 3010,
+  "bpm": 94,
+  "fin_voz": 64.6
+ },
+ "metricool_id": 411775877,
+ "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7735731&openWithPostUuid=6332160432687893230"
 }
