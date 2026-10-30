@@ -1,0 +1,6 @@
+Reel diario 30-oct-2026 — La flama de tu veladora en el espacio (idea #1 de estrategia.md, Día de Muertos)
+Fuentes:
+- En la Tierra el gas caliente sube (convección) y trae aire fresco por abajo; en microgravedad no hay convección, el oxígeno llega por difusión, la flama es esférica/hemisférica, azul, más fría y casi sin hollín: NASA Microgravity Combustion Science "Candle Flames in Microgravity" (citado en https://instructional-resources.physics.uiowa.edu/ QOTW #261) · https://webexhibits.org/causesofcolor/3BB.html
+- El amarillo es hollín incandescente: https://junq.info/?p=3515
+- Shuttle (USML-1, 1992) y Mir (1995): flama de ~1.5 cm, azul tenue, hemisférica; en Mir hasta 45 min: https://ntrs.nasa.gov/citations/20000005087 · https://ntrs.nasa.gov/citations/20010074076
+- Vela de ~10 min en la Tierra ardió 45 min en Mir; ~5 W en el espacio vs ~50 W en la Tierra: https://appel.nasa.gov/2011/08/03/43s_human_spaceflight_science-html/ · NASA SP-4225 combustion summary
