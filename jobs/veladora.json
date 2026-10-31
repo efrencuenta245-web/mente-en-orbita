@@ -7,7 +7,7 @@
  ],
  "node_id": "XpWJ29tGGdeRslGBM7vl",
  "duracion_voz_cruda": 71.12,
- "estado": "programado 19:00",
+ "estado": "publicado",
  "duracion_final": 67.08,
  "rama": "pub-20261030-veladora",
  "sha": "495a87df431b488707459f8d105ed094c04c6ad5",
@@ -18,5 +18,9 @@
   "fin_voz": 64.6
  },
  "metricool_id": 411775877,
- "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7735731&openWithPostUuid=6332160432687893230"
+ "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7735731&openWithPostUuid=6332160432687893230",
+ "permalink": "https://www.instagram.com/reel/DfI7oW8CUdP/",
+ "facebook": "https://facebook.com/reel/2175428579737418",
+ "tiktok": "https://www.tiktok.com/@mente.en.rbita/video/7702631160358194453",
+ "youtube": "https://www.youtube.com/shorts/jskwUgD7ffI"
 }

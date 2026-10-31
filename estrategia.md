@@ -55,13 +55,12 @@ En común:
 11. **(29-oct)** Que el tema sirva para algo o se pueda probar en casa: el hipotético sin utilidad (Tierra plana) tuvo 0.6 compartidos/1 000.
 
 ## Cola de ideas (la #1 se produce hoy; verifica cada dato antes)
-1. **Prende una veladora de tu altar: en el espacio su flama sería una bolita azul.** Por qué la flama sube (el aire caliente pesa menos) y en la Estación Espacial es esférica (experimentos de NASA en microgravedad). *Por qué:* Día de Muertos (1 y 2 de nov) + objeto de casa + espacio, que es lo que más retiene (50 %). Sacarlo a más tardar el sáb 31. Sello: escáner + comparación Tierra/órbita. Verificar con NASA (FLEX/ACME).
-2. **Tembló y tu alerta sísmica no sonó… y no fue una falla.** Cómo decide el SASMEX: sensores en la costa, umbral de intensidad en tu ciudad, contador en vivo de los segundos de ventaja. *Por qué:* pasó el 13 y el 17-oct y vuelve con cada sismo; mexicano y útil (se comparte). Sello: contador en vivo. Verificar con CIRES/SASMEX.
-3. **Respuestas — la mejor pregunta de los comentarios** (vasectomía tiene 4, yema 3). Gancho: la pregunta tal cual, en segunda persona. *Por qué:* la respuesta anterior dio 6.8 compartidos/1 000 (3.3x la mediana); toca uno esta semana (regla 7). Sello: serie "Respuestas" + escáner.
-4. **Tocas a alguien y te da un toque: así se ve por dentro.** Electricidad estática en tu cuerpo; "en noviembre el aire seco de los frentes fríos lo empeora". *Por qué:* outlier de 778 K del mismo tema y llega la temporada de frío. Sello: escáner + estilo médico.
-5. **Tu estufa de inducción calienta la olla… pero no tu mano.** Corrientes de Foucault con escáner; "por eso tu comal de barro no sirve". *Por qué:* sigue viral en México (824 K en TikTok el 25-oct; 3.2 M en IG). Sello: escáner.
-6. **Te pica un alacrán: así se ve por dentro.** Veneno en tus nervios, estilo médico; cierre "ve al centro de salud: el antiveneno existe". *Por qué:* "tu cuerpo por dentro" (1.1 M abeja). Verificar cifras con Secretaría de Salud.
-7. **El aire de tu cuarto pesa como un niño de 10 años.** En la CDMX pesa menos por la altura. *Por qué:* número imposible (nube de 500 t: 2.2 M). Verificar densidad del aire en la CDMX.
+1. **Tembló y tu alerta sísmica no sonó… y no fue una falla.** Cómo decide el SASMEX: sensores en la costa, umbral de intensidad en tu ciudad, contador en vivo de los segundos de ventaja. *Por qué:* pasó el 13 y el 17-oct y vuelve con cada sismo; mexicano y útil (se comparte). Sello: contador en vivo. Verificar con CIRES/SASMEX.
+2. **Respuestas — la mejor pregunta de los comentarios** (vasectomía tiene 4, yema 3). Gancho: la pregunta tal cual, en segunda persona. *Por qué:* la respuesta anterior dio 6.8 compartidos/1 000 (3.3x la mediana); toca uno esta semana (regla 7). Sello: serie "Respuestas" + escáner.
+3. **Tocas a alguien y te da un toque: así se ve por dentro.** Electricidad estática en tu cuerpo; "en noviembre el aire seco de los frentes fríos lo empeora". *Por qué:* outlier de 778 K del mismo tema y llega la temporada de frío. Sello: escáner + estilo médico.
+4. **Tu estufa de inducción calienta la olla… pero no tu mano.** Corrientes de Foucault con escáner; "por eso tu comal de barro no sirve". *Por qué:* sigue viral en México (824 K en TikTok el 25-oct; 3.2 M en IG). Sello: escáner.
+5. **Te pica un alacrán: así se ve por dentro.** Veneno en tus nervios, estilo médico; cierre "ve al centro de salud: el antiveneno existe". *Por qué:* "tu cuerpo por dentro" (1.1 M abeja). Verificar cifras con Secretaría de Salud.
+6. **El aire de tu cuarto pesa como un niño de 10 años.** En la CDMX pesa menos por la altura. *Por qué:* número imposible (nube de 500 t: 2.2 M). Verificar densidad del aire en la CDMX.
 
 ## Ruta a la monetización
 - **TikTok, Programa de Recompensas (México):** 10 000 seguidores, 100 000 vistas en 30 días, videos de **más de 1 min** y 18 años o más. Es la ruta más corta para formato de 61–68 s.
