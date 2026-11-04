@@ -1,6 +1,6 @@
 # Estrategia viral — Mente en órbita (reset del 3-nov-2026)
 
-La actualiza cada mañana la tarea «Monitoreo y estrategia de las 4 redes». La tarea «Video diario» produce la idea **#1 de la cola**.
+La actualiza cada mañana la tarea «Monitoreo y estrategia de las 4 redes» (deja al menos 8 ideas). La tarea «Video diario» (4:35 pm) produce las ideas **#1 y #2 de la cola** (2 reels al día: 8:00 y 19:00).
 Formato, ganchos y nichos: [`ESTILO.md`](ESTILO.md) (manda sobre este archivo).
 Última actualización: 2026-11-04, 12:55 UTC (06:55 CDMX). Metricool: solo Facebook por video (hasta el 31-oct) y YouTube por canal (hasta el 31-oct); **Instagram y TikTok vienen en 0 por tercera vez seguida** (reels, seguidores y ahora también la mejor hora de IG) → permiso de estadísticas perdido, hay que reconectar.
 

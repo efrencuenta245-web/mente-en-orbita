@@ -27,31 +27,35 @@ Las tareas programadas de Claude **solo pueden subir a ramas que empiezan con `c
 ## 2. Formato
 - 1080×1920, 24 fps, **61 a 75 s** (TikTok solo paga videos de más de 1 min).
 - **Fondo negro** (destellos blancos de 2-3 s solo como sorpresa). **Voz: Isaac** (ElevenLabs, no Silverio: Efrén no quiere sonar genérico). Detalles en ESTILO.md.
-- Motor: `kit/nuevo/motor2.py`. Plantilla de escenas, montaje y render: `kit/nuevo/demo_estilo.py`. Sonidos: `kit/nuevo/sfx_demo.py`. Música: `kit/musica.py`.
+- Motor: `kit/nuevo/motor2.py`. Montaje, tiempos, subtítulos, sonido, render y final: `kit/nuevo/montaje.py` (ejemplos: `bateria.py`, `induccion.py`, `teclado.py`, `refri.py`; piezas en `piezas.py`). Sonidos: `kit/nuevo/sfx_demo.py`. Música: `kit/musica.py`.
 - **Datos verificados** con fuentes actuales (WebSearch). Fuentes del guion y de las fotos en `guiones/AAAA-MM-DD_tema.txt`.
 - **Regla de YouTube:** nada «genérico, repetitivo o de plantilla»: escenas nuevas y arco propio en cada video.
 - Se mantienen ejemplos mexicanos y las series «Lo que no ves», «Duelo», «¿Qué pasaría si…?», «Mito o realidad», «Respuestas».
 
-## 3. Pipeline del video diario
-1. **Tema:** la idea #1 de la cola de `estrategia.md` (la actualiza la tarea de monitoreo cada mañana). No repitas un tema de `publicados.md` de los últimos 14 días.
-2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`) con la fórmula de ESTILO.md §7-8: gancho de 3-7 palabras con «tú/tu» y contradicción, prueba en dos casos, zoom de lo grande a lo pequeño, segundo gancho a los 25-30 s (el error), cierre «mándaselo a…» y loop. 12-15 frases, ~950 caracteres. Versión para voz con números en letra; subtítulos con cifras.
-3. **Escenas** (`kit/nuevo/TEMA.py`, copiando `demo_estilo.py`): `preview` de cuadros y hoja de contacto antes del render completo (`python3 TEMA.py render salida.mp4`, ~1 min por cada 10 s).
-4. **Voz:** `creative_generate_speech` con voice_id `QmPfzE500cXXHM9uQKGc` (**Isaac**), modelo `eleven_v4`, **generations_count=1**. Puedes usar etiquetas como `[curious]` o `[excited]` en el gancho. Guarda flow_id y session_ids en `jobs/TEMA.json`. Espera con `creative_get_flow_run_status` (20 s entre llamadas) y toma `generations[0].content_url`.
-5. **Bajar la voz:** `bash kit/descargar.sh "<content_url>" narr_TEMA.mp3 /home/claude/narr_TEMA.mp3`.
-6. **Sincronizar y mezclar:** reparte las frases sobre la voz con `kit/autosync.py` (o `silencedetect`, como `kit/nuevo/norte.py`). Si la voz dura menos de 61 s, alarga las pausas entre frases (~0.3 s cada una) como en ese video; render; efectos (`sfx_demo.py` como base: cada cambio visual con su sonido); música `python3 musica.py DUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (semilla y BPM 90–110 nuevos); mezcla con `./mix_musica.sh VIDEO_SIN_AUDIO VOZ EFECTOS MUSICA SALIDA`.
-   - **Revisa el final:** audio y video con la misma duración (`ffprobe`) y los últimos 3 s más fuertes que −35 dB (`volumedetect`). Nunca quites el `apad` de las mezclas.
-7. **Portada (miniatura) y alojar:** misma portada de diseño fijo en todas las redes para que el perfil se vea limpio (ESTILO.md §10):
-   - Fondo: un cuadro del gancho sin subtítulos (`python3 TEMA.py preview 0.1`). Portada: `python3 kit/nuevo/portada.py /home/claude/nprev_0.1.png /home/claude/portada_TEMA.jpg "Línea 1" "línea 2" CATEGORÍA` (el gancho en 2 partes de máximo ~22 caracteres; categoría: TECNOLOGÍA, ESPACIO, CUERPO, PLANETA, MÉXICO o el nombre de la serie).
-   - Respaldo en el video: `python3 kit/nuevo/portada.py --primer-cuadro /home/claude/TEMA_final.mp4 /home/claude/portada_TEMA.jpg /home/claude/TEMA_final_p.mp4` (la portada queda como cuadro 0, 1/24 s).
-   - `bash kit/alojar.sh /home/claude/TEMA_final_p.mp4` y `bash kit/alojar.sh /home/claude/portada_TEMA.jpg` → dos URL públicas.
-8. **Aprobación obligatoria:** aviso «Tu reel de hoy está listo…» (§5), el video y la portada con SendUserFile y con SendUserMessage: tema, texto para IG/FB (pregunta-gancho, línea de valor, «mándaselo a…», 3-5 hashtags), título de TikTok, título de YouTube Shorts (máx. 100 caracteres con #Shorts) y la pregunta «¿Lo publico hoy a las 7 pm en Instagram, Facebook, TikTok y YouTube?». **Nunca publiques sin un «sí» explícito de Efrén para ese video exacto.**
-9. **Publicar con Metricool** `createScheduledPost`: blogId `7735731`, hoy 19:00 `America/Mexico_City` (si ya pasó, 15 min a partir del «sí»). info: autoPublish true, draft false, media [URL del video], `videoThumbnailUrl` [URL de la portada], text aprobado, providers instagram/facebook/tiktok/youtube, instagramData `{"type":"REEL","showReelOnFeed":true}` (sin isAiGenerated: lo eligió Efrén), facebookData `{"type":"REEL","title":…}`, tiktokData `{"title":…,"privacyOption":"PUBLIC_TO_EVERYONE"}`, youtubeData `{"title":…,"type":"short","privacy":"public","madeForKids":false,"category":"SCIENCE_TECHNOLOGY"}`. Si responde VIDEO_THUMBNAIL_NOT_APPLICABLE, repite una vez sin `videoThumbnailUrl` (el cuadro 0 del video ya es la portada). Si da otro error, no repitas igual: corrige solo si el error dice qué falta. Confirma con `getScheduledPosts` y manda el plannerUrl.
-10. **Revisión 20 min después de publicar** (`send_later` en la misma sesión): `getScheduledPosts` debe mostrar que ya no está pendiente; aviso «Ya se publicó…» o «No se pudo publicar…» (§5). Registra en `publicados.md` (fecha, tipo diario/extra, tema, gancho, duración, redes, enlaces) y guarda con `guardar.sh`.
+## 3. Pipeline diario: 2 reels al día con 4 de reserva (desde el 5-nov-2026)
+**Horario fijo:** cada día salen 2 reels en las 4 redes, a las **8:00** y a las **19:00** (`America/Mexico_City`). Siempre hay **4 de reserva** programados en Metricool (mañana y pasado mañana, 8:00 y 19:00).
+**La tarea de las 4:35 pm hace 2 reels** y los programa, con el «sí» de Efrén, en los **2 primeros huecos libres**: normalmente pasado mañana a las 8:00 y a las 19:00. Si un día falló, la siguiente tarea llena primero los huecos que quedaron. Un hueco está ocupado si Metricool tiene un post pendiente a esa hora (±30 min); los extras van en otras horas y no cuentan.
+
+Para cada uno de los 2 reels:
+1. **Tema:** las ideas #1 y #2 de la cola de `estrategia.md` (sin repetir temas de `publicados.md` de los últimos 14 días ni de «Ya programados»). Como salen 2 días después, deben ser temas que no caduquen; si una idea depende de una fecha, respeta la fecha.
+2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`) con la fórmula de ESTILO.md §7-8: gancho de 3-7 palabras con «tú/tu» y contradicción, prueba en dos casos, zoom de lo grande a lo pequeño, segundo gancho a los 25-30 s (el error), cierre «mándaselo a…» y loop. 12-15 frases, ~950 caracteres. Datos verificados con WebSearch y fuentes en el guion.
+3. **Voz:** `creative_generate_speech` con voice_id `QmPfzE500cXXHM9uQKGc` (**Isaac**), modelo `eleven_v4`, **generations_count=1**, texto con números en letra; etiquetas `[curious]` en el gancho y `[excited]` en el segundo gancho. Lanza las 2 voces juntas.
+4. **Tiempos por palabra:** cuando termine cada voz, `creative_transcribe_audio` (`eleven_scribe_v1`, mismo `flow_id`, `connect_from=[node_id de la voz]`). Del resultado toma `words_download_url`.
+5. **Bajar:** `bash kit/descargar.sh "<content_url>" narr_TEMA.mp3 /home/claude/narr_TEMA.mp3` y `bash kit/descargar.sh "<words_download_url>" words_TEMA.json /home/claude/words_TEMA.json` (caducan en ~2 h).
+6. **Escenas con `kit/nuevo/montaje.py`** (lee su encabezado). Un archivo `kit/nuevo/TEMA.py` con `TEMA`, `TXT` (frases de pantalla con cifras), `VOZ` (las mismas frases como se dicen) y `ESCENAS`. Ejemplos completos del 4-nov: `bateria.py`, `induccion.py`, `teclado.py` y `refri.py`; piezas reutilizables en `kit/nuevo/piezas.py` (celular con pantalla propia, pila, almohada, termómetro, pastilla tachada, ondas de calor). Objetos y escenas nuevos en cada video (regla de YouTube): reutiliza piezas, nunca la misma composición.
+   - `python3 TEMA.py tiempos /home/claude/narr_TEMA.mp3 /home/claude/words_TEMA.json` (alarga las pausas solo hasta 61.3 s o más)
+   - `python3 TEMA.py hoja` → mira `/home/claude/hoja_TEMA.png` y corrige antes de renderizar.
+   - `python3 TEMA.py render` (~10 min por reel; los 2 renders uno después del otro).
+   - `python3 TEMA.py final "Línea 1" "línea 2" CATEGORÍA SEMILLA BPM` → efectos, música (semilla y BPM 90–110 nuevos), mezcla, portada (ESTILO.md §10) y portada como cuadro 0: `/home/claude/TEMA_final_p.mp4` y `/home/claude/portada_TEMA.jpg`. Revisa lo que imprime: video y audio con la misma duración, últimos 3 s más fuertes que −35 dB y menos de 95 MB.
+7. **Alojar:** `bash kit/alojar.sh /home/claude/TEMA_final_p.mp4` y `bash kit/alojar.sh /home/claude/portada_TEMA.jpg` → URL públicas. Guarda guion, `TEMA.py` y jobs con `guardar.sh`.
+8. **Aprobación obligatoria (los 2 juntos):** aviso «Tus 2 reels del <día> están listos…» (§5), los 2 videos y sus portadas con SendUserFile y con SendUserMessage: para cada uno, día y hora, tema, texto para IG/FB (pregunta-gancho, línea de valor, «mándaselo a…», 3-5 hashtags), título de TikTok y título de YouTube Shorts (máx. 100 caracteres con #Shorts); y la pregunta «¿Los programo así? Responde sí a los dos, o dime cuál cambio». **Nunca programes sin un «sí» explícito de Efrén para esos videos.**
+9. **Programar con Metricool** `createScheduledPost` (uno por reel), en su hueco: blogId `7735731`, date y publicationDate con timezone `America/Mexico_City`. info: autoPublish true, draft false, media [URL del video], `videoThumbnailUrl` [URL de la portada], text aprobado, providers instagram/facebook/tiktok/youtube, instagramData `{"type":"REEL","showReelOnFeed":true}` (sin isAiGenerated: lo eligió Efrén), facebookData `{"type":"REEL","title":…}`, tiktokData `{"title":…,"privacyOption":"PUBLIC_TO_EVERYONE"}`, youtubeData `{"title":…,"type":"short","privacy":"public","madeForKids":false,"category":"SCIENCE_TECHNOLOGY"}`. Si responde VIDEO_THUMBNAIL_NOT_APPLICABLE, repite una vez sin `videoThumbnailUrl` (el cuadro 0 ya es la portada). Si da otro error, no repitas igual: corrige solo si el error dice qué falta. Confirma con `getScheduledPosts` y manda los plannerUrl. Anota los 2 en «Ya programados» de `estrategia.md` y sácalos de la cola.
+10. **¿Se publicó?** `getScheduledPosts` trae también los ya publicados: cada red debe decir `PUBLISHED` con su `publicUrl` (una lista vacía NO prueba nada: puede ser que lo borraron). La tarea de las 6:43 revisa el de las 19:00 del día anterior y la de las 4:35 pm revisa el de las 8:00 de ese día. Si salió: regístralo en `publicados.md` (fecha y hora, tipo diario, tema, gancho, duración, redes y enlaces) y quítalo de «Ya programados». Si no: aviso «No se pudo publicar el reel de las <hora>: <motivo>» con el plannerUrl y el enlace del video.
 
 **Texto del reel:** pregunta-gancho, línea de valor, «Mándaselo a alguien que…» y 3-5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
 
 ## 3b. Videos extra (pedidos por Efrén)
-No alteran el video diario ni reordenan la cola. Mismo pipeline, misma aprobación. Si no da hora, sugiere una al menos 3 h antes o después de las 19:00. Se registran como **extra**. Todos cuentan para las estadísticas.
+No alteran los reels diarios, ni la reserva, ni la cola. Mismo pipeline y misma aprobación. Si no da hora, sugiere una entre las 11:00 y las 16:00 (lejos de las 8:00 y las 19:00). Se registran como **extra** y cuentan para las estadísticas.
 
 ## 4. Monitoreo de las 4 redes
 - Fuente principal: **Metricool** (brandId `7735731`, timezone `America/Mexico_City`). vidIQ ya no se usa en las tareas (no tiene créditos y no hace falta).
@@ -62,16 +66,16 @@ No alteran el video diario ni reordenan la cola. Mismo pipeline, misma aprobaci�
 
 ## 5. Avisos a Efrén (PushNotification de menos de 200 caracteres + SendUserMessage con detalles)
 Video:
-1. «Tu reel de hoy está listo: <tema>. ¿Lo publico a las 7 pm en IG, FB, TikTok y YouTube?»
-2. «No pude terminar el reel de hoy: <motivo>» + qué necesitas de él.
-3. «Ya se publicó tu reel en 4 redes: <tema>» + enlaces.
-4. «No se pudo publicar el reel de las 7 pm: <motivo>» + qué hacer y el video para que él lo suba.
+1. «Tus 2 reels del <día> están listos: <tema 1> y <tema 2>. ¿Los programo a las 8 am y 7 pm?»
+2. «No pude terminar los reels de hoy: <motivo>» + qué necesitas de él (si solo salió uno, mándalo y dilo).
+3. Lo que ya se publicó va dentro del reporte de las 6:43 y del aviso de las 4:35 (sin aviso aparte).
+4. «No se pudo publicar el reel de las <hora>: <motivo>» + qué hacer y el enlace del video para que él lo suba.
 Monitoreo:
 5. «Estrategia de hoy lista: <idea #1>» · «No pude hacer la estrategia de hoy: <motivo>»
 6. «Tu reporte semanal de las 4 redes está listo: <dato principal>» · «No pude hacer el reporte semanal: <motivo>»
 Si un guardado en GitHub falla después de los reintentos, no detengas la tarea: termina lo demás, manda el aviso de error de esa tarea con el texto exacto y pon en el mensaje lo que no se guardó.
 
 ## 6. Créditos y límites
-- **ElevenLabs:** Efrén tiene más de 100 000 créditos (dato suyo, 3-nov-2026); alcanzan de sobra para el reel diario (~900 créditos) y el largo de YouTube cada 15 días (~3 000). Si responde 429 o sin cuota: plan B, voz gratis Chatterbox con el workflow `voz_hq` (crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, guárdalo con `guardar.sh` y espera `inbox/narr_TEMA.mp3`, 15–40 min); plan C, avisar a Efrén.
+- **ElevenLabs:** Efrén tiene más de 100 000 créditos (dato suyo, 3-nov-2026). Gasto: ~900 créditos por reel (2 al día ≈ 55 000 al mes) y ~3 000 por largo de YouTube. La transcripción con Scribe para los tiempos no cuesta créditos. Si responde 429 o sin cuota: plan B, voz gratis Chatterbox con el workflow `voz_hq` (crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, guárdalo con `guardar.sh` y espera `inbox/narr_TEMA.mp3`, 15–40 min); plan C, avisar a Efrén.
 - **Red:** aquí solo hay GitHub y registros de paquetes; todo lo demás se baja con `descargar.sh`.
 - **YouTube largo y skills `yt-*`:** activos con el estilo nuevo (ver `YOUTUBE.md`): largo cada 15 días + 2 Shorts, publicados con Metricool solo en YouTube con aprobación. El monitoreo de YouTube lo hace la tarea de las 4 redes.
