@@ -26,7 +26,7 @@ Las tareas programadas de Claude **solo pueden subir a ramas que empiezan con `c
 
 ## 2. Formato
 - 1080×1920, 24 fps, **61 a 75 s** (TikTok solo paga videos de más de 1 min).
-- **Fondo negro** (destellos blancos de 2-3 s solo como sorpresa). **Voz: Silverio** (ElevenLabs). Detalles en ESTILO.md.
+- **Fondo negro** (destellos blancos de 2-3 s solo como sorpresa). **Voz: Isaac** (ElevenLabs, no Silverio: Efrén no quiere sonar genérico). Detalles en ESTILO.md.
 - Motor: `kit/nuevo/motor2.py`. Plantilla de escenas, montaje y render: `kit/nuevo/demo_estilo.py`. Sonidos: `kit/nuevo/sfx_demo.py`. Música: `kit/musica.py`.
 - **Datos verificados** con fuentes actuales (WebSearch). Fuentes del guion y de las fotos en `guiones/AAAA-MM-DD_tema.txt`.
 - **Regla de YouTube:** nada «genérico, repetitivo o de plantilla»: escenas nuevas y arco propio en cada video.
@@ -36,9 +36,9 @@ Las tareas programadas de Claude **solo pueden subir a ramas que empiezan con `c
 1. **Tema:** la idea #1 de la cola de `estrategia.md` (la actualiza la tarea de monitoreo cada mañana). No repitas un tema de `publicados.md` de los últimos 14 días.
 2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`) con la fórmula de ESTILO.md §7-8: gancho de 3-7 palabras con «tú/tu» y contradicción, prueba en dos casos, zoom de lo grande a lo pequeño, segundo gancho a los 25-30 s (el error), cierre «mándaselo a…» y loop. 12-15 frases, ~950 caracteres. Versión para voz con números en letra; subtítulos con cifras.
 3. **Escenas** (`kit/nuevo/TEMA.py`, copiando `demo_estilo.py`): `preview` de cuadros y hoja de contacto antes del render completo (`python3 TEMA.py render salida.mp4`, ~1 min por cada 10 s).
-4. **Voz:** `creative_generate_speech` con voice_id `lLu7VwiNjffLb7HZ3LFW` (**Silverio**), modelo `eleven_v4`, **generations_count=1**. Puedes usar etiquetas como `[curious]` o `[excited]` en el gancho. Guarda flow_id y session_ids en `jobs/TEMA.json`. Espera con `creative_get_flow_run_status` (20 s entre llamadas) y toma `generations[0].content_url`.
+4. **Voz:** `creative_generate_speech` con voice_id `QmPfzE500cXXHM9uQKGc` (**Isaac**), modelo `eleven_v4`, **generations_count=1**. Puedes usar etiquetas como `[curious]` o `[excited]` en el gancho. Guarda flow_id y session_ids en `jobs/TEMA.json`. Espera con `creative_get_flow_run_status` (20 s entre llamadas) y toma `generations[0].content_url`.
 5. **Bajar la voz:** `bash kit/descargar.sh "<content_url>" narr_TEMA.mp3 /home/claude/narr_TEMA.mp3`.
-6. **Sincronizar y mezclar:** reparte las frases sobre la voz con `kit/autosync.py`; render; efectos (`sfx_demo.py` como base: cada cambio visual con su sonido); música `python3 musica.py DUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (semilla y BPM 90–110 nuevos); mezcla con `./mix_musica.sh VIDEO_SIN_AUDIO VOZ EFECTOS MUSICA SALIDA`.
+6. **Sincronizar y mezclar:** reparte las frases sobre la voz con `kit/autosync.py` (o `silencedetect`, como `kit/nuevo/norte.py`). Si la voz dura menos de 61 s, alarga las pausas entre frases (~0.3 s cada una) como en ese video; render; efectos (`sfx_demo.py` como base: cada cambio visual con su sonido); música `python3 musica.py DUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (semilla y BPM 90–110 nuevos); mezcla con `./mix_musica.sh VIDEO_SIN_AUDIO VOZ EFECTOS MUSICA SALIDA`.
    - **Revisa el final:** audio y video con la misma duración (`ffprobe`) y los últimos 3 s más fuertes que −35 dB (`volumedetect`). Nunca quites el `apad` de las mezclas.
 7. **Alojar:** `bash kit/alojar.sh /home/claude/TEMA_final.mp4` → URL pública.
 8. **Aprobación obligatoria:** aviso «Tu reel de hoy está listo…» (§5), el video con SendUserFile y con SendUserMessage: tema, texto para IG/FB (pregunta-gancho, línea de valor, «mándaselo a…», 3-5 hashtags), título de TikTok, título de YouTube Shorts (máx. 100 caracteres con #Shorts) y la pregunta «¿Lo publico hoy a las 7 pm en Instagram, Facebook, TikTok y YouTube?». **Nunca publiques sin un «sí» explícito de Efrén para ese video exacto.**

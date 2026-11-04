@@ -27,7 +27,7 @@ Datos del 4-nov-2026 (últimos 30 días). Todavía **no hay videos del estilo nu
 3. Segundo gancho a los 25-30 s (el error o el dato que se dispara).
 4. 61-75 s; final en loop; cierre «Mándaselo a…».
 5. Foto real (NASA/Wikimedia libre) cuando el tema exista en el mundo real.
-6. Fondo negro; voz Silverio.
+6. Fondo negro; voz Isaac.
 
 ## Cola de ideas
 1. **«Tembló 7.4… y tu alerta *no sonó.*»** — Cómo decide el SASMEX dónde suena la alerta. Nicho 4 + 1 (celular). Red donde se espera que pegue más: **Facebook** (público mexicano que comparte avisos de seguridad) y TikTok.

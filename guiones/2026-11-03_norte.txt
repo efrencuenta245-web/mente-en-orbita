@@ -1,0 +1,30 @@
+Tema: Tu celular sabe dónde está el norte… sin internet (extra, primer video del estilo nuevo)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4) · flow 5uewov6SVxDBTzjqUDAa · 56.9 s + pausas = 61.5 s
+Escenas: kit/nuevo/norte.py · efectos: kit/nuevo/norte_sfx.py · música: musica.py semilla 4417, 104 BPM
+
+GUION (subtítulos)
+1. Tu celular sabe dónde está el norte… sin internet.
+2. Y no, no usa el GPS.
+3. Adentro tiene un chip más chiquito que una lenteja: un magnetómetro.
+4. Ese chip siente un imán gigante que no ves: la Tierra.
+5. Muy abajo, el hierro líquido del núcleo se mueve y crea un campo magnético que nos envuelve.
+6. Es tan débil, que un imán de refri es como 100 veces más fuerte.
+7. Pero tu celular lo nota: lo mide en 3 direcciones al mismo tiempo, y así sabe hacia dónde apuntas.
+8. Ahora, el truco: acércale un imán… y la brújula se vuelve loca.
+9. Por eso las fundas y soportes con imán la descalibran,
+10. y por eso Google Maps te pide mover el celular como un 8: así el chip se vuelve a ajustar.
+11. La Tierra mide entre 25 y 65 µT, y tu celular lo siente en tu bolsillo.
+12. Mándaselo a alguien que siempre se pierde,
+13. porque su celular… sabe dónde está el norte.
+
+DATOS VERIFICADOS (3-nov-2026)
+- Campo de la Tierra en la superficie: 25 a 65 µT (NOAA/NCEI, World Magnetic Model; British Geological Survey).
+- Imán de refrigerador: ~5 mT = 5 000 µT, unas 100 veces más (valor típico de divulgación; por eso «como» y la etiqueta APROX.).
+- Los celulares usan un magnetómetro de 3 ejes (efecto Hall / magnetorresistivo) para la brújula.
+- Google Maps pide calibrar moviendo el celular en forma de 8 (Ayuda de Google Maps).
+- Imanes, fundas y soportes magnéticos interfieren con la brújula (Apple y Google lo advierten).
+- El campo se genera por el movimiento del hierro líquido del núcleo externo (geodínamo); el dipolo está inclinado ~11°.
+- Lecturas X/Y/Z del gráfico: EJEMPLO ilustrativo (marcado en pantalla).
+
+IMÁGENES
+- Blue Marble, Apollo 17, 1972 — NASA, dominio público (crédito en pantalla).

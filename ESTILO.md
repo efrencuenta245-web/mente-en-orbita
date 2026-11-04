@@ -11,7 +11,7 @@ Prueba aprobable: `kit/nuevo/demo_estilo.py` (12.9 s). Motor: `kit/nuevo/motor2.
 
 ## Decisiones fijas (3-nov-2026)
 - **Fondo negro** en todo el video. El blanco solo como destello o sección sorpresa de 2-3 s a mitad del video.
-- **Voz: Silverio** (ElevenLabs, voice_id `lLu7VwiNjffLb7HZ3LFW`, modelo `eleven_v4`): mexicana, joven, cálida y carismática; es la voz masculina con acento mexicano más usada por creadores en ElevenLabs en el último año. Tono: amigo que te cuenta algo sorprendente, con energía pero sin gritar. Etiquetas útiles: `[curious]` en el gancho, `[excited]` en el dato fuerte, `[whispering]` para un secreto.
+- **Voz: Isaac** (ElevenLabs, voice_id `QmPfzE500cXXHM9uQKGc`, modelo `eleven_v4`; desde el 3-nov-2026): hombre joven, cálido y amigable, habla español con tono cercano. Se cambió Silverio por Isaac a petición de Efrén: Silverio es la voz mexicana más usada en ElevenLabs y hacía sonar al canal como «otra cuenta genérica». Isaac conserva lo mismo (joven, amigable, entretenido, da confianza y curiosidad) y es mucho menos usada que Silverio. Tono: amigo que te cuenta algo sorprendente, con energía pero sin gritar. Etiquetas útiles: `[curious]` en el gancho, `[excited]` en el dato fuerte, `[whispering]` para un secreto.
 - **Nombre:** «Mente en órbita». **Foto de perfil:** `marca/perfil_mente_en_orbita.png` (órbita blanca con brillo y un punto cian sobre negro, sin texto).
 
 ---
