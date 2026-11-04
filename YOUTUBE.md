@@ -17,7 +17,7 @@ Este archivo y las skills `yt-*` son para el **video largo de YouTube y los Shor
 - **1 video largo cada 15 días** (horizontal, 3–6 min, capítulos). Lo produce la tarea del miércoles; se salta la semana si ya hubo uno «quincenal» en los últimos 13 días. Se programa con Metricool para el **jueves a las 17:00** (lejos del reel de las 19:00).
 - **2 Shorts** sacados de cada largo (vertical, 50–70 s), programados el **viernes y el sábado a las 13:00**, solo en YouTube Shorts (Efrén puede pedir que también salgan en otras redes).
 - **Peso:** GitHub no acepta archivos de más de 100 MB, así que el largo se codifica para pesar **≤ 92 MB** (bitrate de video = 92×8/duración − 0.2 Mbps; con grano 0.025 en horizontal comprime mejor).
-- **ElevenLabs:** el plan Starter (30 000 créditos al mes) apenas alcanza para el reel diario (~900 al día). Un largo de 3–4 min gasta ~3 000. Si ElevenLabs responde 429 o sin cuota, se usa el plan B de CLAUDE.md §6 (voz gratis) y se le avisa a Efrén.
+- **ElevenLabs:** Efrén tiene más de 100 000 créditos (3-nov-2026): alcanzan para el reel diario (~900 cada uno) y el largo (~3 000 por uno de 3–4 min), siempre con la voz de Isaac. Solo si ElevenLabs responde 429 o sin cuota se usa el plan B de CLAUDE.md §6 y se le avisa a Efrén.
 
 ## Videos extra (pedidos por Efrén en el chat)
 - No alteran lo programado: el largo quincenal y sus 2 Shorts se hacen igual, y `youtube/semana.md` no se reordena por un extra. Solo si el extra cubre el tema planeado de la semana, ese tema sale del plan y se usa la idea de reserva.
