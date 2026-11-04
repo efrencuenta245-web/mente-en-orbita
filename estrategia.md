@@ -1,5 +1,7 @@
 # Estrategia viral — Mente en órbita
 
+> **Reset del 3-nov-2026:** el formato, los ganchos y los nichos prioritarios ahora están en [`ESTILO.md`](ESTILO.md) (§7). Si una regla de abajo choca con ESTILO.md, gana ESTILO.md. La cola de ideas sigue valiendo, pero cada idea se reescribe con la fórmula de gancho nueva antes de producirla.
+
 La actualiza cada mañana el estratega (tarea de las 8:57). La tarea de producción de las 4:35 pm hace la idea **#1 de la cola**.
 Última actualización: 2026-10-29.
 

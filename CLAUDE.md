@@ -11,26 +11,14 @@ python3 -c "import numpy, PIL, scipy" || pip install --break-system-packages num
 ```
 Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebase`.
 
-## 1. Formato (obligatorio)
-- 1080×1920, 24 fps. Con narración, entre **61 y 68 s** (TikTok solo paga videos de más de 1 min; nunca más de 70 s).
-- **Estructura:**
-  - Gancho (0–3 s): un objeto concreto más un dato que parece imposible.
-  - Escáner de rayos X ("Así se ve por dentro").
-  - Explicación con cambio de escena cada 4–6 s.
-  - Cierre "Mente en órbita" más una pregunta Sí/No o "¿Qué quieres que explique después?".
-- **Visual:**
-  - Entornos reales con objetos 3D y colores reales; el neón solo en efectos.
-  - **Escenario según lo que dice cada escena (pedido de Efrén, 28-oct-2026):** nada de usar el mismo fondo (espacio/estudio azul) en todo el video. Si se habla de una gallina → granja; de un huevo → cocina; de una flor → campo; de la sangre → dentro del cuerpo; del espacio → espacio. Usa `kit/entornos.py` (`EN.env(fr, 'granja')`) y agrega escenarios nuevos cuando el guion lo pida. El fondo azul de "Mente en órbita" solo va en el escáner de rayos X y en temas del espacio.
-  - **3D cuidado:** mallas con suficientes caras (esferas de 30+ segmentos en objetos principales), detalles reales (plumas, bordes, reflejos) y nada de figuras burdas.
-  - Subtítulos palabra por palabra, pastillas HUD y etiquetas honestas ("Recreación", "Escala exagerada").
-- **Sello de marca:**
-  - El anillo escáner de rayos X con su sonido.
-  - Comparaciones a "escala real", el zoom "del bolsillo al espacio" y los contadores en vivo.
-  - Ejemplos mexicanos.
-  - Series fijas: "Lo que no ves", "Duelo", "¿Qué pasaría si…?", "Mito o realidad", "Respuestas".
-- **Anatomía:** estilo de ilustración médica 3D clara (ver `kit/vasec.py`).
-- **Datos:** todos verificados con fuentes actuales (WebSearch). Las fuentes se guardan en `guiones/`.
+## 1. Formato (obligatorio) — RESET DEL 3-NOV-2026
+**El estilo visual, las transiciones, los efectos, el sonido, las fotos reales y los ganchos están en [`ESTILO.md`](ESTILO.md). Ese archivo manda.** El estilo viejo (estudio azul, paleta violeta, anillo escáner, tema `orbita`, `entornos.py`) ya no se usa.
+Las tareas programadas se borraron el 3-nov-2026 por el reset; se rehacen cuando Efrén apruebe el estilo nuevo.
+- 1080×1920, 24 fps. Con narración, entre **61 y 75 s** (TikTok solo paga videos de más de 1 min).
+- Motor nuevo: `kit/nuevo/motor2.py`. Plantilla de escenas, montaje y render: `kit/nuevo/demo_estilo.py`. Efectos de sonido: `kit/nuevo/sfx_demo.py`.
+- **Datos:** todos verificados con fuentes actuales (WebSearch). Las fuentes (y las de las fotos) se guardan en `guiones/`.
 - **Regla de YouTube (16-jul-2026):** nada de contenido "genérico, repetitivo o de plantilla". Cada video lleva escenas nuevas y un arco narrativo propio; no se reutiliza la misma escena con otro texto.
+- Se mantienen: ejemplos mexicanos y las series "Lo que no ves", "Duelo", "¿Qué pasaría si…?", "Mito o realidad", "Respuestas".
 
 ## 2. Qué funciona (Instagram, 27-oct-2026)
 | Reel | Reproducciones | Saltos | % visto | Compartidos | Guardados |
@@ -61,10 +49,10 @@ Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se
 2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`):
    - 11–14 frases y unos 900 caracteres como máximo.
    - Versión para la voz con los números escritos con letra; en los subtítulos (PHR), cifras.
-3. **Escenas** (`/home/claude/TEMA.py`):
-   - Usa como base `popo.py` (paisaje/ciencia) o `vasec.py` (anatomía); los ayudantes 3D están en `vasec.py`.
-   - Define `PHR`, `CUTS`, `ENVS`, `T_OUT`, `DUR`, `NF`, `render(t)`, `W`, `H` y `anim`.
-   - Revisa cuadros con `preview` y `csheet.py` antes de renderizar.
+3. **Escenas** (`kit/nuevo/TEMA.py`):
+   - Copia `kit/nuevo/demo_estilo.py`: cada escena es una función `s_xxx(t, fi)` que arma un `Frame`, dibuja `space()`, objetos con `draw_objects()`, line-art con `line3()`/`dot3()`, y la interfaz en `fr.ui`; `frame_at(t)` hace el montaje con las transiciones de `motor2.py`.
+   - Sigue la estructura y la lista de revisión de `ESTILO.md` (§8 y §9).
+   - Revisa cuadros con `python3 TEMA.py preview 0.0 1.5 …` y una hoja de contacto antes de renderizar (`python3 TEMA.py render salida.mp4`, ~1 min por cada 10 s de video).
 4. **Voz:**
    - `creative_generate_speech` con voice_id `5egO01tkUjEzu7xSSE8M` (Carmelo), modelo `eleven_v4`, **generations_count=1**.
    - Guarda el flow_id y los session_ids en `jobs/TEMA.json`.
