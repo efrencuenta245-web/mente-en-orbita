@@ -29,6 +29,13 @@ Datos del 4-nov-2026 (últimos 30 días). El primer video del estilo nuevo («el
 5. Foto real (NASA/Wikimedia libre) cuando el tema exista en el mundo real.
 6. Fondo negro; voz Isaac.
 
+## Ya programados (no los tomes de la cola)
+Desde el 5-nov-2026 se publican 2 reels al día (8:00 y 19:00) con 4 de reserva (CLAUDE.md §3). Estos los hizo Claude en el chat el 4-nov:
+- jue 5-nov 8:00 — «Tu pila no se acaba. *Se cansa.*» (batería de litio)
+- jue 5-nov 19:00 — «Tu estufa calienta la olla… *pero no tu mano.*» (inducción)
+- vie 6-nov 8:00 — «Tu teclado ya sabe *tu siguiente palabra.*» (texto predictivo)
+- vie 6-nov 19:00 — «Tu refri no hace frío. *Saca el calor.*» (refrigerador)
+
 ## Cola de ideas
 1. **«Tembló 7.4… y tu alerta *no sonó.*»** — Cómo decide el SASMEX dónde suena la alerta. Nicho 4 + 1 (celular). Red donde se espera que pegue más: **Facebook** (público mexicano que comparte avisos de seguridad) y TikTok.
    - **Contradicción:** «la alerta sísmica no se activa por la magnitud del terremoto» (SASMEX): decide por el efecto que calcula en cada ciudad con cobertura.
@@ -38,16 +45,7 @@ Datos del 4-nov-2026 (últimos 30 días). El primer video del estilo nuevo («el
    - **Por qué hoy:** tiembla todos los días (4.3 en Chiapas el 1-nov, 4.0 en Pinotepa el 2-nov, Matías Romero el 3-nov, 4.0 en Chiapas el 4-nov) y «¿por qué no sonó la alerta?» fue noticia en enero, mayo, junio y julio de 2026. Útil y para compartir, justo la variable que más falta.
    - **Cierre:** «Mándaselo a quien dice que la alerta está descompuesta.»
    - **Fuentes:** en.wikipedia.org «Mexican Seismic Alert System» (97 sensores, 60–80 s); ejecentral.com.mx (SASMEX, sismo 7.4 Chiapas, 17-jul-2026); record.com.mx (sismo 5.2 Ometepec, 5-jun-2026, y cómo activar las alertas); nmas.com.mx («Sismo de 5.2 en CDMX: ¿por qué no sonó la alerta?»); infobae.com/mexico (2-ene-2026, configuración del celular según la ATDT; sismos del 1 al 4-nov-2026). Verificar con cires.org.mx antes del guion.
-2. **«Tu pila no se acaba. *Se cansa.*»** — Por qué la batería de litio pierde capacidad. Nicho 1. Red: **TikTok e Instagram** (objeto que todos traen; se guarda y se comparte).
-   - **Contradicción:** la batería no «se gasta»: cada carga la desgasta un poquito y el calor la envejece aunque no la uses.
-   - **Prueba en dos casos:** dos baterías guardadas un año a 25 °C: una al 40 % conserva 96 % de su capacidad; la otra al 100 %, solo 80 %. A 40 °C (el tablero del coche, la cama con el cargador): 85 % contra 65 % (Battery University, BU-808).
-   - **Zoom:** celular → batería → capas de grafito y litio → un ion de litio que entra y sale en cada carga (contador de ciclos).
-   - **Error (segundo gancho):** cargarlo al sol o debajo de la almohada; y vaciarlo al 0 % cada día: descargas completas dan ~300 ciclos; descargas de 40 %, ~1 000 (BU-808, NMC, hasta 70 % de capacidad).
-   - **Por qué hoy:** Expansión (3-nov-2026): los celulares con IA ya son el 46 % del valor del mercado mexicano (Circana), pero la gente compra por la batería: el 93 % la considera importante (GSMA). Útil y para guardar.
-   - **Cierre:** «Mándaselo a quien deja el celular cargando toda la noche.»
 3. **«Tu foto de la superluna *siempre sale chiquita.*»** — Superluna del Castor, 24-nov (14:53 h; sale a las 18:02 en la CDMX), a 360 746 km, ~6.5 % más grande y 13.5 % más brillante (INAOE/Star Walk vía Infobae). Prueba: Luna en el horizonte vs. en lo alto (mismo tamaño: ilusión lunar) y celular 1x vs. 5x; error: el zoom digital la vuelve una mancha. *Por qué:* el espacio es lo que más rinde en FB y YouTube; fecha con búsqueda masiva. Producir del 20 al 24-nov. Nicho 3. Red: Facebook y YouTube.
-4. **«Tu estufa calienta la olla… *pero no tu mano.*»** — Inducción y corrientes de Foucault; prueba: olla de acero vs. comal de barro; error: usar ollas de aluminio. *Por qué:* tema viral en México en octubre. Nicho 2. Red: Facebook.
-5. **«Tu teclado ya sabe *tu siguiente palabra.*»** — Cómo predice el texto un modelo de lenguaje (probabilidades por palabra, contador en vivo). *Por qué:* IA + algo que usas a diario (lo más visto de la referencia) y los celulares con IA ya son casi la mitad del mercado (Expansión, 3-nov). Nicho 1. Red: TikTok/Instagram.
 6. **«Tu estrella fugaz *es un granito de arena.*»** — Leónidas: máximo el 17-nov, mejor la madrugada del 18, hasta 15 meteoros por hora (INAOE); Táuridas el 12-nov. Verificar el tamaño de los meteoroides con NASA. Producir del 14 al 17-nov. Nicho 3. Red: Facebook y YouTube.
 7. **GTA 6 por dentro (no antes del 13-nov; sale el 19-nov):** ángulo de tecnología (cómo tu consola dibuja una ciudad entera). Solo con datos verificados; GTA ya salió el 29-oct.
 8. **«Tu GPS sabe dónde estás… *por un reloj en el espacio.*»** — No antes del 10-nov (GPS y relatividad salieron el 26-oct). Relojes atómicos y relatividad (38 µs al día).
