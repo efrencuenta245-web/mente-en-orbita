@@ -1,5 +1,8 @@
 # YouTube — Mente en órbita (separado de Instagram)
 
+> **EN PAUSA desde el 3-nov-2026 (reset del estilo).** El video largo y las skills `yt-*` usan el estilo viejo. El monitoreo de YouTube lo hace la tarea «Monitoreo y estrategia de las 4 redes» (ver CLAUDE.md §4).
+
+
 Canal: **@menteenorbita-t8b** · channelId `UCHk6ZxeFa204iyNser0ALJg` (conectado a vidIQ).
 Este archivo y las skills `yt-*` son **solo para YouTube**. El flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md y sus tareas de las 8:57 y 4:35 pm) **no se toca** desde aquí.
 

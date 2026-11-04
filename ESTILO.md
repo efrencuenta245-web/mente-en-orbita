@@ -9,6 +9,11 @@ Referencias que dio Efrén:
 
 Prueba aprobable: `kit/nuevo/demo_estilo.py` (12.9 s). Motor: `kit/nuevo/motor2.py`. Sonidos: `kit/nuevo/sfx_demo.py`.
 
+## Decisiones fijas (3-nov-2026)
+- **Fondo negro** en todo el video. El blanco solo como destello o sección sorpresa de 2-3 s a mitad del video.
+- **Voz: Silverio** (ElevenLabs, voice_id `lLu7VwiNjffLb7HZ3LFW`, modelo `eleven_v4`): mexicana, joven, cálida y carismática; es la voz masculina con acento mexicano más usada por creadores en ElevenLabs en el último año. Tono: amigo que te cuenta algo sorprendente, con energía pero sin gritar. Etiquetas útiles: `[curious]` en el gancho, `[excited]` en el dato fuerte, `[whispering]` para un secreto.
+- **Nombre:** «Mente en órbita». **Foto de perfil:** `marca/perfil_mente_en_orbita.png` (órbita blanca con brillo y un punto cian sobre negro, sin texto).
+
 ---
 
 ## 1. Espacio y transiciones (lenguaje de @alyxianews)
@@ -91,6 +96,14 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 4. Noticia de tecnología o ciencia del momento explicada en 1 minuto, siempre conectada con tu vida (tipo «La otra cara de SpaceX», 320 K).
 
 **Por qué funciona el gancho.** Abre un **hueco de curiosidad** (teoría de Loewenstein): muestra que hay algo que no sabes sobre algo que sí conoces, y el cerebro quiere cerrarlo. Los ganchos de la referencia son 2 líneas cortas que **contradicen lo que crees**: «No tapan el ruido. *Lo borran.*», «Tu pantalla *no te siente.*», «Boca abajo. *y no se cae*», «Así piensa *ChatGPT.*».
+
+**Fórmula del guion (de los reels de referencia que se hicieron virales):**
+1. 0–2 s: contradicción sobre algo que tienes («No tapan el ruido. *Lo borran.*» · «¿Por qué el gancho del metro está suelto? No, no está roto»).
+2. 2–8 s: prometes la respuesta y das el primer dato en pantalla.
+3. La prueba: dos casos lado a lado (empujar vs. jalar, con vs. sin), mostrados, no contados.
+4. Zoom: del objeto → a su interior → a la pieza más pequeña (o al revés, a escala planeta).
+5. 20–30 s: el error («si haces esto, lo arruinas») = segundo gancho.
+6. Cierre: «Mándaselo a…» y la última imagen igual a la primera (loop).
 
 **Fórmula del gancho (0–2 s):** objeto que tienes + giro inesperado, en 3 a 7 palabras, con **«tú/tu»**, la imagen más llamativa del video en el primer cuadro y el sonido de golpe. Nada de logo, saludo ni título de canal al inicio.
 

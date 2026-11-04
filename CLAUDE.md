@@ -1,113 +1,72 @@
-# Mente en órbita — fábrica de videos
+# Mente en órbita — fábrica de videos (reset del 3-nov-2026)
 
-Canal de Efrén (México) en Instagram `@mente_en_orbita1` (y YouTube, aún sin conectar a vidIQ).
-Videos educativos verticales 100 % generados con código, en español neutro de México.
+Canal educativo de Efrén (México): Instagram `@mente_en_orbita1`, página de Facebook, TikTok `@mente.en.rbita` y YouTube `@menteenorbita-t8b`.
+Videos verticales hechos 100 % con código, en español de México. Todo se publica con **Metricool** en las 4 redes a la vez.
 Habla con Efrén en español, corto y claro: casi siempre está en el celular.
 
-## 0. Arranque de cada sesión
+**Lo visual, los efectos, el sonido, las fotos reales y los ganchos están en [`ESTILO.md`](ESTILO.md). Ese archivo manda.**
+
+## 0. Arranque de cada sesión (siempre igual)
 ```bash
-cp -r /home/claude/mente-en-orbita/kit/* /home/claude/   # todos los scripts asumen /home/claude
-python3 -c "import numpy, PIL, scipy" || pip install --break-system-packages numpy pillow scipy
+git clone --depth 1 https://github.com/efrencuenta245-web/mente-en-orbita /home/claude/mente-en-orbita   # timeout largo (10 min)
+cp -r /home/claude/mente-en-orbita/kit/* /home/claude/
+python3 -c "import numpy, PIL, scipy" || pip install --break-system-packages -q numpy pillow scipy
+bash /home/claude/mente-en-orbita/kit/prueba_github.sh     # debe imprimir GITHUB_OK
 ```
-Antes de hacer `git push`, haz `git -C /home/claude/mente-en-orbita pull --rebase`.
+Antes de clonar llama `add_repo` (owner `efrencuenta245-web`, repo `mente-en-orbita`, access `push`) y después `register_repo_root`, si esas herramientas existen.
 
-## 1. Formato (obligatorio) — RESET DEL 3-NOV-2026
-**El estilo visual, las transiciones, los efectos, el sonido, las fotos reales y los ganchos están en [`ESTILO.md`](ESTILO.md). Ese archivo manda.** El estilo viejo (estudio azul, paleta violeta, anillo escáner, tema `orbita`, `entornos.py`) ya no se usa.
-Las tareas programadas se borraron el 3-nov-2026 por el reset; se rehacen cuando Efrén apruebe el estilo nuevo.
-- 1080×1920, 24 fps. Con narración, entre **61 y 75 s** (TikTok solo paga videos de más de 1 min).
-- Motor nuevo: `kit/nuevo/motor2.py`. Plantilla de escenas, montaje y render: `kit/nuevo/demo_estilo.py`. Efectos de sonido: `kit/nuevo/sfx_demo.py`.
-- **Datos:** todos verificados con fuentes actuales (WebSearch). Las fuentes (y las de las fotos) se guardan en `guiones/`.
-- **Regla de YouTube (16-jul-2026):** nada de contenido "genérico, repetitivo o de plantilla". Cada video lleva escenas nuevas y un arco narrativo propio; no se reutiliza la misma escena con otro texto.
-- Se mantienen: ejemplos mexicanos y las series "Lo que no ves", "Duelo", "¿Qué pasaría si…?", "Mito o realidad", "Respuestas".
+## 1. Regla de oro de GitHub (para que no vuelva el error 403)
+Las tareas programadas de Claude **solo pueden subir a ramas que empiezan con `claude/`**. Por eso:
+- **Nunca** hagas `git push` a `main` ni a ramas `pub-*`.
+- **Guardar archivos:** `TAREA=<nombre> bash kit/guardar.sh "mensaje" ruta1 ruta2 …` (desde la raíz del repo). Sube una rama `claude/guardar-…`; el workflow `sync` la pasa a `main` en ~15-60 s y el script espera a confirmarlo.
+  - Código 0 = guardado. 4 = GitHub rechazó el permiso. 5 = la rama subió pero `sync` no la pasó (los datos siguen a salvo en esa rama).
+- **Descargar algo bloqueado aquí** (voz de ElevenLabs, fotos de NASA/Wikimedia): `bash kit/descargar.sh "URL" nombre_unico.ext [destino]`. Hazlo en cuanto tengas la URL (las de ElevenLabs caducan en ~2 h).
+- **Alojar el video para Metricool:** `bash kit/alojar.sh /ruta/video.mp4` → la última línea trae `URL https://raw.githubusercontent.com/…/<sha>/<archivo>.mp4`.
+- Si `prueba_github.sh` falla: manda el aviso de error correspondiente (§5) con el texto que imprime, y sigue con todo lo que no necesite GitHub.
 
-## 2. Qué funciona (Instagram, 27-oct-2026)
-| Reel | Reproducciones | Saltos | % visto | Compartidos | Guardados |
-|---|---|---|---|---|---|
-| Varg (moto eléctrica vs gasolina) | 2296 | 29 % | 48 % | 4 | 4 |
-| Láseres entre satélites | 1990 | 28 % | 53 % | 5 | 12 |
-| Satélites que no chocan | 1872 | 33 % | 50 % | 1 | 10 |
-| Relatividad / GPS del tiempo | 1712 | 36 % | 55 % | 2 | 5 |
-| Cancelación de ruido | 1671 | 35 % | 35 % | 9 | 13 |
-| Fibra óptica | 1583 | 31 % | 45 % | 41 | 15 |
-| GPS | 250 | 33 % | 34 % | 1 | 1 |
-| Carga inalámbrica | 48 | 63 % | 54 % | 1 | 0 |
+## 2. Formato
+- 1080×1920, 24 fps, **61 a 75 s** (TikTok solo paga videos de más de 1 min).
+- **Fondo negro** (destellos blancos de 2-3 s solo como sorpresa). **Voz: Silverio** (ElevenLabs). Detalles en ESTILO.md.
+- Motor: `kit/nuevo/motor2.py`. Plantilla de escenas, montaje y render: `kit/nuevo/demo_estilo.py`. Sonidos: `kit/nuevo/sfx_demo.py`. Música: `kit/musica.py`.
+- **Datos verificados** con fuentes actuales (WebSearch). Fuentes del guion y de las fotos en `guiones/AAAA-MM-DD_tema.txt`.
+- **Regla de YouTube:** nada «genérico, repetitivo o de plantilla»: escenas nuevas y arco propio en cada video.
+- Se mantienen ejemplos mexicanos y las series «Lo que no ves», «Duelo», «¿Qué pasaría si…?», «Mito o realidad», «Respuestas».
 
-**Conclusión:**
-- Ganan los ganchos de objeto concreto con un dato imposible y acción inmediata.
-- El espacio retiene más.
-- La tecnología de todos los días se comparte más.
-- La hora de publicación pesa menos que el gancho. Publicamos a las **19:00 (CDMX)** y se ajusta con los datos.
+## 3. Pipeline del video diario
+1. **Tema:** la idea #1 de la cola de `estrategia.md` (la actualiza la tarea de monitoreo cada mañana). No repitas un tema de `publicados.md` de los últimos 14 días.
+2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`) con la fórmula de ESTILO.md §7-8: gancho de 3-7 palabras con «tú/tu» y contradicción, prueba en dos casos, zoom de lo grande a lo pequeño, segundo gancho a los 25-30 s (el error), cierre «mándaselo a…» y loop. 12-15 frases, ~950 caracteres. Versión para voz con números en letra; subtítulos con cifras.
+3. **Escenas** (`kit/nuevo/TEMA.py`, copiando `demo_estilo.py`): `preview` de cuadros y hoja de contacto antes del render completo (`python3 TEMA.py render salida.mp4`, ~1 min por cada 10 s).
+4. **Voz:** `creative_generate_speech` con voice_id `lLu7VwiNjffLb7HZ3LFW` (**Silverio**), modelo `eleven_v4`, **generations_count=1**. Puedes usar etiquetas como `[curious]` o `[excited]` en el gancho. Guarda flow_id y session_ids en `jobs/TEMA.json`. Espera con `creative_get_flow_run_status` (20 s entre llamadas) y toma `generations[0].content_url`.
+5. **Bajar la voz:** `bash kit/descargar.sh "<content_url>" narr_TEMA.mp3 /home/claude/narr_TEMA.mp3`.
+6. **Sincronizar y mezclar:** reparte las frases sobre la voz con `kit/autosync.py`; render; efectos (`sfx_demo.py` como base: cada cambio visual con su sonido); música `python3 musica.py DUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (semilla y BPM 90–110 nuevos); mezcla con `./mix_musica.sh VIDEO_SIN_AUDIO VOZ EFECTOS MUSICA SALIDA`.
+   - **Revisa el final:** audio y video con la misma duración (`ffprobe`) y los últimos 3 s más fuertes que −35 dB (`volumedetect`). Nunca quites el `apad` de las mezclas.
+7. **Alojar:** `bash kit/alojar.sh /home/claude/TEMA_final.mp4` → URL pública.
+8. **Aprobación obligatoria:** aviso «Tu reel de hoy está listo…» (§5), el video con SendUserFile y con SendUserMessage: tema, texto para IG/FB (pregunta-gancho, línea de valor, «mándaselo a…», 3-5 hashtags), título de TikTok, título de YouTube Shorts (máx. 100 caracteres con #Shorts) y la pregunta «¿Lo publico hoy a las 7 pm en Instagram, Facebook, TikTok y YouTube?». **Nunca publiques sin un «sí» explícito de Efrén para ese video exacto.**
+9. **Publicar con Metricool** `createScheduledPost`: blogId `7735731`, hoy 19:00 `America/Mexico_City` (si ya pasó, 15 min a partir del «sí»). info: autoPublish true, draft false, media [URL], text aprobado, providers instagram/facebook/tiktok/youtube, instagramData `{"type":"REEL","showReelOnFeed":true}` (sin isAiGenerated: lo eligió Efrén), facebookData `{"type":"REEL","title":…}`, tiktokData `{"title":…,"privacyOption":"PUBLIC_TO_EVERYONE"}`, youtubeData `{"title":…,"type":"short","privacy":"public","madeForKids":false,"category":"SCIENCE_TECHNOLOGY"}`. Si da error, no repitas igual: corrige solo si el error dice qué falta. Confirma con `getScheduledPosts` y manda el plannerUrl.
+10. **Revisión 20 min después de publicar** (`send_later` en la misma sesión): `getScheduledPosts` debe mostrar que ya no está pendiente; aviso «Ya se publicó…» o «No se pudo publicar…» (§5). Registra en `publicados.md` (fecha, tipo diario/extra, tema, gancho, duración, redes, enlaces) y guarda con `guardar.sh`.
 
-## 2b. Estrategia viral
-Lee **`estrategia.md`** antes de elegir el tema. Ahí están los patrones que se están haciendo virales, las reglas nuevas (gancho en segunda persona, música de fondo, 61–68 s para TikTok, final en loop) y la cola de ideas ordenada. Produce la idea #1 salvo que los datos del día digan claramente otra cosa.
-
-## 3. Pipeline diario
-1. **Tema.**
-   - Revisa `vidiq_instagram_owner_insights` (platformAccountId `39432107649769379`) y `vidiq_instagram_tiktok_outlier_search`, más `ideas.md`.
-   - No repitas un tema de `publicados.md` de los últimos 14 días.
-   - Si un reel reciente falló, cambia la variable que falló (gancho, tema o ritmo).
-2. **Guion** (`guiones/AAAA-MM-DD_tema.txt`):
-   - 11–14 frases y unos 900 caracteres como máximo.
-   - Versión para la voz con los números escritos con letra; en los subtítulos (PHR), cifras.
-3. **Escenas** (`kit/nuevo/TEMA.py`):
-   - Copia `kit/nuevo/demo_estilo.py`: cada escena es una función `s_xxx(t, fi)` que arma un `Frame`, dibuja `space()`, objetos con `draw_objects()`, line-art con `line3()`/`dot3()`, y la interfaz en `fr.ui`; `frame_at(t)` hace el montaje con las transiciones de `motor2.py`.
-   - Sigue la estructura y la lista de revisión de `ESTILO.md` (§8 y §9).
-   - Revisa cuadros con `python3 TEMA.py preview 0.0 1.5 …` y una hoja de contacto antes de renderizar (`python3 TEMA.py render salida.mp4`, ~1 min por cada 10 s de video).
-4. **Voz:**
-   - `creative_generate_speech` con voice_id `5egO01tkUjEzu7xSSE8M` (Carmelo), modelo `eleven_v4`, **generations_count=1**.
-   - Guarda el flow_id y los session_ids en `jobs/TEMA.json`.
-   - Haz poll de `creative_get_flow_run_status` (espera ~20 s entre llamadas para no provocar un 429) hasta `all_completed`; la URL está en `generations[0].content_url` (firmada, caduca en 2 h).
-   - Plan de Efrén: ElevenLabs Starter (30 000 créditos al mes, uso comercial). Una toma ≈ 875 créditos.
-5. **Bajar la voz** (aquí ElevenLabs y storage.googleapis.com están bloqueados):
-   - Escribe la URL en `jobs/narr_TEMA.mp3.url`, haz commit y push a `main`.
-   - El workflow `fetch` la deja en `inbox/narr_TEMA.mp3` en 1–2 min.
-   - Haz `git pull` y copia el archivo a `/home/claude/narr_TEMA.mp3`. Hazlo enseguida: las URL firmadas caducan.
-6. **Sincronizar y mezclar:**
-   - Crea `TEMA_sync.py` copiando `popo_sync.py` (usa `autosync.py`, que reparte la voz entre frases sin mapa manual).
-   - `python3 TEMA_sync.py map` → revisa que cada frase empiece en su tramo.
-   - `python3 TEMA_sync.py voz` → voz editada (si pasa de 70 s, sube `TEMPO` hasta 1.04 o baja las pausas).
-   - `./render_varg.sh TEMA_sync`, luego `python3 sfx_TEMA.py` (el script detecta `TEMA_sync`).
-   - Música: `python3 musica.py NEWDUR musica_TEMA.wav SEMILLA BPM FIN_VOZ` (FIN_VOZ = segundo en que termina la voz editada; cambia la semilla y el BPM, 90–110, en cada video). Al terminar la voz, la música sube para que el final nunca quede en silencio.
-   - Mezcla: `./mix_musica.sh TEMA_sync_sin_audio.mp4 narr_TEMA_editada.wav efectos_TEMA_sync.wav musica_TEMA.wav /mnt/user-data/outputs/TEMA_con_narracion.mp4`.
-   - Revisa la hoja de contacto (`check_popo.sh VIDEO`) y los niveles de audio.
-   - **Revisa el final del audio:** `ffprobe -show_entries stream=codec_type,duration` debe dar la misma duración para audio y video, y los últimos 3 s no pueden estar en silencio (más fuerte que −35 dB con `volumedetect`). Antes, `loudnorm` cortaba ~3 s del final; por eso las mezclas llevan `apad` antes de `loudnorm`. Nunca quites ese `apad`.
-7. **Alojar:**
-   - Crea una rama huérfana `pub-AAAAMMDD-tema` que solo tenga el mp4 y haz push.
-   - Pasa la URL `https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/<sha>/<archivo>.mp4` a `vidiq_video_upload` → `videoUrl` y `uploadId`.
-   - El workflow `limpieza` borra las ramas `pub-*` después de 1 día. Desde la sesión no se pueden borrar ramas ni crear releases.
-8. **Aprobación (obligatoria):**
-   - Manda a Efrén el video (SendUserFile), el texto propuesto y la hora, con PushNotification.
-   - Incluye también un título y una descripción cortos para que él lo suba a **TikTok** y **YouTube Shorts** desde el celular.
-   - **Nunca publiques sin un "sí" explícito suyo para ese video exacto.**
-   - Ajustes fijos: Reel normal (sin Trial) y sin etiqueta de IA (omitir `isAiGenerated`; lo eligió Efrén).
-9. **Publicar a las 19:00 CDMX:**
-   - Si aprueba antes, programa `send_later` para esa hora en la misma sesión. Si ya pasó la hora, publica en cuanto apruebe.
-   - `vidiq_instagram_publish_reel` con platformAccountId `39432107649769379`, `videoUrl` y `caption`. Si la URL caducó, renuévala con `vidiq_video_upload uploadId=…`.
-   - Continúa con `containerId`/`mcpJobId` hasta `PUBLISHED`.
-   - **Si la publicación falla** (error, permiso, video rechazado): manda en ese momento un **PushNotification** ("No se pudo publicar el reel de las 7 pm: <motivo>. <qué hacer>") y un SendUserMessage con el motivo, qué hacer y el video para que él lo suba si hace falta. No reintentes en automático. Antes de publicar, `vidiq_instagram_connected_accounts` debe decir `publishingAvailable: true`; si dice false, pídele reconectar Instagram en app.vidiq.com aceptando el permiso de publicar.
-10. **Registrar** en `publicados.md`: fecha, tipo (diario o extra), tema, gancho, duración y permalink. Haz commit y push.
-
-**Texto del reel:** una pregunta-gancho, una línea de valor, la invitación ("Guárdalo y compártelo con alguien que…") y de 3 a 5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
+**Texto del reel:** pregunta-gancho, línea de valor, «Mándaselo a alguien que…» y 3-5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
 
 ## 3b. Videos extra (pedidos por Efrén)
-Efrén a veces pide en el chat videos fuera de lo programado, por ejemplo para contestar un comentario o probar una idea suya.
-- **No alteran lo programado.** El video diario de las 4:35 pm se hace igual, y la cola de `estrategia.md` no se reordena por un extra. Solo si el extra cubre la idea #1, esa idea sale de la cola.
-- **Mismo pipeline y misma calidad** (pasos 1–8), con la misma aprobación obligatoria.
-- **Hora:** se publica cuando Efrén lo apruebe. Si no da hora, sugiere una que quede al menos 3 h antes o después del reel diario de las 19:00 (por ejemplo 13:00 o 15:00), para que no compitan entre sí.
-- Se registra en `publicados.md` con tipo **extra**. Los reels que Efrén sube por su cuenta no se anotan; todo reel de la cuenta que no esté en `publicados.md` es suyo.
-- **Todos cuentan para las estadísticas** (diarios, extra y los suyos): el estratega los analiza igual y aprende de ellos.
+No alteran el video diario ni reordenan la cola. Mismo pipeline, misma aprobación. Si no da hora, sugiere una al menos 3 h antes o después de las 19:00. Se registran como **extra**. Todos cuentan para las estadísticas.
 
-## 3c. Avisos a Efrén (siempre por notificación push + mensaje)
-Efrén pidió que le llegue un aviso a su barra de notificaciones en cada uno de estos momentos, para todos los reels (diarios y extra):
-1. **Reel terminado:** "Tu reel de hoy está listo: <tema>. ¿Lo publico a las 7 pm?" (con el video y el texto en el chat).
-2. **No se pudo hacer el reel:** "No pude terminar el reel de hoy: <motivo>", más qué necesitas de él.
-3. **Reel publicado:** "Ya se publicó tu reel: <tema>", con el enlace.
-4. **No se pudo publicar:** "No se pudo publicar el reel de las 7 pm: <motivo>", más qué hacer y el video para que él lo suba.
-Usa `PushNotification` (mensaje de menos de 200 caracteres) y además `SendUserMessage` con los detalles.
+## 4. Monitoreo de las 4 redes
+- Fuente principal: **Metricool** (brandId `7735731`, timezone `America/Mexico_City`). vidIQ ya no se usa en las tareas (no tiene créditos y no hace falta).
+- Datos acumulados: `stats/redes.csv` (fecha,red,tema,url,vistas,retencion,tiempo_medio,compartidos,guardados,likes,clasificacion) y `stats/seguidores.csv` (fecha,red,seguidores).
+- Metas: TikTok Recompensas (10 000 seguidores y 100 000 vistas en 30 días, videos de más de 1 min) y YouTube (1 000 suscriptores + 10 M de vistas de Shorts públicas en 90 días; sube a 20 M para quien entre desde el 1-feb-2027). Solo cuentan las vistas de videos **públicos**.
 
-## 4. Créditos y límites
-- **ElevenLabs:** unos 900 créditos por video. Si responde 429 o falta cuota, avísale a Efrén.
-  - Plan B automático: voz gratis Chatterbox (MIT) con el workflow `voz_hq`. Crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, haz push y espera `inbox/narr_TEMA.mp3` (en CPU tarda 15–40 min).
-  - Plan C: Efrén descarga el mp3 desde ElevenLabs y lo manda al chat.
-- **vidIQ:** 150 créditos renovables al mes. `vidiq_video_upload` y `vidiq_instagram_publish_reel` cuestan 0. No uses `vidiq_compose` ni `vidiq_voiceover_generate` (gastan créditos).
-- **Red:** solo GitHub y registros de paquetes. Para cualquier descarga externa usa el workflow `fetch`.
+## 5. Avisos a Efrén (PushNotification de menos de 200 caracteres + SendUserMessage con detalles)
+Video:
+1. «Tu reel de hoy está listo: <tema>. ¿Lo publico a las 7 pm en IG, FB, TikTok y YouTube?»
+2. «No pude terminar el reel de hoy: <motivo>» + qué necesitas de él.
+3. «Ya se publicó tu reel en 4 redes: <tema>» + enlaces.
+4. «No se pudo publicar el reel de las 7 pm: <motivo>» + qué hacer y el video para que él lo suba.
+Monitoreo:
+5. «Estrategia de hoy lista: <idea #1>» · «No pude hacer la estrategia de hoy: <motivo>»
+6. «Tu reporte semanal de las 4 redes está listo: <dato principal>» · «No pude hacer el reporte semanal: <motivo>»
+Si un guardado en GitHub falla después de los reintentos, no detengas la tarea: termina lo demás, manda el aviso de error de esa tarea con el texto exacto y pon en el mensaje lo que no se guardó.
+
+## 6. Créditos y límites
+- **ElevenLabs** (plan Starter, 30 000 créditos al mes): unos 1 000 créditos por video. Si responde 429 o sin cuota: plan B, voz gratis Chatterbox con el workflow `voz_hq` (crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, guárdalo con `guardar.sh` y espera `inbox/narr_TEMA.mp3`, 15–40 min); plan C, avisar a Efrén.
+- **Red:** aquí solo hay GitHub y registros de paquetes; todo lo demás se baja con `descargar.sh`.
+- **YouTube largo y skills `yt-*`:** en pausa desde el reset (usan el estilo viejo). El monitoreo de YouTube lo hace la tarea de las 4 redes.
