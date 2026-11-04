@@ -1,0 +1,33 @@
+Reels hechos en el chat el 4-nov-2026 para arrancar los 2 reels al día (reserva de jueves y viernes). Voz Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4), tiempos con Scribe.
+Código: kit/nuevo/bateria.py, induccion.py, teclado.py, refri.py (con montaje.py y piezas.py).
+
+=== JUE 5-nov 8:00 · «Tu pila no se acaba… se cansa.» (bateria.py · flow eTsdEZ3yf409M1viF3c7)
+Datos:
+- Li-ion guardada 1 año: a 25 °C conserva 96 % (al 40 % de carga) contra 80 % (al 100 %); a 40 °C, 85 % contra 65 %.
+  Fuente: Battery University BU-702/BU-808 (tabla de Cadex): https://batteryuniversity.com/article/bu-808-how-to-prolong-lithium-based-batteries
+  y https://www.cadex.com/blog/post/storing-batteries-how-to-handle-them-correctly
+- Iones de litio entran al grafito al cargar y regresan al usarla; en cada ciclo una parte queda atrapada (simplificación de la pérdida de litio).
+Texto IG/FB: ¿Por qué tu celular dura menos que cuando lo compraste? 🔋 La pila de litio no "se gasta": se cansa con cada carga, y el calor la cansa más. Guardada un año llena pierde 20 %; a 40 °C, hasta 35 %. Mándaselo a quien deja el celular cargando debajo de la almohada. #curiosidades #ciencia #mexico #menteenorbita #tecnologia
+
+=== JUE 5-nov 19:00 · «Tu estufa calienta la olla… sin calentarse ella.» (induccion.py · flow Jbq0vgz7so6rvJr8LhvX)
+Datos:
+- Bobina de cobre con corriente alterna de ~25–50 kHz; corrientes de Foucault calientan ollas magnéticas; el vidrio cerámico conduce mal el calor.
+  Fuentes: https://en.wikipedia.org/wiki/Induction_cooking ; EPRI https://restservice.epri.com/publicdownload/000000003002029015/0/Product
+- Eficiencia de transferencia: 84 % inducción (DOE) contra ~40 % del gas (Wikipedia, citando DOE). Se dice «como el» (aprox.).
+- Ollas de aluminio, cobre o barro no funcionan en la inducción común; prueba del imán.
+Texto IG/FB: ¿Por qué la estufa de inducción calienta la olla pero no el vidrio? 🍳 Un campo magnético que cambia miles de veces por segundo mueve corrientes dentro del metal. Con aluminio o tu comal de barro… no pasa nada. Mándaselo a quien cree que es una parrilla eléctrica. #curiosidades #ciencia #mexico #menteenorbita #cocina
+
+=== VIE 6-nov 8:00 · «Tu teclado ya sabe tu siguiente palabra.» (teclado.py · flow fKTlMGn7ebsqc3m4PIUP)
+Datos:
+- Gboard predice la siguiente palabra con un modelo de lenguaje; en 2018 el modelo pesaba 1.4 MB (Hard et al., arXiv 1811.03604: https://arxiv.org/abs/1811.03604).
+- Aprendizaje federado: el celular entrena con lo que escribes y solo manda ajustes del modelo (Xu et al., Google, 2023: https://arxiv.org/abs/2305.18465).
+- Las probabilidades de la gráfica (62/21/9/3 %) son EJEMPLO ilustrativo (marcado en pantalla).
+Texto IG/FB: ¿Tu teclado te lee la mente? ⌨️ No: calcula qué palabra es más probable, y aprende cómo escribes tú sin mandar tus mensajes. Se llama aprendizaje federado. Mándaselo a quien cree que su celular lo espía. #curiosidades #ciencia #mexico #menteenorbita #inteligenciaartificial
+
+=== VIE 6-nov 19:00 · «Tu refri no hace frío… saca el calor.» (refri.py · flow 3XWvIGWqxMp5FB5uZzAL)
+Datos:
+- El refrigerante absorbe calor al evaporarse en los tubos de adentro y lo suelta en el condensador (atrás o abajo): por eso atrás está caliente.
+  Fuentes: https://www.mrappliance.com/blog/how-does-a-refrigerator-work-/ ; https://fridge.com/blogs/news/how-does-a-refrigerator-work
+- FDA/USDA: refri a 4 °C (40 °F) o menos y congelador a −18 °C (0 °F).
+- Puerta abierta: el refri saca calor de adentro, lo tira a la cocina y le suma el de su motor → la cocina se calienta (primera ley de la termodinámica).
+Texto IG/FB: ¿Abrir el refri enfría tu cocina? 🧊 Al revés: el refri no fabrica frío, saca el calor de tu comida y lo tira por atrás… más el calor de su motor. Mándaselo a quien abre el refri para echarse aire. #curiosidades #ciencia #mexico #menteenorbita #hogar

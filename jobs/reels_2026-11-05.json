@@ -1,0 +1,4 @@
+{"bateria": {"flow_id": "eTsdEZ3yf409M1viF3c7", "voz_node": "c9AQ7LxWq1uEOhBQujSu", "session": "HWqRVGmCA9pwfWZg34o9", "slot": "2026-11-05T08:00"},
+ "induccion": {"flow_id": "Jbq0vgz7so6rvJr8LhvX", "voz_node": "xDro7Dk2HGH51XNKG6kY", "session": "FhiOabh2kEjCw0hLLxzg", "slot": "2026-11-05T19:00"},
+ "teclado": {"flow_id": "fKTlMGn7ebsqc3m4PIUP", "voz_node": "hngICmQqnstVvODpThdc", "session": "prHbYJdBfJNVinQVKEVb", "slot": "2026-11-06T08:00"},
+ "refri": {"flow_id": "3XWvIGWqxMp5FB5uZzAL", "voz_node": "Qnu2V0bLrk59Kdzznji6", "session": "I2RDIWmmU2BepsTxo6wx", "slot": "2026-11-06T19:00"}}
