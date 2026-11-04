@@ -52,6 +52,8 @@ No alteran el video diario ni reordenan la cola. Mismo pipeline, misma aprobaci�
 
 ## 4. Monitoreo de las 4 redes
 - Fuente principal: **Metricool** (brandId `7735731`, timezone `America/Mexico_City`). vidIQ ya no se usa en las tareas (no tiene créditos y no hace falta).
+- Seguidores: Instagram `IGEV01`, TikTok `TKEV07` (conector evolution de cada red); Facebook y YouTube con getAnalyticsAvailableMetrics.
+- **Si Instagram o TikTok vienen en 0 o vacíos (incluso los seguidores)**, no es falta de videos: Metricool perdió el permiso de estadísticas de esa red. En la «acción para Efrén» pídele: Metricool → Conexiones → desconectar esa red, quitar el acceso de Metricool en la app de esa red y volver a conectarla con el mismo método, aceptando todos los permisos.
 - Datos acumulados: `stats/redes.csv` (fecha,red,tema,url,vistas,retencion,tiempo_medio,compartidos,guardados,likes,clasificacion) y `stats/seguidores.csv` (fecha,red,seguidores).
 - Metas: TikTok Recompensas (10 000 seguidores y 100 000 vistas en 30 días, videos de más de 1 min) y YouTube (1 000 suscriptores + 10 M de vistas de Shorts públicas en 90 días; sube a 20 M para quien entre desde el 1-feb-2027). Solo cuentan las vistas de videos **públicos**.
 
