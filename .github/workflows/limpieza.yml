@@ -2,6 +2,7 @@ name: limpieza
 on:
   schedule:
     - cron: '17 9 * * *'
+  workflow_dispatch:
   push:
     branches: [main]
     paths: ['jobs/limpiar*']
@@ -14,12 +15,29 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Borrar ramas temporales de videos ya publicados (pub-*) con más de 1 día
+      - name: Borrar ramas temporales viejas
         run: |
           now=$(date +%s)
-          for b in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | grep '^origin/pub-' | sed 's#^origin/##'); do
+          for b in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | sed 's#^origin/##'); do
             t=$(git log -1 --format=%ct "origin/$b")
-            if [ $((now - t)) -gt 86400 ] || [ -f jobs/limpiar-ya ]; then
-              git push origin --delete "$b" && echo "borrada $b"
-            fi
+            age=$((now - t))
+            case "$b" in
+              pub-*|claude/pub-*) lim=172800 ;;     # videos alojados: 2 días (Metricool ya los copió)
+              claude/ping-*) lim=600 ;;             # pruebas de permiso
+              claude/guardar-*) lim=259200 ;;       # guardados que sync no pudo pasar: 3 días para revisarlos
+              *) continue ;;
+            esac
+            if [ $age -gt $lim ] || [ -f jobs/limpiar-ya ]; then git push origin --delete "$b" && echo "borrada $b"; fi
           done
+      - name: Vaciar inbox de archivos de más de 14 días
+        run: |
+          git config user.name "mente-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          now=$(date +%s)
+          for f in inbox/*; do
+            [ -f "$f" ] || continue
+            t=$(git log -1 --format=%ct -- "$f")
+            [ -n "$t" ] && [ $((now - t)) -gt 1209600 ] && git rm -q -- "$f" && echo "borrado $f"
+          done
+          git commit -qm "limpieza: inbox de más de 14 días" || exit 0
+          git pull --rebase -q && git push -q

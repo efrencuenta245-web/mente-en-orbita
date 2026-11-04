@@ -17,7 +17,7 @@ M3 = M.M3
 
 DUR = 12.9
 NF = int(round(DUR * FPS))
-PHOTO = Image.open(os.path.join(HERE, '..', '..', 'inbox', 'img_bluemarble.jpg')).convert('RGB')
+PHOTO = Image.open(os.path.join(HERE, 'img', 'img_bluemarble.jpg')).convert('RGB')
 
 # ------------------------------------------------------------------ el celular (semirrealista)
 PH_Y = 0.95

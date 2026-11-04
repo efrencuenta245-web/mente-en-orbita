@@ -1,0 +1,82 @@
+name: sync
+# Las tareas programadas de Claude solo pueden subir a ramas claude/… (regla de seguridad de Claude Code).
+# Este workflow pasa esos cambios a main, descarga lo pedido en jobs/*.url y borra la rama.
+# Las ramas claude/pub-… (videos alojados) y claude/ping-… (pruebas de permiso) NO se tocan aquí.
+on:
+  push:
+    branches:
+      - 'claude/**'
+      - '!claude/pub-**'
+      - '!claude/ping-**'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 50
+      - name: Pasar la rama claude/ a main
+        env:
+          BR: ${{ github.ref_name }}
+        run: |
+          git config user.name "mente-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q --depth=50 origin "$BR"
+          BASE=$(git rev-parse HEAD)
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          if git merge -q --no-edit -X theirs "origin/$BR" -m "sync: $BR"; then
+            echo "fusionado"
+          else
+            git merge --abort 2>/dev/null || true
+            echo "respaldo: copio los archivos del último commit de $BR"
+            git diff --name-status "origin/$BR~1" "origin/$BR" | while read -r st f g; do
+              case "$st" in
+                D) git rm -q --ignore-unmatch -- "$f" ;;
+                R*) git rm -q --ignore-unmatch -- "$f"; git checkout "origin/$BR" -- "$g" ;;
+                *) git checkout "origin/$BR" -- "$f" ;;
+              esac
+            done
+            git commit -qm "sync: $BR (copia)" || true
+          fi
+      - name: Descargar archivos pedidos (jobs/*.url)
+        run: |
+          mkdir -p inbox
+          for f in jobs/*.url; do
+            [ -e "$f" ] || continue
+            n=$(basename "$f" .url)
+            [ -f "inbox/$n" ] && continue
+            [ -f "inbox/$n.error" ] && continue
+            if curl -fsSL --retry 3 --max-time 300 -A "MenteEnOrbitaBot/1.0 (https://github.com/efrencuenta245-web/mente-en-orbita)" -o "inbox/$n" "$(head -n1 "$f")"; then
+              echo "ok $n"
+            else
+              rm -f "inbox/$n"; echo "fallo la descarga de $(head -n1 "$f")" > "inbox/$n.error"
+            fi
+          done
+          git add inbox
+          git commit -qm "inbox: descargas" || true
+      - name: Subir a main y borrar la rama
+        env:
+          BR: ${{ github.ref_name }}
+        run: |
+          ok=0
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then ok=1; break; fi
+            sleep $((i * 4))
+            git fetch -q --depth=50 origin main && git rebase -q -X theirs origin/main || { git rebase --abort; git merge -q --no-edit -X ours origin/main; }
+          done
+          [ $ok = 1 ] || { echo "no pude subir a main"; exit 1; }
+          git push -q origin --delete "$BR" || true
+      - name: Lanzar voces gratis si se pidieron
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CH=$(git diff --name-only "$BASE" HEAD)
+          echo "$CH" | grep -q '^tts_hq/' && gh workflow run voz_hq.yml --ref main || true
+          echo "$CH" | grep -q '^tts/' && gh workflow run tts.yml --ref main || true

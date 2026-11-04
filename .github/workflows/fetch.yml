@@ -20,7 +20,7 @@ jobs:
             [ -e "$f" ] || continue
             n=$(basename "$f" .url)
             [ -f "inbox/$n" ] && continue
-            curl -fsSL --retry 3 -o "inbox/$n" "$(head -n1 "$f")" && echo "ok $n" || echo "fallo $n" > "inbox/$n.error"
+            curl -fsSL --retry 3 -A "MenteEnOrbitaBot/1.0 (https://github.com/efrencuenta245-web/mente-en-orbita)" -o "inbox/$n" "$(head -n1 "$f")" && echo "ok $n" || echo "fallo $n" > "inbox/$n.error"
           done
       - name: Guardar en el repo
         run: |

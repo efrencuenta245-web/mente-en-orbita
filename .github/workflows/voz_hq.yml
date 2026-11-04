@@ -1,5 +1,6 @@
 name: voz_hq
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths: ['tts_hq/**']
