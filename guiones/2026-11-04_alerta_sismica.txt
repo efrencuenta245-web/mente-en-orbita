@@ -1,7 +1,8 @@
 Reel diario · mié 4-nov-2026 19:00 (excepción de arranque) · «Tembló 7.4… y tu alerta no sonó.» (alerta sísmica SASMEX)
 Código: kit/nuevo/alerta.py (montaje.py + piezas.py). Voz Isaac (QmPfzE500cXXHM9uQKGc, eleven_v4), 1 toma, 67.8 s.
 ElevenLabs flow: Qmk9u8AFXYhqy3uwY8dH · voz node H0fhAt5Cn7Y9tb9iuTAa (session sMhTmhnxmynPFlAGSU8V) · Scribe node lM89eP7OjV4tNKyjpReq
-Duración del reel: 68.4 s. Portada: «Tembló 7.4…» / «y tu alerta no sonó» · MÉXICO.
+Duración del reel: 68.5 s (75.2 MB). Música: semilla 7731, 102 BPM. Render por tramos (kit/nuevo/render_seg.py): el render con Pool se quedaba sin memoria en las escenas de mapa.
+Portada: «Tembló 7.4…» / «y tu alerta no sonó» · MÉXICO.
 
 === GUION (pantalla)
 0  Tembló 7.4… y tu alerta no sonó.

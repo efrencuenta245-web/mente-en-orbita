@@ -434,8 +434,8 @@ def s_caso1(t, fi, u, d):
         mid = fr.cam.p1((e1 + cd) / 2)
         if kl > 0.9:
             pill(img, fx, mid[0] - 40, mid[1] - 60, '+800 KM', eout(seg(t, tc + 1.3, tc + 1.6)), size=26, border=AMAR, dot=False)
-        pill(img, fx, 540, 1330, 'NO SONÓ', eout(seg(t, wt(3, 12), wt(3, 13))), size=40, border=RED)
-        photo_card(img, fx, tarjeta(), 540, 470, 560, wt(3, 12) + 0.25, t, angle0=-8)
+        pill(img, fx, 540, 1330, 'NO SONÓ', eout(seg(t, wt(3, 11), wt(3, 12))), size=40, border=RED)
+        photo_card(img, fx, tarjeta(), 540, 470, 560, wt(3, 10) - 0.1, t, angle0=-8)
     fr.ui.append(ui)
     return finish(fr, fi)
 
@@ -731,8 +731,8 @@ def _sfx_dinamicos():
     ESCENAS[1]['sfx'] += [(tm - 1.2, 'tick', 0.6), (tm - 0.2, 'scribble', 0.7)]
     ESCENAS[2]['sfx'] += [(wt(2, 9) - TT(2), 'chime_c', 0.6), (0.3, 'riser', 0.3)]
     tc = wt(3, 6) - TT(3)
-    ESCENAS[3]['sfx'] += [(tc, 'sub', 0.7), (tc + 1.3, 'tick', 0.6), (wt(3, 12) - TT(3), 'thud', 0.9),
-                          (wt(3, 12) - TT(3) + 0.3, 'slap', 0.9)]
+    ESCENAS[3]['sfx'] += [(tc, 'sub', 0.7), (tc + 1.3, 'tick', 0.6), (wt(3, 11) - TT(3), 'thud', 0.9),
+                          (wt(3, 10) - TT(3) + 0.18, 'slap', 0.9)]
     ESCENAS[4]['sfx'] += [(wt(4, 4) - TT(4), 'sub', 0.5), (wt(4, 13) - TT(4), 'chime_c', 0.7), (wt(4, 13) - TT(4) + 0.15, 'chime_b', 0.5)]
     t0 = wt(5, 2) - TT(5)
     ESCENAS[5]['sfx'] += [(t0 + 0.15 * j, 'tick2', 0.35) for j in range(10)] + [(wt(5, 9) - TT(5), 'tick', 0.5),
