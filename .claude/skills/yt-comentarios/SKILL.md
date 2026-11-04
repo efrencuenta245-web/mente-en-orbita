@@ -4,7 +4,7 @@ description: Solo para YouTube. Gestiona los comentarios del canal de YouTube - 
 ---
 # Comentarios
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Presupuesto
@@ -20,3 +20,6 @@ description: Solo para YouTube. Gestiona los comentarios del canal de YouTube - 
    - Spam/odio → no responder; sugerir ocultarlo.
 4. Manda a Efrén la lista con las respuestas propuestas numeradas y espera "sí" (todas o por número) antes de publicar. Nunca respondas dos veces si el resultado fue dudoso.
 5. Las 1–2 mejores preguntas van a `youtube/ideas.md` como "Respuestas: @usuario …" (fórmula 20 de la skill `yt-guionista`).
+
+## Sin créditos de vidIQ (hasta el 27-nov-2026 hay 0)
+No se pueden leer los comentarios: no gastes nada, dile a Efrén en una línea que puede pegarlos en el chat si quiere respuestas, y sigue con lo demás.

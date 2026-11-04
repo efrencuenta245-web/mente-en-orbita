@@ -1,34 +1,27 @@
 ---
 name: yt-animador
-description: Solo para YouTube. Diseña y programa las escenas 3D de los videos de YouTube - identifica el tema y elige el tema visual (orbita = esencia de la marca, estudio, espacio, médico, plano, neón, noir, naturaleza, micro, mapa), arma escenas nuevas con motor3d/escenas y las revisa con hojas de contacto.
+description: Solo para YouTube. Diseña y programa las escenas del video largo (horizontal) y de sus Shorts (vertical) con el estilo nuevo de ESTILO.md (motor2, fondo negro, objetos semirrealistas, line-art que brilla) y las revisa con hojas de contacto.
 ---
 # Animador
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
+## 1. Plano de escenas (antes de programar)
+Tabla: frase (del `tl_TEMA_full.json`) → escena → objeto principal → movimiento de cámara → transición → efecto → sonido. Reglas:
+- Cambio visual cada 4–6 s; nada estático más de 6 s sin un evento (aparece algo, pastilla, contador, garabato, zoom digital).
+- Al menos 4 transiciones distintas de ESTILO.md (zoom que atraviesa, destello, whip, barrido, empuje) y 4 efectos de ESTILO.md §4. Nada con personas ni avatares.
+- Rayos X «así se ve por dentro» una vez por video; una comparación de escala o gráfica que crece; ejemplo mexicano visible.
+- 1 a 3 fotos reales con licencia libre (NASA y agencias de EE. UU., Wikimedia PD/CC0/CC BY; nunca personas ni logos), con crédito en pantalla. Bájalas con `bash kit/descargar.sh "URL" nombre.jpg`.
+- Etiquetas honestas: «Recreación», «Escala exagerada», «Ejemplo», «Aprox.».
+- Cada capítulo abre con una tarjeta corta: kicker `CAPÍTULO N`, título sans + serif y letras de cristal.
+- Escenas nuevas en cada video: puedes reutilizar objetos y funciones, nunca la misma composición con otro texto.
 
-## 1. Elegir el tema visual (obligatorio, nunca el mismo por costumbre)
-Lee el guion y elige con la tabla de [temas.md](temas.md). `orbita` es la esencia del canal (azul marino, estrellas, neón solo en efectos, HUD): úsalo al menos 1 de cada 3 videos y siempre que el tema no pida otro mundo. En cualquier tema se conservan los sellos de la marca (escáner, HUD, contador, escala real, cierre `s_marca`, loop). Escribe en `jobs/TEMA.json` el campo `"tema_visual"` y una línea de por qué.
-- Si el mismo tema visual salió en los 2 videos anteriores (`youtube/publicados.md` → columna Tema visual), usa la segunda opción salvo que el tema lo exija (p. ej. anatomía → médico).
-- Un video largo puede cambiar de tema por capítulo (p. ej. noir en la historia del hackeo y estudio en el resto): exporta `MOTOR_TEMA` distinto por render de capítulo solo si la transición entre ellos es una tarjeta.
+## 2. Programar
+- **Largo:** `kit/nuevo/TEMA_largo.py` con `os.environ['MOTOR_FORMATO']='h'` antes de importar `motor2` (1920×1080). Acomodo como `kit/nuevo/demo_horizontal.py`: objeto a un lado (`cx=0.68` o `0.32` en la cámara), título y kicker del otro (`cx=` en `title`/`kicker`), subtítulos `y=900, cx=960, maxw=1300` en bloques de máximo 8 palabras. Usa `finish(fr, fi, grain=0.025)` para que el archivo pese menos.
+- **Shorts:** `kit/nuevo/TEMA_short.py` vertical, con la estructura de `kit/nuevo/norte.py` (frases, `cap()` en bloques de 6 palabras, `frame_at()` con transiciones, final en loop) y los tiempos de `tl_TEMA_reelA.json` / `reelB`.
+- Reutiliza `kit/nuevo/demo_estilo.py` y `kit/nuevo/norte.py` (celular, Tierra, imán, gráficas, foto que cae, `phone_with`, `earth`, `compass_img`).
+- Render con `multiprocessing.Pool(2)` a ffmpeg (como `norte.py render`): ~1 min por cada 10 s de video.
 
-## 2. Plano de escenas
-Antes de programar, escribe una tabla: frase → escena → objeto 3D principal → movimiento de cámara → efecto (escáner, contador, escala real, etiqueta). Reglas:
-- Cambio de escena cada 4–6 s; nada de escenas estáticas más de 6 s sin un evento (aparece algo, cambia el título, contador).
-- El escáner de rayos X "Así se ve por dentro" aparece una vez por video (sello).
-- Una comparación de escala real o "del bolsillo al espacio" y al menos un contador en vivo.
-- Ejemplo mexicano visible en pantalla.
-- Etiquetas honestas: "Recreación", "Escala exagerada", "Mapa aproximado", "Imagen oficial: …" cuando uses imágenes reales.
-- Escenas nuevas en cada video (regla de YouTube): puedes reutilizar objetos/ayudantes, nunca la misma composición con otro texto.
-
-## 3. Programar
-- Archivo `kit/TEMA.py` (copiar a /home/claude). Importa `escenas` (que trae `motor3d`): ver el encabezado de `kit/escenas.py` y el ejemplo completo `kit/gta6.py` (video largo) y `kit/demo_temas.py` (mínimo).
-- Define `CARD` (tarjetas entre capítulos; estilos `bounce`, `line`, `rings`, `error`, `ruler`, en blanco y negro con transición a gris) y `SHOTS = [(('c0', 0), s_gancho), (('card', 'c1'), None), ...]`.
-- Variables: `MOTOR_TEMA`, `GTA_FMT=h|v` (largo horizontal / Shorts verticales), `VIDEO_TL=/home/claude/tl_TEMA_MODO.json`.
-- Encuadre vertical: usa `vfit(d, wide=True)` en escenas anchas.
-- Imágenes reales (portadas, capturas oficiales de prensa): bájalas con el workflow `fetch` a `inbox/`, cópialas a `/home/claude/img/` y úsalas con `photo()` o como textura (`real_img()`); nunca uses material filtrado o pirata.
-
-## 4. Revisar antes de renderizar
-- `python3 TEMA.py info` (lista de escenas y tiempos) y `python3 TEMA.py sheet salida.jpg t1 t2 …` con un cuadro por escena.
-- Mira la hoja y corrige: objetos que tapan el título o los subtítulos, textos cortados en vertical, escenas vacías, colores sin contraste con el tema.
-- Revisa también la versión vertical de los Shorts (`GTA_FMT=v`).
+## 3. Revisar antes de renderizar
+- `preview` de un cuadro por escena y una hoja de contacto. Corrige: objetos que tapan el texto, textos cortados, escenas vacías, subtítulos de más de 2 líneas.
+- Revisa también los Shorts en vertical.

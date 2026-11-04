@@ -4,7 +4,7 @@ description: Solo para YouTube. Revisa y optimiza juntos el título y la miniatu
 ---
 # Empaquetador
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Regla de oro
@@ -17,3 +17,6 @@ Título y miniatura son **una sola promesa en dos partes**: la miniatura enseña
 4. Miniatura 1280×720 con el motor (plantilla `kit/thumb_gta.py`): mismo tema visual del video, objeto 3D grande a un lado, texto gigante del otro, máximo 3 colores fuertes, legible en tamaño de celular (revísala reducida a 320 px). Imágenes oficiales solo si suman (portadas, key art) y con permiso de prensa.
 5. Si el video ya está en YouTube y el canal conectado, `vidiq_score_thumbnail` (5 créditos) solo si hay presupuesto.
 6. Entrega: título elegido + 2 alternativas, miniatura en `youtube/guiones/AAAA-MM-DD_tema_miniatura.jpg` y la portada de cada Short (cuadro del gancho).
+
+## Miniatura con el estilo nuevo
+Ya no uses `thumb_gta.py`: renderiza un cuadro con `MOTOR_FORMATO=h` (fondo negro, objeto semirrealista grande a un lado, letras de cristal o título gigante del otro, máximo 4 palabras) y redúcelo a 1280×720 (jpg, calidad 92). Si no hay créditos de vidIQ, decide con la rúbrica sin calificar.

@@ -4,7 +4,7 @@ description: Solo para YouTube. Lee la retención de los videos de YouTube y dic
 ---
 # Analista
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Fuentes de datos
@@ -20,3 +20,6 @@ description: Solo para YouTube. Lee la retención de los videos de YouTube y dic
 
 ## Salida para Efrén (≤ 10 líneas)
 "Se fueron en 0:07 (−18 %) mientras decía «…»: la escena duró 9 s sin cambio. Próximo video: corte cada 4 s en el arranque."
+
+## Sin créditos de vidIQ (hasta el 27-nov-2026 hay 0)
+Usa Metricool (`getAnalyticsDataByMetrics`, brandId 7735731, YouTube: YTVP02 fecha, YTVP17 título, YTVP05 url, YTVP06 vistas, YTVP08 duración media vista, YTVP12 compartidos, YTVP09 likes, YTVP11 comentarios). Sin curva por segundo: calcula % visto = duración media / duración; busca en el `tl_TEMA_full.json` qué se decía y qué se veía en el segundo de la duración media y en el primer tercio; compara largos contra Shorts. Dilo como estimación.

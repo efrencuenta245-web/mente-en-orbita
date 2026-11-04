@@ -4,7 +4,7 @@ description: Solo para YouTube. Escribe guiones del canal de YouTube - dada una 
 ---
 # Guionista
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Entrada
@@ -28,3 +28,6 @@ Una idea (de `youtube/semana.md`, `youtube/ideas.md` o del chat) y el formato: *
 - Nunca reutilices el arco o las frases de otro video (regla de YouTube del 16-jul-2026).
 - Revisa `youtube/publicados.md`: no repitas tema de las últimas 4 semanas.
 - Nada de datos inventados ni "dicen que". Lo no confirmado se dice: "según X", "se estima".
+
+## Reset del 3-nov-2026
+Ganchos y retención con la fórmula de ESTILO.md §7–8 (gancho de 3–7 palabras con «tú/tu» y contradicción, segundo gancho, cierre «mándaselo a…» y loop). Ya no hay cierre `REEL_OUT` de marca: los Shorts terminan en loop. Voz con números en letra para Isaac.

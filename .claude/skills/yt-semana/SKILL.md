@@ -4,7 +4,7 @@ description: Solo para YouTube. Planifica la semana del canal de YouTube - 1 vid
 ---
 # La Semana
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Entradas
@@ -24,3 +24,6 @@ Reglas:
 Los videos **extra** que Efrén pide en el chat no cambian este plan (ver `YOUTUBE.md`).
 
 Haz commit y push y manda a Efrén un resumen de 6 líneas.
+
+## Reset del 3-nov-2026
+La columna «Tema visual» ahora es «Escena principal» (objeto o escena del estilo nuevo, ESTILO.md). Ya no aplica la regla de `orbita` 1 de cada 3. Si no hay créditos de vidIQ, `yt-cazador` trabaja con WebSearch. Guarda con `TAREA=youtube bash kit/guardar.sh` (nunca `git push`).

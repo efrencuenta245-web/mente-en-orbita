@@ -71,4 +71,4 @@ Si un guardado en GitHub falla después de los reintentos, no detengas la tarea:
 ## 6. Créditos y límites
 - **ElevenLabs** (plan Starter, 30 000 créditos al mes): unos 1 000 créditos por video. Si responde 429 o sin cuota: plan B, voz gratis Chatterbox con el workflow `voz_hq` (crea `tts_hq/narr_TEMA.json` con `{"text_file": "guiones/…_voz.txt", "ref": "ald", "exaggeration": 0.6, "cfg": 0.45}`, guárdalo con `guardar.sh` y espera `inbox/narr_TEMA.mp3`, 15–40 min); plan C, avisar a Efrén.
 - **Red:** aquí solo hay GitHub y registros de paquetes; todo lo demás se baja con `descargar.sh`.
-- **YouTube largo y skills `yt-*`:** en pausa desde el reset (usan el estilo viejo). El monitoreo de YouTube lo hace la tarea de las 4 redes.
+- **YouTube largo y skills `yt-*`:** activos con el estilo nuevo (ver `YOUTUBE.md`): largo cada 15 días + 2 Shorts, publicados con Metricool solo en YouTube con aprobación. El monitoreo de YouTube lo hace la tarea de las 4 redes.

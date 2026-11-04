@@ -4,7 +4,7 @@ description: Solo para YouTube. Busca qué está funcionando en el nicho del can
 ---
 # Cazador
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Presupuesto
@@ -29,3 +29,6 @@ Máximo **1 llamada de 5 créditos por semana** a `vidiq_outliers` Antes, `vidiq
 | Educación general, historia | 1.3 |
 | Videojuegos | 1.0 |
 | Entretenimiento, curiosidades | 0.8 |
+
+## Sin créditos de vidIQ (hasta el 27-nov-2026 hay 0)
+Si `vidiq_balance` da menos de 5, haz el mismo análisis con WebSearch (6–8 búsquedas: videos de ciencia y tecnología en español que están rompiendo esta semana, noticias de ciencia en México, preguntas que la gente busca). Puntúa con el mismo criterio usando lo que sepas del canal de origen; marca «sin vidIQ» en `youtube/cazador.md`.

@@ -4,7 +4,7 @@ description: Solo para YouTube. Optimiza el posicionamiento de los videos de You
 ---
 # SEO
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Presupuesto
@@ -18,3 +18,6 @@ description: Solo para YouTube. Optimiza el posicionamiento de los videos de You
 5. **Shorts (y TikTok si Efrén lo sube):** título ≤ 50 caracteres con 1–2 hashtags; descripción corta con «Video completo en el canal».
 6. Guarda todo en `guiones/AAAA-MM-DD_tema_youtube.md`.
 7. **Aplicar en YouTube:** `vidiq_update_video` (5 créditos) solo después de que Efrén apruebe el texto exacto y si el canal está conectado (`vidiq_user_channels`).
+
+## Sin créditos de vidIQ (hasta el 27-nov-2026 hay 0)
+Saca las palabras clave con WebSearch (cómo lo buscan en México, títulos de los videos que rankean) y el historial de `youtube/seo.md`. Los cambios a videos ya publicados se hacen desde Metricool solo si el post sigue programado; si ya salió, mándale a Efrén el texto para YouTube Studio.

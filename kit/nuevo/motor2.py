@@ -5,7 +5,8 @@ bloom de 2 pasos, grano de película, viñeta, profundidad de campo, tipografía
 con objetos semirrealistas como la referencia del metro (luz suave arriba, luz de borde, brillo especular,
 rayos X de cristal con bordes que brillan). Ver ESTILO.md.
 
-Todo trabaja a 1080x1920; la geometría se dibuja a 1.5x y se reduce (antialias).
+Trabaja a 1080x1920 (reels y Shorts). Con MOTOR_FORMATO=h trabaja a 1920x1080 (video largo de YouTube).
+La geometría se dibuja a 1.5x y se reduce (antialias). Define MOTOR_FORMATO antes de importar.
 """
 import math, os, sys
 import numpy as np
@@ -16,7 +17,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 os.environ.setdefault('GTA_FMT', 'v')
 import motor3d as M3  # primitivas de malla (box, rbox, cyl, sphere, torus, extrude, merge, Mesh, rotm, paste_quad)
 
-W, H = 1080, 1920
+HORIZONTAL = os.environ.get('MOTOR_FORMATO', 'v').lower() in ('h', 'horizontal')
+W, H = (1920, 1080) if HORIZONTAL else (1080, 1920)
 SS = 1.5
 GW, GH = int(W * SS), int(H * SS)
 FPS = 24
@@ -117,7 +119,7 @@ class Cam:
             a = math.radians(roll)
             r, u = r * math.cos(a) + u * math.sin(a), u * math.cos(a) - r * math.sin(a)
         self.f, self.r, self.u = f, r, u
-        self.F = fk * W * SS
+        self.F = fk * min(W, H) * SS  # misma lente en vertical y horizontal
         self.cx, self.cy = cx * GW, cy * GH
 
     def proj(self, P):
@@ -554,8 +556,8 @@ def text_layer(lines, size, gap=1.12, align='c', width=W):
     return lay, tot
 
 
-def title(img, fx, lines, y, k, size=86, col=WHITE, glow=0.35):
-    """Título de 2 líneas (sans + serif itálica). Entra con desenfoque y subida."""
+def title(img, fx, lines, y, k, size=86, col=WHITE, glow=0.35, cx=None):
+    """Título de 2 líneas (sans + serif itálica). Entra con desenfoque y subida. cx: centro horizontal (px)."""
     if k <= 0.01:
         return
     lay, h = text_layer(lines, size)
@@ -564,26 +566,27 @@ def title(img, fx, lines, y, k, size=86, col=WHITE, glow=0.35):
         lay = lay.filter(ImageFilter.GaussianBlur(10 * (1 - kk)))
     yy = int(y + 34 * (1 - kk))
     a = lay.point(lambda v: int(v * clamp(k * 1.4)))
-    img.paste(Image.new('RGB', lay.size, col), (0, yy), a)
+    dx = int(cx - W / 2) if cx is not None else 0
+    img.paste(Image.new('RGB', lay.size, col), (dx, yy), a)
     if glow:
-        fx.paste(Image.new('RGB', lay.size, scale_c(col, glow)), (0, yy), a.filter(ImageFilter.GaussianBlur(6)))
+        fx.paste(Image.new('RGB', lay.size, scale_c(col, glow)), (dx, yy), a.filter(ImageFilter.GaussianBlur(6)))
 
 
-def kicker(img, txt, y, k=1.0, size=26, col=MUTED, spacing=6):
+def kicker(img, txt, y, k=1.0, size=26, col=MUTED, spacing=6, cx=None):
     if k <= 0.01:
         return
     d = ImageDraw.Draw(img)
     f = font('mono', size)
     widths = [d.textlength(ch, font=f) for ch in txt]
     tw = sum(widths) + spacing * (len(txt) - 1)
-    x = (W - tw) / 2
+    x = (W if cx is None else 2 * cx) / 2 - tw / 2
     c = scale_c(col, clamp(k))
     for ch, w in zip(txt, widths):
         d.text((x, y), ch, font=f, fill=c)
         x += w + spacing
 
 
-def word_caption(img, fx, words, t0, t, y=1520, size=56, per=0.22, key=None, box=CYAN):
+def word_caption(img, fx, words, t0, t, y=1520, size=56, per=0.22, key=None, box=CYAN, cx=None, maxw=None):
     """Subtítulo palabra por palabra: la palabra activa en blanco con caja de selección y anclas (estilo UI)."""
     n = int(clamp((t - t0) / per, 0, len(words)))
     if t < t0:
@@ -594,7 +597,7 @@ def word_caption(img, fx, words, t0, t, y=1520, size=56, per=0.22, key=None, box
     ws = [d.textlength(w, font=f) for w in words]
     lines, cur, cw = [], [], 0
     for i, w in enumerate(ws):
-        if cur and cw + sp + w > W * 0.84:
+        if cur and cw + sp + w > (maxw or W * 0.84):
             lines.append(cur); cur, cw = [], 0
         cur.append(i); cw += (sp if cw else 0) + w
     lines.append(cur)
@@ -603,7 +606,7 @@ def word_caption(img, fx, words, t0, t, y=1520, size=56, per=0.22, key=None, box
     df = ImageDraw.Draw(fx)
     for li, line in enumerate(lines):
         tw = sum(ws[i] for i in line) + sp * (len(line) - 1)
-        x = (W - tw) / 2
+        x = (W if cx is None else 2 * cx) / 2 - tw / 2
         yy = y + li * lh
         for i in line:
             if i <= cur_i:
@@ -712,15 +715,16 @@ def rec_frame(img, t, k=1.0, zoom_label='x1.0'):
     d = ImageDraw.Draw(img)
     c = scale_c(WHITE, 0.9 * k)
     m, L = 60, 70
-    for (x, y, sx, sy) in ((m, 230, 1, 1), (W - m, 230, -1, 1), (m, H - 300, 1, -1), (W - m, H - 300, -1, -1)):
+    top, bot = int(H * 0.12), int(H - H * 0.156)
+    for (x, y, sx, sy) in ((m, top, 1, 1), (W - m, top, -1, 1), (m, bot, 1, -1), (W - m, bot, -1, -1)):
         d.line([(x, y + sy * L), (x, y), (x + sx * L, y)], fill=c, width=4)
     if int(t * 2) % 2 == 0:
-        d.ellipse((m + 10, 260, m + 34, 284), fill=scale_c(RED, k))
+        d.ellipse((m + 10, top + 30, m + 34, top + 54), fill=scale_c(RED, k))
     f = font('mono', 30)
-    d.text((m + 46, 256), 'REC', font=f, fill=c)
+    d.text((m + 46, top + 26), 'REC', font=f, fill=c)
     tc = f'00:{int(t) // 60:02d}:{int(t) % 60:02d}:{int((t % 1) * 24):02d}'
-    d.text((W - m - 10, 256), tc, font=f, fill=c, anchor='ra')
-    d.text((W / 2, H - 340), zoom_label, font=font('mono', 34), fill=c, anchor='mm')
+    d.text((W - m - 10, top + 26), tc, font=f, fill=c, anchor='ra')
+    d.text((W / 2, bot - 40), zoom_label, font=font('mono', 34), fill=c, anchor='mm')
 
 
 def chart_grow(img, fx, box, vals, labels, t0, t, unit='µT', title_txt='', vmax=None, line=True, tag=None):

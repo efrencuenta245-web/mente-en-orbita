@@ -4,7 +4,7 @@ description: Solo para YouTube. Revisa una transcripción con tiempos (voz gener
 ---
 # Editor
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Entrada
@@ -26,3 +26,6 @@ Tabla en el chat y en `guiones/AAAA-MM-DD_tema_edicion.md`:
 `mm:ss.s – mm:ss.s · tipo · texto · acción (cortar / acortar a 0.3 s / regenerar capítulo / dejar)`.
 Al final: duración actual, duración tras cortes y si queda dentro de 50–70 s (Shorts).
 Para la voz generada, `timeline.py` ya recorta pausas (`GAP_MAX`); el editor solo decide si hace falta regenerar un capítulo.
+
+## Reset del 3-nov-2026
+La voz del canal es Isaac (ElevenLabs `QmPfzE500cXXHM9uQKGc`). Para subir una grabación usa la herramienta de ElevenLabs que exista (`creative_upload_flow_reference` o `creative_attach_reference_file`).

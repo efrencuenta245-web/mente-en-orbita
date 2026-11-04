@@ -4,7 +4,7 @@ description: Solo para YouTube. Auditoría mensual completa del canal de YouTube
 ---
 # Auditoría
 
-> **Solo YouTube** (@menteenorbita-t8b). Reglas generales en `YOUTUBE.md`. No toques nada del flujo de Instagram (CLAUDE.md, estrategia.md, publicados.md, ideas.md ni sus tareas programadas).
+> **Solo YouTube** (@menteenorbita-t8b). Reglas generales y el **reset del 3-nov-2026** en `YOUTUBE.md` (manda sobre esta skill). No toques nada del flujo del reel diario (CLAUDE.md, estrategia.md, publicados.md ni sus tareas programadas).
 
 
 ## Presupuesto (≈ 15–20 créditos al mes)
@@ -23,3 +23,6 @@ description: Solo para YouTube. Auditoría mensual completa del canal de YouTube
 
 ## Salida
 `youtube/auditorias/AAAA-MM.md` con tabla de calificaciones, 5 hallazgos con dato, y **plan de 30 días** (máx. 7 acciones con responsable: Claude o Efrén). Resumen de 10 líneas a Efrén con notificación.
+
+## Sin créditos de vidIQ (hasta el 27-nov-2026 hay 0)
+Usa Metricool (YouTube: YTVP02, YTVP17, YTVP05, YTVP06, YTVP08, YTVP12, YTVP09, YTVP11 y los suscriptores con getAnalyticsAvailableMetrics) y `youtube/stats.csv`. Las áreas sin datos (tráfico) se marcan «sin dato» en vez de inventarlas.
