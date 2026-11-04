@@ -1,0 +1,54 @@
+Reel diario · mié 4-nov-2026 19:00 (excepción de arranque) · «Tembló 7.4… y tu alerta no sonó.» (alerta sísmica SASMEX)
+Código: kit/nuevo/alerta.py (montaje.py + piezas.py). Voz Isaac (QmPfzE500cXXHM9uQKGc, eleven_v4), 1 toma, 67.8 s.
+ElevenLabs flow: Qmk9u8AFXYhqy3uwY8dH · voz node H0fhAt5Cn7Y9tb9iuTAa (session sMhTmhnxmynPFlAGSU8V) · Scribe node lM89eP7OjV4tNKyjpReq
+Duración del reel: 68.4 s. Portada: «Tembló 7.4…» / «y tu alerta no sonó» · MÉXICO.
+
+=== GUION (pantalla)
+0  Tembló 7.4… y tu alerta no sonó.
+1  No está descompuesta: la alerta sísmica no se fija en la magnitud.
+2  Calcula cuánto va a sacudir a cada ciudad, en los primeros segundos.
+3  Mira dos casos. 17 de julio: un 7.4 frente a Chiapas. No sonó.
+4  Pero uno de más de 5, a menos de 170 km de la capital, sí la activa.
+5  La diferencia: 96 sensores vigilan el Pacífico, de Jalisco a Oaxaca.
+6  En Chiapas no hay ni uno: ese sismo lo detectaron hasta que llegó a Oaxaca.
+7  Y su energía de los primeros segundos no alcanzó el nivel de alerta.
+8  Pero el error más común… está en tu bolsillo.
+9  Si apagaste las alertas de emergencia de tu celular, aunque suene la calle, a ti no te llega.
+10 En Android se llaman «Alertas de emergencia inalámbricas»; en iPhone, «Alertas gubernamentales».
+11 No gastan datos ni saldo: llegan por la antena.
+12 Y si el sismo nace cerca, no da tiempo: la alerta puede sonar cuando ya está temblando.
+13 Mándaselo a quien dice que la alerta está descompuesta,
+14 y revisa tu celular hoy, antes de que vuelva a temblar.   (loop con «Tembló…»)
+
+=== DATOS Y FUENTES (verificados el 4-nov-2026)
+- 17-jul-2026, 08:48 (SSN): sismo 7.4 (USGS 7.3) en la región marítima frente a Chiapas. SASMEX: «detectó un sismo que no
+  ameritó aviso de alerta porque la energía radiada por el sismo durante los primeros segundos no superó los niveles de
+  activación» (detección 08:49:38). No hay cobertura de sensores en Chiapas; se detectó al llegar a las estaciones de Oaxaca.
+  Sin señal de alerta, ni altavoces ni celulares tenían mensaje que retransmitir.
+  https://www.elimparcial.com/mexico/2026/07/17/sismo-de-74-sacude-chiapas-pero-no-activa-la-alerta-sismica-sasmex-explica-por-que-no-sonaron-los-altavoces/
+  https://www.nmas.com.mx/sociedad/por-que-no-sono-alerta-sismica-temblor-7-4-chiapas-tampoco-llego-mensaje-celulares/
+- La alerta de la CDMX no se activa con una magnitud fija: un algoritmo calcula la energía y la distancia a la capital.
+  Umbrales citados: más de 5.0 a menos de 170 km de la CDMX → sí se activa; más de 5.5 entre 250 y 350 km; más de 6.0 a más de 350 km.
+  https://www.nmas.com.mx/sociedad/temblor-hoy-5-de-junio-2026-a-partir-que-magnitud-grados-suena-alerta-sismica-cdmx/
+- 96 sensores (estaciones en Jalisco, Colima, Michoacán, Guerrero, Oaxaca y Puebla); la opera CIRES; no suena si el sismo
+  es local o lejos de los sensores («no hay tiempo suficiente para emitir el alertamiento antes de que llegue el movimiento»).
+  https://www.unotv.com/nacional/por-que-unos-sismos-activan-la-alerta-sismica-y-otros-no/  y elimparcial.com (arriba)
+- Celulares: mensajes por difusión celular, no requieren saldo, datos ni app. Android: Ajustes > Notificaciones >
+  Ajustes avanzados / Seguridad y emergencia > Alertas de emergencia inalámbricas. iPhone: Configuración > Notificaciones >
+  Alertas gubernamentales. Fuentes: elimparcial.com y nmas.com.mx (arriba).
+- En pantalla: mapa = ESQUEMA (ubicación aproximada de sensores y epicentro); «+800 KM» = distancia aproximada entre la costa
+  de Chiapas y la CDMX; barras de energía marcadas «EJEMPLO».
+- No se usó: el 5.2 de Ometepec (magnitud no confirmada), los 60 s de aviso y el año 1991 (no confirmados en esta corrida).
+
+=== FOTOS
+Ninguna: Wikimedia Commons no se pudo consultar desde esta sesión (permiso del lector web), así que no se pudo verificar
+licencia. En su lugar, tarjeta que cae (efecto 06) con la cita textual del comunicado de SASMEX.
+
+=== TEXTOS
+IG/FB: ¿Por qué no sonó la alerta si tembló 7.4? 🚨
+La alerta sísmica no se fija en la magnitud: en los primeros segundos calcula cuánto va a sacudir a cada ciudad. Y si apagaste las alertas de emergencia de tu celular, aunque suene la calle, a ti no te llega.
+Mándaselo a alguien que dice que la alerta está descompuesta.
+#curiosidades #ciencia #mexico #menteenorbita #sismo
+TikTok: ¿Tembló 7.4 y tu alerta no sonó? Así decide la alerta sísmica 🚨 #sismo #curiosidades #mexico
+YouTube: Tembló 7.4 y tu alerta no sonó: así decide la alerta sísmica #Shorts
+FB título: Tembló 7.4… y tu alerta no sonó
