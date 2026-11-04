@@ -135,6 +135,14 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 - [ ] Segundo gancho entre 25 y 30 s; final en loop.
 - [ ] Hoja de contacto revisada (texto legible, nada cortado fuera de los zooms digitales).
 
+## 10. Portada (miniatura) de cada video — perfil limpio y ordenado
+- **Mismo diseño siempre** (`kit/nuevo/portada.py`): cuadro del gancho oscurecido, categoría en mono cian arriba (y=300), título en 2 líneas (sans blanca + serif itálica) en el mismo lugar, y la firma «● MENTE EN ÓRBITA» abajo (y=1600). Nada de flechas, emojis ni colores extra: la cuadrícula se ve ordenada porque todas las portadas son iguales salvo el objeto y el título.
+- Todo lo importante va dentro del recorte 3:4 de la cuadrícula de Instagram y TikTok (y de 240 a 1680 en 1080×1920).
+- Título: el gancho en 2 partes de máximo ~22 caracteres cada una (p. ej. «Tu celular sabe» / «dónde está el norte»).
+- Categorías fijas: TECNOLOGÍA, ESPACIO, CUERPO, PLANETA, MÉXICO, o el nombre de la serie (LO QUE NO VES, DUELO, ¿QUÉ PASARÍA SI…?, MITO O REALIDAD, RESPUESTAS).
+- Se manda a Metricool como `videoThumbnailUrl` (Instagram, Facebook, YouTube y TikTok si la cuenta es de empresa) y además va como cuadro 0 del video, por si alguna red la ignora.
+- Videos largos de YouTube: miniatura 1280×720 con el mismo lenguaje (skill `yt-empaquetador`).
+
 ## Fuentes de la investigación
 - Análisis de los 3 reels de referencia y de los 12 reels más recientes de @alyxianews (3-nov-2026).
 - Hooks y primeros 3 s: kineclip.com/blog/how-to-write-viral-hooks-short-form-2026 · hansencommerce.com/insights-tiktok-hook-3-seconds · perceedigital.com/insights/video-hooks-that-convert

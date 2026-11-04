@@ -15,7 +15,8 @@ description: Solo para YouTube. Analiza un video largo de YouTube para encontrar
 3. Escribe el bloque `EDITS` en `kit/TEMA_guion.py`, por ejemplo:
    `'reelA': [('gap', 0.15), ('c4', 1, 8), ('gap', 0.45), ('c5', 2, 3), ('gap', 0.6)]`
 4. `python3 timeline.py TEMA reelA reelB` → revisa la duración y renderiza en vertical (skill `yt-animador`, `kit/nuevo/TEMA_short.py`).
-5. Para cada Short: título ≤ 60 caracteres con #Shorts y descripción corta con «Video completo en el canal». Se publican **solo en YouTube Shorts** con Metricool (skill `yt-publicador`), salvo que Efrén pida otra red.
+5. Portada de cada Short con `kit/nuevo/portada.py` (mismo diseño que los reels, ESTILO.md §10) y `--primer-cuadro`.
+6. Para cada Short: título ≤ 60 caracteres con #Shorts y descripción corta con «Video completo en el canal». Se publican **solo en YouTube Shorts** con Metricool (skill `yt-publicador`), salvo que Efrén pida otra red.
 
 ## Video ajeno o ya subido
 `vidiq_video_transcript` (5 créditos, si alcanza) y el mismo análisis; para cortar se necesita el archivo original (no descargamos videos de otros).

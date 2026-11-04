@@ -1,24 +1,41 @@
-# Textos de perfil (28-oct-2026)
+# Textos de perfil (3-nov-2026, después del reset)
+Claude no puede cambiar los perfiles desde aquí (Metricool solo publica). Efrén los pega desde cada app.
+Foto de perfil en todas: `marca/perfil_mente_en_orbita.png`. Nombre en todas: **Mente en órbita**.
 
-## Instagram (@mente_en_orbita1)
-**Nombre** (sale en búsquedas): Mente en órbita | Ciencia en 3D
+## Instagram (@mente_en_orbita1) — Editar perfil
+**Nombre** (sale en búsquedas, máx. 30 caracteres): `Mente en órbita | Ciencia`
+**Biografía** (máx. 150):
+```
+🧭 Lo que pasa dentro de lo que usas diario
+🚀 Ciencia y tecnología en 1 minuto 🇲🇽
+🎬 Video nuevo todos los días, 7 pm
+```
+**Enlace:** https://www.youtube.com/@menteenorbita-t8b?sub_confirmation=1 · título «Suscríbete en YouTube»
+**Categoría** (cuenta profesional): Educación
 
-**Biografía:**
-🚀 Ciencia y tecnología que no ves
-🇲🇽 Explicada en 1 minuto, en 3D
-🎬 Historias completas en YouTube 👇
+## TikTok (@mente.en.rbita) — Editar perfil
+**Nombre:** `Mente en órbita`
+**Biografía** (máx. 80):
+```
+Ciencia y tecnología que no ves 🚀 Video nuevo diario 7 pm 🇲🇽
+```
+Enlace (si TikTok lo permite en la cuenta): el mismo de YouTube.
 
-**Enlace** (Editar perfil → Enlaces → Agregar enlace externo):
-- URL: https://www.youtube.com/@menteenorbita-t8b?sub_confirmation=1 (abre directo el botón de suscribirse)
-- Título: Videos completos en YouTube
+## Facebook (página) — Editar detalles
+**Nombre de la página:** Mente en órbita
+**Presentación** (máx. 101):
+```
+Ciencia y tecnología que no ves, explicada en 1 minuto. Video nuevo todos los días a las 7 pm 🚀
+```
+**Categoría:** Creador de contenido digital (y Educación)
+**Sitio web:** https://www.youtube.com/@menteenorbita-t8b
 
-**Extra:** fija el reel de GTA 6 (hackeo) en el perfil y en cada reel que salga de un video largo pon en el texto "Video completo: link en mi perfil".
+## YouTube (@menteenorbita-t8b) — Personalizar canal → Información básica
+**Descripción:**
+```
+🚀 Mente en órbita: la ciencia y la tecnología que no ves, explicada en español de México.
 
-## YouTube
-**Descripción del canal:**
-🚀 Mente en órbita: ciencia y tecnología que no ves, explicada en 3D y en español de México.
-
-Abrimos por dentro las cosas que usas todos los días (tu celular, el GPS, la fibra óptica), el espacio sobre tu cabeza y las historias detrás de la tecnología, como por qué GTA 6 tardó 13 años.
+Abrimos por dentro lo que usas todos los días (tu celular, el GPS, el internet), el espacio sobre tu cabeza y las preguntas que nadie te había explicado bien.
 
 🔬 Lo que no ves: cómo funciona por dentro
 ⚔️ Duelo: una cosa contra otra, con datos
@@ -26,13 +43,10 @@ Abrimos por dentro las cosas que usas todos los días (tu celular, el GPS, la fi
 ✅ Mito o realidad
 💬 Respuestas: tus comentarios hechos video
 
-📊 Datos verificados con fuentes actuales (van en cada descripción).
-🎬 Shorts todos los días y videos largos para entender todo el tema.
+🎬 Un Short nuevo todos los días a las 7 pm y un video largo cada 15 días.
+📊 Datos verificados: las fuentes van en cada descripción.
 
-Suscríbete y pon tu mente en órbita. 🚀
-📸 Instagram: https://www.instagram.com/mente_en_orbita1/
-
-**Enlaces del canal** (Personalizar canal → Información básica → Vínculos):
-- Instagram → https://www.instagram.com/mente_en_orbita1/
-
-**Palabras clave del canal:** ciencia, tecnología, curiosidades, espacio, cómo funciona, animación 3D, México, videojuegos, GTA 6, mente en órbita
+Suscríbete y pon tu mente en órbita 🚀
+```
+**Vínculos:** Instagram https://www.instagram.com/mente_en_orbita1/ · TikTok https://www.tiktok.com/@mente.en.rbita
+**Palabras clave:** ciencia, tecnología, curiosidades, cómo funciona, espacio, celular, México, ciencia en español, mente en órbita
