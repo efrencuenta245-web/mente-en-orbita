@@ -2,7 +2,7 @@
 
 La actualiza cada mañana la tarea «Monitoreo y estrategia de las 4 redes». La tarea «Video diario» produce la idea **#1 de la cola**.
 Formato, ganchos y nichos: [`ESTILO.md`](ESTILO.md) (manda sobre este archivo).
-Última actualización: 2026-11-04 (datos de Metricool: solo Facebook por video y YouTube por canal; Instagram y TikTok vinieron vacíos).
+Última actualización: 2026-11-04, 02:36 UTC (3-nov, 20:36 CDMX; corrida de prueba repetida, mismos datos). Metricool: solo Facebook por video y YouTube por canal; Instagram y TikTok vinieron vacíos dos veces seguidas.
 
 ## Nichos prioritarios
 1. Tecnología e IA de todos los días por dentro (celular, baterías, Wi-Fi, pantallas, apps, IA).
