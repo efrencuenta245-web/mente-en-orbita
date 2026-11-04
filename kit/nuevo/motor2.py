@@ -539,6 +539,74 @@ def push_in(img, k, cx=0.5, cy=0.5, zmax=2.4):
     return radial_blur(scale_about(img, s, cx, cy), 0.3 * eexp_in(k), cx, cy)
 
 
+def tr_glitch(A, B, k, fi=0):
+    """Falla digital: canales RGB separados, franjas desplazadas y líneas de barrido. 0.25 s."""
+    img = np.asarray(_pil(A if k < 0.5 else B)).astype(np.int16)
+    amt = math.sin(math.pi * clamp(k))
+    dx = int(40 * amt)
+    out = img.copy()
+    out[..., 0] = np.roll(img[..., 0], dx, 1)
+    out[..., 2] = np.roll(img[..., 2], -dx, 1)
+    rng = np.random.RandomState(fi + 7)
+    for _ in range(int(12 * amt)):
+        y0 = rng.randint(0, H - 60)
+        h = rng.randint(8, 70)
+        out[y0:y0 + h] = np.roll(out[y0:y0 + h], rng.randint(-160, 160), 1)
+    out[::3] = out[::3] * (1 - 0.3 * amt)
+    return out.clip(0, 255).astype(np.uint8)
+
+
+def tr_giro(A, B, k, cx=0.5, cy=0.5):
+    """Giro con zoom: A se va girando y creciendo, B llega girando al revés. 0.3 s."""
+    if k < 0.5:
+        u = ein(k / 0.5, 2)
+        im = _pil(A).rotate(-70 * u, resample=Image.BILINEAR, center=(cx * W, cy * H))
+        return radial_blur(scale_about(im, 1 + 1.4 * u, cx, cy), 0.3 * u, cx, cy)
+    u = eout((k - 0.5) / 0.5, 2)
+    im = _pil(B).rotate(70 * (1 - u), resample=Image.BILINEAR)
+    return radial_blur(scale_about(im, 1 + 1.4 * (1 - u)), 0.3 * (1 - u))
+
+
+def tr_iris(A, B, k, cx=0.5, cy=0.5):
+    """Iris: B se abre en un círculo desde (cx, cy) con un anillo de luz. 0.3 s."""
+    a = np.asarray(_pil(A)).astype(np.float32)
+    b = np.asarray(_pil(B)).astype(np.float32)
+    r = eout(k, 3) * math.hypot(W, H)
+    ys, xs = np.ogrid[0:H, 0:W]
+    d = np.sqrt((xs - cx * W) ** 2 + (ys - cy * H) ** 2)
+    m = np.clip((r - d) / 6 + 0.5, 0, 1)[..., None]
+    ring = np.clip(1 - np.abs(d - r) / 14, 0, 1)[..., None] * (1 - k)
+    out = a * (1 - m) + b * m + 255 * ring * 0.8
+    return out.clip(0, 255).astype(np.uint8)
+
+
+def tr_deslizar(A, B, k, arriba=True):
+    """Deslizamiento vertical rápido con desenfoque de movimiento: A sale, B entra. 0.25 s."""
+    u = ease(k)
+    sgn = -1 if arriba else 1
+    a = np.roll(np.asarray(_pil(A)), int(sgn * u * H), 0)
+    b = np.roll(np.asarray(_pil(B)), int(-sgn * (1 - u) * H), 0)
+    yb = int((1 - u) * H) if arriba else int(u * H)
+    out = a.copy()
+    if arriba:
+        out[yb:] = b[yb:]
+    else:
+        out[:yb] = b[:yb]
+    blur = 220 * math.sin(math.pi * k)
+    return dir_blur(out, 0, sgn * blur)
+
+
+def tr_golpe(A, B, k, cx=0.5, cy=0.5):
+    """Golpe de cámara: A se acerca de golpe (crash zoom) y corta seco a B que rebota. 0.25 s."""
+    if k < 0.55:
+        u = ein(k / 0.55, 3)
+        return radial_blur(scale_about(A, 1 + 2.2 * u, cx, cy), 0.35 * u, cx, cy)
+    u = (k - 0.55) / 0.45
+    s = 1 + 0.12 * math.exp(-5 * u) * math.cos(14 * u)
+    out = scale_about(B, max(1.0, s))
+    return (out.astype(np.float32) + 70 * (1 - u) ** 3).clip(0, 255).astype(np.uint8)
+
+
 # ---------------------------------------------------------------- texto
 def text_layer(lines, size, gap=1.12, align='c', width=W):
     """lines: [(texto, estilo)] estilo en FONT. Devuelve imagen L con el texto y su alto."""

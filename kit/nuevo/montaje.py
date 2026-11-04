@@ -8,8 +8,13 @@
 Cada escena dura desde 0.2 s antes de su frase `desde` hasta que empieza la siguiente.
 fn(t, fi, u, d) devuelve el cuadro terminado (np.uint8 1080x1920x3): t = tiempo global, u = t − inicio de su frase,
 d = duración de la escena. `loop=True` repite la escena 0 con t − DUR para que el último cuadro sea el primero.
-Transiciones (tr): whip, whip_izq, zoom, flash, wipe, push, corte, ritmo.
+Transiciones (tr): whip, whip_izq, zoom, flash, wipe, push, corte, ritmo, glitch, giro, iris, deslizar,
+  deslizar_abajo, golpe (rápidas: 0.25–0.3 s). Usa al menos 5 distintas por video y no repitas la misma dos veces seguidas.
 Los subtítulos (bloques de 6 palabras con caja cian) se ponen solos encima de todo.
+Movimiento (ESTILO.md §11): objetos que entran en 0.12–0.3 s y cámara con golpes rápidos → piezas.entrada,
+  piezas.cam_rapida, piezas.sacudida + piezas.mover_img, piezas.rebote/resorte/eout4, piezas.despiece.
+Inicio (ESTILO.md §12): tipo distinto a los últimos 6 de /home/claude/mente-en-orbita/inicios.md; anótalo ahí.
+`hoja` y `render` avisan si hay menos de 5 transiciones distintas o una repetida dos veces seguidas.
 
 Comandos (desde /home/claude/mente-en-orbita/kit/nuevo):
   python3 TEMA.py tiempos /home/claude/narr_TEMA.mp3 [/home/claude/words_TEMA.json]
@@ -28,7 +33,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 KIT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import motor2 as M
-from motor2 import W, H, FPS, word_caption, seg, tr_zoom_through, tr_flash, tr_whip, tr_wipe_v, push_in
+from motor2 import (W, H, FPS, word_caption, seg, tr_zoom_through, tr_flash, tr_whip, tr_wipe_v, push_in,
+                    tr_glitch, tr_giro, tr_iris, tr_deslizar, tr_golpe)
 
 OUT = '/home/claude'
 LEAD, TAIL, MIN_DUR, MAX_GAP = 0.25, 0.55, 61.3, 0.6
@@ -227,11 +233,11 @@ def frame_at(t, fi, caps=True):
     e = SC[k]
     nxt = SC[k + 1] if k + 1 < len(SC) else None
     img = None
-    # transición de salida hacia la siguiente (empieza 0.2 s antes del corte)
-    if nxt is not None and t >= nxt['a'] - 0.2:
+    # transición de salida hacia la siguiente (cada una decide su ventana; máx. 0.4 s antes del corte)
+    if nxt is not None and t >= nxt['a'] - 0.4:
         img = _transicion(e, nxt, t, fi)
-    # transición de entrada (los 0.15 s después del corte)
-    if img is None and k > 0 and t < e['a'] + 0.15:
+    # transición de entrada (hasta 0.25 s después del corte)
+    if img is None and k > 0 and t < e['a'] + 0.25:
         img = _transicion(SC[k - 1], e, t, fi)
     if img is None:
         img = _eval(e, t, fi)
@@ -261,6 +267,21 @@ def _transicion(A, B, t, fi):
     elif tr == 'push':
         if c - 0.35 <= t < c:
             return push_in(_eval(A, t, fi), seg(t, c - 0.35, c), cx, cy, zmax=3.2)
+    elif tr == 'glitch':
+        if c - 0.13 <= t < c + 0.12:
+            return tr_glitch(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.13, c + 0.12), fi)
+    elif tr == 'giro':
+        if c - 0.16 <= t < c + 0.14:
+            return tr_giro(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.16, c + 0.14), cx, cy)
+    elif tr == 'iris':
+        if c - 0.1 <= t < c + 0.2:
+            return tr_iris(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.1, c + 0.2), *B.get('c', (0.5, 0.5)))
+    elif tr in ('deslizar', 'deslizar_abajo'):
+        if c - 0.13 <= t < c + 0.12:
+            return tr_deslizar(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.13, c + 0.12), tr == 'deslizar')
+    elif tr == 'golpe':
+        if c - 0.14 <= t < c + 0.11:
+            return tr_golpe(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.14, c + 0.11), cx, cy)
     elif tr == 'ritmo':
         if c - 0.36 <= t < c:
             SC = CTX['_SC']
@@ -307,6 +328,16 @@ def sonido(out):
                 add(S.whoosh(0.35, 800, 3000), c - 0.2, 0.8)
             elif tr == 'push':
                 add(S.whoosh(0.4, 400, 4500), c - 0.35, 0.9); add(S.burst(), c, 0.9)
+            elif tr == 'glitch':
+                add(S.burst(0.25), c - 0.13, 0.7); add(S.tick(3200, 0.03, 0.5), c - 0.05); add(S.tick(900, 0.03, 0.5), c + 0.03)
+            elif tr == 'giro':
+                add(S.whoosh(0.32, 300, 2600), c - 0.18, 1.0); add(S.thud(), c + 0.12, 0.5)
+            elif tr == 'iris':
+                add(S.shimmer(0.4), c - 0.1, 0.6); add(S.chime(1318, 0.4), c, 0.35)
+            elif tr in ('deslizar', 'deslizar_abajo'):
+                add(S.whoosh(0.28, 700, 3400), c - 0.15, 0.9)
+            elif tr == 'golpe':
+                add(S.whoosh(0.2, 300, 5000), c - 0.15, 0.8); add(S.bass_hit(), c, 0.9)
             elif tr == 'ritmo':
                 for j in range(3):
                     add(S.bass_hit(), c - 0.36 + 0.12 * j)
@@ -380,6 +411,17 @@ def final(l1, l2, cat, semilla, bpm):
           'peso', round(os.path.getsize(fin) / 1e6, 1), 'MB')
 
 
+def _revisar_transiciones():
+    trs = [e.get('tr', 'corte') for e in CTX['ESCENAS'][1:]]
+    dist = set(trs) - {'corte'}
+    rep = [trs[i] for i in range(1, len(trs)) if trs[i] == trs[i - 1] and trs[i] != 'corte']
+    if len(dist) < 5:
+        print(f'AVISO transiciones: solo {len(dist)} distintas ({", ".join(sorted(dist))}); usa 5 o más (ESTILO.md §11)')
+    if rep:
+        print(f'AVISO transiciones: repetidas seguidas: {", ".join(rep)}')
+    print('Transiciones:', ' → '.join(trs))
+
+
 def cli(g):
     CTX.update({k: g[k] for k in ('TEMA', 'TXT', 'ESCENAS', 'VOZ') if k in g})
     CTX['CAP'] = g.get('CAP', {})
@@ -398,8 +440,10 @@ def cli(g):
             t = float(ts)
             Image.fromarray(frame_at(t, int(t * FPS))).save(f'{OUT}/prev_{tema}_{ts}.png')
     elif cmd == 'hoja':
+        _revisar_transiciones()
         hoja(f'{OUT}/hoja_{tema}.png')
     elif cmd == 'render':
+        _revisar_transiciones()
         render(f'{OUT}/{tema}_sin_audio.mp4')
     elif cmd == 'sonido':
         sonido(f'{OUT}/efectos_{tema}.wav')

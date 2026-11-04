@@ -4,7 +4,7 @@ Canal educativo de Efrén (México): Instagram `@mente_en_orbita1`, página de F
 Videos verticales hechos 100 % con código, en español de México. Todo se publica con **Metricool** en las 4 redes a la vez.
 Habla con Efrén en español, corto y claro: casi siempre está en el celular.
 
-**Lo visual, los efectos, el sonido, las fotos reales y los ganchos están en [`ESTILO.md`](ESTILO.md). Ese archivo manda.**
+**Lo visual, los efectos, el sonido, las fotos reales y los ganchos están en [`ESTILO.md`](ESTILO.md). Ese archivo manda.** Ritmo y movimiento rápidos: §11; inicios distintos en cada video: §12 + registro `inicios.md`.
 
 ## 0. Arranque de cada sesión (siempre igual)
 ```bash
@@ -43,6 +43,7 @@ Para cada uno de los 2 reels:
 4. **Tiempos por palabra:** cuando termine cada voz, `creative_transcribe_audio` (`eleven_scribe_v1`, mismo `flow_id`, `connect_from=[node_id de la voz]`). Del resultado toma `words_download_url`.
 5. **Bajar:** `bash kit/descargar.sh "<content_url>" narr_TEMA.mp3 /home/claude/narr_TEMA.mp3` y `bash kit/descargar.sh "<words_download_url>" words_TEMA.json /home/claude/words_TEMA.json` (caducan en ~2 h).
 6. **Escenas con `kit/nuevo/montaje.py`** (lee su encabezado). Un archivo `kit/nuevo/TEMA.py` con `TEMA`, `TXT` (frases de pantalla con cifras), `VOZ` (las mismas frases como se dicen) y `ESCENAS`. Ejemplos completos del 4-nov: `bateria.py`, `induccion.py`, `teclado.py` y `refri.py`; piezas reutilizables en `kit/nuevo/piezas.py` (celular con pantalla propia, pila, almohada, termómetro, pastilla tachada, ondas de calor). Objetos y escenas nuevos en cada video (regla de YouTube): reutiliza piezas, nunca la misma composición.
+   - **Movimiento e inicio (pedido de Efrén, 4-nov):** transiciones de 0.25–0.3 s, 5+ distintas y ninguna dos veces seguidas (glitch, giro, iris, deslizar, golpe, whip, zoom, flash, wipe, push, ritmo); objetos que entran con movimiento en 0.12–0.3 s y cámara con golpes rápidos (`piezas.entrada`, `cam_rapida`, `sacudida`, `despiece`, `titulo_golpe`, `numero_golpe`; ver `ejemplo_inicios.py`). **Inicio de un tipo distinto** a los últimos 6 de `inicios.md` (catálogo en ESTILO.md §12) y primera transición distinta a la del video anterior; el final sigue en loop. Anota cada reel en `inicios.md` y guárdalo con `guardar.sh`.
    - `python3 TEMA.py tiempos /home/claude/narr_TEMA.mp3 /home/claude/words_TEMA.json` (alarga las pausas solo hasta 61.3 s o más)
    - `python3 TEMA.py hoja` → mira `/home/claude/hoja_TEMA.png` y corrige antes de renderizar.
    - `python3 TEMA.py render` (~10 min por reel; los 2 renders uno después del otro).

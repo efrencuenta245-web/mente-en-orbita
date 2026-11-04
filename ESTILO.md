@@ -21,12 +21,12 @@ Prueba aprobable: `kit/nuevo/demo_estilo.py` (12.9 s). Motor: `kit/nuevo/motor2.
 - Elementos de apoyo en **line-art blanco que brilla**: esferas de alambre, líneas de campo, nodos luminosos, redes, pisos de puntos o de rayas en perspectiva, haces de luz que bajan como foco de escenario.
 - **Bloom de 2 pasos** (radio chico intenso + radio grande difuso) en todo lo que emite luz.
 - **Profundidad de campo:** lo principal nítido; fondo y partículas desenfocados. Al cambiar de escala, la cámara «enfoca» el siguiente detalle.
-- **Cámara siempre en movimiento:** dolly hacia adentro/afuera y órbita leve (±15°). Nunca un cuadro quieto más de 2 s.
+- **Cámara siempre en movimiento y con golpes rápidos** (ver §11): órbitas de 30–90° en ~0.6 s, crash zoom, punch-in y sacudida en los impactos. Nunca un cuadro quieto más de 1.5 s.
 - **Ritmo:** un cambio visual cada **2 a 3 s** (en su reel más visto el plano dura 1.8–2.5 s en promedio).
 - **Revelación tipo zoom fractal:** de lo que tienes en la mano → a lo que hay adentro → a la pieza más pequeña → a la escala del planeta (o al revés).
 - **Paleta:** blanco y negro. **Color solo en el objeto real** (con sus colores verdaderos) y **un acento cian** para rayos X, cotas y la caja del subtítulo.
 
-### Catálogo de transiciones (usar 4 o más distintas por video)
+### Catálogo de transiciones (usar 5 o más distintas por video, nunca la misma dos veces seguidas, y que la primera transición cambie en cada video)
 | Transición | Duración | Cuándo | Sonido |
 |---|---|---|---|
 | **Atraviesa la escena** (zoom-through + desenfoque radial) | 0.35 s | Entrar a algo: una pantalla, un hueco, una letra «O» | whoosh que acelera |
@@ -37,8 +37,13 @@ Prueba aprobable: `kit/nuevo/demo_estilo.py` (12.9 s). Motor: `kit/nuevo/motor2.
 | **Vuelo de cámara** hacia arriba o hacia abajo | 0.6 s | Cambiar de piso, subir a la atmósfera | riser |
 | **Cortes rítmicos** de 0.15 s con flash de bloom | 2–4 cortes | Montaje final o lista rápida | golpes de bajo sincopados |
 | **Morph** (una forma se convierte en otra) | 0.4 s | Explicar que A «es» B | barrido suave |
+| **Falla digital** `glitch` (RGB separado + franjas) | 0.25 s | Mito, dato falso, «error», algo que se rompe | ráfaga + ticks |
+| **Giro con zoom** `giro` (rota 70° y entra la otra girando) | 0.3 s | Dar la vuelta a una idea, «al revés», cambio de punto de vista | whoosh + golpe |
+| **Iris** `iris` (círculo de luz que se abre desde un punto) | 0.3 s | Revelar algo que salió de un punto (gota, chip, foco, planeta) | brillo + campanita |
+| **Deslizamiento** `deslizar` / `deslizar_abajo` con desenfoque | 0.25 s | Listas, «y además…», subir/bajar de piso | swish |
+| **Golpe de cámara** `golpe` (crash zoom y corte seco con rebote) | 0.25 s | Dato que impacta, número grande, «¡y aquí está el truco!» | whoosh + bajo |
 
-Funciones listas en `motor2.py`: `tr_zoom_through`, `tr_flash`, `push_in`, `tr_whip`, `tr_wipe_v`, `radial_blur`, `dir_blur`, `scale_about`.
+Funciones listas en `motor2.py`: `tr_zoom_through`, `tr_flash`, `push_in`, `tr_whip`, `tr_wipe_v`, `tr_glitch`, `tr_giro`, `tr_iris`, `tr_deslizar`, `tr_golpe`, `radial_blur`, `dir_blur`, `scale_about`. En `montaje.py` se piden con `tr=` en cada escena: whip, whip_izq, zoom, flash, wipe, push, corte, ritmo, glitch, giro, iris, deslizar, deslizar_abajo, golpe.
 
 ## 2. Cómo se ven los objetos (referencia del metro)
 - **Semirrealistas, no caricatura:** materiales reales (metal satinado, latón brillante, plástico mate, madera con veta, concreto rugoso, vidrio).
@@ -127,7 +132,9 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 
 ## 9. Lista de revisión antes de mandar a Efrén
 - [ ] Gancho de 3 a 7 palabras con «tú/tu», sin intro, imagen más fuerte en el primer cuadro.
-- [ ] 4+ transiciones distintas del catálogo y 4+ efectos de la sección 4.
+- [ ] 5+ transiciones distintas del catálogo (ninguna dos veces seguidas) y 4+ efectos de la sección 4.
+- [ ] **Inicio de un tipo distinto** a los últimos 6 de `inicios.md` (§12) y anotado ahí; la escena 0 funciona con u negativo (loop).
+- [ ] Cada escena tiene contenido visible desde su primer cuadro y al menos un movimiento rápido de cámara u objeto (§11).
 - [ ] Ningún efecto con persona o avatar.
 - [ ] Cada cambio visual tiene sonido; sin silencios de más de 1.5 s; el audio llega al final.
 - [ ] Fotos reales solo de fuentes permitidas, con crédito.
@@ -142,6 +149,37 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 - Categorías fijas: TECNOLOGÍA, ESPACIO, CUERPO, PLANETA, MÉXICO, o el nombre de la serie (LO QUE NO VES, DUELO, ¿QUÉ PASARÍA SI…?, MITO O REALIDAD, RESPUESTAS).
 - Se manda a Metricool como `videoThumbnailUrl` (Instagram, Facebook, YouTube y TikTok si la cuenta es de empresa) y además va como cuadro 0 del video, por si alguna red la ignora.
 - Videos largos de YouTube: miniatura 1280×720 con el mismo lenguaje (skill `yt-empaquetador`).
+
+## 11. Ritmo y movimiento: más rápido y más creativo (pedido de Efrén, 4-nov-2026)
+Efrén quiere transiciones y movimientos de objetos y de cámara **más creativos y más rápidos**. Reglas para cada escena:
+- **Nada aparece «solo»:** cada objeto entra con movimiento en **0.12–0.3 s**: cae y rebota, hace «pop» con resorte, llega girando o entra deslizándose (`piezas.entrada(u, u0, dur, modo)` con modo `cae`, `pop`, `gira`, `desliza`). Prohibido el desvanecido lento de más de 0.4 s.
+- **Contenido desde el primer cuadro:** como las transiciones duran 0.25 s, la escena nueva debe tener algo visible desde u = 0 (si no, la transición deja ver negro). Lo que va entrando, que entre rápido.
+- **Cámara con golpes, no paneos lentos:** cada escena tiene al menos **un movimiento rápido** (órbita de 30–90° en ~0.6 s, crash zoom, punch-in de x1 a x1.6, paso lateral) y luego se queda casi quieta con deriva suave. `piezas.cam_rapida(u, claves)` hace exactamente eso (salta en el primer 35 % del tramo con ease-out cuártico y descansa).
+- **Impactos con sacudida:** cuando algo cae, choca o aparece un número grande, sacude la cámara 0.3 s (`piezas.sacudida(t, t0=…)` + `piezas.mover_img`) con su golpe grave.
+- **Curvas con personalidad:** `piezas.rebote`, `piezas.resorte` (se pasa un poco y regresa) y `piezas.eout4` (arranca muy rápido y frena) en lugar de rampas lineales.
+- **Vista explotada** para explicar piezas: `piezas.despiece(mallas, k, centro, fuerza, giro)` separa las partes y las vuelve a armar.
+- **Transiciones:** 0.25–0.3 s (las de §1). Elige la transición por lo que dice la frase (mito → `glitch`, número que impacta → `golpe`, lista → `deslizar`, sale de un punto → `iris`, cambio de punto de vista → `giro`).
+- Cada escena dura **1.8–3 s**; si una frase es larga, pártela en 2 escenas con un movimiento de cámara distinto.
+
+## 12. Inicios: uno distinto en cada video
+El inicio decide si la gente se queda. **Cada video abre con un tipo de inicio diferente**: nunca uno de los usados en los **últimos 6 videos** (registro en `inicios.md`, con fecha, tema, tipo y primera transición). El final sigue igual: la última imagen y la última frase regresan al primer cuadro sin aviso (loop), así que **la escena 0 debe verse bien con u negativo** (el final la reproduce antes de tiempo).
+
+Catálogo de inicios (combina con el gancho de 3-7 palabras; el título de 2 líneas entra con golpe, no fijo desde el cuadro 0):
+1. **Caída desde el espacio:** la Tierra de alambre → crash zoom a México → a una casa → al objeto, en 1.5 s, con el título al aterrizar.
+2. **El objeto cae y rebota** desde arriba del cuadro, sacudida y título que se estrella con golpe grave.
+3. **Se arma solo:** vista explotada que se junta en 1 s (`despiece` de 1 a 0) y hace clic.
+4. **Barra de búsqueda:** el cursor escribe la pregunta del gancho letra por letra, Enter y la cámara atraviesa la pantalla.
+5. **Número gigante:** una cifra enorme golpea la pantalla (contador que se detiene de golpe) y luego se revela de qué es.
+6. **Pantalla dividida antes/después:** dos mitades que chocan o se deslizan (con / sin, mito / realidad).
+7. **Macro extremo que se aleja:** empieza en una textura irreconocible (pieza, fibra, gota) y un zoom hacia atrás revela el objeto.
+8. **Error en pantalla:** glitch, aviso rojo «ERROR» o la pieza fallando (el problema primero, la explicación después).
+9. **Giro 360° con destellos:** el objeto da una vuelta completa rapidísima con 3 cortes rítmicos y queda de frente al título.
+10. **Rayos X de golpe:** el objeto normal y en el primer golpe de sonido se vuelve de cristal y se ve por dentro.
+11. **Pregunta directa en primera persona:** texto grande «¿Tú también…?» que se rompe en pedazos y deja ver el objeto.
+12. **Cuenta regresiva o reloj:** 3-2-1 o una manecilla que corre y se congela en el dato.
+13. **Objeto al centro con título** (el clásico de los primeros reels): máximo 1 de cada 7 videos.
+
+También cambia la **primera transición** (la de la escena 0 a la 1): no la misma que en el video anterior.
 
 ## Fuentes de la investigación
 - Análisis de los 3 reels de referencia y de los 12 reels más recientes de @alyxianews (3-nov-2026).

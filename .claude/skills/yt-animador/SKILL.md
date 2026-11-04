@@ -9,7 +9,9 @@ description: Solo para YouTube. Diseña y programa las escenas del video largo (
 ## 1. Plano de escenas (antes de programar)
 Tabla: frase (del `tl_TEMA_full.json`) → escena → objeto principal → movimiento de cámara → transición → efecto → sonido. Reglas:
 - Cambio visual cada 4–6 s; nada estático más de 6 s sin un evento (aparece algo, pastilla, contador, garabato, zoom digital).
-- Al menos 4 transiciones distintas de ESTILO.md (zoom que atraviesa, destello, whip, barrido, empuje) y 4 efectos de ESTILO.md §4. Nada con personas ni avatares.
+- Al menos 5 transiciones distintas de ESTILO.md (glitch, giro, iris, deslizar, golpe, zoom, destello, whip, barrido, empuje), ninguna dos veces seguidas, y 4 efectos de ESTILO.md §4. Nada con personas ni avatares.
+- Movimiento rápido y creativo (ESTILO.md §11): objetos que entran en 0.12–0.3 s y cámara con golpes (`piezas.entrada`, `cam_rapida`, `sacudida`, `despiece`, `titulo_golpe`, `numero_golpe`; ejemplos en `kit/nuevo/ejemplo_inicios.py`).
+- Inicio de cada video y de cada Short de un tipo distinto a los últimos 6 de `inicios.md` (catálogo en ESTILO.md §12); anótalo ahí.
 - Rayos X «así se ve por dentro» una vez por video; una comparación de escala o gráfica que crece; ejemplo mexicano visible.
 - 1 a 3 fotos reales con licencia libre (NASA y agencias de EE. UU., Wikimedia PD/CC0/CC BY; nunca personas ni logos), con crédito en pantalla. Bájalas con `bash kit/descargar.sh "URL" nombre.jpg`.
 - Etiquetas honestas: «Recreación», «Escala exagerada», «Ejemplo», «Aprox.».
