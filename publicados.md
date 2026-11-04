@@ -27,3 +27,4 @@ Tipos:
 | 2026-10-29 19:00 | diario | Lo que no ves: el control de la tele | "Agarra el control de la tele, apúntale a la cámara de tu celular y aprieta un botón." | 65 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfGW7MFiNFZ/ |
 | 2026-10-30 13:00 | extra | Starlink: 11 mil satélites sobre ti (Short A del largo de YouTube) | "Sobre tu cabeza vuelan más de 11 mil satélites de Starlink." | 68 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfISYbdjSQj/ |
 | 2026-10-30 19:00 | diario | La flama de tu veladora en el espacio | "Prende una veladora de tu altar y mira su flama: sube como una gota de fuego." | 67 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfI7oW8CUdP/ |
+| 2026-11-03 ~21:40 | extra | Tu celular sabe dónde está el norte sin internet (1.º del estilo nuevo, voz Isaac) | "Tu celular sabe dónde está el norte… sin internet." | 61.5 s | IG+FB+TikTok+YT (Metricool post 416057138; Efrén lo publicó antes de las 22:00) · enlaces pendientes |
