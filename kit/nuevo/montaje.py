@@ -376,7 +376,7 @@ def render(out):
 def hoja(out):
     SC = CTX['_SC']
     ts = [round((e['a'] + e['b']) / 2, 2) for e in SC] + [round(e['a'] + 0.05, 2) for e in SC[1:]]
-    ts = sorted(ts)[:24]
+    ts = sorted(ts)[:48]
     ims = [Image.fromarray(frame_at(t, int(t * FPS))).resize((216, 384)) for t in ts]
     cols = 8
     rows = math.ceil(len(ims) / cols)

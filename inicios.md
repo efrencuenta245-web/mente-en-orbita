@@ -3,6 +3,7 @@ Cada video abre con un tipo de inicio distinto a los últimos 6 de esta lista. A
 
 | Fecha de publicación | Tema | Tipo de inicio (# del catálogo) | Primera transición |
 |---|---|---|---|
+| 2026-11-04 19:00 | alerta sísmica (sasmex) | 5 número gigante «7.4» + crash zoom | glitch |
 | 2026-11-06 19:00 | refri | 13 objeto al centro con título | zoom |
 | 2026-11-06 08:00 | teclado | 13 objeto al centro con título | zoom |
 | 2026-11-05 19:00 | inducción | 13 objeto al centro con título | zoom |
