@@ -1,7 +1,7 @@
 # Videos publicados
 
 Tipos:
-- **diario**: lo hace la tarea de las 4:35 pm (máximo uno por día).
+- **diario**: lo hace la tarea de las 4:35 pm (desde el 5-nov-2026, 2 al día: 8:00 y 19:00).
 - **extra**: los pide Efrén en el chat para contestar comentarios o probar ideas suyas. No cuentan para el límite diario.
 - **efrén**: los sube él por su cuenta. No hace falta anotarlos: todo reel de la cuenta que no esté aquí es suyo.
 
@@ -28,3 +28,4 @@ Tipos:
 | 2026-10-30 13:00 | extra | Starlink: 11 mil satélites sobre ti (Short A del largo de YouTube) | "Sobre tu cabeza vuelan más de 11 mil satélites de Starlink." | 68 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfISYbdjSQj/ |
 | 2026-10-30 19:00 | diario | La flama de tu veladora en el espacio | "Prende una veladora de tu altar y mira su flama: sube como una gota de fuego." | 67 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfI7oW8CUdP/ |
 | 2026-11-03 22:00 | extra | Tu celular sabe dónde está el norte sin internet (1.º del estilo nuevo, voz Isaac) | "Tu celular sabe dónde está el norte… sin internet." | 61.5 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfTjY2RgTtD/ · https://facebook.com/reel/1535809528309282 · https://www.youtube.com/shorts/rshgILoVEvw · https://www.tiktok.com/@mente.en.rbita/video/7704162030088932628 |
+| 2026-11-04 19:00 | diario | Alerta sísmica: por qué no sonó (SASMEX; 2.º del estilo nuevo, inicio tipo 5) | "Tembló 7.4… y tu alerta no sonó." | 68.4 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfVz1ScmBR7/ · https://facebook.com/reel/1474720954722820 · https://www.youtube.com/shorts/Jtv46YaGUo4 · https://www.tiktok.com/@mente.en.rbita/video/7704487330836417810 |
