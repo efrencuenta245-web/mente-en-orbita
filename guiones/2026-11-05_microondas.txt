@@ -1,0 +1,38 @@
+Reel EXTRA «Tu microondas apaga tu Wi-Fi.» — jue 5-nov-2026, 14:30 (pedido por Efrén en el chat: «hazlo ahora y publícalo hoy a las 2:30 pm»)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, flow Fs0gJGE4CUz0aPvs7Df2), tiempos con Scribe.
+Código: kit/nuevo/microondas.py (montaje.py + piezas.py). Duración 65.2 s. Música: semilla 5288, 97 BPM.
+Inicio: tipo 8 (error en pantalla: la videollamada se cae y el micro prende desde el cuadro 0). Primera transición: golpe.
+Voz completa (con etiquetas): guiones/2026-11-05_microondas_voz.txt
+
+GUION (pantalla)
+Calientas tu café en el micro… / y tu Wi-Fi se cae. / No es la compañía de internet. / Es tu microondas. /
+Tu micro trabaja a 2 450 MHz… / justo en medio de la banda de tu Wi-Fi. / Mira dos casos: /
+en la red normal, la videollamada se congela. / En la red de 5 GHz… ni se entera. / ¿Y por qué le gana? /
+Porque tu micro usa unos 1 000 W… / y tu módem manda menos de 1 W. / Es como gritar junto a alguien que te habla en secreto. /
+Claro, la puerta lo encierra: / tiene una rejilla con hoyitos de 1 mm. / Y la onda mide 12 cm, /
+120 veces más: rebota y se queda adentro. / La luz sí pasa… por eso ves tu comida. /
+Pero basta que se escape una pizca, la que permite la norma, / para tapar la señal de tu Wi-Fi. /
+Y el error que casi todos cometemos: / poner el módem en la cocina, junto al micro. /
+Aléjalo… o conéctate a la red de 5 GHz. / Mándaselo a quien le echa la culpa a la compañía de internet. /
+Porque ahora ya sabes qué pasa cada vez que… (loop al inicio)
+
+FUENTES
+- Horno a 2 450 MHz; onda de ~12 cm; hoyitos de la rejilla de ~1 mm contra 120 mm de onda (~120 veces); fuga limitada a
+  5 mW/cm² a ~5 cm de la superficie: HyperPhysics (Georgia State University), https://hyperphysics-archive.netlify.app/waves/mwoven
+- La rejilla deja pasar la luz (380–700 nm) y no la onda de ~12 cm: The Takeout, https://www.thetakeout.com/2073815/why-microwaves-mesh-on-door-important/
+- Wi-Fi de 2.4 GHz en 2 400–2 483.5 MHz con potencia máxima de 1 W (4 W PIRE), 47 CFR § 15.247:
+  https://wdi.rfwel.com/wireless-compliance/part-15-radio-frequency-devices
+- El horno interfiere con el Wi-Fi de 2.4 GHz y la red de 5 GHz evita el problema: ScienceABC,
+  https://www.scienceabc.com/innovation/do-microwaves-interfere-with-wifi-signals.html
+- «Unos 1 000 W»: potencia típica de etiqueta de un horno casero (700–1 200 W).
+- Espectro, ondas, canales, cocina y corte del horno en pantalla: RECREACIÓN / ESCALA EXAGERADA. Sin foto real: no se halló
+  una foto de una rejilla de microondas con licencia libre (dominio público o CC0) a tiempo.
+
+TEXTOS
+IG/FB: ¿Se te traba el internet cuando calientas tu café? ☕📶
+Tu microondas trabaja a 2 450 MHz, justo en medio de la banda de 2.4 GHz de tu Wi-Fi, y usa unos 1 000 W contra menos de 1 W de tu módem. Aleja el módem del micro o conéctate a la red de 5 GHz.
+Mándaselo a alguien que le echa la culpa a la compañía de internet 📲
+#curiosidades #ciencia #mexico #menteenorbita #wifi
+Título FB: Tu microondas apaga tu Wi-Fi
+TikTok: ¿Tu Wi-Fi se cae cuando usas el microondas? Esta es la razón 📶 #wifi #microondas #ciencia #curiosidades #mexico
+YouTube Shorts: Tu microondas apaga tu Wi-Fi: así le gana a tu módem #Shorts
