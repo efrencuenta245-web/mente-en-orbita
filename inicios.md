@@ -3,6 +3,8 @@ Cada video abre con un tipo de inicio distinto a los últimos 6 de esta lista. A
 
 | Fecha de publicación | Tema | Tipo de inicio (# del catálogo) | Primera transición |
 |---|---|---|---|
+| 2026-11-07 19:00 | luna que se aleja | 4 barra de búsqueda (escribe la pregunta, Enter y atraviesa hacia la Luna) | iris |
+| 2026-11-07 08:00 | modo noche | 12 cuenta regresiva 3-2-1 del modo noche | giro |
 | 2026-11-05 14:30 | microondas y Wi-Fi (extra) | 8 error en pantalla (la videollamada se cae y el micro prende) | golpe |
 | 2026-11-04 19:00 | alerta sísmica (sasmex) | 5 número gigante «7.4» + crash zoom | glitch |
 | 2026-11-06 19:00 | refri | 13 objeto al centro con título | zoom |

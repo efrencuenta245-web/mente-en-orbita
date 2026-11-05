@@ -1,0 +1,38 @@
+Reel diario · SÁB 7-nov-2026 19:00 (CDMX) · «Tu Luna se está escapando.» (kit/nuevo/luna.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma) · flow fK6iTBvDAUF2BK17EVG7 · tiempos con Scribe.
+Inicio: tipo 4 (barra de búsqueda: se escribe la pregunta, Enter y la cámara la atraviesa hacia la Luna). Primera transición: iris.
+Duración final: 69.1 s · música semilla 1907, 94 BPM · categoría de portada ESPACIO.
+
+GUION (voz): ver guiones/2026-11-07_luna_voz.txt
+
+DATOS Y FUENTES
+- «The Moon is receding from Earth at a rate of about 3.8 centimeters per year»; Apolo 11 dejó en 1969 un panel de 100 retrorreflectores
+  («corner cubes») en el Mar de la Tranquilidad; la distancia se mide con ~3 cm de precisión; «only one photon is received every few seconds»;
+  distancia media 385 000 km. Fuente: NASA GSFC, «Measuring the Moon's Distance» (LPI Bulletin 72): https://eclipse.gsfc.nasa.gov/help/ApolloLaser.html
+  y JPL: https://www.jpl.nasa.gov/news/apollo-11-experiment-continues-to-return-valuable-data/
+- Ida y vuelta de la luz: 2 × 385 000 km / 299 792 km/s ≈ 2.6 s («unos 2.5 segundos»; el cronómetro llega a 2.56).
+- 20 años × 3.8 cm = 76 cm.
+- Uñas: ~3.47 mm/mes ≈ 4.2 cm/año (Yaemsiri et al., J Am Acad Dermatol 2010, PubMed 19744178) → «más o menos» como la Luna.
+- Hace 70 millones de años: día de ~23.5 h y año de 372 días (de Winter et al., Paleoceanography and Paleoclimatology, 2020,
+  doi:10.1029/2019PA003723; resumen: https://www.sci.news/paleontology/cretaceous-earth-day-08211.html).
+- Mareas: el bulto de marea va adelantado porque la Tierra gira más rápido que lo que la Luna orbita; jala a la Luna hacia adelante
+  (órbita más alta) y frena el giro de la Tierra. Diagramas, láser y dinosaurio: RECREACIÓN / ESCALA EXAGERADA.
+
+FOTOS REALES
+- Retrorreflector del Apolo 11 (AS11-40-5952). NASA, dominio público.
+  https://commons.wikimedia.org/wiki/File:Apollo_11_Lunar_Laser_Ranging_Experiment.jpg (kit/nuevo/img/img_apolo11_lrrr.jpg)
+- Luna, mosaico del Lunar Reconnaissance Orbiter. Crédito NASA/GSFC/Arizona State University.
+  https://commons.wikimedia.org/wiki/File:Moon_nearside_LRO.jpg (kit/nuevo/img/img_luna_lro.jpg)
+  Nota: no se pudo abrir la página de licencia de Commons desde esta sesión; revisar que diga dominio público (PD-USGov-NASA).
+
+TEXTO IG/FB
+¿Sabes cuánto se alejó la Luna desde que naciste? 🌕
+Se aleja unos 3.8 cm cada año: lo miden con un láser que rebota en los espejos que dejó el Apolo 11. Y la culpa es de las mareas, que de paso frenan a la Tierra.
+Mándaselo a alguien que dice que la Luna siempre está igual.
+#curiosidades #ciencia #mexico #menteenorbita #luna
+Fotos: NASA (Apolo 11) · NASA/GSFC/ASU (LRO).
+
+TÍTULOS
+- Facebook: Tu Luna se está escapando
+- TikTok: Tu Luna se está escapando 🌕 #curiosidades #ciencia #luna
+- YouTube Shorts: Tu Luna se está escapando: 3.8 cm cada año 🌕 #Shorts

@@ -1,0 +1,29 @@
+Reel diario · SÁB 7-nov-2026 8:00 (CDMX) · «Tu foto de noche no es una foto.» (kit/nuevo/noche.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma) · flow npSmY7saRDrtLFjp3PHx · tiempos con Scribe.
+Inicio: tipo 12 (cuenta regresiva 3-2-1 del modo noche que se congela en la foto). Primera transición: giro.
+Duración final: 64.8 s · música semilla 711, 104 BPM · categoría de portada TECNOLOGÍA.
+
+GUION (voz): ver guiones/2026-11-07_noche_voz.txt
+
+DATOS Y FUENTES
+- Night Sight de Google: «captures 15 frames of 1/15 second (or less) each, or 6 frames of 1 second each» (hasta 15 en mano; 6 en tripié);
+  mide el movimiento (motion metering) y acorta la exposición; alinea y promedia; «we reject pieces of frames for which we can't find a good alignment».
+  Fuente: Google Research, «Night Sight: Seeing in the Dark on Pixel Phones», 14-nov-2018: https://research.google/blog/night-sight-seeing-in-the-dark-on-pixel-phones/
+- «El ruido baja casi 4 veces con 15 fotos»: el ruido aleatorio baja como 1/√n (√15 ≈ 3.9). La gráfica (100/50/33/26 %) es APROX., marcada en pantalla.
+- «Borroso o con fantasmas»: lo que se mueve no se puede alinear (mismo blog de Google). Perro, tripié, pared y ruido: RECREACIÓN.
+
+FOTO REAL
+- Monterrey de noche desde la Estación Espacial (ISS-35). NASA, dominio público.
+  https://commons.wikimedia.org/wiki/File:ISS-35_Night_image_of_Monterrey,_Mexico.jpg (descargada con descargar.sh; copia en kit/nuevo/img/img_monterrey_noche.jpg)
+
+TEXTO IG/FB
+¿Por qué tu foto de noche sale mejor si no te mueves? 🌙📸
+Tu celular no toma una foto: junta varias (el modo noche de Google, hasta 15), las alinea y saca el promedio. La luz se suma y el ruido se cancela… pero si te mueves, salen fantasmas.
+Mándaselo a alguien que siempre sale borroso en las fotos de la fiesta.
+#curiosidades #ciencia #mexico #menteenorbita #fotografia
+Foto: NASA (ISS, Monterrey de noche).
+
+TÍTULOS
+- Facebook: Tu foto de noche no es una foto
+- TikTok: Tu foto de noche no es una foto 📸🌙 #curiosidades #ciencia #fotografia
+- YouTube Shorts: Tu foto de noche no es una foto: así funciona el modo noche 📸 #Shorts

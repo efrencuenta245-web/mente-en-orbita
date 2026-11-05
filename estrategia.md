@@ -39,11 +39,9 @@ Datos del 5-nov-2026 (últimos 30 días). Clasificación de los últimos 7 días
 
 ## Ya programados (no los tomes de la cola)
 Desde el 5-nov-2026 se publican 2 reels al día (8:00 y 19:00) con 4 de reserva (CLAUDE.md §3). Estos los hizo Claude en el chat el 4-nov:
-- jue 5-nov 8:00 — «Tu pila no se acaba. *Se cansa.*» (batería de litio)
 - jue 5-nov 19:00 — «Tu estufa calienta la olla… *pero no tu mano.*» (inducción)
 - vie 6-nov 8:00 — «Tu teclado ya sabe *tu siguiente palabra.*» (texto predictivo)
 - vie 6-nov 19:00 — «Tu refri no hace frío. *Saca el calor.*» (refrigerador)
-- jue 5-nov 14:30 — EXTRA «Tu microondas *apaga tu Wi-Fi.*» (pedido por Efrén; post 417842684)
 Huecos libres: sáb 7-nov 8:00 y 19:00 (los llena la tarea de hoy a las 4:35 pm con las ideas #1 y #2).
 
 ## Cola de ideas
