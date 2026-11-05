@@ -1,8 +1,26 @@
-{"noche": {"flow_id": "npSmY7saRDrtLFjp3PHx", "voz_node": "77c378EK3aUHbrBmioJz", "session": "9ej35D2OkvPjL6ghl2zC", "slot": "2026-11-07T08:00",
-           "video": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/1c2a33912f3bbd5b0d0b77d321d55f18713f6241/noche_final_p.mp4",
-           "portada": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/52def5dfa3fa364741570fa1b64d90b8bce93569/portada_noche.jpg",
-           "duracion": 64.8, "estado": "esperando aprobación"},
- "luna": {"flow_id": "fK6iTBvDAUF2BK17EVG7", "voz_node": "E5OYRtHfqM8GqctPX5RP", "session": "colqQKxCPCyBmarEHoUY", "slot": "2026-11-07T19:00",
-          "video": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/22188273a08747ce8c704c7b187c7d54b61f9900/luna_final_p.mp4",
-          "portada": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/3961c1d0004a82934fceff2cab36c38a51805658/portada_luna.jpg",
-          "duracion": 69.1, "estado": "esperando aprobación"}}
+{
+ "noche": {
+  "flow_id": "npSmY7saRDrtLFjp3PHx",
+  "voz_node": "77c378EK3aUHbrBmioJz",
+  "session": "9ej35D2OkvPjL6ghl2zC",
+  "slot": "2026-11-07T08:00",
+  "video": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/1c2a33912f3bbd5b0d0b77d321d55f18713f6241/noche_final_p.mp4",
+  "portada": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/52def5dfa3fa364741570fa1b64d90b8bce93569/portada_noche.jpg",
+  "duracion": 64.8,
+  "estado": "programado",
+  "post": 418354984,
+  "planner": "https://app.metricool.com/planner/calendar?blogId=7735731&openWithPostUuid=7549309633326302244"
+ },
+ "luna": {
+  "flow_id": "fK6iTBvDAUF2BK17EVG7",
+  "voz_node": "E5OYRtHfqM8GqctPX5RP",
+  "session": "colqQKxCPCyBmarEHoUY",
+  "slot": "2026-11-07T19:00",
+  "video": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/22188273a08747ce8c704c7b187c7d54b61f9900/luna_final_p.mp4",
+  "portada": "https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/3961c1d0004a82934fceff2cab36c38a51805658/portada_luna.jpg",
+  "duracion": 69.1,
+  "estado": "programado",
+  "post": 418355022,
+  "planner": "https://app.metricool.com/planner/calendar?blogId=7735731&openWithPostUuid=-7419808422082031817"
+ }
+}
