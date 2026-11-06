@@ -3,6 +3,7 @@ Cada video abre con un tipo de inicio distinto a los últimos 6 de esta lista. A
 
 | Fecha de publicación | Tema | Tipo de inicio (# del catálogo) | Primera transición |
 |---|---|---|---|
+| 2026-11-06 15:00 | ojo que se apaga (extra) | 7 macro extremo del iris que se aleja y el párpado cae | wipe |
 | 2026-11-07 19:00 | luna que se aleja | 4 barra de búsqueda (escribe la pregunta, Enter y atraviesa hacia la Luna) | iris |
 | 2026-11-07 08:00 | modo noche | 12 cuenta regresiva 3-2-1 del modo noche | giro |
 | 2026-11-05 14:30 | microondas y Wi-Fi (extra) | 8 error en pantalla (la videollamada se cae y el micro prende) | golpe |

@@ -1,0 +1,39 @@
+Reel EXTRA (pedido por Efrén) · VIE 6-nov-2026 15:00 (CDMX) · «Tu ojo se apaga… y no lo notas.» (kit/nuevo/ojo.py + ojo_pieza.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~984 créditos) · flow FaTJ9F1Hea3Xh6mWTxaz · tiempos con Scribe.
+Inicio: tipo 7 (macro extremo del iris que se aleja, revela el ojo y el párpado cae de golpe). Primera transición: wipe.
+Duración final: 65.1 s · música semilla 2611, 104 BPM · categoría de portada CUERPO.
+Serie / nicho: cuerpo + prueba con tu celular (idea extra #5 de estrategia.md del 6-nov).
+
+GUION (voz): ver guiones/2026-11-06_ojo_voz.txt
+
+DATOS Y FUENTES
+- Parpadeo de 100–150 ms («una décima de segundo»), «at least 1000 times an hour» (unas mil por hora) y «about three or four
+  percent of our waking hours are unknowingly spent with our eyes closed» (3–4 % de 16 h despierto = 29–38 min → «como media hora»).
+  El cerebro no rellena el hueco: suprime la señal del apagón. Fuente: Golan T. et al., «Human intracranial recordings link
+  suppressed transients rather than 'filling-in' to perceptual continuity across blinks», eLife 2016;5:e17243.
+  https://elifesciences.org/articles/17243
+- Una oscuridad externa de la misma duración sí se nota (el estudio compara parpadeos con «gaps» iguales).
+- Experimento de la luz por el paladar: Volkmann, Riggs y Moore, «Eyeblinks and visual suppression», Science 1980; metieron
+  una fibra óptica en la boca para iluminar la retina sin pasar por el párpado y la sensibilidad bajó igual al parpadear
+  («active neural suppression of visual input during a blink»). Descrito en Willett, Maenner y Mayo, «The perceptual
+  consequences and neurophysiology of eye blinks», Front. Syst. Neurosci. 2023 (doi 10.3389/fnsys.2023.1242654):
+  https://www.frontiersin.org/articles/10.3389/fnsys.2023.1242654 (también da ~15 parpadeos por minuto).
+- Pantalla contra papel: parpadeos incompletos 7.02 % contra 4.33 % (p = 0.02); la frecuencia NO bajó (14.9 contra 13.6 por
+  minuto). Portello, Chu y Rosenfield, «Blink patterns: reading from a computer screen versus hard copy», Optom. Vis. Sci.
+  2014;91(3):297-302, https://pubmed.ncbi.nlm.nih.gov/24413278/ y nota de la AOA: https://aoa.org/news/clinical-eye-care/the-benefits-of-blinking
+  Por eso el guion dice «se quedan a medias» y no «parpadeas menos».
+- Regla 20-20-20 (cada 20 minutos, 20 segundos, a 20 pies ≈ 6 m): American Optometric Association (misma nota).
+- «Más de 15 veces» en el video: ~65 s × 15 parpadeos/min ≈ 16.
+- Espejo: cuando parpadeas tus ojos están cerrados, por eso nunca te ves parpadear; en un video grabado sí sales.
+Ojo, cerebro, foco, diagrama del experimento y gráficas: RECREACIÓN (el diagrama lo dice en pantalla). Sin fotos reales.
+
+TEXTO IG/FB
+¿Sabías que pasas como media hora al día con los ojos cerrados… despierto? 👁️
+Cada parpadeo te deja a ciegas una décima de segundo, y parpadeas unas mil veces por hora. Tu cerebro borra esos apagones para que no los notes. Frente a la pantalla, más parpadeos se quedan a medias: cada 20 minutos, mira algo lejano 20 segundos.
+Mándaselo a alguien que vive pegado al celular 📲
+#curiosidades #ciencia #mexico #menteenorbita #cuerpohumano
+
+TÍTULOS
+- Facebook: Tu ojo se apaga… y no lo notas
+- TikTok: Tu ojo se apaga… y no lo notas 👁️ #curiosidades #ciencia #cuerpohumano
+- YouTube Shorts: Tu ojo se apaga y no lo notas: media hora al día a ciegas 👁️ #Shorts
