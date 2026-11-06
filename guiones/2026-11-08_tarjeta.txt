@@ -1,0 +1,36 @@
+Reel diario · DOM 8-nov-2026 19:00 (CDMX) · «Tu tarjeta no tiene pila… y paga.» (kit/nuevo/tarjeta.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma) · flow InoEdmxm5Htt13qNv4ls · tiempos con Scribe (palabra por palabra).
+Inicio: tipo 10 (rayos X de golpe: la tarjeta normal y, con el primer golpe, se vuelve de cristal y se ve su antena y su chip).
+Primera transición: cubo_izq. Letras de cristal: PILA, CAMPO, ERROR, CÓDIGO (transición cristal).
+Segundo gancho: 29 s («Ahora, el error que casi todos cometemos»). «Mándaselo…» a los 26.7 s y al final.
+
+GUION (voz): ver guiones/2026-11-08_tarjeta_voz.txt
+
+DATOS Y FUENTES
+- La tarjeta sin contacto no tiene batería: la terminal crea un campo de radiofrecuencia de 13.56 MHz (más de 13 millones de
+  ciclos por segundo) y la antena en espiral escondida en el plástico lo convierte en electricidad (inducción) que prende el chip.
+  https://www.bbva.mx/educacion-financiera/banca-digital/cuenta-digital-pago-tarjeta-contactless.html
+  https://herramientasparavendedores.com.mx/que-es-terminal-contactless-como-funciona/ · https://novacard.mx/blog/tarjeta-contactless-que-es
+- Alcance: «Typically the optimum distance is 4 centimeters or less»; la señal «can never exceed 10 centimeters»; 13.56 MHz.
+  «Every POS terminal is registered to a merchant and a bank» (Thales, «Why contactless pickpocketing is impossible»):
+  https://dcmpx.remotevs.com/com/thalesgroup-events/images/SL/Web/THALES/%7B2e7dca91-95c2-4938-abd5-8161dc1bffb1%7D_fs-why-contactless-pickpocketing-impossible.pdf
+  (fuente de un fabricante de tarjetas, 2020).
+- Dos tarjetas juntas («card clash»): el lector puede no leer ninguna, no cobrar, o «take payment for your journey from the card
+  you didn't intend to pay with»; recomiendan no llevarlas en la misma cartera. TfL: https://tfl.gov.uk/fares/how-to-pay-and-where-to-buy-tickets-and-oyster/pay-as-you-go/card-clash
+- Cada pago genera un criptograma dinámico (EMV) que no se repite: si alguien copia los datos de un pago, no le sirve para otro.
+  https://en.wikipedia.org/wiki/EMV · BBVA México (arriba).
+- Tarjetas, terminal, cartera, camión y códigos: RECREACIÓN / EJEMPLO, sin marcas ni logos. El número «13 560 000» es 13.56 MHz.
+
+FOTOS REALES
+- Ninguna: una foto real de tarjeta o terminal mostraría logos de bancos o marcas.
+
+TEXTO IG/FB
+¿Tu tarjeta sin contacto tiene pila? 💳
+No: la energía se la da la terminal. Su campo magnético prende el chip a través de una antena escondida en el plástico, y solo a unos 4 cm. El error: llevar dos tarjetas sin contacto juntas, porque te pueden cobrar con la que no querías.
+Mándaselo a alguien que le tiene miedo a pagar sin contacto.
+#curiosidades #ciencia #mexico #menteenorbita #tecnologia
+
+TÍTULOS
+- Facebook: Tu tarjeta no tiene pila… y paga
+- TikTok: Tu tarjeta no tiene pila… y paga 💳 #curiosidades #ciencia #tecnologia
+- YouTube Shorts: Tu tarjeta no tiene pila… y paga: así funciona el pago sin contacto 💳 #Shorts

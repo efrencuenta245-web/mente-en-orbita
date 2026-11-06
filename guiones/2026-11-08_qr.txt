@@ -1,0 +1,42 @@
+Reel diario · DOM 8-nov-2026 08:00 (CDMX) · «Tu QR sirve aunque lo rompas.» (kit/nuevo/qr.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma) · flow InoEdmxm5Htt13qNv4ls · tiempos con Scribe (palabra por palabra).
+Inicio: tipo 3 (se arma solo: los pedazos del QR vuelan, se juntan con clic y luego se le rompe una esquina… y sigue leyendo).
+Primera transición: rompe. Letras de cristal: ROTO, REPUESTO, ESQUINAS, CUADRITO (transición cristal).
+Segundo gancho: 30.6 s («Pero hay tres cuadros que nunca debes tapar»). «Mándaselo…» a los 27 s y al final.
+
+GUION (voz): ver guiones/2026-11-08_qr_voz.txt
+
+QR REAL Y PRUEBA
+- El QR del video es real: versión 2, nivel H, modo alfanumérico, dice «MENTE EN ORBITA» (kit/nuevo/qr_codigo.py,
+  algoritmo público de Project Nayuki, MIT). Cada daño que el video muestra como «sí lee» (rayado, manchado, pedazo menos,
+  esquina rota, hueco grande, logo en medio, despintado, salsa, muy rayado) se leyó con el lector de QR de OpenCV antes de
+  renderizar, y el de las 3 esquinas tapadas NO se leyó (`python3 qr.py probar`).
+- «16 bloques de datos y 28 de respaldo»: así es la versión 2-H (44 codewords, 28 de corrección Reed-Solomon).
+
+DATOS Y FUENTES
+- Lo inventó Denso Wave (Japón) en 1994 para rastrear autopartes en las fábricas.
+  https://www.techspot.com/guides/1676-qr-code-explained/ · https://orbisica.com/articles/qr-code · https://www.scandit.com/products/barcode-scanning/symbologies/qr-code/
+- 4 niveles de corrección: L ~7 %, M ~15 %, Q ~25 %, H ~30 %; código Reed-Solomon; con el nivel más alto se recupera ~30 % de
+  los datos dañados (por eso aguanta rayones, calcomanías y logos).
+  https://qrmake.org/qr-code-error-correction/ · https://help.seagullscientific.com/10.1/en/Content/ErrorCorrection_QRCode.html
+  https://maketecheasier.com/how-qr-codes-survive-damage/ · https://www.makeuseof.com/this-clever-redundancy-lets-qr-codes-survive-scratches-stickers-and-missing-pieces/
+- Los 3 cuadros de las esquinas son marcadores de posición: le dicen al lector dónde está el código y cómo está girado
+  (se lee de cabeza o inclinado). https://maketecheasier.com/qr-code-corner-position-markers/
+- Reed-Solomon (Irving Reed y Gustave Solomon, 1960) también corrige errores en los CD y en sondas espaciales como la Voyager.
+- «Bloques de ocho, como letras»: cada codeword es de 8 bits (en modo byte, un carácter); la «M» = 01001101 es EJEMPLO.
+- Taquería y tiendita: EJEMPLO / RECREACIÓN. Fábrica y sonda: RECREACIÓN.
+- No se pudieron abrir las páginas de Denso Wave (qrcode.com) desde esta sesión; los datos coinciden en todas las fuentes de arriba.
+
+FOTOS REALES
+- Ninguna: el objeto real (el QR) se generó por código y sí funciona; una foto de QR en la calle mostraría logos o negocios reales.
+
+TEXTO IG/FB
+¿Tu QR rayado ya no sirve? 📲
+Sí sirve: el QR guarda tu información y además un respaldo hecho con matemáticas, y con el nivel más alto aguanta que le falte cerca del 30 %. Lo que nunca debes tapar son los 3 cuadros de las esquinas. (El QR del video es real: escanéalo).
+Mándaselo a alguien que tiene el QR de su negocio todo despintado.
+#curiosidades #ciencia #mexico #menteenorbita #tecnologia
+
+TÍTULOS
+- Facebook: Tu QR sirve aunque lo rompas
+- TikTok: Tu QR sirve aunque lo rompas 📲 #curiosidades #ciencia #tecnologia
+- YouTube Shorts: Tu QR sirve aunque lo rompas (y los 3 cuadros que nunca debes tapar) #Shorts

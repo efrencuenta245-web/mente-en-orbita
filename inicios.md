@@ -6,6 +6,8 @@ Las filas antes del 6-nov se hicieron sin letras de cristal gigantes (por eso Ef
 
 | Fecha de publicación | Tema | Tipo de inicio (# del catálogo) | Primera transición | Archivo | Transiciones | Cristal |
 |---|---|---|---|---|---|---|
+| 2026-11-08 19:00 | tarjeta sin contacto sin pila | 10 rayos X de golpe (la tarjeta se vuelve de cristal y se ve la antena en espiral y el chip) | cubo_izq | tarjeta | cubo_izq iris zoom flash push wipe rebanadas whip rompe mosaico glitch deslizar_abajo giro whip_izq cristal golpe ritmo remolino | PILA CAMPO ERROR CÓDIGO |
+| 2026-11-08 08:00 | QR que sirve aunque lo rompas | 3 se arma solo (los pedazos del QR vuelan, se juntan con clic y se le rompe una esquina) | rompe | qr | rompe iris cubo mosaico golpe deslizar whip_izq glitch zoom rebanadas cristal deslizar_abajo giro remolino whip push ritmo flash | ROTO REPUESTO ESQUINAS CUADRITO |
 | 2026-11-06 15:00 | ojo que se apaga (extra) | 7 macro extremo del iris que se aleja y el párpado cae | wipe | ojo | wipe golpe deslizar whip corte giro iris deslizar_abajo whip_izq zoom flash golpe deslizar giro wipe push deslizar_abajo whip golpe glitch iris deslizar flash golpe zoom giro ritmo whip | — |
 | 2026-11-07 19:00 | luna que se aleja | 4 barra de búsqueda (escribe la pregunta, Enter y atraviesa hacia la Luna) | iris | luna | iris golpe deslizar whip giro zoom flash whip_izq golpe wipe giro deslizar_abajo push iris whip flash deslizar ritmo zoom | — |
 | 2026-11-07 08:00 | modo noche | 12 cuenta regresiva 3-2-1 del modo noche | giro | noche | giro golpe deslizar whip push glitch zoom deslizar_abajo wipe iris flash deslizar golpe whip_izq giro glitch wipe push iris ritmo whip | — |

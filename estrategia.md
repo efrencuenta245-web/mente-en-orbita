@@ -41,13 +41,11 @@ Datos del 6-nov-2026 (últimos 30 días). Clasificación de los últimos 7 días
 
 ## Ya programados (no los tomes de la cola)
 Desde el 5-nov-2026 se publican 2 reels al día (8:00 y 19:00) con 4 de reserva (CLAUDE.md §3). Los de jueves y viernes los hizo Claude en el chat el 4-nov:
-- vie 6-nov 8:00 — «Tu teclado ya sabe *tu siguiente palabra.*» (texto predictivo; post 417102603)
 - vie 6-nov 19:00 — «Tu refri no hace frío. *Saca el calor.*» (refrigerador; post 417102685)
 - sáb 7-nov 8:00 — «Tu foto de noche *no es una foto.*» (modo noche; post 418354984; tarea del 5-nov)
 - sáb 7-nov 19:00 — «Tu Luna se está *escapando.*» (la Luna se aleja; post 418355022; tarea del 5-nov)
-- EXTRA vie 6-nov 15:00 — «Tu ojo se apaga… *y no lo notas.*» (parpadeo; pedido por Efrén; post 419084760; no ocupa hueco). La siguiente tarea revisa que salga en las 4 redes y lo registra en `publicados.md` como extra.
 Huecos libres: dom 8-nov 8:00 y 19:00 (los llena la tarea del 6-nov a las 4:35 pm con las ideas #1 y #2).
-(La inducción del 5-nov 19:00 ya salió en las 4 redes y está en `publicados.md`.)
+(La inducción del 5-nov 19:00, el teclado del 6-nov 8:00 y el ojo extra del 6-nov 15:00 ya salieron en las 4 redes y están en `publicados.md`.)
 
 ## Cola de ideas
 1. **«Tu QR sirve *aunque lo rompas.*»** — Los QR tienen corrección de errores: con nivel H se leen aunque falte o se dañe hasta ~30 % (verificar con Denso Wave, inventor del QR, o la norma ISO/IEC 18004). Prueba en dos casos: QR rayado o con un logo encima que sí lee, contra QR con los 3 cuadros de las esquinas tapados que no lee. Error del segundo gancho: tapar o despintar esos 3 cuadros (son los que le dicen a tu cámara dónde está el código). Ejemplo mexicano: el QR del menú de la taquería o del pago en la tiendita. *Por qué:* objeto de diario + truco que puedes probar ya, y la conclusión 1 pide temas que se manden. «Mándaselo a quien tiene el QR de su negocio todo despintado» (decirlo también a los ~20 s). Nicho 1. Red: Instagram y TikTok. Sin fecha → **para el dom 8-nov 8:00**.
