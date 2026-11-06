@@ -9,19 +9,31 @@ Cada escena dura desde 0.2 s antes de su frase `desde` hasta que empieza la sigu
 fn(t, fi, u, d) devuelve el cuadro terminado (np.uint8 1080x1920x3): t = tiempo global, u = t − inicio de su frase,
 d = duración de la escena. `loop=True` repite la escena 0 con t − DUR para que el último cuadro sea el primero.
 Transiciones (tr): whip, whip_izq, zoom, flash, wipe, push, corte, ritmo, glitch, giro, iris, deslizar,
-  deslizar_abajo, golpe (rápidas: 0.25–0.3 s). Usa al menos 5 distintas por video y no repitas la misma dos veces seguidas.
+  deslizar_abajo, golpe (rápidas: 0.25–0.3 s) y las CREATIVAS (6-nov-2026): cubo, cubo_izq (cubo 3D que gira),
+  rebanadas (franjas que salen disparadas), rompe (la pantalla se rompe como cristal; c=(x, y) es el impacto),
+  mosaico (bloques digitales), remolino (espiral) y cristal (la palabra de cristal gigante deja ver la escena
+  siguiente por sus letras y la cámara atraviesa una letra; pon palabra='CALOR' en esa escena).
+REGLAS QUE SE REVISAN SOLAS (`hoja` las imprime como ERROR y `render` NO arranca hasta que se cumplan):
+  · Transiciones: 8+ distintas (5+ si hay menos de 14 cambios), 3+ creativas distintas, ninguna dos veces seguidas,
+    ninguna más de 3 veces, la primera distinta a la del reel anterior y ninguna racha de 3 seguidas igual a un
+    reel de los últimos 6 de inicios.md (para que no salga la misma plantilla de siempre).
+  · Letras de cristal GIGANTES (motor2.cristal, ≥ 80 % del ancho, detrás del objeto): en 3+ escenas (2+ si hay
+    menos de 10) y una en los primeros 6 s. La transición `cristal` cuenta como una.
 Los subtítulos (bloques de 6 palabras con caja cian) se ponen solos encima de todo.
 Movimiento (ESTILO.md §11): objetos que entran en 0.12–0.3 s y cámara con golpes rápidos → piezas.entrada,
   piezas.cam_rapida, piezas.sacudida + piezas.mover_img, piezas.rebote/resorte/eout4, piezas.despiece.
 Inicio (ESTILO.md §12): tipo distinto a los últimos 6 de /home/claude/mente-en-orbita/inicios.md; anótalo ahí.
-`hoja` y `render` avisan si hay menos de 5 transiciones distintas o una repetida dos veces seguidas.
+Al terminar `hoja` sin errores: python3 TEMA.py registrar "AAAA-MM-DD HH:MM" "tema" "N nombre del inicio"
+  → agrega la fila del reel arriba en inicios.md (con su secuencia de transiciones y sus palabras de cristal).
 
 Comandos (desde /home/claude/mente-en-orbita/kit/nuevo):
   python3 TEMA.py tiempos /home/claude/narr_TEMA.mp3 [/home/claude/words_TEMA.json]
         → tiempos por frase (mejor con las palabras de Scribe) + voz con pausas (61 s o más)
   python3 TEMA.py preview 0.1 5 12                      → /home/claude/prev_TEMA_T.png
-  python3 TEMA.py hoja                                   → hoja de contacto /home/claude/hoja_TEMA.png
-  python3 TEMA.py render                                 → /home/claude/TEMA_sin_audio.mp4
+  python3 TEMA.py hoja                                   → reglas (ERROR si falta algo) + hoja de contacto /home/claude/hoja_TEMA.png
+  python3 TEMA.py revisar                                → solo las reglas (transiciones y letras de cristal)
+  python3 TEMA.py registrar "AAAA-MM-DD HH:MM" "tema" "N nombre del inicio"   → fila arriba en inicios.md
+  python3 TEMA.py render                                 → /home/claude/TEMA_sin_audio.mp4 (no arranca si hay ERROR)
   python3 TEMA.py final "Línea 1" "línea 2" CATEGORÍA SEMILLA BPM
         → efectos, música, mezcla, portada y portada como cuadro 0: /home/claude/TEMA_final_p.mp4 + portada_TEMA.jpg
 """
@@ -34,7 +46,8 @@ KIT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import motor2 as M
 from motor2 import (W, H, FPS, word_caption, seg, tr_zoom_through, tr_flash, tr_whip, tr_wipe_v, push_in,
-                    tr_glitch, tr_giro, tr_iris, tr_deslizar, tr_golpe)
+                    tr_glitch, tr_giro, tr_iris, tr_deslizar, tr_golpe, tr_cubo, tr_rebanadas, tr_rompe, tr_mosaico,
+                    tr_remolino, tr_cristal)
 
 OUT = '/home/claude'
 LEAD, TAIL, MIN_DUR, MAX_GAP = 0.25, 0.55, 61.3, 0.6
@@ -236,8 +249,8 @@ def frame_at(t, fi, caps=True):
     # transición de salida hacia la siguiente (cada una decide su ventana; máx. 0.4 s antes del corte)
     if nxt is not None and t >= nxt['a'] - 0.4:
         img = _transicion(e, nxt, t, fi)
-    # transición de entrada (hasta 0.25 s después del corte)
-    if img is None and k > 0 and t < e['a'] + 0.25:
+    # transición de entrada (hasta 0.3 s después del corte)
+    if img is None and k > 0 and t < e['a'] + 0.3:
         img = _transicion(SC[k - 1], e, t, fi)
     if img is None:
         img = _eval(e, t, fi)
@@ -246,6 +259,14 @@ def frame_at(t, fi, caps=True):
     if caps:
         img = np.asarray(_cap(Image.fromarray(img), t, CTX['T'], CTX['TXT'], **CTX.get('CAP', {})))
     return img
+
+
+def _palabra(e):
+    """Palabra de la transición `cristal`: la que diga la escena (palabra='…') o la más larga de su frase."""
+    if e.get('palabra'):
+        return e['palabra'].upper()
+    ws = re.findall(r'[0-9A-Za-zÁÉÍÓÚÑÜáéíóúñü%]+', CTX['TXT'][e['desde']])
+    return max(ws, key=len).upper() if ws else 'MENTE'
 
 
 def _transicion(A, B, t, fi):
@@ -282,6 +303,24 @@ def _transicion(A, B, t, fi):
     elif tr == 'golpe':
         if c - 0.14 <= t < c + 0.11:
             return tr_golpe(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.14, c + 0.11), cx, cy)
+    elif tr in ('cubo', 'cubo_izq'):
+        if c - 0.2 <= t < c + 0.15:
+            return tr_cubo(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.2, c + 0.15), -1 if tr == 'cubo_izq' else 1)
+    elif tr == 'rebanadas':
+        if c - 0.18 <= t < c + 0.14:
+            return tr_rebanadas(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.18, c + 0.14))
+    elif tr == 'rompe':
+        if c - 0.12 <= t < c + 0.26:
+            return tr_rompe(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.12, c + 0.26), *B.get('c', (0.5, 0.45)))
+    elif tr == 'mosaico':
+        if c - 0.15 <= t < c + 0.13:
+            return tr_mosaico(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.15, c + 0.13), fi)
+    elif tr == 'remolino':
+        if c - 0.17 <= t < c + 0.15:
+            return tr_remolino(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.17, c + 0.15), cx, cy)
+    elif tr == 'cristal':
+        if c - 0.3 <= t < c + 0.2:
+            return tr_cristal(_eval(A, t, fi), _eval(B, t, fi), seg(t, c - 0.3, c + 0.2), _palabra(B))
     elif tr == 'ritmo':
         if c - 0.36 <= t < c:
             SC = CTX['_SC']
@@ -310,7 +349,7 @@ def sonido(out):
              'scribble': lambda: S.scribble(0.45), 'click': S.click, 'slap': S.slap, 'shimmer': lambda: S.shimmer(0.7),
              'sub': lambda: S.sub_hit(0.9), 'bass': S.bass_hit, 'burst': lambda: S.burst(0.35), 'thud': S.thud,
              'whoosh': lambda: S.whoosh(0.45, 400, 3500), 'whoosh_suave': lambda: S.whoosh(1.2, 300, 1500),
-             'riser': lambda: S.riser(1.0)}
+             'riser': lambda: S.riser(1.0), 'cristal': S.brillo_cristal, 'vidrio': S.vidrio, 'digital': S.digital}
     add(S.sub_hit(), 0.0)
     add(S.whoosh(0.5, 300, 1600), 0.15, 0.35)
     T = CTX['T']
@@ -338,6 +377,20 @@ def sonido(out):
                 add(S.whoosh(0.28, 700, 3400), c - 0.15, 0.9)
             elif tr == 'golpe':
                 add(S.whoosh(0.2, 300, 5000), c - 0.15, 0.8); add(S.bass_hit(), c, 0.9)
+            elif tr in ('cubo', 'cubo_izq'):
+                add(S.whoosh(0.4, 250, 2200), c - 0.22, 1.0); add(S.thud(), c + 0.13, 0.7)
+            elif tr == 'rebanadas':
+                for j in range(4):
+                    add(S.whoosh(0.16, 900, 5200), c - 0.18 + 0.05 * j, 0.55)
+                add(S.bass_hit(), c + 0.1, 0.6)
+            elif tr == 'rompe':
+                add(S.vidrio(), c - 0.12, 1.0); add(S.sub_hit(0.8), c - 0.12, 0.6)
+            elif tr == 'mosaico':
+                add(S.digital(0.3), c - 0.15, 0.9); add(S.burst(0.2), c - 0.02, 0.4)
+            elif tr == 'remolino':
+                add(S.whoosh(0.4, 200, 1800), c - 0.2, 1.0); add(S.riser(0.3), c - 0.3, 0.4); add(S.thud(), c + 0.14, 0.5)
+            elif tr == 'cristal':
+                add(S.brillo_cristal(), c - 0.3, 0.9); add(S.whoosh(0.3, 400, 6000), c - 0.08, 0.9); add(S.thud(), c + 0.18, 0.6)
             elif tr == 'ritmo':
                 for j in range(3):
                     add(S.bass_hit(), c - 0.36 + 0.12 * j)
@@ -346,6 +399,11 @@ def sonido(out):
         base = T[e['desde']][0]
         for (u, name, g) in e.get('sfx', []):
             add(NAMED[name](), base + u, g)
+    # brillo cristalino cuando entra cada palabra de cristal gigante (lo guarda la revisión de `render`)
+    fc = f'{OUT}/cristal_{CTX["TEMA"]}.json'
+    if os.path.exists(fc):
+        for tc in json.load(open(fc)).get('t', []):
+            add(S.brillo_cristal(), max(0.0, tc), 0.7)
     add(S.riser(0.9), DUR - 0.95, 0.45)
     L = L[:int(DUR * SR)]
     L = L / (np.max(np.abs(L)) + 1e-9) * 0.89
@@ -411,15 +469,121 @@ def final(l1, l2, cat, semilla, bpm):
           'peso', round(os.path.getsize(fin) / 1e6, 1), 'MB')
 
 
+CREATIVAS = {'cubo': 'cubo', 'cubo_izq': 'cubo', 'rebanadas': 'rebanadas', 'rompe': 'rompe', 'mosaico': 'mosaico',
+             'remolino': 'remolino', 'cristal': 'cristal'}
+INICIOS = os.path.join(os.path.dirname(KIT), 'inicios.md')
+
+
+def _inicios():
+    """Filas de inicios.md (de la más nueva a la más vieja): dict con primera, archivo y secuencia."""
+    out = []
+    if not os.path.exists(INICIOS):
+        return out
+    for ln in open(INICIOS, encoding='utf-8'):
+        c = [x.strip() for x in ln.strip().strip('|').split('|')]
+        if not ln.startswith('|') or len(c) < 4 or c[0].startswith('Fecha') or set(c[0]) <= set('-: '):
+            continue
+        out.append(dict(fecha=c[0], tema=c[1], primera=c[3].split()[0] if c[3] else '',
+                        archivo=c[4] if len(c) > 4 else '', seq=c[5].split() if len(c) > 5 else []))
+    return out
+
+
+def _trs():
+    return [e.get('tr', 'corte') for e in CTX['ESCENAS'][1:]]
+
+
 def _revisar_transiciones():
-    trs = [e.get('tr', 'corte') for e in CTX['ESCENAS'][1:]]
+    trs = _trs()
+    n = len(trs)
     dist = set(trs) - {'corte'}
-    rep = [trs[i] for i in range(1, len(trs)) if trs[i] == trs[i - 1] and trs[i] != 'corte']
-    if len(dist) < 5:
-        print(f'AVISO transiciones: solo {len(dist)} distintas ({", ".join(sorted(dist))}); usa 5 o más (ESTILO.md §11)')
+    crea = {CREATIVAS[x] for x in trs if x in CREATIVAS}
+    err = []
+    need = 8 if n >= 14 else 5
+    if len(dist) < need:
+        err.append(f'solo {len(dist)} transiciones distintas; usa {need} o más (ESTILO.md §11)')
+    if len(crea) < 3:
+        err.append(f'solo {len(crea)} transiciones creativas ({", ".join(sorted(crea)) or "ninguna"}); usa 3 o más de: '
+                   'cubo, rebanadas, rompe, mosaico, remolino, cristal')
+    rep = [trs[i] for i in range(1, n) if trs[i] == trs[i - 1] and trs[i] != 'corte']
     if rep:
-        print(f'AVISO transiciones: repetidas seguidas: {", ".join(rep)}')
+        err.append(f'repetidas seguidas: {", ".join(rep)}')
+    mas = sorted({x for x in trs if x != 'corte' and trs.count(x) > 3})
+    if mas:
+        err.append('usadas más de 3 veces: ' + ', '.join(f'{x} ({trs.count(x)})' for x in mas))
+    prev = [r for r in _inicios() if r['archivo'] != CTX['TEMA']]
+    if prev and trs and prev[0]['primera'] and trs[0] == prev[0]['primera']:
+        err.append(f'la primera transición ({trs[0]}) es la misma del reel anterior ({prev[0]["tema"]}); cámbiala')
+    mios = {tuple(trs[i:i + 3]) for i in range(n - 2)}
+    for r in prev[:6]:
+        sq = r['seq']
+        comun = mios & {tuple(sq[i:i + 3]) for i in range(len(sq) - 2)}
+        if comun:
+            err.append(f'racha igual a «{r["tema"]}»: {" → ".join(sorted(comun)[0])}; cambia el orden (nada de plantilla)')
     print('Transiciones:', ' → '.join(trs))
+    return err
+
+
+def _revisar_cristal(guardar=True):
+    """Busca palabras de cristal gigantes (≥ 80 % del ancho) en cada escena y cuenta las transiciones `cristal`."""
+    SC, T = CTX['_SC'], CTX['T']
+    hits = []
+    for k, e in enumerate(SC):
+        if e.get('loop'):
+            continue
+        for fr_ in (0.3, 0.6, 0.9):
+            t = e['a'] + (e['b'] - e['a']) * fr_
+            M.REG_CRISTAL.clear()
+            _eval(e, t, int(t * FPS))
+            big = [x for x in M.REG_CRISTAL if x[1] >= 0.8]
+            if big:
+                hits.append((k, big[0][0], round(T[e['desde']][0] + big[0][2], 2)))
+                break
+    for k, e in enumerate(SC[1:], 1):
+        if e.get('tr') == 'cristal' and not any(h[0] == k for h in hits):
+            hits.append((k, _palabra(e), round(e['a'] - 0.3, 2)))
+    hits.sort()
+    n_esc = len([e for e in SC if not e.get('loop')])
+    need = 3 if n_esc >= 10 else 2
+    err = []
+    if len(hits) < need:
+        err.append(f'letras de cristal gigantes en {len(hits)} escenas; van en {need} o más (motor2.cristal, '
+                   'detrás del objeto: llámala con fr.base/fr.fx antes de draw_objects; ESTILO.md §4b)')
+    if not any(h[2] < 6.0 for h in hits):
+        err.append('ninguna palabra de cristal gigante en los primeros 6 s (el gancho la necesita)')
+    print('Cristal:', ', '.join(f'escena {k} «{w}» {t:.1f} s' for k, w, t in hits) or 'ninguna')
+    if guardar:
+        json.dump({'t': [h[2] for h in hits if not any(e.get('tr') == 'cristal' and i == h[0]
+                                                         for i, e in enumerate(SC))],
+                   'palabras': [h[1] for h in hits]}, open(f'{OUT}/cristal_{CTX["TEMA"]}.json', 'w'))
+    return err, hits
+
+
+def _revisar(estricto):
+    err = _revisar_transiciones()
+    e2, hits = _revisar_cristal()
+    err += e2
+    for x in err:
+        print('ERROR', x)
+    if err and estricto:
+        raise SystemExit(f'No se renderiza: {len(err)} regla(s) sin cumplir (ve los ERROR de arriba, corrige TEMA.py y '
+                         'vuelve a correr hoja).')
+    if not err:
+        print('Reglas OK: transiciones variadas y letras de cristal gigantes.')
+    return hits
+
+
+def registrar(fecha, tema_txt, tipo):
+    """Agrega arriba en inicios.md la fila de este reel (reemplaza la suya si ya estaba)."""
+    trs = _trs()
+    _, hits = _revisar_cristal(guardar=False)
+    fila = (f'| {fecha} | {tema_txt} | {tipo} | {trs[0] if trs else "corte"} | {CTX["TEMA"]} | {" ".join(trs)} | '
+            f'{" ".join(h[1] for h in hits)} |\n')
+    lines = open(INICIOS, encoding='utf-8').readlines()
+    lines = [ln for ln in lines if not (ln.startswith('|') and f'| {CTX["TEMA"]} |' in ln)]
+    i = next(j for j, ln in enumerate(lines) if ln.startswith('|---'))
+    lines.insert(i + 1, fila)
+    open(INICIOS, 'w', encoding='utf-8').writelines(lines)
+    print('inicios.md ←', fila.strip())
 
 
 def cli(g):
@@ -440,11 +604,15 @@ def cli(g):
             t = float(ts)
             Image.fromarray(frame_at(t, int(t * FPS))).save(f'{OUT}/prev_{tema}_{ts}.png')
     elif cmd == 'hoja':
-        _revisar_transiciones()
+        _revisar(estricto=False)
         hoja(f'{OUT}/hoja_{tema}.png')
+    elif cmd == 'revisar':
+        _revisar(estricto=False)
     elif cmd == 'render':
-        _revisar_transiciones()
+        _revisar(estricto=True)
         render(f'{OUT}/{tema}_sin_audio.mp4')
+    elif cmd == 'registrar':
+        registrar(*sys.argv[2:5])
     elif cmd == 'sonido':
         sonido(f'{OUT}/efectos_{tema}.wav')
     elif cmd == 'final':

@@ -119,6 +119,37 @@ def bass_hit(d=0.35):
     return (np.sin(2 * np.pi * 55 * t) + 0.3 * lp(noise(d), 200)) * np.exp(-t * 9) * 0.7
 
 
+def vidrio(d=0.7):
+    """Cristal que se rompe: crujido agudo + pedacitos que tintinean (para la transición `rompe`)."""
+    n = int(d * SR); t = np.arange(n) / SR
+    x = hp(noise(d), 2500) * np.exp(-t * 18) * 0.7
+    r = np.random.RandomState(9)
+    for _ in range(14):
+        t0 = r.uniform(0.0, d * 0.6)
+        i = int(t0 * SR)
+        c = chime(r.uniform(2600, 6200), 0.25) * r.uniform(0.4, 1.0)
+        x[i:i + len(c)] += c[:max(0, n - i)]
+    return x
+
+
+def brillo_cristal(d=0.8):
+    """Brillo cristalino cuando aparecen las letras de cristal gigantes (efecto 03)."""
+    t = np.arange(int(d * SR)) / SR
+    x = sum(np.sin(2 * np.pi * f * t + i) * np.exp(-t * (3 + i)) for i, f in enumerate((1568, 2093, 2637, 3136, 4186)))
+    return x * 0.07 + whoosh(d, 2000, 7000) * 0.25
+
+
+def digital(d=0.3):
+    """Ticks digitales rápidos (para `mosaico`)."""
+    out = np.zeros(int(d * SR))
+    r = np.random.RandomState(3)
+    for i in range(9):
+        c = tick(r.uniform(1200, 4200), 0.02, 0.5)
+        j = int(i * d / 9 * SR)
+        out[j:j + len(c)] += c[:max(0, len(out) - j)]
+    return out
+
+
 def build(dur, out):
     L = np.zeros(int(dur * SR) + SR)
 

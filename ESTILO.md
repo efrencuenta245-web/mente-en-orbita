@@ -43,7 +43,19 @@ Prueba aprobable: `kit/nuevo/demo_estilo.py` (12.9 s). Motor: `kit/nuevo/motor2.
 | **Deslizamiento** `deslizar` / `deslizar_abajo` con desenfoque | 0.25 s | Listas, «y además…», subir/bajar de piso | swish |
 | **Golpe de cámara** `golpe` (crash zoom y corte seco con rebote) | 0.25 s | Dato que impacta, número grande, «¡y aquí está el truco!» | whoosh + bajo |
 
-Funciones listas en `motor2.py`: `tr_zoom_through`, `tr_flash`, `push_in`, `tr_whip`, `tr_wipe_v`, `tr_glitch`, `tr_giro`, `tr_iris`, `tr_deslizar`, `tr_golpe`, `radial_blur`, `dir_blur`, `scale_about`. En `montaje.py` se piden con `tr=` en cada escena: whip, whip_izq, zoom, flash, wipe, push, corte, ritmo, glitch, giro, iris, deslizar, deslizar_abajo, golpe.
+### Transiciones CREATIVAS (6-nov-2026: Efrén notó que las transiciones ya no eran tan creativas) — 3 o más distintas en cada reel
+| Transición | Duración | Cuándo | Sonido |
+|---|---|---|---|
+| **Cubo 3D** `cubo` / `cubo_izq` (la escena es una cara de un cubo que gira y la siguiente llega en la otra cara) | 0.35 s | «Del otro lado…», comparar, pasar al siguiente paso | whoosh grave + golpe |
+| **Se rompe** `rompe` (grietas desde un punto y la pantalla estalla en pedazos de cristal que vuelan hacia ti) | 0.38 s | Mito que se rompe, «error», «no es lo que crees», segundo gancho | cristal que se rompe + golpe sub |
+| **Rebanadas** `rebanadas` (franjas que salen disparadas a los lados en cascada) | 0.32 s | Listas, «y además…», cambio de capa | 4 swishes + bajo |
+| **Atraviesa la letra** `cristal` (cae la palabra de cristal gigante, por sus letras se ve la escena siguiente y la cámara atraviesa una letra) | 0.5 s | Entrar a la palabra clave: «PANTALLA», «CALOR», «LITIO» (pon `palabra='…'` en la escena) | brillo cristalino + whoosh |
+| **Mosaico digital** `mosaico` (bloques que se voltean en oleada a la escena nueva) | 0.28 s | Pantallas, datos, internet, «tu celular calcula…» | ticks digitales |
+| **Remolino** `remolino` (la imagen se tuerce en espiral y la nueva sale destorciéndose) | 0.32 s | Mareo, giro, tiempo, «en un instante», agua, aire | whoosh + riser |
+
+**Sin plantilla:** cada reel arma su propia secuencia. `montaje.py` no deja renderizar si la primera transición es la del reel anterior, si una racha de 3 transiciones seguidas es igual a la de alguno de los últimos 6 reels de `inicios.md` (pasaba: «golpe → deslizar → whip» salió igual en 3 reels seguidos), si una transición se usa más de 3 veces o si hay menos de 8 distintas (5 en reels de menos de 14 cambios). Además de las del catálogo, al menos 2 veces por reel la transición la hace **el objeto mismo** (la cámara entra por la pantalla, la gota se vuelve el planeta, el chip se abre y es la ciudad): eso no lo revisa el código, lo revisas tú en la hoja.
+
+Funciones listas en `motor2.py`: `tr_zoom_through`, `tr_flash`, `push_in`, `tr_whip`, `tr_wipe_v`, `tr_glitch`, `tr_giro`, `tr_iris`, `tr_deslizar`, `tr_golpe`, `tr_cubo`, `tr_rebanadas`, `tr_rompe`, `tr_mosaico`, `tr_remolino`, `tr_cristal`, `radial_blur`, `dir_blur`, `scale_about`. En `montaje.py` se piden con `tr=` en cada escena: whip, whip_izq, zoom, flash, wipe, push, corte, ritmo, glitch, giro, iris, deslizar, deslizar_abajo, golpe, cubo, cubo_izq, rebanadas, rompe, mosaico, remolino, cristal. Muestra de todas las nuevas: `kit/nuevo/demo_cristal.py`.
 
 ## 2. Cómo se ven los objetos (referencia del metro)
 - **Semirrealistas, no caricatura:** materiales reales (metal satinado, latón brillante, plástico mate, madera con veta, concreto rugoso, vidrio).
@@ -68,7 +80,7 @@ En **cada video** van al menos 4 de estos, cada uno con su sonido:
 | # | Efecto | Cómo se usa aquí | Sonido |
 |---|---|---|---|
 | 02 | **Atraviesa la escena** | La cámara entra por la pantalla, una «O» o un hueco del objeto | whoosh |
-| 03 | **Letras de cristal** | Palabra clave gigante detrás del objeto, casi transparente, con bisel que brilla (`glass_type`) | brillo cristalino |
+| 03 | **Letras de cristal** (OBLIGATORIO, ver §4b) | Palabra clave GIGANTE que llena el ancho, detrás del objeto, de cristal (`cristal`) | brillo cristalino |
 | 06 | **Muro de titulares / foto que cae** | Fotos reales o titulares que caen y se pegan con balanceo (`photo_card`) | golpe de papel |
 | 07 | **Celular con vida** | Celular 3D girando con su pantalla animada (app, scroll) | whoosh de giro + clic |
 | 08 | **Gráfico que crece** | Barras que suben una por una y línea punteada con nodos (`chart_grow`) | campanitas ascendentes |
@@ -76,6 +88,16 @@ En **cada video** van al menos 4 de estos, cada uno con su sonido:
 | 10 | **Zoom digital** | Saltos x1.0 → x1.3 → x1.8 sobre el detalle con marco REC (`rec_frame`) | clics de cámara |
 
 **Omitidos** porque dependen de una persona o avatar: 01 Rompe el marco (cabeza que sale del cuadro), 04 Órbita alrededor de la cabeza, 05 Interfaces flotantes alrededor del presentador. No se usan caras, avatares ni presentadores.
+
+### 4b. Letras de cristal GIGANTES en cada reel (pedido de Efrén, 6-nov-2026)
+Efrén notó que ya no salían: en los reels del 4 al 6-nov eran de 230–330 px, casi transparentes y tapadas por el objeto, y en los últimos ni aparecían. Desde ahora:
+- **Función:** `M.cristal(fr.base, fr.fx, 'PALABRA', u, t0=…, cy=…)` **antes de `draw_objects`**, para que quede detrás del objeto. Llena el 94 % del ancho (máximo 42 % del alto), refracta el fondo, tiene bisel redondeado con luz arriba-izquierda, filo que brilla, tinte cian de prisma y un destello que la recorre al entrar y cada 3.2 s. Se empuja despacio (nunca está quieta).
+- **Entradas:** `entrada='golpe'` (cae desde grande y desenfocada), `'sube'` (letra por letra desde abajo) o `'zoom'` (crece con rebote). Cámbiala entre escenas.
+- **Cuántas:** en **3 o más escenas** de cada reel (2 si tiene menos de 10 escenas) y **una en los primeros 6 s** (en el gancho, con `t0 ≤ −0.3` para que ya esté en el primer cuadro y en el loop). La transición `cristal` cuenta como una.
+- **Qué palabra:** UNA palabra clave corta y en mayúsculas (o una cifra: «100%», «7.4», «−18 °C»), la que el espectador debe recordar de esa frase. Nunca la misma palabra dos veces en un reel.
+- **Que se lea:** el objeto tapa como máximo la mitad de la palabra; si la tapa más, súbela o bájala con `cy` (0.3–0.55). El objeto va delante: así se ve la profundidad.
+- `montaje.py` lo revisa solo: si falta, `hoja` imprime ERROR y `render` no arranca. Al mezclar, cada palabra de cristal suena con su brillo cristalino.
+- `glass_type` queda solo para etiquetas chicas; **no cuenta** como el efecto 03.
 
 ## 5. Sonido
 - **Cada cambio visual lleva un sonido** (corte, texto que aparece, zoom, etiqueta, barra). Ninguna transición muda.
@@ -122,17 +144,18 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 ## 8. Estructura de cada video (61–75 s)
 | Tiempo | Qué pasa | Efectos y transición |
 |---|---|---|
-| 0–2 s | Gancho: objeto real + título de 2 líneas + etiqueta técnica | Letras de cristal, celular con vida, golpe grave |
+| 0–2 s | Gancho: objeto real + título de 2 líneas + etiqueta técnica | **Letras de cristal gigantes** detrás del objeto, celular con vida, golpe grave |
 | 2–12 s | Contexto: por qué te importa, con foto real si existe | Atraviesa la escena, foto que cae |
 | 12–25 s | Por dentro: rayos X de cristal, pieza nombrada | Destello, pastillas, garabato, zoom digital |
-| 25–30 s | **Segundo gancho** (error, dato que se dispara, escala) | Acercamiento exponencial, contador |
+| 25–30 s | **Segundo gancho** (error, dato que se dispara, escala) | `rompe` o `cristal`, acercamiento exponencial, contador, letras de cristal con la cifra |
 | 30–55 s | Explicación por capas (zoom fractal) | Gráfico que crece, barridos, cortinillas |
 | 55–65 s | Cierre: invitación a compartir con alguien concreto + pregunta | Cortes rítmicos |
 | Final | Última imagen = primera imagen (loop) | Riser que regresa al inicio |
 
 ## 9. Lista de revisión antes de mandar a Efrén
 - [ ] Gancho de 3 a 7 palabras con «tú/tu», sin intro, imagen más fuerte en el primer cuadro.
-- [ ] 5+ transiciones distintas del catálogo (ninguna dos veces seguidas) y 4+ efectos de la sección 4.
+- [ ] `hoja` sin ningún ERROR: 8+ transiciones distintas con 3+ creativas, sin plantilla repetida de reels anteriores, y letras de cristal gigantes en 3+ escenas (una en los primeros 6 s).
+- [ ] 4+ efectos de la sección 4 (el 03, letras de cristal, siempre) y 2+ transiciones hechas con el objeto mismo.
 - [ ] **Inicio de un tipo distinto** a los últimos 6 de `inicios.md` (§12) y anotado ahí; la escena 0 funciona con u negativo (loop).
 - [ ] Cada escena tiene contenido visible desde su primer cuadro y al menos un movimiento rápido de cámara u objeto (§11).
 - [ ] Ningún efecto con persona o avatar.
@@ -158,7 +181,7 @@ Efrén quiere transiciones y movimientos de objetos y de cámara **más creativo
 - **Impactos con sacudida:** cuando algo cae, choca o aparece un número grande, sacude la cámara 0.3 s (`piezas.sacudida(t, t0=…)` + `piezas.mover_img`) con su golpe grave.
 - **Curvas con personalidad:** `piezas.rebote`, `piezas.resorte` (se pasa un poco y regresa) y `piezas.eout4` (arranca muy rápido y frena) en lugar de rampas lineales.
 - **Vista explotada** para explicar piezas: `piezas.despiece(mallas, k, centro, fuerza, giro)` separa las partes y las vuelve a armar.
-- **Transiciones:** 0.25–0.3 s (las de §1). Elige la transición por lo que dice la frase (mito → `glitch`, número que impacta → `golpe`, lista → `deslizar`, sale de un punto → `iris`, cambio de punto de vista → `giro`).
+- **Transiciones:** 0.25–0.38 s (las de §1; `cristal` dura 0.5 s). Elige la transición por lo que dice la frase (mito → `rompe` o `glitch`, número que impacta → `golpe`, lista → `rebanadas` o `deslizar`, sale de un punto → `iris`, cambio de punto de vista → `cubo` o `giro`, pantallas y datos → `mosaico`, palabra clave → `cristal`), nunca por costumbre ni copiando el orden de otro reel.
 - Cada escena dura **1.8–3 s**; si una frase es larga, pártela en 2 escenas con un movimiento de cámara distinto.
 
 ## 12. Inicios: uno distinto en cada video

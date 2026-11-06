@@ -722,12 +722,13 @@ def pill(img, fx, x, y, txt, k=1.0, size=30, col=INK, border=CYAN, anchor='m', d
 
 # ---------------------------------------------------------------- efectos (video de referencia 2, sin persona)
 def glass_type(img, fx, txt, cx, cy, size, k=1.0, fill_a=0.09, edge=0.55):
-    """Letras de cristal: relleno casi transparente, bisel con borde que brilla."""
+    """Letras de cristal CHICAS (etiquetas). Para el efecto 03 de verdad usa `cristal()`: palabra gigante detrás del objeto."""
     if k <= 0.01:
         return
     f = font('sansx', size)
     d0 = ImageDraw.Draw(Image.new('L', (1, 1)))
     bb = d0.textbbox((0, 0), txt, font=f)
+    REG_CRISTAL.append((txt, (bb[2] - bb[0]) / img.width, 0.0))
     w, h = bb[2] - bb[0] + 40, bb[3] - bb[1] + 40
     m = Image.new('L', (w, h), 0)
     ImageDraw.Draw(m).text((20 - bb[0], 20 - bb[1]), txt, font=f, fill=255)
@@ -867,3 +868,359 @@ def photo_card(img, fx, photo, x, y, w, t0, t, caption='', angle0=-9.0, credit_y
     px, py = int(x - card.width / 2), int(yy - card.height / 2)
     img.paste(sh, (px + 14, py + 22), sh)
     img.paste(card, (px, py), card)
+
+
+# ================================================================ LETRAS DE CRISTAL GIGANTES (efecto 03; pedido de Efrén, 6-nov-2026)
+# El efecto de la referencia es una PALABRA GIGANTE que llena el ancho del cuadro, detrás del objeto, de cristal:
+# casi transparente, refracta el fondo, bisel con luz arriba-izquierda, filo que brilla y un destello que la recorre.
+# montaje.py revisa REG_CRISTAL: cada reel necesita palabras de cristal gigantes (ESTILO.md §4b).
+REG_CRISTAL = []   # (texto, fracción del ancho del cuadro, t0) de cada palabra de cristal dibujada
+
+
+def _texto_fit(txt, wmax, hmax, estilo='sansx'):
+    """Fuente y medidas para que `txt` mida `wmax` de ancho sin pasar de `hmax` de alto.
+    Devuelve (font, w, h, y_texto, [(letra, x)], ancho_del_texto) con margen incluido."""
+    key = ('fit', txt, int(wmax), int(hmax), estilo)
+    if key in _CACHE:
+        return _CACHE[key]
+    d0 = ImageDraw.Draw(Image.new('L', (1, 1)))
+    bb = d0.textbbox((0, 0), txt, font=font(estilo, 200))
+    s = min(wmax / max(1, bb[2] - bb[0]), hmax / max(1, bb[3] - bb[1]))
+    f = font(estilo, max(8, 200 * s))
+    bb = d0.textbbox((0, 0), txt, font=f)
+    pad = int(0.08 * (bb[3] - bb[1])) + 10
+    w, h = bb[2] - bb[0] + 2 * pad, bb[3] - bb[1] + 2 * pad
+    letras = [(ch, pad - bb[0] + d0.textlength(txt[:i], font=f)) for i, ch in enumerate(txt)]
+    out = (f, w, h, pad - bb[1], letras, bb[2] - bb[0])
+    _CACHE[key] = out
+    return out
+
+
+def _shift(a, dx, dy):
+    out = np.zeros_like(a)
+    H_, W_ = a.shape[:2]
+    if abs(dx) >= W_ or abs(dy) >= H_:
+        return out
+    xs0, xs1 = max(0, dx), min(W_, W_ + dx)
+    ys0, ys1 = max(0, dy), min(H_, H_ + dy)
+    out[ys0:ys1, xs0:xs1] = a[ys0 - dy:ys1 - dy, xs0 - dx:xs1 - dx]
+    return out
+
+
+def _bisel(m):
+    """Mapas del bisel de una máscara de letras: rim (brillo cerca del borde, por dentro) y luz (+ arriba-izquierda,
+    − abajo-derecha), con un perfil redondeado calculado con la distancia al borde (a 1/3 de resolución)."""
+    from scipy.ndimage import distance_transform_edt
+    w, h = m.size
+    sm = np.asarray(m.resize((max(4, w // 3), max(4, h // 3)), Image.BILINEAR)) > 110
+    dist = distance_transform_edt(sm)
+    bw = max(2.0, sm.shape[0] * 0.075)
+    b = np.clip(dist / bw, 0, 1)
+    prof = gaussian_filter(1 - (1 - b) ** 2, 1.0)
+    gy, gx = np.gradient(prof)
+    luz = np.clip((gx + gy) * bw * 0.9, -1, 1)
+    rim = (1 - b) ** 1.5 * sm
+    up = lambda x: np.asarray(Image.fromarray(((x * 0.5 + 0.5) * 255).astype(np.uint8)).resize((w, h), Image.BILINEAR),
+                             np.float32)[..., None] / 255 * 2 - 1
+    return np.clip(up(rim), 0, 1), up(luz)
+
+
+def cristal(img, fx, txt, t, t0=0.0, cy=0.5, ancho=0.94, alto=0.42, entrada='golpe', brillo=1.0, cx=0.5):
+    """Palabra de cristal GIGANTE (efecto 03). Llena `ancho` (0.94 = casi todo el ancho) sin pasar de `alto`.
+    Para que quede DETRÁS del objeto, llámala con fr.base y fr.fx ANTES de draw_objects (las coordenadas son
+    fracciones, sirve igual en fr.base o en las capas 1x de ui). t = tiempo de la escena (u); t0 = cuándo entra
+    (en la escena 0 usa t0 ≤ −0.3 para que ya esté en el primer cuadro y en el loop).
+    entrada: 'golpe' (cae desde grande y desenfocada), 'sube' (letra por letra desde abajo), 'zoom' (crece con rebote)."""
+    k = seg(t, t0, t0 + 0.32)
+    if k <= 0.01:
+        return
+    Wi, Hi = img.size
+    f, w, h, oy, letras, tw = _texto_fit(txt, Wi * ancho, Hi * alto)
+    REG_CRISTAL.append((txt, tw / Wi, t0))
+    m = Image.new('L', (w, h), 0)
+    dm = ImageDraw.Draw(m)
+    if entrada == 'sube':
+        for i, (ch, x) in enumerate(letras):
+            kk = eout(seg(t, t0 + i * 0.05, t0 + i * 0.05 + 0.26), 3)
+            if kk > 0.01:
+                dm.text((x, oy + (1 - kk) * h * 0.55), ch, font=f, fill=int(255 * clamp(kk * 1.4)))
+        s, a = 1.0, 1.0
+    else:
+        dm.text((letras[0][1], oy), txt, font=f, fill=255)
+        if entrada == 'zoom':
+            s, a = 0.3 + 0.7 * eback(k), clamp(k * 2.2)
+        else:
+            s, a = 1 + 0.5 * (1 - eout(k, 3)), clamp(k * 1.6)
+    s *= 1 + 0.035 * ease(seg(t, t0 + 0.3, t0 + 4.5))       # empuje lento: nunca se queda quieta
+    if abs(s - 1) > 1e-3:
+        m = m.resize((max(2, int(w * s)), max(2, int(h * s))), Image.BILINEAR)
+    if entrada == 'golpe' and k < 1:
+        m = m.filter(ImageFilter.GaussianBlur(max(0.1, (1 - k) * m.height * 0.035)))
+    w2, h2 = m.size
+    x0, y0 = int(cx * Wi - w2 / 2), int(cy * Hi - h2 / 2)
+    box = (x0, y0, x0 + w2, y0 + h2)
+    M_ = np.asarray(m, np.float32)[..., None] / 255.0
+    reg = np.asarray(img.crop(box), np.float32)
+    # 1) refracción: lo de atrás se ve borroso, más claro y un poco corrido (vidrio grueso)
+    refr = np.asarray(img.crop(box).filter(ImageFilter.GaussianBlur(max(2, h2 * 0.018))), np.float32)
+    refr = _shift(refr, int(h2 * 0.02), int(h2 * 0.035)) * 1.3 + 10
+    reg = reg * (1 - M_ * a * 0.85) + refr * (M_ * a * 0.85)
+    # 2) relleno con degradado (arriba más claro)
+    g = np.linspace(0.26, 0.05, h2, dtype=np.float32)[:, None, None]
+    reg += 255 * g * M_ * a * brillo
+    # 3) bisel redondeado (como vidrio grueso): luz arriba-izquierda, sombra y tinte cian abajo-derecha (prisma)
+    rim, luz = _bisel(m)
+    hi = np.clip(luz, 0, 1) * M_
+    lo = np.clip(-luz, 0, 1) * M_
+    reg += 255 * (rim * 0.22 * M_ + hi * 0.62) * a * brillo
+    reg = reg * (1 - lo * 0.5 * a) + np.array(CYAN, np.float32) * lo * 0.35 * a
+    # 4) filo que brilla
+    er = np.asarray(m.filter(ImageFilter.MinFilter(5)), np.float32)[..., None] / 255.0
+    edge = np.clip(M_ - er, 0, 1)
+    reg += 255 * edge * 0.6 * a * brillo
+    # 5) destello diagonal que recorre las letras al entrar y cada 3.2 s
+    tt = (t - t0 - 0.15) % 3.2
+    band = np.zeros_like(M_)
+    if tt < 0.6:
+        c = -0.3 + 1.6 * ease(tt / 0.6)
+        X = np.linspace(0, 1, w2, dtype=np.float32)[None, :] + 0.35 * np.linspace(0, 1, h2, dtype=np.float32)[:, None]
+        band = (np.exp(-((X - c) / 0.06) ** 2)[..., None] * M_).astype(np.float32)
+        reg += 255 * band * 0.75 * a * brillo
+    img.paste(Image.fromarray(reg.clip(0, 255).astype(np.uint8)), (x0, y0))
+    fxr = np.asarray(fx.crop(box), np.float32)
+    eb = np.asarray(Image.fromarray((edge[..., 0] * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(3)), np.float32)[..., None] / 255
+    fxr += 255 * (eb * 0.55 + band * 0.6 + hi * 0.25) * a * brillo
+    fx.paste(Image.fromarray(fxr.clip(0, 255).astype(np.uint8)), (x0, y0))
+
+
+# ================================================================ TRANSICIONES CREATIVAS (6-nov-2026)
+def _persp(dst, src):
+    """Coeficientes de PIL PERSPECTIVE: punto de salida (dst) -> punto de entrada (src)."""
+    A = []
+    for (x, y), (X, Y) in zip(dst, src):
+        A.append([x, y, 1, 0, 0, 0, -X * x, -X * y])
+        A.append([0, 0, 0, x, y, 1, -Y * x, -Y * y])
+    return tuple(np.linalg.solve(np.array(A, float), np.array(src, float).reshape(8)))
+
+
+def tr_cubo(A, B, k, dx=1):
+    """Cubo 3D: A es una cara que gira 90° y B llega en la cara de al lado (la cámara se aleja un poco). 0.35 s."""
+    if dx < 0:
+        r = tr_cubo(np.asarray(_pil(A))[:, ::-1], np.asarray(_pil(B))[:, ::-1], k, 1)
+        return np.ascontiguousarray(r[:, ::-1])
+    th = math.radians(90 * ease(k))
+    D = 1.7 * W
+    zc = D + W / 2 + 0.5 * W * math.sin(math.pi * clamp(k))
+
+    def proj(pts):
+        out = []
+        for x, y, z in pts:
+            xr = x * math.cos(th) + z * math.sin(th)
+            zr = -x * math.sin(th) + z * math.cos(th) + zc
+            out.append((W / 2 + D * xr / zr, H / 2 + D * y / zr))
+        return out
+    hw, hh = W / 2, H / 2
+    fa = proj([(-hw, -hh, -hw), (hw, -hh, -hw), (hw, hh, -hw), (-hw, hh, -hw)])
+    fb = proj([(hw, -hh, -hw), (hw, -hh, hw), (hw, hh, hw), (hw, hh, -hw)])
+    src = [(0, 0), (W, 0), (W, H), (0, H)]
+    out = Image.new('RGB', (W, H), (0, 0, 0))
+    full = Image.new('L', (W, H), 255)
+    caras = [(B, fb, 1 - 0.7 * math.cos(th)), (A, fa, 1 - 0.7 * math.sin(th))]
+    if th > math.pi / 4:
+        caras = caras[::-1]
+    for img, quad, luz in caras:
+        try:
+            c = _persp(quad, src)
+        except np.linalg.LinAlgError:
+            continue
+        im = _pil(img).transform((W, H), Image.PERSPECTIVE, c, Image.BILINEAR)
+        mk = full.transform((W, H), Image.PERSPECTIVE, c, Image.BILINEAR)
+        if luz < 0.999:
+            im = Image.fromarray((np.asarray(im, np.float32) * max(0.0, luz)).astype(np.uint8))
+        out.paste(im, (0, 0), mk)
+    if 0.03 < k < 0.97:
+        ImageDraw.Draw(out).line([fa[1], fa[2]], fill=scale_c(WHITE, math.sin(math.pi * k)), width=4)
+    return np.asarray(out)
+
+
+def tr_rebanadas(A, B, k, n=7):
+    """Rebanadas: A se parte en franjas que salen disparadas a los lados (alternadas, en cascada) y dejan ver B. 0.32 s."""
+    a = np.asarray(_pil(A))
+    out = scale_about(B, 1.1 - 0.1 * eout(k, 3)).astype(np.float32) * (0.5 + 0.5 * eout(k, 2))
+    hb = H / n
+    st = 0.05
+    span = 1 - st * (n - 1)
+    for i in range(n):
+        u = ein(seg(k, st * i, st * i + span), 3)
+        y0, y1 = int(i * hb), int((i + 1) * hb)
+        if u < 0.999:
+            off = int((1 if i % 2 == 0 else -1) * u * W * 1.05)
+            band = _shift(a[y0:y1], off, 0)
+            band = dir_blur(band, 140 * u, 0, n=5).astype(np.float32)
+            msk = _shift(np.ones((y1 - y0, W, 1), np.float32), off, 0)
+            out[y0:y1] = out[y0:y1] * (1 - msk) + band * msk
+        if 0 < i and 0.02 < k < 0.98:
+            out[max(0, y0 - 2):y0 + 2] += 180 * math.sin(math.pi * k)
+    return out.clip(0, 255).astype(np.uint8)
+
+
+def _shards():
+    if 'shards' in _CACHE:
+        return _CACHE['shards']
+    rng = np.random.RandomState(11)
+    cols, rows = 6, 10
+    xs, ys = np.linspace(0, W, cols + 1), np.linspace(0, H, rows + 1)
+    P = np.zeros((rows + 1, cols + 1, 2))
+    for r in range(rows + 1):
+        for c in range(cols + 1):
+            x, y = xs[c], ys[r]
+            if 0 < c < cols:
+                x += rng.uniform(-0.32, 0.32) * W / cols
+            if 0 < r < rows:
+                y += rng.uniform(-0.32, 0.32) * H / rows
+            P[r, c] = (x, y)
+    tris = []
+    for r in range(rows):
+        for c in range(cols):
+            p0, p1, p2, p3 = P[r, c], P[r, c + 1], P[r + 1, c + 1], P[r + 1, c]
+            tris += [(p0, p1, p2), (p0, p2, p3)] if rng.rand() < 0.5 else [(p0, p1, p3), (p1, p2, p3)]
+    sh = []
+    for tri in tris:
+        tri = np.array(tri)
+        x0, y0 = np.floor(tri.min(0)).astype(int)
+        x1, y1 = np.ceil(tri.max(0)).astype(int) + 1
+        poly = [tuple(p - (x0, y0)) for p in tri]
+        m = Image.new('L', (x1 - x0, y1 - y0), 0)
+        ImageDraw.Draw(m).polygon(poly, fill=255)
+        sh.append(dict(tri=tri, poly=poly, box=(int(x0), int(y0), int(x1), int(y1)), mask=m, cen=tri.mean(0),
+                       rot=rng.uniform(-1, 1), rnd=rng.rand()))
+    _CACHE['shards'] = sh
+    return sh
+
+
+def tr_rompe(A, B, k, cx=0.5, cy=0.5):
+    """La pantalla se rompe como cristal: grietas desde el punto de impacto (cx, cy), los pedazos salen volando
+    hacia la cámara y dejan ver B. 0.38 s. Úsala en «mito», «error», «se rompe», «no es lo que crees»."""
+    a = _pil(A)
+    sh = _shards()
+    ix, iy = cx * W, cy * H
+    kc = 0.24
+    diag = math.hypot(W, H)
+    if k < kc:
+        out = a.copy()
+        dr = ImageDraw.Draw(out)
+        R = diag * eout(k / kc, 2) * 0.85
+        for s in sh:
+            for p, q in zip(s['tri'], np.roll(s['tri'], 1, 0)):
+                if math.hypot((p[0] + q[0]) / 2 - ix, (p[1] + q[1]) / 2 - iy) < R:
+                    dr.line([tuple(p), tuple(q)], fill=(255, 255, 255), width=3)
+        o = (np.asarray(out, np.float32) + 50 * (k / kc)).clip(0, 255).astype(np.uint8)
+        return _shift(o, int(16 * math.sin(k * 95)), int(12 * math.cos(k * 71)))
+    u = (k - kc) / (1 - kc)
+    bb = scale_about(B, 1.08 - 0.08 * eout(u, 3)).astype(np.float32) * (0.4 + 0.6 * eout(u, 2))
+    out = Image.fromarray(bb.clip(0, 255).astype(np.uint8))
+    for s in sorted(sh, key=lambda s: s['rnd']):
+        v = s['cen'] - (ix, iy)
+        dist = float(np.linalg.norm(v)) + 1
+        delay = 0.3 * dist / diag
+        uu = clamp((u - delay) / (1 - delay))
+        if uu >= 0.97:
+            continue
+        off = v / dist * (0.4 + 0.9 * s['rnd']) * W * ein(uu, 2) + np.array([0, H * 0.45 * uu * uu])
+        sc = 1 + 0.45 * uu
+        x0, y0, x1, y1 = s['box']
+        piece = a.crop((x0, y0, x1, y1))
+        ImageDraw.Draw(piece).polygon(s['poly'], outline=(235, 245, 255), width=3)
+        m2 = s['mask']
+        if sc > 1.01:
+            size = (max(1, int(piece.width * sc)), max(1, int(piece.height * sc)))
+            piece, m2 = piece.resize(size, Image.BILINEAR), m2.resize(size, Image.BILINEAR)
+        ang = s['rot'] * 140 * uu
+        piece = piece.rotate(ang, Image.BILINEAR, expand=True)
+        m2 = m2.rotate(ang, Image.BILINEAR, expand=True)
+        if uu > 0.55:
+            m2 = m2.point(lambda val, f=1 - (uu - 0.55) / 0.42: int(val * clamp(f)))
+        c = s['cen'] + off
+        out.paste(piece, (int(c[0] - piece.width / 2), int(c[1] - piece.height / 2)), m2)
+    return np.asarray(out)
+
+
+def tr_mosaico(A, B, k, fi=0):
+    """Mosaico digital: A se hace bloques, los bloques se voltean a B en oleadas con brillo y B se enfoca. 0.28 s."""
+    if 'mos' not in _CACHE:
+        rng = np.random.RandomState(31)
+        R = rng.rand(H // 48 + 1, W // 48 + 1).astype(np.float32)
+        yy, xx = np.mgrid[0:R.shape[0], 0:R.shape[1]]
+        R = 0.55 * R + 0.45 * (yy / R.shape[0])               # oleada de arriba hacia abajo
+        _CACHE['mos'] = np.repeat(np.repeat(R, 48, 0), 48, 1)[:H, :W, None]
+    R = _CACHE['mos']
+    p = seg(k, 0.2, 0.8) * 1.1 - 0.05
+    a = np.asarray(_pil(A), np.float32)
+    b = np.asarray(_pil(B), np.float32)
+    mix = np.where(R < p, b, a)
+    mix += 140 * np.exp(-((R - p) / 0.05) ** 2)
+    bs = int(2 + 46 * math.sin(math.pi * clamp(k)))
+    im = Image.fromarray(mix.clip(0, 255).astype(np.uint8))
+    if bs > 2:
+        im = im.resize((max(1, W // bs), max(1, H // bs)), Image.BOX).resize((W, H), Image.NEAREST)
+    return np.asarray(im)
+
+
+def tr_remolino(A, B, k, cx=0.5, cy=0.5):
+    """Remolino: A se tuerce en espiral hacia el centro y B sale del remolino destorciéndose. 0.32 s."""
+    key = ('rem', cx, cy)
+    if key not in _CACHE:
+        ys, xs = np.mgrid[0:H, 0:W].astype(np.float32)
+        dx, dy = xs - cx * W, ys - cy * H
+        r = np.sqrt(dx * dx + dy * dy)
+        _CACHE[key] = (dx, dy, np.clip(1 - r / (0.62 * math.hypot(W, H)), 0, 1) ** 2)
+    dx, dy, fall = _CACHE[key]
+    u = math.sin(math.pi * clamp(k))
+    src = np.asarray(_pil(A if k < 0.5 else B))
+    ang = (6.0 if k < 0.5 else -6.0) * u * fall
+    s = 1 + 0.6 * u
+    ca, sa = np.cos(ang), np.sin(ang)
+    sx = np.clip((cx * W + (dx * ca - dy * sa) / s).astype(np.int32), 0, W - 1)
+    sy = np.clip((cy * H + (dx * sa + dy * ca) / s).astype(np.int32), 0, H - 1)
+    out = src[sy, sx].astype(np.float32) + 60 * u * fall[..., None]
+    return out.clip(0, 255).astype(np.uint8)
+
+
+def tr_cristal(A, B, k, txt):
+    """La palabra de cristal gigante cae sobre A; a través de sus letras ya se ve B; luego la cámara atraviesa
+    una letra y B llena el cuadro. 0.5 s. txt = la palabra clave de la escena B."""
+    key = ('trc', txt)
+    if key not in _CACHE:
+        from scipy.ndimage import distance_transform_edt
+        f, w, h, oy, letras, _ = _texto_fit(txt, W * 0.94, H * 0.4)
+        m = Image.new('L', (W, H), 0)
+        x0, y0 = int(W / 2 - w / 2), int(H * 0.45 - h / 2)
+        ImageDraw.Draw(m).text((x0 + letras[0][1], y0 + oy), txt, font=f, fill=255)
+        small = np.asarray(m)[::4, ::4] > 128
+        dist = distance_transform_edt(small)
+        yy, xx = np.mgrid[0:small.shape[0], 0:small.shape[1]]
+        score = dist - 0.04 * np.hypot(xx - small.shape[1] / 2, yy - small.shape[0] * 0.45)
+        py, px = np.unravel_index(np.argmax(score), score.shape)
+        _CACHE[key] = (m, (px * 4 + 2, py * 4 + 2), (W / 2, y0 + h / 2))
+    m, (px, py), (tx, ty) = _CACHE[key]
+    if k >= 0.98:
+        return np.asarray(_pil(B))
+    k1 = 0.45
+    if k < k1:
+        u = eout(k / k1, 3)
+        s, zx, zy, al = 1.4 - 0.4 * u, tx, ty, clamp(k / k1 * 2)
+        bz = 1.2
+    else:
+        u = (k - k1) / (1 - k1)
+        s, zx, zy, al = 1 + 45 * ein(u, 3), px, py, 1.0
+        bz = 1.2 - 0.2 * eout(u, 2)
+    mm = m.transform((W, H), Image.AFFINE, (1 / s, 0, zx - zx / s, 0, 1 / s, zy - zy / s), Image.BILINEAR)
+    if k < k1 * 0.6:
+        mm = mm.filter(ImageFilter.GaussianBlur((1 - k / (k1 * 0.6)) * 12))
+    M_ = np.asarray(mm, np.float32)[..., None] / 255 * al
+    er = np.asarray(mm.filter(ImageFilter.MinFilter(5)), np.float32)[..., None] / 255 * al
+    edge = np.clip(M_ - er, 0, 1)
+    a = np.asarray(_pil(A), np.float32) * (1 - 0.7 * al)
+    b = scale_about(B, bz, px / W, py / H).astype(np.float32)
+    out = a * (1 - M_) + b * M_ + 255 * edge * 0.9 * (1 - seg(s, 3, 12)) + 255 * M_ * 0.07
+    return out.clip(0, 255).astype(np.uint8)
