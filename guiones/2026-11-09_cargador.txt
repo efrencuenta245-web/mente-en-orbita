@@ -1,0 +1,43 @@
+Reel diario · LUN 9-nov-2026 19:00 (CDMX) · «Tu cargador sin celular… ¿gasta luz?» (Mito o realidad) (kit/nuevo/cargador.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~985 créditos) · flow lMJITAZgKxs0sh6bcQT9 · tiempos con Scribe.
+Inicio: tipo 6 (pantalla dividida que choca: arriba el cargador solo en el contacto, abajo la tele «apagada» con su lucecita roja).
+Primera transición: deslizar_abajo. Creativas: cubo, rompe, rebanadas, mosaico, remolino.
+Letras de cristal: LUZ, 0.1 W, 45 kWh, ERROR, 11%.
+Segundo gancho: 28.8 s («20 veces más que tu cargador») y 32.7 s («Y aquí está el error», rompe).
+«Mándaselo…» solo en la penúltima frase (59.5 s). Duración 65.3 s.
+
+GUION (voz): ver guiones/2026-11-09_cargador_voz.txt
+
+DATOS Y FUENTES
+- UE, Reglamento 2019/1782 (diseño ecológico de fuentes de alimentación externas), Anexo II, desde el 1-abr-2020: en vacío, una
+  fuente CA-CC de hasta 49 W no puede pasar de 0.10 W. https://legislation.gov.uk/eur/2019/1782/annexes/2020-12-31
+- CFE (más de 82 000 diagnósticos en casas, citado por Luz Noticias 24-jul-2026 y El Imparcial 22-jul-2026): consumo en espera
+  al año ≈ tele 45.1 kWh, calefactor 36.9, microondas 27, pantalla de plasma 26.8, computadora 24.9, estéreo 14.5, DVD 13.6,
+  cargador de celular 2.3 kWh; lo que se queda en espera es ~11 % del consumo total de electricidad de una casa; recomienda
+  desconectar o usar una regleta con apagador (el refri y los equipos médicos o de seguridad se quedan conectados).
+  https://www.luznoticias.mx/2026-07-24/mexico/apagarlo-no-es-suficiente-cfe-pide-desconectar-este-aparato-para-frenar-tu-gasto-de-luz/298081
+  https://www.elimparcial.com/dinero/2026/07/23/el-consumo-fantasma-tras-analizar-el-consumo-en-los-hogares-la-cfe-revela-cual-es-el-aparato-que-sigue-gastando-luz-aunque-este-apagado-y-conviene-desconectar/
+- Pesos: tarifa 1 de CFE, consumo básico $1.125 por kWh (jun-2026, UnoTV): cargador 2.3 kWh ≈ $2.6 («menos de $3»);
+  tele 45.1 kWh ≈ $50.7 («unos $50»); 45.1 / 2.3 ≈ 19.6 («20 veces»). Si la casa ya pasó del consumo básico, cuesta más.
+  https://www.unotv.com/nacional/las-tarifas-domesticas-de-cfe-van-de-1-a-4-pesos-por-kwh-en-junio-de-2026/
+- Norma mexicana de espera (NOM-032-ENER-2013, resumen): tele ≤ 1 W; decodificador sin DVR ≤ 5 W, con DVR ≤ 15 W; microondas ≤ 2.5 W.
+  https://www.normasoficiales.mx/nom/nom-032-ener-2013 (no se usa en el guion; contexto).
+- «Si está tibio, ese sí desconéctalo»: el calor que suelta sin carga es energía que se pierde (cargadores viejos o de mala calidad).
+- Medidor de consumo y cifras en pantallas: EJEMPLO / RECREACIÓN. Cargador, tele, decodificador, micro, estéreo, regleta: sin marcas.
+
+FOTOS REALES
+- Ninguna: una foto real de cargador o tele mostraría marcas.
+
+TEXTO IG/FB
+¿Desconectas el cargador para ahorrar luz? 🔌
+Casi no ahorras: la CFE calcula unos 2 kWh al año por cargador (menos de $3). Tu tele en espera gasta unos 45 kWh (≈ $50), y todo lo que se queda en espera es como el 11 % del consumo de una casa. El truco: una regleta con apagador para la tele, el decodificador y el estéreo.
+Mándaselo a alguien que desconecta el cargador y deja la tele enchufada.
+#curiosidades #ciencia #mexico #menteenorbita #ahorro
+
+TÍTULOS
+- Facebook: Tu cargador sin celular… ¿gasta luz?
+- TikTok: Tu cargador sin celular… ¿gasta luz? 🔌 #curiosidades #ciencia #ahorro
+- YouTube Shorts: Tu cargador sin celular… ¿gasta luz? Lo que de verdad gasta en tu casa 🔌 #Shorts
+
+ARCHIVOS
+- Música: semilla 5873, 96 BPM · categoría MITO O REALIDAD · portada «Tu cargador sin celular» / «¿gasta luz?».

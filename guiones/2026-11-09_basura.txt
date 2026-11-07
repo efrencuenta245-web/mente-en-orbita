@@ -1,0 +1,56 @@
+Reel diario · LUN 9-nov-2026 08:00 (CDMX) · «Sobre tu cabeza cae basura… todos los días.» (kit/nuevo/basura.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~1 150 créditos) · flow p3cPHaMwelE3kFq0TNe7 · tiempos con Scribe.
+Inicio: tipo 1 (caída desde el espacio: Tierra de alambre con bolas de fuego → crash zoom a México → una casa → el pedazo cae y rebota).
+Primera transición: zoom (la cámara atraviesa el pedazo y sale al Swift). Creativas: remolino, cristal (FUEGO), rompe, rebanadas, cubo, mosaico.
+Letras de cristal: BASURA, FUEGO (transición), 10%, 1 EN 2 100, TÓXICO.
+Segundo gancho: 27.6 s («pero cerca del 10 % puede llegar al suelo», rompe) y 37.6 s («Y lo peor: 1 en 2 100»).
+«Mándaselo…» solo en la penúltima frase (67.8 s). Duración 73.0 s.
+
+GUION (voz): ver guiones/2026-11-09_basura_voz.txt
+
+DATOS Y FUENTES
+- El observatorio Neil Gehrels Swift de la NASA (3 200 lb ≈ 1 450 kg; lanzado en nov-2004) reingresó el miércoles 4-nov-2026
+  hacia las 7:39 a. m. hora del este (= 6:39 a. m. en la CDMX) sobre Indonesia (Sumatra del Norte según IBTimes); dato de la
+  Fuerza Espacial de EE. UU. La NASA había calculado ~1 en 2 100 de que lastimara a alguien; la norma de EE. UU. (Orbital Debris
+  Mitigation Standard Practices, actualizada en 2019) pide menos de 1 en 10 000. La NASA dijo que no hubo heridos ni daños reportados.
+  https://abc7news.com/story/nasas-neil-gehrels-swift-observatory-is-careening-back-earth-heres-what-know/20015487/
+  https://www.ibtimes.co.uk/nasa-swift-observatory-reentry-indonesia-1830397
+- Rescate: la nave LINK de Katalyst Space Technologies (lanzada el 3-jul-2026) tuvo una falla de control de orientación y quedó
+  girando sin control; el 19-ago la NASA anunció que no intentaría la captura. El equipo de Penn State apagó el Swift el 20-oct.
+  (IBTimes y ABC7, arriba).
+- «Cerca del 10 %» de una nave de ~1.5 t suele sobrevivir la reentrada (Jonathan McDowell, citado por Universe Magazine, 3-nov-2026):
+  https://universemagazine.com/en/swift-observatorys-fall-to-earth-what-is-the-risk-of-harm-to-people/
+- Tanque de Texas: «The main propellant tank of the second stage of a Delta 2 rocket landed near Georgetown, Texas, USA, on
+  22 January 1997. This tank of about 250 kg is primarily a stainless steel structure and survived reentry relatively intact.»
+  https://esa.int/ESA_Multimedia/Images/2015/12/Debris_landed_in_Texas (en el video: RECREACIÓN 3D, sin la foto).
+- «More than three intact satellites or rocket bodies are reentering the Earth's atmosphere every day on average» (ESA Space
+  Environment Report 2026, datos de 2025): https://www.esa.int/Space_Safety/Space_Debris/ESA_Space_Environment_Report_2026
+- Florida, 8-mar-2024: un pedazo de ~10 cm (0.7 kg) del soporte de baterías que soltó la estación espacial en 2021 atravesó el techo
+  de una casa en Naples; la NASA lo confirmó tras analizarlo en Kennedy. https://www.nbcnews.com/news/amp/rcna147990
+  · Space.com: https://www.space.com/space-exploration/satellites/3-big-hunks-of-space-junk-crash-to-earth-every-day-and-its-only-going-to-get-worse
+- «Que se sepa, todavía no ha herido a nadie»: no hay herido confirmado por basura espacial (McDowell en Space.com: «Eventually...
+  someone is going to get hurt»; la NASA: sin heridos por el Swift).
+- No tocar los restos: la Agencia Espacial de Filipinas (PhilSA) pide no recoger ni acercarse a restos de cohetes porque pueden
+  traer restos de sustancias tóxicas como el combustible, y avisar a las autoridades locales (en México: Protección Civil).
+  https://mb.com.ph/2023/3/31/phil-sa-monitors-debris-from-chinese-rocket-warns-public-from-retrieving-possible-toxic-remnants
+- Velocidad de reentrada: un satélite en órbita baja va a ~7.8 km/s (≈ 28 000 km/h); el guion dice «más de 25 000 km/h».
+
+FOTOS REALES
+- Swift antes del lanzamiento (NASA, dominio público), recortada para que no salgan personas ni marcas:
+  https://upload.wikimedia.org/wikipedia/commons/9/9e/Swift_pre-launch.jpg (kit/nuevo/img/img_swift_nasa.jpg).
+  Crédito en la tarjeta: «NASA · SWIFT · 2004».
+
+TEXTO IG/FB
+¿Te puede caer un satélite encima? 🛰️🔥
+El 4 de noviembre el telescopio Swift de la NASA (1 450 kg) cayó sobre Indonesia. Casi todo se quema al entrar al aire, pero cerca del 10 % puede llegar al suelo, y cada día caen en promedio más de 3 satélites o cohetes enteros. Si encuentras un pedazo, no lo toques: puede traer combustible tóxico. Avisa a Protección Civil.
+Mándaselo a alguien que se llevaría el pedazo de recuerdo.
+#curiosidades #ciencia #mexico #menteenorbita #espacio
+Foto: NASA (Swift antes del lanzamiento).
+
+TÍTULOS
+- Facebook: Sobre tu cabeza cae basura… todos los días
+- TikTok: Sobre tu cabeza cae basura… todos los días 🛰️🔥 #curiosidades #ciencia #espacio
+- YouTube Shorts: Sobre tu cabeza cae basura espacial todos los días: así cayó el Swift de la NASA 🛰️ #Shorts
+
+ARCHIVOS
+- Música: semilla 4421, 104 BPM · categoría ESPACIO · portada «Sobre tu cabeza cae» / «basura todos los días».
