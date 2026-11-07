@@ -28,14 +28,14 @@ Datos del 6-nov-2026 (últimos 30 días). Clasificación de los últimos 7 días
 - **Mejor hora (Metricool, próximos 7 días):** IG no da datos (todo en 0). Las **10:00 rinden más que las 8:00**: TikTok +116 %, Facebook +55 %, YouTube +27 %. Las **18:00 rinden más que las 19:00**: TikTok +31 %, Facebook +15 %, YouTube +26 %. Picos: TikTok y FB a las 10:00; YouTube a las 16:00. Recomendación (no aplicada): 10:00 y 18:00. La batería (buenas métricas, poco alcance a las 8:00) apunta en la misma dirección.
 
 **Conclusiones accionables**
-1. **«Mándaselo a…» SOLO al final (pedido de Efrén, 6-nov-2026).** Probamos decirlo también a la mitad (cerca del segundo 25-30) para subir los compartidos, pero la gráfica de retención de IG se desploma justo ahí: de 41 % a ~18 % en el segundo 30 de un reel de 1:05. La gente oye «mándaselo» y cree que ya se acabó, y se va. Desde ahora el «mándaselo a…» va únicamente en la última frase, antes del loop. Para los compartidos se eligen temas con un truco que la gente quiera mandar (QR, tarjeta, cargador), sin cortar el video a la mitad.
+1. **Al estilo nuevo lo hunden los compartidos (0.5 contra 3.8 por cada 1 000 en IG)**, y sin compartidos IG no lo enseña a quien no te sigue. Además la gente ve en promedio 17–19 s, así que el «mándaselo a…» del final casi nadie lo oye. ~~Decir el «mándaselo a…» también a mitad del video~~ **NO FUNCIONÓ** (Efrén, 6-nov): en el reel del ojo el 41 % seguía viendo a los 30 s y cayó de golpe a ~15 % justo al salir «Mándaselo a…»; la gente cree que ya terminó. **El «mándaselo a…» va SOLO al final.** Para subir compartidos: temas con un truco que la gente quiera mandar (QR, tarjeta, cargador) y un cierre corto y directo.
 2. **El gancho que sí jala es el de la batería**: objeto que todos tienen + verbo que lo contradice, en 5–6 palabras («Tu pila no se acaba… se cansa»: 69.9 % pasó de 3 s, aun con el inicio tipo 13). Abrir con un número de noticia o un susto (alerta «7.4») dejó ir al 57 % en 3 s. Nada de números sueltos ni sustos en el primer cuadro: primero el objeto y la contradicción.
 
 ## Reglas (resumen de ESTILO.md)
 1. Gancho de 3-7 palabras con «tú/tu» y una contradicción; la imagen más fuerte en el primer cuadro; nada de intro. **Primera frase dicha = orden, pregunta directa o «Tu [objeto] no [verbo]… [contrario]».**
 2. Cambio visual cada 2-3 s con sonido; 4+ transiciones y 4+ efectos del catálogo.
-3. Segundo gancho a los 25-30 s (el error o el dato que se dispara). **Nunca** un «mándaselo a…» a la mitad: hace creer que el video terminó.
-4. 61-75 s; final en loop; cierre «Mándaselo a…» (solo ahí, en la última frase).
+3. Segundo gancho a los 25-30 s (el error o el dato que se dispara), **sin «mándaselo a…»**: eso va solo al final (a mitad del video la gente cree que ya terminó y se va).
+4. 61-75 s; final en loop; cierre «Mándaselo a…» en la última o penúltima frase, nunca antes.
 5. Foto real (NASA/Wikimedia libre) cuando el tema exista en el mundo real.
 6. Fondo negro; voz Isaac.
 

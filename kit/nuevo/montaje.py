@@ -19,6 +19,7 @@ REGLAS QUE SE REVISAN SOLAS (`hoja` las imprime como ERROR y `render` NO arranca
     reel de los últimos 6 de inicios.md (para que no salga la misma plantilla de siempre).
   · Letras de cristal GIGANTES (motor2.cristal, ≥ 80 % del ancho, detrás del objeto): en 3+ escenas (2+ si hay
     menos de 10) y una en los primeros 6 s. La transición `cristal` cuenta como una.
+  · Guion: «Mándaselo a…» solo en la última o penúltima frase (a mitad del video la gente cree que ya terminó).
 Los subtítulos (bloques de 6 palabras con caja cian) se ponen solos encima de todo.
 Movimiento (ESTILO.md §11): objetos que entran en 0.12–0.3 s y cámara con golpes rápidos → piezas.entrada,
   piezas.cam_rapida, piezas.sacudida + piezas.mover_img, piezas.rebote/resorte/eout4, piezas.despiece.
@@ -558,8 +559,18 @@ def _revisar_cristal(guardar=True):
     return err, hits
 
 
+def _revisar_mandaselo():
+    """Guion (no animación): el «mándaselo a…» va solo en la última o penúltima frase (Efrén, 6-nov-2026)."""
+    malas = set()
+    for lista in (CTX.get('TXT') or [], CTX.get('VOZ') or []):
+        n = len(lista)
+        malas |= {i for i, f in enumerate(lista) if i < n - 2 and re.search(r'm[aá]nd[aá]selo|comp[aá]rtelo', f, re.I)}
+    return [f'«mándaselo a…» en la frase {i + 1} de {len(CTX["TXT"])}: va SOLO en la última o penúltima frase '
+            '(a mitad del video la gente cree que ya terminó y se va)' for i in sorted(malas)]
+
+
 def _revisar(estricto):
-    err = _revisar_transiciones()
+    err = _revisar_mandaselo() + _revisar_transiciones()
     e2, hits = _revisar_cristal()
     err += e2
     for x in err:

@@ -30,4 +30,4 @@ Una idea (de `youtube/semana.md`, `youtube/ideas.md` o del chat) y el formato: *
 - Nada de datos inventados ni "dicen que". Lo no confirmado se dice: "según X", "se estima".
 
 ## Reset del 3-nov-2026
-Ganchos y retención con la fórmula de ESTILO.md §7–8 (gancho de 3–7 palabras con «tú/tu» y contradicción, segundo gancho, cierre «mándaselo a…» y loop). Ya no hay cierre `REEL_OUT` de marca: los Shorts terminan en loop. Voz con números en letra para Isaac.
+Ganchos y retención con la fórmula de ESTILO.md §7–8 (gancho de 3–7 palabras con «tú/tu» y contradicción, segundo gancho, cierre «mándaselo a…» solo al final —nunca a mitad del video, la gente cree que ya terminó— y loop). Ya no hay cierre `REEL_OUT` de marca: los Shorts terminan en loop. Voz con números en letra para Isaac.
