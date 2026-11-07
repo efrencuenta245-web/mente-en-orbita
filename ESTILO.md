@@ -131,6 +131,7 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 4. Zoom: del objeto → a su interior → a la pieza más pequeña (o al revés, a escala planeta).
 5. 20–30 s: el error («si haces esto, lo arruinas») = segundo gancho.
 6. Cierre: «Mándaselo a…» y la última imagen igual a la primera (loop).
+   **«Mándaselo a…» SOLO al final, nunca a la mitad** (pedido de Efrén, 6-nov-2026): cuando se dijo cerca del segundo 30, la retención de IG cayó de 41 % a ~18 % justo ahí, porque la gente cree que el video ya terminó y hace scroll.
 
 **Fórmula del gancho (0–2 s):** objeto que tienes + giro inesperado, en 3 a 7 palabras, con **«tú/tu»**, la imagen más llamativa del video en el primer cuadro y el sonido de golpe. Nada de logo, saludo ni título de canal al inicio.
 
@@ -163,6 +164,7 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 - [ ] Fotos reales solo de fuentes permitidas, con crédito.
 - [ ] Datos verificados con fuente actual; las cifras de ejemplo dicen «EJEMPLO».
 - [ ] Segundo gancho entre 25 y 30 s; final en loop.
+- [ ] «Mándaselo a…» solo en la última frase (ninguno a la mitad del video).
 - [ ] Hoja de contacto revisada (texto legible, nada cortado fuera de los zooms digitales).
 
 ## 10. Portada (miniatura) de cada video — perfil limpio y ordenado
