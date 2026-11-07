@@ -2,7 +2,7 @@ Reel diario · DOM 8-nov-2026 08:00 (CDMX) · «Tu QR sirve aunque lo rompas.» 
 Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma) · flow InoEdmxm5Htt13qNv4ls · tiempos con Scribe (palabra por palabra).
 Inicio: tipo 3 (se arma solo: los pedazos del QR vuelan, se juntan con clic y luego se le rompe una esquina… y sigue leyendo).
 Primera transición: rompe. Letras de cristal: ROTO, REPUESTO, ESQUINAS, CUADRITO (transición cristal).
-Segundo gancho: 27.1 s («Pero hay tres cuadros que nunca debes tapar»). «Mándaselo…» solo al final (6-nov: Efrén pidió quitar el de la mitad; se cortó la frase «Mándaselo a quien tiene el QR de su negocio todo despintado» y su escena). Duración nueva: 65.3 s.
+Segundo gancho: 30.6 s («Pero hay tres cuadros que nunca debes tapar»). «Mándaselo…» a los 27 s y al final.
 
 GUION (voz): ver guiones/2026-11-08_qr_voz.txt
 
@@ -44,5 +44,10 @@ TÍTULOS
 ARCHIVOS (alojados para Metricool)
 - Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/a4c2e6ebb01ca259979268f3febfa0f3ea002979/qr_final_p.mp4 (68.8 s, 46.8 MB)
 - Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/3d03b0bbe17830bba41fcadebb50cf829e8ebb76/portada_qr.jpg
-- Música semilla 2211, 102 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool; el 6-nov se cambió el video por la v2 (posts 419628464 · 419628483).
-- Versión 2 sin el «mándaselo» de en medio (6-nov, 65.3 s, 41.9 MB): https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/1f20e4ef205b64528ed20b43b25603b4656b25cb/qr_final_p.mp4 (portada igual).
+- Música semilla 2211, 102 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool (posts 419542677 · 419542738).
+
+VERSIÓN 2 (6-nov, 21 h) — pedido de Efrén: el «Mándaselo a…» va solo al final
+- Se quitó la frase 8 «Mándaselo a quien tiene el QR de su negocio todo despintado.» (a mitad del video la gente cree que ya terminó y se va; dato del reel del ojo). Se recortó su audio y su escena; el resto quedó igual.
+- Voz y palabras: inbox/narr_qr_v2.mp3 e inbox/words_qr_v2.json (python3 qr.py tiempos …). Duración 65.3 s.
+- Video v2: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/6617939d0af5c95c921a8fc892d6563e3b4d5c41/qr_final_p.mp4 (63.3 MB). Portada: la misma de arriba.
+- Estado: esperando el «sí» de Efrén para cambiar el video en Metricool (post 419542677).

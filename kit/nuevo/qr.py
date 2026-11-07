@@ -44,12 +44,6 @@ TXT = ['Tu QR sirve aunque lo rompas.',
 VOZ = [x.strip() for x in open(os.path.join(os.path.dirname(os.path.dirname(HERE)), 'guiones', '2026-11-08_qr_voz.txt'),
                                encoding='utf-8').read().strip().split('\n')]
 assert len(VOZ) == len(TXT)
-CUT = 7          # frase quitada el 6-nov (pedido de Efrén: el «mándaselo a…» solo al final, nunca a la mitad)
-
-
-def _ix(i):
-    """Índice de frase viejo (el de las escenas) → índice nuevo (sin la frase CUT)."""
-    return i - 1 if i > CUT else i
 
 AMARILLO = (255, 236, 160)
 VERDE = (110, 235, 150)
@@ -273,20 +267,16 @@ def pantalla_cam(qr_im=None, estado='busca', u=0.0, txt=''):
 
 
 # ================================================================== utilidades
-def _paln(j):
-    return re.sub(r'\[[^\]]*\]', ' ', VOZ[j]).split()
-
-
 def _pal(i):
-    return _paln(_ix(i))
+    return re.sub(r'\[[^\]]*\]', ' ', VOZ[i]).split()
 
 
 def TT(i):
-    return montaje.CTX['T'][_ix(i)][0]
+    return montaje.CTX['T'][i][0]
 
 
 def TE(i):
-    return montaje.CTX['T'][_ix(i)][1]
+    return montaje.CTX['T'][i][1]
 
 
 _W = []
@@ -308,8 +298,8 @@ def wt(i, k):
     n = len(_pal(i))
     k = max(0, min(k, n - 1))
     W = _words()
-    if len(W) == sum(len(_paln(j)) for j in range(len(VOZ))):
-        n0 = sum(len(_paln(j)) for j in range(_ix(i)))
+    if len(W) == sum(len(_pal(j)) for j in range(len(VOZ))):
+        n0 = sum(len(_pal(j)) for j in range(i))
         return W[n0 + k]['start'] - W[n0]['start']
     return (TE(i) - TT(i)) * k / n
 
@@ -589,8 +579,8 @@ def s_desp(t, fi, u, d):
 
 # 8. segundo gancho: pero hay tres cuadros que nunca debes tapar (las 3 esquinas se encienden una por una)
 def s_tres(t, fi, u, d):
-    u3 = wt(8, 3)
-    ue = wt(8, 9)
+    u3 = wt(7, 3)
+    ue = wt(7, 9)
     fr = Frame(cam(u, [K(-0.2, 2.6, 0, 4, ty=1.0, roll=-8), K(0.25, 3.2, -10, 6, ty=1.0), K(ue, 2.9, 12, 4, ty=1.0),
                        K(5.0, 2.9, 14, 4, ty=1.0)], cy=0.53))
     piso(fr, t, 'dots', 0.6, 1.0)
@@ -617,7 +607,7 @@ def s_tres(t, fi, u, d):
 
 # 9. le dicen a tu cámara dónde está y hacia dónde está girado (zoom digital con REC y el triángulo de las 3 esquinas)
 def s_gira(t, fi, u, d):
-    ug = wt(9, 9)
+    ug = wt(8, 9)
     rz = -150 * P.eout4(seg(u, ug - 0.3, ug + 0.6)) + 20 * math.sin(t * 1.3)
     fr = Frame(Cam(target=(0, 1.0, 0), dist=3.1, yaw=0, pitch=2, cy=0.5))
     piso(fr, t, None, 0, 0.8)
@@ -655,7 +645,7 @@ def s_gira(t, fi, u, d):
 def s_tapas(t, fi, u, d):
     ut = [0.05, 0.3, 0.55]
     n = sum(1 for x in ut if u > x)
-    un = wt(10, 9) - 0.2
+    un = wt(9, 9) - 0.2
     fr = Frame(cam(u, [K(-0.2, 3.5, 30, 8, ty=1.0, tx=0.3), K(0.25, 3.2, 6, 6, ty=1.0, tx=0.3), K(un, 3.6, -14, 6, ty=1.0, tx=0.5),
                        K(5.0, 3.6, -16, 6, ty=1.0, tx=0.5)], cy=0.52))
     piso(fr, t, 'lines', 0.7, 1.0)
@@ -735,7 +725,7 @@ def s_byte(t, fi, u, d):
 
 # 13. el respaldo usa la misma matemática que los CD y las naves espaciales (CD que gira → sonda de alambre)
 def s_cd(t, fi, u, d):
-    un = wt(13, 10) - 0.1                      # «y las naves espaciales»
+    un = wt(12, 10) - 0.1                      # «y las naves espaciales»
     if u < un:
         fr = Frame(cam(u, [K(-0.2, 3.0, 20, 40, ty=0.3), K(0.3, 2.7, -10, 32, ty=0.3), K(5.0, 2.6, -14, 30, ty=0.3)], cy=0.55))
         piso(fr, t, None, 0, 1.0, beam=0.5)
@@ -784,7 +774,7 @@ HUECO = [(x, y) for y in range(10, 16) for x in range(10, 16) if not QF[y][x]]
 
 
 def s_rellena(t, fi, u, d):
-    ur = wt(14, 6) - 0.1
+    ur = wt(13, 6) - 0.1
     k = seg(u, ur, ur + 1.2)
     n = int(len(HUECO) * k)
     falt = HUECO[n:]
@@ -811,7 +801,7 @@ def s_rellena(t, fi, u, d):
 
 # 15. el QR de la taquería con todo y salsa (mesa de madera, botella de salsa y el QR salpicado)
 def s_taqueria(t, fi, u, d):
-    us = wt(15, 10) - 0.2
+    us = wt(14, 10) - 0.2
     fr = Frame(cam(u, [K(-0.2, 4.4, 50, 26, ty=0.6), K(0.3, 3.6, 18, 16, ty=0.6), K(us, 3.2, -10, 12, ty=0.7), K(5.0, 3.15, -12, 12, ty=0.7)], cy=0.55))
     piso(fr, t, None, 0, 0.8, beam=0.6)
     mesa = named(M3.box(3.4, 0.12, 2.0, (122, 80, 46), shadow=0, base=True, gloss=0.25), 'mesa', rim=0.4)
@@ -876,29 +866,21 @@ ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.5), sfx=[]),
            dict(desde=4, fn=s_respaldo, tr='mosaico', sfx=[]),
            dict(desde=5, fn=s_30, tr='golpe', sfx=[]),
            dict(desde=6, fn=s_logo, tr='deslizar', sfx=[]),
-           dict(desde=7, fn=s_desp, tr='whip_izq', sfx=[]),
-           dict(desde=8, fn=s_tres, tr='glitch', sfx=[]),
-           dict(desde=9, fn=s_gira, tr='zoom', c=(0.3, 0.33), sfx=[]),
-           dict(desde=10, fn=s_tapas, tr='rebanadas', sfx=[]),
-           dict(desde=11, fn=s_bits, tr='cristal', palabra='CUADRITO', sfx=[]),
-           dict(desde=12, fn=s_byte, tr='deslizar_abajo', sfx=[]),
-           dict(desde=13, fn=s_cd, tr='giro', sfx=[]),
-           dict(desde=14, fn=s_rellena, tr='remolino', sfx=[]),
-           dict(desde=15, fn=s_taqueria, tr='whip', sfx=[]),
-           dict(desde=16, fn=s_tienda, tr='push', c=(0.5, 0.45), sfx=[]),
-           dict(desde=17, fn=s_mandalo, tr='ritmo', sfx=[]),
-           dict(desde=18, loop=True, tr='flash')]
-
-ESCENAS = [dict(e, desde=_ix(e['desde']), _o=e['desde']) for e in ESCENAS if e['desde'] != CUT]
-
-
-class _PorViejo(dict):
-    def __missing__(self, k):
-        return {}
+           dict(desde=7, fn=s_tres, tr='glitch', sfx=[]),
+           dict(desde=8, fn=s_gira, tr='zoom', c=(0.3, 0.33), sfx=[]),
+           dict(desde=9, fn=s_tapas, tr='rebanadas', sfx=[]),
+           dict(desde=10, fn=s_bits, tr='cristal', palabra='CUADRITO', sfx=[]),
+           dict(desde=11, fn=s_byte, tr='deslizar_abajo', sfx=[]),
+           dict(desde=12, fn=s_cd, tr='giro', sfx=[]),
+           dict(desde=13, fn=s_rellena, tr='remolino', sfx=[]),
+           dict(desde=14, fn=s_taqueria, tr='whip', sfx=[]),
+           dict(desde=15, fn=s_tienda, tr='push', c=(0.5, 0.45), sfx=[]),
+           dict(desde=16, fn=s_mandalo, tr='ritmo', sfx=[]),
+           dict(desde=17, loop=True, tr='flash')]
 
 
 def _sfx_dinamicos():
-    E = _PorViejo({e['_o']: e for e in ESCENAS})
+    E = ESCENAS
     uc, ur = 0.45, wt(0, 6) + 0.1
     E[0]['sfx'] = [(-0.6, 'whoosh', 0.6), (uc - 0.05, 'click', 1.0), (uc + 0.15, 'bass', 1.0), (ur, 'vidrio', 0.7), (ur + 0.35, 'chime_c', 0.6)]
     u1, u2, u3 = wt(1, 1) - 0.1, wt(1, 4), wt(1, 9) + 0.1
@@ -914,24 +896,23 @@ def _sfx_dinamicos():
     E[5]['sfx'] = [(0.1 + 0.18 * i, 'tick', 0.5) for i in range(4)] + [(un5 - 0.9, 'digital', 0.4), (un5, 'bass', 1.0), (un5 + 0.4, 'chime_b', 0.6)]
     ul = wt(6, 4) - 0.25
     E[6]['sfx'] = [(ul, 'whoosh', 0.5), (ul + 0.3, 'thud', 1.0), (ul + 0.35, 'scribble', 0.5), (ul + 0.9, 'chime_c', 0.7)]
-    E[7]['sfx'] = [(-0.2, 'thud', 0.7), (0.0, 'shimmer', 0.4), (1.4, 'chime_b', 0.6)]
-    u38, ue = wt(8, 3), wt(8, 9)
-    E[8]['sfx'] = [(0.0, 'sub', 0.8)] + [(u38 + 0.25 * i, 'tick2', 0.7) for i in range(3)] + [(ue, 'whoosh', 0.4), (ue + 0.15, 'bass', 1.0)]
-    ug9 = wt(9, 9)
-    E[9]['sfx'] = [(0.2, 'scribble', 0.4), (0.9, 'click', 0.8), (ug9 - 0.3, 'whoosh', 0.7), (ug9 - 0.3, 'click', 0.8)]
-    un10 = wt(10, 9) - 0.2
-    E[10]['sfx'] = [(x, 'slap', 0.9) for x in (0.05, 0.3, 0.55)] + [(1.0, 'whoosh', 0.4), (un10, 'burst', 0.5), (un10 + 0.05, 'sub', 0.8)]
-    E[11]['sfx'] = [(0.05 + 0.05 * i, 'tick2', 0.25) for i in range(8)] + [(0.3 + 0.1 * i, 'tick', 0.2) for i in range(10)]
-    E[12]['sfx'] = [(0.05 * i + 0.1, 'tick', 0.4) for i in range(8)] + [(1.0, 'whoosh', 0.4), (1.15, 'bass', 1.0)]
-    un13 = wt(13, 10) - 0.1
-    E[13]['sfx'] = [(-0.2, 'whoosh_suave', 0.6), (0.25, 'shimmer', 0.4), (un13, 'whoosh', 0.7), (un13 + 0.1, 'sub', 0.7)]
-    ur14 = wt(14, 6) - 0.1
-    E[14]['sfx'] = [(0.1, 'scribble', 0.5)] + [(0.3 + 0.2 * j, 'tick2', 0.5) for j in range(3)] + \
+    u38, ue = wt(7, 3), wt(7, 9)
+    E[7]['sfx'] = [(0.0, 'sub', 0.8)] + [(u38 + 0.25 * i, 'tick2', 0.7) for i in range(3)] + [(ue, 'whoosh', 0.4), (ue + 0.15, 'bass', 1.0)]
+    ug9 = wt(8, 9)
+    E[8]['sfx'] = [(0.2, 'scribble', 0.4), (0.9, 'click', 0.8), (ug9 - 0.3, 'whoosh', 0.7), (ug9 - 0.3, 'click', 0.8)]
+    un10 = wt(9, 9) - 0.2
+    E[9]['sfx'] = [(x, 'slap', 0.9) for x in (0.05, 0.3, 0.55)] + [(1.0, 'whoosh', 0.4), (un10, 'burst', 0.5), (un10 + 0.05, 'sub', 0.8)]
+    E[10]['sfx'] = [(0.05 + 0.05 * i, 'tick2', 0.25) for i in range(8)] + [(0.3 + 0.1 * i, 'tick', 0.2) for i in range(10)]
+    E[11]['sfx'] = [(0.05 * i + 0.1, 'tick', 0.4) for i in range(8)] + [(1.0, 'whoosh', 0.4), (1.15, 'bass', 1.0)]
+    un13 = wt(12, 10) - 0.1
+    E[12]['sfx'] = [(-0.2, 'whoosh_suave', 0.6), (0.25, 'shimmer', 0.4), (un13, 'whoosh', 0.7), (un13 + 0.1, 'sub', 0.7)]
+    ur14 = wt(13, 6) - 0.1
+    E[13]['sfx'] = [(0.1, 'scribble', 0.5)] + [(0.3 + 0.2 * j, 'tick2', 0.5) for j in range(3)] + \
                    [(ur14 + 0.1 * i, 'tick', 0.3) for i in range(12)] + [(ur14 + 1.2, 'chime_c', 0.7), (ur14 + 1.25, 'bass', 0.6)]
-    us = wt(15, 10) - 0.2
-    E[15]['sfx'] = [(0.1, 'thud', 0.6), (us, 'slap', 1.0), (us + 0.05, 'burst', 0.3), (us + 0.5, 'chime_b', 0.6)]
-    E[16]['sfx'] = [(0.0, 'scribble', 0.5), (0.6, 'whoosh', 0.4), (1.1, 'chime_c', 0.7)]
-    E[17]['sfx'] = [(0.0, 'shimmer', 0.5), (0.8, 'chime_b', 0.6)]
+    us = wt(14, 10) - 0.2
+    E[14]['sfx'] = [(0.1, 'thud', 0.6), (us, 'slap', 1.0), (us + 0.05, 'burst', 0.3), (us + 0.5, 'chime_b', 0.6)]
+    E[15]['sfx'] = [(0.0, 'scribble', 0.5), (0.6, 'whoosh', 0.4), (1.1, 'chime_c', 0.7)]
+    E[16]['sfx'] = [(0.0, 'shimmer', 0.5), (0.8, 'chime_b', 0.6)]
 
 
 if __name__ == '__main__':

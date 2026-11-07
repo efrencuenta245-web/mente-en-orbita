@@ -42,12 +42,6 @@ TXT = ['Tu tarjeta no tiene pila… y paga.',
 VOZ = [x.strip() for x in open(os.path.join(os.path.dirname(os.path.dirname(HERE)), 'guiones', '2026-11-08_tarjeta_voz.txt'),
                                encoding='utf-8').read().strip().split('\n')]
 assert len(VOZ) == len(TXT)
-CUT = 8          # frase quitada el 6-nov (pedido de Efrén: el «mándaselo a…» solo al final, nunca a la mitad)
-
-
-def _ix(i):
-    """Índice de frase viejo (el de las escenas) → índice nuevo (sin la frase CUT)."""
-    return i - 1 if i > CUT else i
 
 AMARILLO = (255, 236, 160)
 VERDE = (110, 235, 150)
@@ -57,20 +51,16 @@ ORO = (214, 176, 92)
 
 
 # ================================================================== utilidades
-def _paln(j):
-    return re.sub(r'\[[^\]]*\]', ' ', VOZ[j]).split()
-
-
 def _pal(i):
-    return _paln(_ix(i))
+    return re.sub(r'\[[^\]]*\]', ' ', VOZ[i]).split()
 
 
 def TT(i):
-    return montaje.CTX['T'][_ix(i)][0]
+    return montaje.CTX['T'][i][0]
 
 
 def TE(i):
-    return montaje.CTX['T'][_ix(i)][1]
+    return montaje.CTX['T'][i][1]
 
 
 _W = []
@@ -91,8 +81,8 @@ def wt(i, k):
     n = len(_pal(i))
     k = max(0, min(k, n - 1))
     W = _words()
-    if len(W) == sum(len(_paln(j)) for j in range(len(VOZ))):
-        n0 = sum(len(_paln(j)) for j in range(_ix(i)))
+    if len(W) == sum(len(_pal(j)) for j in range(len(VOZ))):
+        n0 = sum(len(_pal(j)) for j in range(i))
         return W[n0 + k]['start'] - W[n0]['start']
     return (TE(i) - TT(i)) * k / n
 
@@ -460,7 +450,7 @@ def s_duelo(t, fi, u, d):
                 check(img, fx, 540, 1430, seg(u, 0.5, 0.75), 'COBRA')
         else:
             pill(img, fx, 540, 300, 'A 10 CM', 1.0, size=40, border=ROJO, dot=False)
-            cota(img, fx, p0[0] + 40, p0[1], p1[0] + 40, p1[1], '10 cm', seg(u, u10 + 0.2, u10 + 0.5), col=ROJO, lado=-1)
+            cota(img, fx, p0[0] + 40, p0[1], p1[0] + 40, p1[1], '10 cm', seg(u, u10 + 0.2, u10 + 0.5), col=ROJO)
             if u > u10 + 0.7:
                 tache(img, fx, 540, 1430, seg(u, u10 + 0.7, u10 + 0.95), 'NADA')
     fr.ui.append(ui)
@@ -485,7 +475,7 @@ def s_mete(t, fi, u, d):
 
 # 9. segundo gancho: el error que casi todos cometemos → dos tarjetas juntas en la cartera
 def s_error(t, fi, u, d):
-    uc = wt(9, 6) - 0.1                          # «dos tarjetas…»: aparece la cartera
+    uc = wt(8, 6) - 0.1                          # «dos tarjetas…»: aparece la cartera
     if u < uc:
         fr = Frame(cam(u, [K(-0.2, 2.6, 0, 4, ty=1.0, roll=10), K(0.25, 3.2, -8, 6, ty=1.0), K(4.0, 3.1, -10, 6, ty=1.0)], cy=0.55))
         space(fr, t, floor='dots', floor_a=0.6, bokeh=1.0)
@@ -494,7 +484,7 @@ def s_error(t, fi, u, d):
 
         def ui(img, fx):
             kicker(img, '¡OJO!', 150, seg(u, 0.0, 0.2), col=ROJO, size=34)
-            P.titulo_golpe(img, fx, [('El error', 'sans'), ('de casi todos.', 'serif')], 1330, seg(u, 0.15, 0.3), size=82, col=(255, 160, 150))
+            P.titulo_golpe(img, fx, [('El error', 'sans'), ('de casi todos.', 'serif')], 1240, seg(u, 0.15, 0.3), size=82, col=(255, 160, 150))
         fr.ui.append(ui)
         return sacudir(finish(fr, fi), t, golpe_k(u, 0.3, 0.35), amp=24)
     v = u - uc
@@ -517,7 +507,7 @@ def s_error(t, fi, u, d):
 
 # 10. la terminal detecta dos chips y no sabe cuál cobrar (dos chips señalados con «?» y aviso «presente solo una»)
 def s_dos(t, fi, u, d):
-    uq = wt(10, 6) - 0.1
+    uq = wt(9, 6) - 0.1
     fr = Frame(cam(u, [K(-0.2, 3.6, -30, 46, ty=0.4), K(0.3, 3.2, -6, 44, ty=0.4), K(uq, 2.9, 16, 48, ty=0.4), K(4.0, 2.85, 18, 48, ty=0.4)], cy=0.55))
     space(fr, t, floor='dots', floor_a=0.8, bokeh=1.0)
     draw_objects(fr, terminal('una' if u > uq else 'lee', u, s=0.85))
@@ -544,7 +534,7 @@ def s_dos(t, fi, u, d):
 
 # 11. puede rechazar el pago… o cobrarle a la que no querías
 def s_rechaza(t, fi, u, d):
-    uo = wt(11, 4) - 0.1                         # «o cobrarle…»
+    uo = wt(10, 4) - 0.1                         # «o cobrarle…»
     fr = Frame(cam(u, [K(-0.2, 3.3, 30, 48, ty=0.3), K(0.3, 3.0, 6, 46, ty=0.3), K(uo, 3.4, -20, 24, ty=0.7), K(4.0, 3.4, -22, 24, ty=0.7)], cy=0.56))
     space(fr, t, floor='lines', floor_a=0.7, bokeh=1.0)
     if u < uo:
@@ -621,7 +611,7 @@ def s_camion(t, fi, u, d):
 
 # 14. tendría que pegártela (cota de 4 cm) y cada terminal está registrada a un comercio y a un banco (red)
 def s_registro(t, fi, u, d):
-    ur = wt(14, 4) - 0.15                        # «cada terminal…»
+    ur = wt(13, 4) - 0.15                        # «cada terminal…»
     if u < ur:
         fr = Frame(cam(u, [K(-0.2, 3.8, 40, 14, ty=0.8, tz=0.4), K(0.3, 3.4, 58, 10, ty=0.8, tz=0.4), K(4.0, 3.35, 62, 10, ty=0.8, tz=0.4)], cy=0.55))
         space(fr, t, floor=None, bokeh=1.0)
@@ -709,7 +699,7 @@ def s_codigo(t, fi, u, d):
 
 # 16. si alguien lo copia, ya no le sirve (código copiado con sello COPIA → rechazado)
 def s_copia(t, fi, u, d):
-    ur = wt(16, 4) - 0.1
+    ur = wt(15, 4) - 0.1
     fr = Frame(cam(u, [K(-0.2, 3.0, -20, 48, ty=0.3), K(0.3, 3.2, 4, 46, ty=0.3), K(ur, 2.8, 14, 52, ty=0.3), K(4.0, 2.75, 16, 52, ty=0.3)], cy=0.62))
     space(fr, t, floor='dots', floor_a=0.7, bokeh=1.0)
     draw_objects(fr, terminal('no' if u > ur + 0.2 else 'lee', u, s=0.85))
@@ -753,28 +743,20 @@ ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.5), sfx=[]),
            dict(desde=5, fn=s_chip, tr='push', c=(0.3, 0.5), sfx=[]),
            dict(desde=6, fn=s_4cm, tr='wipe', sfx=[]),
            dict(desde=7, fn=s_duelo, tr='rebanadas', sfx=[]),
-           dict(desde=8, fn=s_mete, tr='whip', sfx=[]),
-           dict(desde=9, fn=s_error, tr='rompe', c=(0.5, 0.45), sfx=[]),
-           dict(desde=10, fn=s_dos, tr='mosaico', sfx=[]),
-           dict(desde=11, fn=s_rechaza, tr='glitch', sfx=[]),
-           dict(desde=12, fn=s_sola, tr='deslizar_abajo', sfx=[]),
-           dict(desde=13, fn=s_camion, tr='giro', sfx=[]),
-           dict(desde=14, fn=s_registro, tr='whip_izq', sfx=[]),
-           dict(desde=15, fn=s_codigo, tr='cristal', palabra='CÓDIGO', sfx=[]),
-           dict(desde=16, fn=s_copia, tr='golpe', sfx=[]),
-           dict(desde=17, fn=s_mandalo, tr='ritmo', sfx=[]),
-           dict(desde=18, loop=True, tr='remolino')]
-
-ESCENAS = [dict(e, desde=_ix(e['desde']), _o=e['desde']) for e in ESCENAS if e['desde'] != CUT]
-
-
-class _PorViejo(dict):
-    def __missing__(self, k):
-        return {}
+           dict(desde=8, fn=s_error, tr='rompe', c=(0.5, 0.45), sfx=[]),
+           dict(desde=9, fn=s_dos, tr='mosaico', sfx=[]),
+           dict(desde=10, fn=s_rechaza, tr='glitch', sfx=[]),
+           dict(desde=11, fn=s_sola, tr='deslizar_abajo', sfx=[]),
+           dict(desde=12, fn=s_camion, tr='giro', sfx=[]),
+           dict(desde=13, fn=s_registro, tr='whip_izq', sfx=[]),
+           dict(desde=14, fn=s_codigo, tr='cristal', palabra='CÓDIGO', sfx=[]),
+           dict(desde=15, fn=s_copia, tr='golpe', sfx=[]),
+           dict(desde=16, fn=s_mandalo, tr='ritmo', sfx=[]),
+           dict(desde=17, loop=True, tr='remolino')]
 
 
 def _sfx_dinamicos():
-    E = _PorViejo({e['_o']: e for e in ESCENAS})
+    E = ESCENAS
     up = wt(0, 5) - 0.05
     E[0]['sfx'] = [(-1.2, 'whoosh_suave', 0.5), (0.15, 'sub', 1.0), (0.17, 'shimmer', 0.7), (up - 0.3, 'whoosh', 0.5),
                    (up + 0.15, 'chime_c', 0.9), (up + 0.17, 'click', 0.6)]
@@ -792,22 +774,21 @@ def _sfx_dinamicos():
     E[6]['sfx'] = [(0.2 + 0.25, 'chime_a', 0.6), (0.2 + 0.53, 'chime_c', 0.6), (u4, 'whoosh', 0.4), (u4 + 0.1, 'bass', 0.8)]
     u10 = wt(7, 2) - 0.1
     E[7]['sfx'] = [(0.5, 'chime_c', 0.8), (u10, 'whoosh', 0.6), (u10 + 0.7, 'thud', 0.9), (u10 + 0.72, 'burst', 0.3)]
-    E[8]['sfx'] = [(0.0, 'shimmer', 0.4), (0.3, 'whoosh', 0.5), (0.9, 'click', 1.0), (0.9, 'thud', 0.5)]
-    uc = wt(9, 6) - 0.1
-    E[9]['sfx'] = [(0.0, 'sub', 0.9), (0.3, 'bass', 1.0), (uc, 'whoosh', 0.5), (uc + 0.25, 'thud', 0.8), (uc + 0.5, 'slap', 0.6)]
-    uq = wt(10, 6) - 0.1
-    E[10]['sfx'] = [(0.3, 'scribble', 0.5), (0.6, 'scribble', 0.5), (0.35, 'tick2', 0.5), (0.65, 'tick2', 0.5), (uq, 'digital', 0.6), (uq + 0.05, 'bass', 0.6)]
-    uo = wt(11, 4) - 0.1
-    E[11]['sfx'] = [(0.1, 'burst', 0.5), (0.12, 'sub', 0.9), (uo, 'whoosh', 0.5), (uo + 0.4, 'slap', 0.8), (uo + 0.45, 'scribble', 0.5)]
-    E[12]['sfx'] = [(0.0, 'whoosh', 0.6), (0.75, 'thud', 0.7), (0.95, 'chime_c', 0.8)]
-    E[13]['sfx'] = [(0.0, 'scribble', 0.4), (0.4, 'shimmer', 0.5), (0.6, 'whoosh', 0.6)]
-    ur = wt(14, 4) - 0.15
-    E[14]['sfx'] = [(0.0, 'whoosh', 0.6), (0.6, 'tick', 0.7), (ur, 'whoosh_suave', 0.5), (ur + 0.35, 'chime_a', 0.6), (ur + 0.9, 'chime_b', 0.6),
+    uc = wt(8, 6) - 0.1
+    E[8]['sfx'] = [(0.0, 'sub', 0.9), (0.3, 'bass', 1.0), (uc, 'whoosh', 0.5), (uc + 0.25, 'thud', 0.8), (uc + 0.5, 'slap', 0.6)]
+    uq = wt(9, 6) - 0.1
+    E[9]['sfx'] = [(0.3, 'scribble', 0.5), (0.6, 'scribble', 0.5), (0.35, 'tick2', 0.5), (0.65, 'tick2', 0.5), (uq, 'digital', 0.6), (uq + 0.05, 'bass', 0.6)]
+    uo = wt(10, 4) - 0.1
+    E[10]['sfx'] = [(0.1, 'burst', 0.5), (0.12, 'sub', 0.9), (uo, 'whoosh', 0.5), (uo + 0.4, 'slap', 0.8), (uo + 0.45, 'scribble', 0.5)]
+    E[11]['sfx'] = [(0.0, 'whoosh', 0.6), (0.75, 'thud', 0.7), (0.95, 'chime_c', 0.8)]
+    E[12]['sfx'] = [(0.0, 'scribble', 0.4), (0.4, 'shimmer', 0.5), (0.6, 'whoosh', 0.6)]
+    ur = wt(13, 4) - 0.15
+    E[13]['sfx'] = [(0.0, 'whoosh', 0.6), (0.6, 'tick', 0.7), (ur, 'whoosh_suave', 0.5), (ur + 0.35, 'chime_a', 0.6), (ur + 0.9, 'chime_b', 0.6),
                     (ur + 1.4, 'tick', 0.6)]
-    E[15]['sfx'] = sum([[(x + 0.45, 'chime_c', 0.6), (x + 0.5, 'tick2', 0.5)] for x in (0.2, 1.1, 2.0)], []) + [(2.2, 'bass', 0.6)]
-    ur16 = wt(16, 4) - 0.1
-    E[16]['sfx'] = [(0.0, 'tick', 0.5), (0.55, 'slap', 1.0), (0.55, 'bass', 0.6), (ur16 + 0.2, 'burst', 0.5), (ur16 + 0.22, 'sub', 0.8)]
-    E[17]['sfx'] = [(0.0, 'shimmer', 0.5), (0.3, 'whoosh_suave', 0.5), (1.0, 'chime_c', 0.8)]
+    E[14]['sfx'] = sum([[(x + 0.45, 'chime_c', 0.6), (x + 0.5, 'tick2', 0.5)] for x in (0.2, 1.1, 2.0)], []) + [(2.2, 'bass', 0.6)]
+    ur16 = wt(15, 4) - 0.1
+    E[15]['sfx'] = [(0.0, 'tick', 0.5), (0.55, 'slap', 1.0), (0.55, 'bass', 0.6), (ur16 + 0.2, 'burst', 0.5), (ur16 + 0.22, 'sub', 0.8)]
+    E[16]['sfx'] = [(0.0, 'shimmer', 0.5), (0.3, 'whoosh_suave', 0.5), (1.0, 'chime_c', 0.8)]
 
 
 if __name__ == '__main__':
