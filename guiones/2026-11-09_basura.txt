@@ -54,3 +54,6 @@ TÍTULOS
 
 ARCHIVOS
 - Música: semilla 4421, 104 BPM · categoría ESPACIO · portada «Sobre tu cabeza cae» / «basura todos los días».
+- Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/364cbe3b96da47aa378aa3fb0f3b2c96319368b4/basura_final_p.mp4 (73.0 s, 74.9 MB)
+- Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/baf86dbd232c96cd9de62ae41e3b0a739330e898/portada_basura.jpg
+- Estado: esperando el «sí» de Efrén para programarlo en Metricool.

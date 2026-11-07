@@ -41,3 +41,6 @@ TÍTULOS
 
 ARCHIVOS
 - Música: semilla 5873, 96 BPM · categoría MITO O REALIDAD · portada «Tu cargador sin celular» / «¿gasta luz?».
+- Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/7d24cad72d95e9c34c330d8c0238686e465a0aa0/cargador_final_p.mp4 (65.3 s, 63.4 MB)
+- Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/8d7ee70d8fae29af95283ce3dd161c1390719e16/portada_cargador.jpg
+- Estado: esperando el «sí» de Efrén para programarlo en Metricool.

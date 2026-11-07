@@ -314,6 +314,7 @@ def sala(fr, t, leds=1.0, flujo_k=0.0, regleta_on=None):
 # ================================================================== escenas
 # 0. gancho, inicio tipo 6: pantalla dividida que choca (arriba el cargador solo, abajo la tele en espera)
 UJ = 0.1            # las mitades chocan
+PORTADA = False     # True: sin etiquetas (fondo limpio para la portada)
 
 
 def _mitad_cargador(t, fi, u):
@@ -324,7 +325,8 @@ def _mitad_cargador(t, fi, u):
     cable(fr, (0, 0.78, 0.52), (0.5, 0.15, 0.6), caida=0.15)
 
     def ui(img, fx):
-        pill(img, fx, 540, 180, 'CARGADOR SIN CELULAR', 1.0, size=30, border=CYAN, dot=False)
+        if not PORTADA:
+            pill(img, fx, 540, 180, 'CARGADOR SIN CELULAR', 1.0, size=30, border=CYAN, dot=False)
     fr.ui.append(ui)
     return finish(fr, fi)
 
@@ -338,7 +340,8 @@ def _mitad_tele(t, fi, u):
     def ui(img, fx):
         r = 26 + 6 * math.sin(t * 4)
         ImageDraw.Draw(fx).ellipse((pl[0] - r, pl[1] - r, pl[0] + r, pl[1] + r), fill=(150, 20, 16))
-        pill(img, fx, 540, 1470, 'TELE «APAGADA»', 1.0, size=30, border=ROJO, dot=False)
+        if not PORTADA:
+            pill(img, fx, 540, 1470, 'TELE «APAGADA»', 1.0, size=30, border=ROJO, dot=False)
     fr.ui.append(ui)
     return finish(fr, fi)
 
@@ -358,7 +361,8 @@ def s_gancho(t, fi, u, d):
     lw = 4 if u >= UJ else 3
     d.line([(0, h), (1080, h)], fill=(235, 240, 255), width=lw)
     ImageDraw.Draw(fx).line([(0, h), (1080, h)], fill=(120, 140, 160), width=14)
-    kicker(im, 'MITO O REALIDAD', 70, 1.0, col=AMARILLO, size=30)
+    if not PORTADA:
+        kicker(im, 'MITO O REALIDAD', 70, 1.0, col=AMARILLO, size=30)
     P.titulo_golpe(im, fx, [('Tu cargador sin celular…', 'sans'), ('¿gasta luz?', 'serif')], 880, seg(u, UJ, UJ + 0.15), size=70)
     small = fx.resize((270, 480), Image.BILINEAR).filter(ImageFilter.GaussianBlur(3)).resize((1080, 1920), Image.BILINEAR)
     o = np.asarray(im, np.float32) + np.asarray(small, np.float32) * 0.8 + np.asarray(fx, np.float32) * 0.4
