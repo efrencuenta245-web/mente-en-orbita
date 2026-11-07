@@ -38,5 +38,5 @@ TÍTULOS
 ARCHIVOS (alojados para Metricool)
 - Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/f6061009be94dda48e3354a7df78285e7ebe5372/tarjeta_final_p.mp4 (61.9 s, 62.2 MB)
 - Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/ce5c0bf04d1df0af0a56033adb3ea4ec87f313f9/portada_tarjeta.jpg
-- Música semilla 3187, 97 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool (posts 419542677 · 419542738).
+- Música semilla 3187, 97 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool; el 6-nov se cambió el video por la v2 (posts 419628464 · 419628483).
 - Versión 2 sin el «mándaselo» de en medio (6-nov, 61.3 s, 43.6 MB): https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/61c8f508e9521b260b9f810e5bfead1d88136f78/tarjeta_final_p.mp4 (portada igual).

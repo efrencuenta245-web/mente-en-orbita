@@ -44,8 +44,8 @@ Desde el 5-nov-2026 se publican 2 reels al día (8:00 y 19:00) con 4 de reserva 
 - vie 6-nov 19:00 — «Tu refri no hace frío. *Saca el calor.*» (refrigerador; post 417102685)
 - sáb 7-nov 8:00 — «Tu foto de noche *no es una foto.*» (modo noche; post 418354984; tarea del 5-nov)
 - sáb 7-nov 19:00 — «Tu Luna se está *escapando.*» (la Luna se aleja; post 418355022; tarea del 5-nov)
-- dom 8-nov 8:00 — «Tu QR sirve *aunque lo rompas.*» (corrección de errores del QR; post 419542677; tarea del 6-nov)
-- dom 8-nov 19:00 — «Tu tarjeta no tiene pila… *y paga.*» (pago sin contacto; post 419542738; tarea del 6-nov)
+- dom 8-nov 8:00 — «Tu QR sirve *aunque lo rompas.*» (corrección de errores del QR; post 419628464; tarea del 6-nov; video v2 sin el «mándaselo» de en medio)
+- dom 8-nov 19:00 — «Tu tarjeta no tiene pila… *y paga.*» (pago sin contacto; post 419628483; tarea del 6-nov; video v2 sin el «mándaselo» de en medio)
 Huecos libres: lun 9-nov 8:00 y 19:00 (los llena la tarea del 7-nov a las 4:35 pm con las ideas #1 y #2).
 (La inducción del 5-nov 19:00, el teclado del 6-nov 8:00 y el ojo extra del 6-nov 15:00 ya salieron en las 4 redes y están en `publicados.md`.)
 

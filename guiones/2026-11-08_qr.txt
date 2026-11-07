@@ -44,5 +44,5 @@ TÍTULOS
 ARCHIVOS (alojados para Metricool)
 - Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/a4c2e6ebb01ca259979268f3febfa0f3ea002979/qr_final_p.mp4 (68.8 s, 46.8 MB)
 - Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/3d03b0bbe17830bba41fcadebb50cf829e8ebb76/portada_qr.jpg
-- Música semilla 2211, 102 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool (posts 419542677 · 419542738).
+- Música semilla 2211, 102 BPM · categoría TECNOLOGÍA · estado: aprobado por Efrén y programado en Metricool; el 6-nov se cambió el video por la v2 (posts 419628464 · 419628483).
 - Versión 2 sin el «mándaselo» de en medio (6-nov, 65.3 s, 41.9 MB): https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/1f20e4ef205b64528ed20b43b25603b4656b25cb/qr_final_p.mp4 (portada igual).
