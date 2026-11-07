@@ -30,7 +30,6 @@ TXT = ['Tu QR sirve aunque lo rompas.',
        'Guarda tu información… y además un respaldo hecho con matemáticas.',
        'Con el nivel más alto, aguanta que le falte cerca del 30 %.',
        'Hasta le ponen un logo en medio y sigue funcionando.',
-       'Mándaselo a quien tiene el QR de su negocio todo despintado.',
        'Pero hay tres cuadros que nunca debes tapar: los de las esquinas.',
        'Le dicen a tu cámara dónde está el código y hacia dónde está girado.',
        'Si los tapas, aunque lo demás esté perfecto, ya no lo encuentra.',
@@ -45,6 +44,12 @@ TXT = ['Tu QR sirve aunque lo rompas.',
 VOZ = [x.strip() for x in open(os.path.join(os.path.dirname(os.path.dirname(HERE)), 'guiones', '2026-11-08_qr_voz.txt'),
                                encoding='utf-8').read().strip().split('\n')]
 assert len(VOZ) == len(TXT)
+CUT = 7          # frase quitada el 6-nov (pedido de Efrén: el «mándaselo a…» solo al final, nunca a la mitad)
+
+
+def _ix(i):
+    """Índice de frase viejo (el de las escenas) → índice nuevo (sin la frase CUT)."""
+    return i - 1 if i > CUT else i
 
 AMARILLO = (255, 236, 160)
 VERDE = (110, 235, 150)
@@ -268,16 +273,20 @@ def pantalla_cam(qr_im=None, estado='busca', u=0.0, txt=''):
 
 
 # ================================================================== utilidades
+def _paln(j):
+    return re.sub(r'\[[^\]]*\]', ' ', VOZ[j]).split()
+
+
 def _pal(i):
-    return re.sub(r'\[[^\]]*\]', ' ', VOZ[i]).split()
+    return _paln(_ix(i))
 
 
 def TT(i):
-    return montaje.CTX['T'][i][0]
+    return montaje.CTX['T'][_ix(i)][0]
 
 
 def TE(i):
-    return montaje.CTX['T'][i][1]
+    return montaje.CTX['T'][_ix(i)][1]
 
 
 _W = []
@@ -299,8 +308,8 @@ def wt(i, k):
     n = len(_pal(i))
     k = max(0, min(k, n - 1))
     W = _words()
-    if len(W) == sum(len(_pal(j)) for j in range(len(VOZ))):
-        n0 = sum(len(_pal(j)) for j in range(i))
+    if len(W) == sum(len(_paln(j)) for j in range(len(VOZ))):
+        n0 = sum(len(_paln(j)) for j in range(_ix(i)))
         return W[n0 + k]['start'] - W[n0]['start']
     return (TE(i) - TT(i)) * k / n
 
@@ -880,9 +889,16 @@ ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.5), sfx=[]),
            dict(desde=17, fn=s_mandalo, tr='ritmo', sfx=[]),
            dict(desde=18, loop=True, tr='flash')]
 
+ESCENAS = [dict(e, desde=_ix(e['desde']), _o=e['desde']) for e in ESCENAS if e['desde'] != CUT]
+
+
+class _PorViejo(dict):
+    def __missing__(self, k):
+        return {}
+
 
 def _sfx_dinamicos():
-    E = ESCENAS
+    E = _PorViejo({e['_o']: e for e in ESCENAS})
     uc, ur = 0.45, wt(0, 6) + 0.1
     E[0]['sfx'] = [(-0.6, 'whoosh', 0.6), (uc - 0.05, 'click', 1.0), (uc + 0.15, 'bass', 1.0), (ur, 'vidrio', 0.7), (ur + 0.35, 'chime_c', 0.6)]
     u1, u2, u3 = wt(1, 1) - 0.1, wt(1, 4), wt(1, 9) + 0.1

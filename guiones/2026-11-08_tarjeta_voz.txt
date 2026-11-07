@@ -6,7 +6,6 @@ Al entrar al campo, la antena produce electricidad.
 Eso prende el chip… solo un instante.
 Pero el campo es chiquito: unos cuatro centímetros.
 Pegada, cobra. A diez centímetros… nada.
-Mándaselo a quien todavía mete la tarjeta.
 [excited] Ahora, el error que casi todos cometemos: dos tarjetas sin contacto juntas en la cartera.
 La terminal detecta dos chips y no sabe cuál cobrar.
 Puede rechazar el pago… o cobrarle a la que no querías.

@@ -29,7 +29,6 @@ TXT = ['Tu tarjeta no tiene pila… y paga.',
        'Eso prende el chip… solo un instante.',
        'Pero el campo es chiquito: unos 4 centímetros.',
        'Pegada, cobra. A 10 centímetros… nada.',
-       'Mándaselo a quien todavía mete la tarjeta.',
        'Ahora, el error que casi todos cometemos: dos tarjetas sin contacto juntas en la cartera.',
        'La terminal detecta dos chips y no sabe cuál cobrar.',
        'Puede rechazar el pago… o cobrarle a la que no querías.',
@@ -43,6 +42,12 @@ TXT = ['Tu tarjeta no tiene pila… y paga.',
 VOZ = [x.strip() for x in open(os.path.join(os.path.dirname(os.path.dirname(HERE)), 'guiones', '2026-11-08_tarjeta_voz.txt'),
                                encoding='utf-8').read().strip().split('\n')]
 assert len(VOZ) == len(TXT)
+CUT = 8          # frase quitada el 6-nov (pedido de Efrén: el «mándaselo a…» solo al final, nunca a la mitad)
+
+
+def _ix(i):
+    """Índice de frase viejo (el de las escenas) → índice nuevo (sin la frase CUT)."""
+    return i - 1 if i > CUT else i
 
 AMARILLO = (255, 236, 160)
 VERDE = (110, 235, 150)
@@ -52,16 +57,20 @@ ORO = (214, 176, 92)
 
 
 # ================================================================== utilidades
+def _paln(j):
+    return re.sub(r'\[[^\]]*\]', ' ', VOZ[j]).split()
+
+
 def _pal(i):
-    return re.sub(r'\[[^\]]*\]', ' ', VOZ[i]).split()
+    return _paln(_ix(i))
 
 
 def TT(i):
-    return montaje.CTX['T'][i][0]
+    return montaje.CTX['T'][_ix(i)][0]
 
 
 def TE(i):
-    return montaje.CTX['T'][i][1]
+    return montaje.CTX['T'][_ix(i)][1]
 
 
 _W = []
@@ -82,8 +91,8 @@ def wt(i, k):
     n = len(_pal(i))
     k = max(0, min(k, n - 1))
     W = _words()
-    if len(W) == sum(len(_pal(j)) for j in range(len(VOZ))):
-        n0 = sum(len(_pal(j)) for j in range(i))
+    if len(W) == sum(len(_paln(j)) for j in range(len(VOZ))):
+        n0 = sum(len(_paln(j)) for j in range(_ix(i)))
         return W[n0 + k]['start'] - W[n0]['start']
     return (TE(i) - TT(i)) * k / n
 
@@ -451,7 +460,7 @@ def s_duelo(t, fi, u, d):
                 check(img, fx, 540, 1430, seg(u, 0.5, 0.75), 'COBRA')
         else:
             pill(img, fx, 540, 300, 'A 10 CM', 1.0, size=40, border=ROJO, dot=False)
-            cota(img, fx, p0[0] + 40, p0[1], p1[0] + 40, p1[1], '10 cm', seg(u, u10 + 0.2, u10 + 0.5), col=ROJO)
+            cota(img, fx, p0[0] + 40, p0[1], p1[0] + 40, p1[1], '10 cm', seg(u, u10 + 0.2, u10 + 0.5), col=ROJO, lado=-1)
             if u > u10 + 0.7:
                 tache(img, fx, 540, 1430, seg(u, u10 + 0.7, u10 + 0.95), 'NADA')
     fr.ui.append(ui)
@@ -485,7 +494,7 @@ def s_error(t, fi, u, d):
 
         def ui(img, fx):
             kicker(img, '¡OJO!', 150, seg(u, 0.0, 0.2), col=ROJO, size=34)
-            P.titulo_golpe(img, fx, [('El error', 'sans'), ('de casi todos.', 'serif')], 1240, seg(u, 0.15, 0.3), size=82, col=(255, 160, 150))
+            P.titulo_golpe(img, fx, [('El error', 'sans'), ('de casi todos.', 'serif')], 1330, seg(u, 0.15, 0.3), size=82, col=(255, 160, 150))
         fr.ui.append(ui)
         return sacudir(finish(fr, fi), t, golpe_k(u, 0.3, 0.35), amp=24)
     v = u - uc
@@ -756,9 +765,16 @@ ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.5), sfx=[]),
            dict(desde=17, fn=s_mandalo, tr='ritmo', sfx=[]),
            dict(desde=18, loop=True, tr='remolino')]
 
+ESCENAS = [dict(e, desde=_ix(e['desde']), _o=e['desde']) for e in ESCENAS if e['desde'] != CUT]
+
+
+class _PorViejo(dict):
+    def __missing__(self, k):
+        return {}
+
 
 def _sfx_dinamicos():
-    E = ESCENAS
+    E = _PorViejo({e['_o']: e for e in ESCENAS})
     up = wt(0, 5) - 0.05
     E[0]['sfx'] = [(-1.2, 'whoosh_suave', 0.5), (0.15, 'sub', 1.0), (0.17, 'shimmer', 0.7), (up - 0.3, 'whoosh', 0.5),
                    (up + 0.15, 'chime_c', 0.9), (up + 0.17, 'click', 0.6)]
