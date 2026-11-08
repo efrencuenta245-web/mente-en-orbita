@@ -1,0 +1,39 @@
+Reel diario · MAR 10-nov-2026 18:00 (CDMX) · «Tu dedo se arruga… a propósito.» (kit/nuevo/dedo.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~1 004 créditos) · flow SezJIc2UoHJ3xd1rrv76 · tiempos con Scribe.
+Inicio: tipo 9 (giro 360° con destellos: la yema arrugada da una vuelta completa con 3 cortes y queda de frente; «PROPÓSITO» de cristal detrás).
+Primera transición: glitch. Creativas: cristal, cubo, rompe, mosaico.
+Letras de cristal: PROPÓSITO, NERVIOS, SURCOS, CANICAS, LISO, PRUEBA, AGARRE (y LLANTA).
+Segundo gancho: 28.5 s («Y aquí viene lo más raro: hay dedos que ya no se arrugan», rompe).
+«Mándaselo…» solo en la penúltima frase (57.9 s). Duración 64.8 s.
+
+GUION (voz): ver guiones/2026-11-10_dedo_voz.txt
+
+DATOS Y FUENTES
+- Las arrugas no son piel que se infla: las causa la contracción de los vasos sanguíneos bajo la piel, una reacción involuntaria del
+  sistema nervioso autónomo; desde los años 1930 se sabe que no pasa si el nervio del dedo está dañado (Nature News, 2013):
+  https://www.nature.com/articles/nature.2013.12175
+- «The physiology of the wrinkling response includes vasoconstriction because of sympathetic activation»; aparece tras 5–30 min en
+  agua tibia en personas sanas; la piel sin nervio no se arruga (O'Riain, 1973); los médicos la usan como «wrinkle test» para revisar
+  el nervio digital (Grinbaum et al., Scientific Reports 12, 8877, 25-may-2022): https://www.nature.com/articles/s41598-022-13083-7
+- Estudio de las canicas: Kareklas, Nettle y Smulders, Biology Letters (2013), Universidad de Newcastle (Inglaterra): los dedos arrugados
+  fueron más rápidos con canicas mojadas; con secas, las arrugas no hicieron diferencia; analogía del dibujo de las llantas
+  (Nature News, mismo enlace). DOI 10.1098/rsbl.2012.0999.
+- No se usa: el «12 % más rápido» ni la réplica de 2014 (no se pudieron verificar en una fuente primaria).
+- Dedo, canicas, carriles, corte de la yema, llanta, regadera y chat: RECREACIÓN (sin personas ni marcas).
+
+FOTOS REALES
+- Ninguna: una foto real de dedos mostraría a una persona.
+
+TEXTO IG/FB
+¿Por qué se te arrugan los dedos en el agua? 🖐️
+No es piel inflada: tu sistema nervioso aprieta los vasitos de la yema y la piel se dobla en surcos que sacan el agua, como el dibujo de una llanta. En un estudio de 2013, con dedos arrugados pasaron más rápido canicas mojadas. Y si el nervio de un dedo está cortado, ese dedo no se arruga: los médicos lo usan como prueba.
+Mándaselo a alguien que se tarda horas en la regadera.
+#curiosidades #ciencia #mexico #menteenorbita #cuerpohumano
+
+TÍTULOS
+- Facebook: Tu dedo se arruga… a propósito
+- TikTok: Tu dedo se arruga… a propósito 🖐️ #curiosidades #ciencia #cuerpohumano
+- YouTube Shorts: Tu dedo se arruga en el agua a propósito: la orden de tu sistema nervioso 🖐️ #Shorts
+
+ARCHIVOS
+- Música: semilla 4462, 94 BPM · categoría CUERPO · portada «Tu dedo se arruga…» / «a propósito».

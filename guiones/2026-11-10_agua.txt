@@ -1,0 +1,43 @@
+Reel diario · MAR 10-nov-2026 10:00 (CDMX) · «Tu agua hierve… sin llegar a 100.» (kit/nuevo/agua.py)
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~948 créditos) · flow XpH6Uc8Kh9Xa3Rvafh37 · tiempos con Scribe.
+Inicio: tipo 12 (reloj: la aguja del termómetro de cocina corre hacia el 100, se estrella contra el 92 y se congela; «100°» de cristal detrás).
+Primera transición: zoom (atraviesa la carátula). Creativas: cubo, rebanadas, remolino, rompe, cristal, mosaico.
+Letras de cristal: 100°, AIRE, FUEGO, GAS, EXPRÉS, +100°.
+Segundo gancho: 27.9 s («Y aquí está el error: subirle todo el fuego a la olla», rompe).
+«Mándaselo…» solo en la penúltima frase (54.8 s). Duración 61.3 s.
+
+GUION (voz): ver guiones/2026-11-10_agua_voz.txt
+
+DATOS Y FUENTES
+- Ciudad de México (2 240 m): el agua hierve a ~92 °C. Tutiempo, «¿Por qué el agua no siempre hierve a 100 °C?» (1-abr-2025):
+  https://www.tutiempo.net/noticias/por-que-el-agua-no-siempre-hierve-a-100-grados.html
+  Cafessio (28-jul-2026, valores calculados): CDMX 92.6 °C; Toluca (2 660 m) 91.2 °C; Puebla 92.9; Guadalajara 94.8; Veracruz 100.0.
+  https://cafessio.com/aprende/temperatura-del-agua/
+- A más altura los alimentos tardan más en cocerse (Tutiempo, misma nota).
+- Ya hirviendo, más fuego no la calienta más: «keeping a lot of heat flowing in just boils the water faster, not hotter»
+  (Univ. de Illinois, Physics Van, «Boiling Food»): https://van.physics.illinois.edu/ask/listing/1472
+- Olla exprés: al subir la presión sube el punto de hervor; con ~15 psi sobre la presión ambiente llega a ~121 °C a nivel del mar
+  (HyperPhysics, Georgia State Univ.): https://hyperphysics.gsu.edu/hbase/thermo/precook.html
+  En la CDMX la presión ambiente es menor, por eso el guion solo dice que «pasa de 100 °C» (cálculo propio: ~117 °C con 15 psi).
+- Agua a 100 °C a 1 atm (Educación Química, SciELO México): https://scielo.org.mx/pdf/eq/v32n2/0187-893X-eq-32-02-143.pdf
+- Gráfica de temperaturas: APROX. (redondeadas). Nivel del tanque de gas, cronómetro y chat: EJEMPLO / RECREACIÓN, sin marcas.
+
+FOTOS REALES
+- NASA, foto de astronauta ISS062-E-112947 (México desde la Estación Espacial, 23-mar-2020; ISS Crew Earth Observations,
+  JSC). Dominio público. https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/Wide-EyedOverMexico.htm
+  Archivo: https://eol.jsc.nasa.gov/DatabaseImages/EO/highres/ISS062/ISS062-E-112947.JPG (recortada arriba).
+
+TEXTO IG/FB
+¿Tu agua hierve a 100 °C? En la CDMX, no 🔥
+Aquí hierve a unos 92 °C porque tienes menos aire encima: en Veracruz llega a 100 y en Toluca a unos 91. Por eso los frijoles tardan más. Y ya hirviendo, subirle todo el fuego no la calienta más: solo gastas gas. La olla exprés sí, porque sube la presión.
+Mándaselo a alguien que le sube todo el fuego a la olla.
+#curiosidades #ciencia #mexico #menteenorbita #cocina
+Foto: NASA (ISS062-E-112947).
+
+TÍTULOS
+- Facebook: Tu agua hierve… sin llegar a 100
+- TikTok: Tu agua hierve… sin llegar a 100 🔥 #curiosidades #ciencia #cocina
+- YouTube Shorts: Tu agua hierve sin llegar a 100 °C: por qué en la CDMX hierve a 92 🔥 #Shorts
+
+ARCHIVOS
+- Música: semilla 7319, 102 BPM · categoría MÉXICO · portada «Tu agua hierve…» / «sin llegar a 100».
