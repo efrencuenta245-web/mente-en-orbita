@@ -33,8 +33,8 @@ Las tareas programadas de Claude **solo pueden subir a ramas que empiezan con `c
 - Se mantienen ejemplos mexicanos y las series «Lo que no ves», «Duelo», «¿Qué pasaría si…?», «Mito o realidad», «Respuestas».
 
 ## 3. Pipeline diario: 2 reels al día con 4 de reserva (desde el 5-nov-2026)
-**Horario fijo:** cada día salen 2 reels en las 4 redes, a las **8:00** y a las **19:00** (`America/Mexico_City`). Siempre hay **4 de reserva** programados en Metricool (mañana y pasado mañana, 8:00 y 19:00).
-**La tarea de las 4:35 pm hace 2 reels** y los programa, con el «sí» de Efrén, en los **2 primeros huecos libres**: normalmente pasado mañana a las 8:00 y a las 19:00. Si un día falló, la siguiente tarea llena primero los huecos que quedaron. Un hueco está ocupado si Metricool tiene un post pendiente a esa hora (±30 min); los extras van en otras horas y no cuentan.
+**Horario fijo (desde el 8-nov-2026, lo aprobó Efrén):** cada día salen 2 reels en las 4 redes, a las **10:00** y a las **18:00** (`America/Mexico_City`). Antes era 8:00 y 19:00; se cambió porque Metricool marca que las 10:00 rinden más que las 8:00 (TikTok +116 %, Facebook +55 %, YouTube +27 %) y las 18:00 más que las 19:00 (+15 a +31 %). Siempre hay **4 de reserva** programados en Metricool (mañana y pasado mañana, 10:00 y 18:00).
+**La tarea de las 4:35 pm hace 2 reels** y los programa, con el «sí» de Efrén, en los **2 primeros huecos libres**: normalmente pasado mañana a las 10:00 y a las 18:00. Si un día falló, la siguiente tarea llena primero los huecos que quedaron. Un hueco está ocupado si Metricool tiene un post pendiente a esa hora (±30 min); los extras van en otras horas y no cuentan.
 
 Para cada uno de los 2 reels:
 1. **Tema:** las ideas #1 y #2 de la cola de `estrategia.md` (sin repetir temas de `publicados.md` de los últimos 14 días ni de «Ya programados»). Como salen 2 días después, deben ser temas que no caduquen; si una idea depende de una fecha, respeta la fecha.
@@ -52,12 +52,12 @@ Para cada uno de los 2 reels:
 7. **Alojar:** `bash kit/alojar.sh /home/claude/TEMA_final_p.mp4` y `bash kit/alojar.sh /home/claude/portada_TEMA.jpg` → URL públicas. Guarda guion, `TEMA.py` y jobs con `guardar.sh`.
 8. **Aprobación obligatoria (los 2 juntos):** aviso «Tus 2 reels del <día> están listos…» (§5), los 2 videos y sus portadas con SendUserFile y con SendUserMessage: para cada uno, día y hora, tema, texto para IG/FB (pregunta-gancho, línea de valor, «mándaselo a…», 3-5 hashtags), título de TikTok y título de YouTube Shorts (máx. 100 caracteres con #Shorts); y la pregunta «¿Los programo así? Responde sí a los dos, o dime cuál cambio». **Nunca programes sin un «sí» explícito de Efrén para esos videos.**
 9. **Programar con Metricool** `createScheduledPost` (uno por reel), en su hueco: blogId `7735731`, date y publicationDate con timezone `America/Mexico_City`. info: autoPublish true, draft false, media [URL del video], `videoThumbnailUrl` [URL de la portada], text aprobado, providers instagram/facebook/tiktok/youtube, instagramData `{"type":"REEL","showReelOnFeed":true}` (sin isAiGenerated: lo eligió Efrén), facebookData `{"type":"REEL","title":…}`, tiktokData `{"title":…,"privacyOption":"PUBLIC_TO_EVERYONE"}`, youtubeData `{"title":…,"type":"short","privacy":"public","madeForKids":false,"category":"SCIENCE_TECHNOLOGY"}`. Si responde VIDEO_THUMBNAIL_NOT_APPLICABLE, repite una vez sin `videoThumbnailUrl` (el cuadro 0 ya es la portada). Si da otro error, no repitas igual: corrige solo si el error dice qué falta. Confirma con `getScheduledPosts` y manda los plannerUrl. Anota los 2 en «Ya programados» de `estrategia.md` y sácalos de la cola.
-10. **¿Se publicó?** `getScheduledPosts` trae también los ya publicados: cada red debe decir `PUBLISHED` con su `publicUrl` (una lista vacía NO prueba nada: puede ser que lo borraron). La tarea de las 6:43 revisa el de las 19:00 del día anterior y la de las 4:35 pm revisa el de las 8:00 de ese día. Si salió: regístralo en `publicados.md` (fecha y hora, tipo diario, tema, gancho, duración, redes y enlaces) y quítalo de «Ya programados». Si no: aviso «No se pudo publicar el reel de las <hora>: <motivo>» con el plannerUrl y el enlace del video.
+10. **¿Se publicó?** `getScheduledPosts` trae también los ya publicados: cada red debe decir `PUBLISHED` con su `publicUrl` (una lista vacía NO prueba nada: puede ser que lo borraron). La tarea de las 6:43 revisa el de las 18:00 del día anterior y la de las 4:35 pm revisa el de las 10:00 de ese día. Si salió: regístralo en `publicados.md` (fecha y hora, tipo diario, tema, gancho, duración, redes y enlaces) y quítalo de «Ya programados». Si no: aviso «No se pudo publicar el reel de las <hora>: <motivo>» con el plannerUrl y el enlace del video.
 
 **Texto del reel:** pregunta-gancho, línea de valor, «Mándaselo a alguien que…» y 3-5 hashtags (#curiosidades #ciencia #mexico #menteenorbita + uno del tema).
 
 ## 3b. Videos extra (pedidos por Efrén)
-No alteran los reels diarios, ni la reserva, ni la cola. Mismo pipeline y misma aprobación. Si no da hora, sugiere una entre las 11:00 y las 16:00 (lejos de las 8:00 y las 19:00). Se registran como **extra** y cuentan para las estadísticas.
+No alteran los reels diarios, ni la reserva, ni la cola. Mismo pipeline y misma aprobación. Si no da hora, sugiere una entre las 13:00 y las 15:00 (lejos de las 10:00 y las 18:00). Se registran como **extra** y cuentan para las estadísticas.
 
 ## 4. Monitoreo de las 4 redes
 - Fuente principal: **Metricool** (brandId `7735731`, timezone `America/Mexico_City`). vidIQ ya no se usa en las tareas (no tiene créditos y no hace falta).
@@ -68,7 +68,7 @@ No alteran los reels diarios, ni la reserva, ni la cola. Mismo pipeline y misma 
 
 ## 5. Avisos a Efrén (PushNotification de menos de 200 caracteres + SendUserMessage con detalles)
 Video:
-1. «Tus 2 reels del <día> están listos: <tema 1> y <tema 2>. ¿Los programo a las 8 am y 7 pm?»
+1. «Tus 2 reels del <día> están listos: <tema 1> y <tema 2>. ¿Los programo a las 10 am y 6 pm?»
 2. «No pude terminar los reels de hoy: <motivo>» + qué necesitas de él (si solo salió uno, mándalo y dilo).
 3. Lo que ya se publicó va dentro del reporte de las 6:43 y del aviso de las 4:35 (sin aviso aparte).
 4. «No se pudo publicar el reel de las <hora>: <motivo>» + qué hacer y el enlace del video para que él lo suba.
