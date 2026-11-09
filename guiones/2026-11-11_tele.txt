@@ -50,3 +50,6 @@ TÍTULOS
 
 ARCHIVOS
 - Música: semilla 6149, 100 BPM · categoría TECNOLOGÍA · portada «Tu tele 4K…» / «no la ves en 4K.».
+- Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/469380f1da6a6c25006c3c6abaf296543d43b394/tele_final_p.mp4 (62.2 s, 61.8 MB)
+- Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/8782690ca1ef0f421b33c2ba3055d23db44678cb/portada_tele.jpg
+- Estado: esperando el «sí» de Efrén (se le mandó el 9-nov) para mié 11-nov 10:00.

@@ -42,14 +42,12 @@ Datos del 9-nov-2026 (últimos 30 días). Clasificación de los últimos 7 días
 6. Fondo negro; voz Isaac.
 
 ## Ya programados (no los tomes de la cola)
-Desde el 5-nov-2026 se publican 2 reels al día con 4 de reserva (CLAUDE.md §3); **desde el 8-nov a las 10:00 y 18:00** (antes 8:00 y 19:00). Pendientes en Metricool (revisado el 9-nov a las 06:45; los 4 en las 4 redes):
-- lun 9-nov 10:00 — «Sobre tu cabeza cae basura… *todos los días.*» (Swift / basura espacial; post 420916708, antes 420339956 a las 8:00; tarea del 7-nov; aprobado por Efrén)
+Desde el 5-nov-2026 se publican 2 reels al día con 4 de reserva (CLAUDE.md §3); **desde el 8-nov a las 10:00 y 18:00** (antes 8:00 y 19:00). Pendientes en Metricool (revisado el 9-nov a las 16:40; los 3 en las 4 redes):
 - lun 9-nov 18:00 — «Tu cargador sin celular… *¿gasta luz?*» (Mito o realidad, consumo en espera; post 420916730, antes 420339986 a las 19:00; tarea del 7-nov; aprobado por Efrén)
-- lun 9-nov 14:00 — **EXTRA** «Tu «razer»… *no es un RZR.*» (historia de Can-Am por sus side by side: Commander, Maverick; vehículos con fotos reales en 3D; post 422046689; pedido y aprobado por Efrén el 9-nov; no ocupa hueco del diario)
 - mar 10-nov 10:00 — «Tu agua hierve… *sin llegar a 100.*» (CDMX 92 °C, altitud y olla exprés; post 421255373; tarea del 8-nov; aprobado por Efrén)
 - mar 10-nov 18:00 — «Tu dedo se arruga… *a propósito.*» (dedos arrugados, sistema nervioso; post 421255588; tarea del 8-nov; aprobado por Efrén)
-Huecos libres: mié 11-nov 10:00 y 18:00 (los llena la tarea del 9-nov a las 4:35 pm con las ideas #1 y #2).
-(La tarjeta del 8-nov 18:00, el QR del 8-nov 8:00 y la Luna del 7-nov 19:00 ya salieron en las 4 redes y están en `publicados.md`.)
+Huecos libres: mié 11-nov 10:00 y 18:00. La tarea del 9-nov ya hizo la tele 4K (#1) y WhatsApp (#2) para esos huecos; esperan el «sí» de Efrén.
+(La basura espacial del 9-nov 10:00, el extra del razer del 9-nov 14:00, la tarjeta del 8-nov 18:00, el QR del 8-nov 8:00 y la Luna del 7-nov 19:00 ya salieron en las 4 redes y están en `publicados.md`.)
 
 ## Cola de ideas
 Reordenada por el reporte semanal del 8-nov-2026 (`reportes/semana-2026-11-08.md`) y revisada por la estrategia del 9-nov a las 06:50 (mismo orden; a la #1 y la #2 se les asignó el tipo de inicio según los datos de 3 s, y se agregaron la #13 y la #14 para el 17-nov). Cada día la tarea de las 4:35 pm toma la #1 (10:00) y la #2 (18:00); la «Sale» es la fecha esperada si no falla ningún día. Reglas de la semana, sacadas de los datos: **gancho de algo que sentiste o viste** (los de ≥63 % a 3 s: ojo, foto de noche, Wi-Fi, pila), **más cuerpo y casa con truco** (parpadeo: 6.9 veces la mediana en FB), **una persona concreta en el «mándaselo a…»** (solo al final) e **inicio que muestre el problema del espectador en el primer cuadro** (macro, error en pantalla, cuenta regresiva: 64-70 % a los 3 s; los abstractos como «se arma solo», número gigante o barra de búsqueda: 41-50 %).
