@@ -1,7 +1,7 @@
 # Videos publicados
 
 Tipos:
-- **diario**: lo hace la tarea de las 4:35 pm (desde el 5-nov-2026, 2 al día: 8:00 y 19:00).
+- **diario**: lo hace la tarea de las 4:35 pm (desde el 5-nov-2026, 2 al día: 8:00 y 19:00; desde el 8-nov, 10:00 y 18:00).
 - **extra**: los pide Efrén en el chat para contestar comentarios o probar ideas suyas. No cuentan para el límite diario.
 - **efrén**: los sube él por su cuenta. No hace falta anotarlos: todo reel de la cuenta que no esté aquí es suyo.
 
@@ -38,3 +38,4 @@ Tipos:
 | 2026-11-07 08:00 | diario | Modo noche: tu foto de noche no es una foto (inicio tipo 12; YouTube publicó con aviso: no subió la miniatura) | "Tu foto de noche no es una foto." | — | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfcWqkGFIL2/ · https://facebook.com/reel/974198078647117 · https://www.youtube.com/shorts/LFtm4w3Z628 · https://www.tiktok.com/@mente.en.rbita/video/7705430582171307271 |
 | 2026-11-07 19:00 | diario | La Luna se aleja 3.8 cm al año (inicio tipo 4, barra de búsqueda) | "Tu Luna se está escapando." | 69.1 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfdiBPckeIr/ · https://facebook.com/reel/1436014935346938 · https://www.youtube.com/shorts/xjsZd8PzcBk · https://www.tiktok.com/@mente.en.rbita/video/7705600266153856277 |
 | 2026-11-08 08:00 | diario | QR que sirve aunque lo rompas: corrección de errores (inicio tipo 3, se arma solo; último reel a las 8:00, desde aquí el horario es 10:00 y 18:00) | "Tu QR sirve aunque lo rompas." | 65.3 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/Dfe7c2kjvCR/ · https://facebook.com/reel/1135809555707519 · https://www.youtube.com/shorts/ncghcTCK4Ng · https://www.tiktok.com/@mente.en.rbita/video/7705801106508516660 |
+| 2026-11-08 18:00 | diario | Tarjeta sin contacto: no tiene pila y paga (inicio tipo 10, rayos X de golpe; video v2 sin el «mándaselo» de en medio; primer reel del horario de las 18:00) | "Tu tarjeta no tiene pila… y paga." | 61.3 s | IG+FB+TikTok+YT · https://www.instagram.com/reel/DfgAE7omeLY/ · https://facebook.com/reel/1009733465497802 · https://www.youtube.com/shorts/VBjBtuWeCPM · https://www.tiktok.com/@mente.en.rbita/video/7705955248619277620 |
