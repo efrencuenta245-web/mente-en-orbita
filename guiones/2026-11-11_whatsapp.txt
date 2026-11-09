@@ -1,0 +1,47 @@
+Reel diario · MIÉ 11-nov-2026 18:00 (CDMX) · «Tu celular prende… pero WhatsApp se va.» (kit/nuevo/whatsapp.py)
+Idea #2 de la cola de estrategia.md (debe salir antes del 30-nov). Nicho 1 y 4 (tecnología + noticia de la semana).
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~1 043 créditos) · flow dJ1KojSNy0F6dr3Qktw9 · tiempos con Scribe.
+Inicio: tipo 8 (error en pantalla: el primer cuadro es el celular con el aviso rojo «Esta versión de iOS ya no es compatible»,
+chat gris y falla digital; «ADIÓS» de cristal detrás). En el final el chat funciona, falla y sale el aviso (loop).
+Primera transición: deslizar_abajo. Creativas: cubo, rompe, remolino, rebanadas, mosaico.
+Transiciones con el objeto: la cámara entra al celular (zoom → rayos X «piezas bien») y el toque en «General» abre los ajustes.
+Letras de cristal: ADIÓS, 30 NOV, SISTEMA, RESPALDO, SUSPENDIDA. Efectos: 02 atraviesa, 03 cristal, 07 celular con vida,
+09 garabatos, 10 zoom digital REC.
+Segundo gancho: 34.3 s («Y aquí está el error que más duele: cambiar de celular sin respaldo», rompe). Antes, a los 24 s,
+la prueba de los dos iPhone 7 iguales.
+«Mándaselo…» solo en la penúltima frase (59.2 s). Duración 66.1 s.
+
+GUION (voz): ver guiones/2026-11-11_whatsapp_voz.txt
+
+DATOS Y FUENTES
+- Desde el 30-nov-2026 WhatsApp pide iOS 15.5 o más nuevo: deja de funcionar en iPhone con iOS 15.1 a 15.4. iPhone 6s, 6s Plus,
+  SE (1.ª gen.), 7 y 7 Plus pueden instalar iOS 15.8.x y seguir; iPhone 5s, 6 y 6 Plus ya estaban fuera. En Android pide 6.0
+  desde el 8-sep-2026. WhatsApp no cierra cuentas: solo deja de funcionar en esos sistemas (sin las protecciones de seguridad
+  necesarias). WhatsApp no almacena tu historial: se recupera con la copia de iCloud o Google Drive.
+  Fox Sports México, 4-nov-2026: https://www.foxsports.com.mx/2026/11/04/lista-celulares-iphone-android-no-sirve-whatsapp-noviembre-2026-por-que-uti/
+  Noticias SIN, 7-nov-2026: https://noticiassin.com/tecnologia/2026/11/07/whatsapp-dejara-sin-soporte-a-iphone-con-ios-15-1-a-15-4-2165778
+  Ráfaga Noticias, 31-oct-2026: https://rafaganoticias.com/2026/10/31/whatsapp-dejara-de-funcionar-en-algunos-iphone-a-partir-del-30-de-noviembre/
+  (el centro de ayuda de WhatsApp no se pudo abrir desde la nube; las tres notas coinciden en fecha y versiones).
+- Apps no oficiales («WhatsApp Plus», «GB WhatsApp»): WhatsApp puede suspender la cuenta de quien las usa.
+  Xataka: https://www.xataka.com/basics/whatsapp-puede-suspender-tu-cuenta-usar-apps-no-autorizadas-cuales-que
+  Infobae, 20-jun-2026: https://www.infobae.com/tecno/2026/06/20/no-usar-la-aplicacion-oficial-de-whatsapp-el-error-que-suspende-tu-cuenta-y-como-recuperarla/
+- Ruta en iPhone: Ajustes › General › Actualización de software.
+- Los dos iPhone 7, el chat con «Mamá», el calendario, el escudo, el servidor, la nube y la descarga: RECREACIÓN y EJEMPLO
+  (sin logos de WhatsApp, Apple ni Google).
+
+FOTOS REALES
+- Ninguna: serían productos con logo.
+
+TEXTO IG/FB
+¿Tu mamá todavía usa un iPhone viejo? 📱
+Desde el 30 de noviembre, WhatsApp deja de funcionar en iPhone con iOS 15.1 a 15.4 (en Android ya pide la versión 6 o más nueva). La solución: Ajustes › General › Actualización de software; los iPhone 6s, SE y 7 pueden subir a iOS 15.8 y siguen con WhatsApp. Y antes de cambiar de celular, respalda tus chats: WhatsApp no los guarda en sus servidores. Nada de WhatsApp «modificado»: te pueden suspender la cuenta.
+Mándaselo a alguien que todavía tiene el iPhone viejo.
+#curiosidades #ciencia #mexico #menteenorbita #whatsapp
+
+TÍTULOS
+- Facebook: Tu celular prende… pero WhatsApp se va
+- TikTok: Tu celular prende… pero WhatsApp se va 📱 #curiosidades #whatsapp #iphone
+- YouTube Shorts: WhatsApp deja de funcionar en iPhone viejos el 30 de noviembre: cómo evitarlo 📱 #Shorts
+
+ARCHIVOS
+- Música: semilla 8053, 108 BPM · categoría TECNOLOGÍA · portada «Tu celular prende…» / «pero WhatsApp se va.».

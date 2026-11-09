@@ -1,0 +1,52 @@
+Reel diario · MIÉ 11-nov-2026 10:00 (CDMX) · «Tu tele 4K… no la ves en 4K.» (kit/nuevo/tele.py)
+Idea #1 de la cola de estrategia.md (Buen Fin del 13 al 17-nov). Serie: ninguna. Nicho 1 (tecnología de todos los días).
+Voz: Isaac (ElevenLabs QmPfzE500cXXHM9uQKGc, eleven_v4, 1 toma, ~1 039 créditos) · flow 4D9xDdaV4pbXHcB8cBlK · tiempos con Scribe.
+Inicio: tipo 7 (macro extremo: subpixeles rojo-verde-azul gigantes e irreconocibles; el zoom hacia atrás revela la imagen, la tele
+y el sillón; «4K» de cristal detrás). El final se clava en la pantalla hasta los subpixeles (loop).
+Primera transición: golpe. Creativas: cubo, remolino, rompe, mosaico, cristal (8K), rebanadas.
+Transiciones con el objeto: la cámara entra a la pantalla (gancho → pared de subpixeles) y la miniatura 4×4 de la tarjeta
+Premium se vuelve la rejilla del reescalado.
+Letras de cristal: 4K, 94, 3 METROS, HD, 8K. Efectos: 02 atraviesa, 03 cristal, 09 garabatos, 10 zoom digital REC.
+Segundo gancho: 28.2 s («Y aquí viene lo peor: mucho de lo que ves ni siquiera viene en 4K», rompe).
+«Mándaselo…» solo en la penúltima frase (55.9 s). Duración 62.2 s.
+
+GUION (voz): ver guiones/2026-11-11_tele_voz.txt
+
+DATOS Y FUENTES
+- 4K (UHD) = 3 840 × 2 160 = 8 294 400 pixeles; Full HD = 1 920 × 1 080 = 2 073 600 → exactamente 4 veces (definiciones
+  estándar de UHD y HD).
+- Límite del ojo: Ashraf, Chapiro y Mantiuk (Universidad de Cambridge y Meta), Nature Communications, 2025,
+  DOI 10.1038/s41467-025-64679-2: en promedio 94 pixeles por grado en gris viéndolo de frente (89 en rojo-verde, 53 en
+  amarillo-violeta). Reseña (27-oct-2025): https://connectsci.au/news/news-parent/6937/Is-your-ultra-HD-TV-s-resolution-too-high-for-the
+  («for an average-sized living room with 2.5m between the TV and seating, a 44-inch 4K or 8K TV does not provide any detectable
+  benefit over a lower resolution HD TV of the same size»).
+- Cálculo propio con esa cifra (prueba en dos casos): tele de 43" 16:9 = 0.952 m de ancho → un pixel Full HD mide 0.496 mm.
+  Un grado mide 26.2 mm a 1.5 m → 53 pixeles Full HD por grado (menos de 94: el 4K SÍ se nota). A 3 m mide 52.4 mm → 106 pixeles
+  por grado (más de 94: ya no distingues 4K de Full HD). Se dice en pantalla «ESCALA EXAGERADA» en el cono de 1°.
+- TV abierta en México (TDT, norma ATSC 1.0): la Política de TDT define alta definición como 720p o 1080i (cita en el estudio del
+  IFT «ATSC 3.0: recomendaciones para su futura adopción en México», oct-2025, p. 14):
+  https://ift.org.mx/sites/default/files/estudio_atsc_3.0.pdf — ATSC 3.0 (la que permite 4K) todavía no se adopta.
+- Netflix: el Ultra HD 4K solo viene en el plan Premium y pide unos 15 Mbps o más: https://help.netflix.com/es/node/306 ;
+  Xataka México: https://www.xataka.com.mx/streaming/esta-es-la-velocidad-necesaria-para-ver-netflix-en-4k-y-estos-son-los-proveedores-que-la-ofrecen-en-mexico
+  (las páginas de ayuda de Netflix no se pudieron abrir desde la nube; se confirmó con resultados de búsqueda del 9-nov-2026).
+- Si la señal no es 4K, la tele la reescala (upscaling): estira la imagen e interpola los pixeles que faltan.
+- Buen Fin 2026: del viernes 13 al martes 17 de noviembre (UnoTV, 31-ago-2026):
+  https://www.unotv.com/negocios/el-buen-fin-2026-durara-cinco-dias-la-edicion-16-sera-del-13-al-17-de-noviembre/
+- Tele, sala, sillón, ojo de alambre, antena, tarjetas de planes, etiqueta de precio y caja: RECREACIÓN (sin marcas ni logos).
+
+FOTOS REALES
+- Ninguna: el tema es un producto (las fotos traerían marcas). La imagen de la tele es un atardecer hecho por código.
+
+TEXTO IG/FB
+¿Tu tele 4K se ve en 4K? Depende de dónde te sientes 📺
+Una 4K tiene más de 8 millones de puntitos, 4 veces más que una Full HD. Pero en una tele de 43 pulgadas, desde 3 metros, tu ojo ya no nota la diferencia (Universidad de Cambridge, 2025). Además, la tele abierta llega cuando mucho en HD, y en Netflix el 4K es solo del plan Premium con unos 15 megas. Antes de pagar de más en el Buen Fin, mide del sillón a la tele.
+Mándaselo a alguien que va a comprar tele en el Buen Fin.
+#curiosidades #ciencia #mexico #menteenorbita #buenfin
+
+TÍTULOS
+- Facebook: Tu tele 4K… no la ves en 4K
+- TikTok: Tu tele 4K… no la ves en 4K 📺 #curiosidades #ciencia #buenfin
+- YouTube Shorts: Tu tele 4K no la ves en 4K: lo que debes saber antes del Buen Fin 📺 #Shorts
+
+ARCHIVOS
+- Música: semilla 6149, 100 BPM · categoría TECNOLOGÍA · portada «Tu tele 4K…» / «no la ves en 4K.».
