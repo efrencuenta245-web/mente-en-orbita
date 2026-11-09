@@ -1,0 +1,60 @@
+REEL EXTRA (pedido de Efrén, 9-nov-2026): la historia de Can-Am
+Pedido: «que los vehículos no se vean como una recreación en 3D, sino como se ven en las imágenes pero en 3D».
+Solución: cada vehículo es su FOTO REAL recortada (ISNet, ONNX) con mapa de profundidad (Depth Anything V2 small, ONNX);
+la cámara orbita con paralaje, la luz recorre la carrocería y hay reflejo en el piso (kit/nuevo/foto3d.py).
+Archivo: kit/nuevo/canam.py · voz Isaac (eleven_v4) acelerada 4 % (atempo 1.04) para quedar en 74.2 s.
+Inicio tipo 2 (el objeto cae y rebota: el Spyder cae sobre la foto de motocross de los 70). Primera transición: iris.
+
+GUION (voz)
+1. [curious] Seguro has visto uno de estos… pero Can-Am no nació con tres ruedas.
+2. Nació en Quebec, Canadá, dentro de Bombardier, la empresa que inventó la moto de nieve Ski-Doo.
+3. En mil novecientos setenta y tres lanzó sus primeras motos de motocross, con motor Rotax.
+4. El nombre salió de un concurso entre sus empleados: Canadá más América… y hasta tuvieron que comprarlo.
+5. Y ganaron rápido: oro, plata y bronce en los Seis Días Internacionales.
+6. Un año después ya eran campeones de motocross en Estados Unidos.
+7. [excited] Pero las ventas se cayeron… y en mil novecientos ochenta y siete hicieron su última moto.   ← 2.º gancho (30.7 s)
+8. El nombre se quedó dormido diecinueve años.
+9. En dos mil seis, BRP lo revivió: sus cuatrimotos pasaron a llamarse Can-Am.
+10. Y en dos mil siete sacó algo rarísimo: el Spyder, con dos ruedas adelante y una atrás.
+11. ¿Te suena? Es el mismo acomodo de una moto de nieve: dos esquís adelante y una oruga atrás.
+12. Hoy muchos se arman en Ciudad Juárez, Chihuahua: de ahí ya salieron dos millones.
+13. Y en dos mil veinticuatro volvió a las motos de dos ruedas… pero eléctricas.
+14. A su edición especial le pusieron un número: setenta y tres.
+15. Mándaselo a alguien con un Can-Am, porque todo empezó con dos ruedas.   (loop → el Spyder vuelve a caer)
+
+FUENTES DE LOS DATOS
+- Can-Am creada en 1972 dentro de Bombardier (Valcourt, Quebec); motos de 1972/73 a 1987; nombre por concurso entre
+  empleados (mercado canadiense y estadounidense) y compra de los derechos por la serie de carreras Can-Am:
+  en.wikipedia.org/wiki/Can-Am_motorcycles
+- Producción en serie desde 1973 con motores Rotax (filial austriaca de Bombardier): cyclechaos.com/wiki/Can-Am ·
+  100jahre.rotax.com (historia Rotax) · motocrossactionmag.com/flashback-friday-can-am-mx-2
+- ISDT 1973: oro, plata y bronce: cyclechaos.com/wiki/Can-Am · motocrossactionmag.com/amp/flashback-friday-can-am-mx-2
+- 1974: Gary Jones, campeón AMA 250 en una Can-Am MX-2: motocrossactionmag.com/flashback-friday-can-am-mx-2 · pulpmx.com
+- 1987, último año de motos Can-Am (licencia a Armstrong-CCM desde 1983): Wikipedia · pulpmx.com
+- 2003: Bombardier vende la división recreativa → BRP (Bain Capital, familia Bombardier, Caisse): powersportsbusiness.com (2003)
+- Mayo 2006: toda la línea de cuatrimotos de BRP pasa a llamarse Can-Am: powersportsbusiness.com/features/2006/05/15
+- Febrero 2007: lanzamiento del Spyder roadster (dos ruedas adelante, una atrás): atvmag.com (comunicado BRP) ·
+  acomodo parecido a una moto de nieve: Wikipedia «Can-Am Spyder»
+- Juárez: 2 millones de vehículos fabricados en el Campus Juárez desde 2007 (Defender, Maverick, Commander, Outlander):
+  news.brp.com, 23-ene-2026
+- 2024: Can-Am Pulse y Origin eléctricas (lanzamiento 20-ago-2024, modelos 2025) y ediciones «73» por el año de
+  lanzamiento: electricautonomy.ca (22-ago-2024) · amcn.com.au · cyclegear.com/common-tread (21-ago-2024)
+
+FOTOS (Wikimedia Commons; solo CC BY / CC0 / dominio público, como pide ESTILO.md §6)
+- Spyder RT rojo: «BRP Can-Am Spyder Roadster (8044129660).jpg» · Tony Hisgett · CC BY 2.0
+- Spyder GS amarillo: «BRPCan-AmSpyderRSRoadsterTrike.jpg» · Brian Snelson · CC BY 2.0
+- Spyder RS gris: «BRP Can-Am Spyder rs - Flickr - Joost J. Bakker IJmuiden.jpg» · Joost J. Bakker · CC BY 2.0
+- Ski-Doo 1958 (ejemplar de 1961): «Ski-Doo Snowmobile, Joseph-Armand Bombardier, 1958 … DSC08973.jpg» · Daderot · CC0
+- Outlander: «Helsinki Police Department Can-am Outlander all-terrain vehicle.jpg» · Antti Leppänen · CC BY 4.0
+  (se borró del recorte al policía que estaba detrás)
+- Defender: «Rideau Canal - BRP Can-Am Defender vehicle 1972.jpg» · Ahunt · CC0
+- Maverick X3 (frente y atrás): «Can-Am Maverick Front.JPG», «Can-Am Maverick Seite.JPG» · KarleHorn · CC BY 3.0
+- Ryker: «Can-Am Irving Oil 73 South Main Street downtown Hanover NH April 2024.jpg» · Artaxerxes · CC BY 4.0
+- Motocross de los 70 (NO son Can-Am, se dice en pantalla «MOTOCROSS · AÑOS 70»): «MOTORCYCLE RACE - NARA - 543723/543731»,
+  «MOTORCYCLE RACE RIPS UP LAND - NARA - 543727» · Bill Gillette (EPA DOCUMERICA) · dominio público
+- No hay foto libre (CC BY/CC0/PD) de una moto Can-Am de los 70 ni de la Pulse/Origin: en Commons solo hay CC BY-SA
+  («Can-Am 370 MX-5 1979.jpg», «Can-Am TNT 175.jpg», «Can-Am Pulse.jpg»). Por eso las motos eléctricas van en line-art.
+
+CRÉDITOS PARA LA DESCRIPCIÓN
+Fotos: Tony Hisgett, Brian Snelson y Joost J. Bakker (CC BY 2.0), Antti Leppänen y Artaxerxes (CC BY 4.0), KarleHorn (CC BY 3.0),
+Daderot y Ahunt (CC0), Bill Gillette / NARA (dominio público), vía Wikimedia Commons.

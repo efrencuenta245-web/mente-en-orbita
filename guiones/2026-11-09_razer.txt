@@ -1,0 +1,54 @@
+REEL EXTRA (pedido de Efrén, 9-nov-2026): «Tu "razer" no es un RZR» — historia de Can-Am contada por sus side by side
+Pedido: historia de Can-Am hablando más de los Maverick y los Commander; en México es muy popular irse de ruta en «razers»
+y la gente no sabe que RZR es de Polaris: a todo vehículo parecido le dice «razer». Vehículos = fotos reales en 3D, no recreaciones.
+Archivo: kit/nuevo/razer.py (motor de fotos 3D: kit/nuevo/foto3d.py) · voz Isaac (eleven_v4) · 68.7 s.
+Inicio tipo 11 (pregunta directa en texto gigante que se rompe y deja ver un Maverick real). Primera transición: cubo.
+Reemplaza al borrador «canam.py» (historia general), que Efrén pidió cambiar antes de verlo.
+
+GUION (voz)
+1. [curious] ¿Te vas de ruta en razer? Casi seguro… no es un razer.
+2. El razer, que se escribe erre, zeta, erre, es un modelo de Polaris, una marca de Estados Unidos.
+3. Salió en dos mil siete y pegó tanto que a todo lo que se le parece le decimos razer.
+4. Como cuando a cualquier pañuelo le dices Kleenex.
+5. Su nombre real es side by side: vas sentado al lado de tu copiloto.
+6. Y muchos de los que ves en la ruta son de otra marca: Can-Am.          ← giro (24.6 s)
+7. Nació en Canadá en mil novecientos setenta y tres… haciendo motos de motocross.
+8. [excited] Pero en mil novecientos ochenta y siete hizo su última moto… y el nombre desapareció.   ← 2.º gancho (33 s)
+9. Volvió en dos mil seis con cuatrimotos, y en dos mil diez sacó su primer side by side: el Commander.
+10. Con ochenta y cinco caballos, era el más potente de todos.
+11. En dos mil trece llegó el Maverick, hecho para pelearle de frente al razer.
+12. Y al año siguiente sacó el primer side by side con turbo de fábrica.
+13. Hoy el Maverick R tiene doscientos cuarenta caballos… y muchos Can-Am se arman en Ciudad Juárez.
+14. Mándaselo a tu amigo que le dice razer a todo,
+15. porque igual el suyo… es un Can-Am.   (loop → vuelve la pregunta)
+
+FUENTES DE LOS DATOS
+- Polaris RZR (se pronuncia «razor»), side by side deportivo de Polaris Industries; salió en 2007 como modelo 2008
+  (Ranger RZR) y creó el segmento: en.wikipedia.org/wiki/Polaris_RZR · powersportsbusiness.com (12-feb-2007 y 13-ago-2007)
+- Can-Am: marca de Bombardier (Valcourt, Quebec); motos de motocross desde 1973; último año de motos 1987:
+  en.wikipedia.org/wiki/Can-Am_motorcycles · pulpmx.com · motocrossactionmag.com
+- Mayo 2006: las cuatrimotos de BRP pasan a llamarse Can-Am: powersportsbusiness.com/features/2006/05/15
+- Junio 2010: BRP presenta el Commander 2011, su primer side by side; Commander 1000 con 85 hp, el de más potencia
+  del mercado en ese momento: powersportsbusiness.com (10 y 14-jun-2010) · utvguide.net · en.wikipedia.org/wiki/Can-Am_Off-Road
+- 2013: Maverick 1000R, 101 hp, diseñado para competir contra el Polaris RZR XP: en.wikipedia.org/wiki/Can-Am_Off-Road
+- Sept. 2014: primer side by side con turbo de fábrica (Maverick Turbo): en.wikipedia.org/wiki/Can-Am_Off-Road · superatv.com
+- Potencia (gráfica): Commander 2010 85 hp · Maverick 2013 101 hp · Maverick X3 2017 154 hp (utvunderground, folleto BRP) ·
+  X3 Turbo RR 2022 200 hp (ficha BRP MY22) · Maverick R 2024 240 hp (news.brp.com, 20-ago-2023)
+- Juárez: Maverick, Commander, Defender y Outlander; 2 millones de vehículos desde 2007 (news.brp.com, 23-ene-2026)
+
+FOTOS (Wikimedia Commons; solo CC BY / CC0 / dominio público)
+- Polaris RZR (negro y azul): «23 Polaris RZR Turbo R Sport.jpg», «24 Polaris RZR Turbo R Sport.jpg» · HJUdall · CC0
+- Maverick X3 (frente y atrás): «Can-Am Maverick Front.JPG», «Can-Am Maverick Seite.JPG» · KarleHorn · CC BY 3.0
+- Commander Max: «Can-Am Commander Max - Peru.jpg» · Galería del Ministerio de Defensa del Perú · CC BY 2.0
+  (recortado al primer vehículo; se quitó del recorte al soldado que iba sentado)
+- Outlander: «Helsinki Police Department Can-am Outlander all-terrain vehicle.jpg» · Antti Leppänen · CC BY 4.0
+- Defender: «Rideau Canal - BRP Can-Am Defender vehicle 1972.jpg» · Ahunt · CC0
+- La ruta: «Radar Hill Off-Highway Vehicle Area (37211953891).jpg» · BLM Oregon & Washington · dominio público
+- Motocross de los 70 (no es una Can-Am; en pantalla dice «ASÍ ERA EL MOTOCROSS EN LOS 70»):
+  «MOTORCYCLE RACE - NARA - 543731» · Bill Gillette (EPA DOCUMERICA) · dominio público
+- Vista desde arriba, caja de pañuelos, turbina y gráfica: dibujos en line-art (no son fotos).
+
+CRÉDITOS PARA LA DESCRIPCIÓN
+Fotos vía Wikimedia Commons: HJUdall y Ahunt (CC0), KarleHorn (CC BY 3.0), Ministerio de Defensa del Perú (CC BY 2.0),
+Antti Leppänen (CC BY 4.0), BLM y Bill Gillette/NARA (dominio público). Polaris, RZR, Can-Am, Maverick y Commander son marcas
+de sus dueños; este video no está patrocinado.
