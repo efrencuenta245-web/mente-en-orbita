@@ -45,6 +45,7 @@ Datos del 9-nov-2026 (últimos 30 días). Clasificación de los últimos 7 días
 Desde el 5-nov-2026 se publican 2 reels al día con 4 de reserva (CLAUDE.md §3); **desde el 8-nov a las 10:00 y 18:00** (antes 8:00 y 19:00). Pendientes en Metricool (revisado el 9-nov a las 06:45; los 4 en las 4 redes):
 - lun 9-nov 10:00 — «Sobre tu cabeza cae basura… *todos los días.*» (Swift / basura espacial; post 420916708, antes 420339956 a las 8:00; tarea del 7-nov; aprobado por Efrén)
 - lun 9-nov 18:00 — «Tu cargador sin celular… *¿gasta luz?*» (Mito o realidad, consumo en espera; post 420916730, antes 420339986 a las 19:00; tarea del 7-nov; aprobado por Efrén)
+- lun 9-nov 14:00 — **EXTRA** «Tu «razer»… *no es un RZR.*» (historia de Can-Am por sus side by side: Commander, Maverick; vehículos con fotos reales en 3D; post 422046689; pedido y aprobado por Efrén el 9-nov; no ocupa hueco del diario)
 - mar 10-nov 10:00 — «Tu agua hierve… *sin llegar a 100.*» (CDMX 92 °C, altitud y olla exprés; post 421255373; tarea del 8-nov; aprobado por Efrén)
 - mar 10-nov 18:00 — «Tu dedo se arruga… *a propósito.*» (dedos arrugados, sistema nervioso; post 421255588; tarea del 8-nov; aprobado por Efrén)
 Huecos libres: mié 11-nov 10:00 y 18:00 (los llena la tarea del 9-nov a las 4:35 pm con las ideas #1 y #2).
