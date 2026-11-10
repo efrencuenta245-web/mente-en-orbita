@@ -1,0 +1,44 @@
+REEL DIARIO jue 12-nov-2026 18:00 — «Tu razer no se voltea solo.» (la física del vuelco de un side by side)
+Idea #2 de la cola de estrategia.md (vehículos y comunidades: riders). Continuación del reel VIRAL del razer (9-nov): aquel fue la
+historia de las marcas; este es la física del vuelco y la seguridad. Archivo: kit/nuevo/vuelco.py · voz Isaac (eleven_v4) · 69.5 s.
+Inicio tipo 10 (rayos X de golpe): un side by side real (foto CC0 en 3D) se vuelve de cristal y aparece su centro de gravedad.
+Primera transición: giro. Loop: la última frase regresa a la foto.
+Dato que se dispara (×4) a los 27-32 s y el error a los 33 s. «Mándaselo…» solo en la penúltima frase (63.8 s).
+
+GUION (pantalla)
+1. Tu razer no se voltea solo.
+2. Lo voltea la física… y tu pie en el acelerador.
+3. En Estados Unidos revisaron 428 accidentes de side by side:
+4. en el 68 % de los casos, se volteó.
+5. Mira por dentro: es alto y angosto…
+6. y su centro de gravedad va arriba.
+7. En la curva, una fuerza lo jala hacia afuera desde ese punto.
+8. Despacio, esa fuerza cae entre las llantas y sigue pegado al piso.
+9. Al doble de velocidad, la fuerza no se duplica: se multiplica por 4… y se voltea.   ← dato que se dispara (27 s)
+10. Pero el error que más lastima viene después: sacar el brazo para detenerlo.   ← 2.º gancho (33 s)
+11. El manual lo dice claro: nada de tu cuerpo afuera. Agárrate fuerte y aguanta.
+12. Adentro de la jaula estás protegido; lo que queda afuera, lo aplasta.
+13. Y de los que murieron al salir disparados, 9 de cada 10 no traían cinturón.
+14. Más de la mitad de esos accidentes pasó en una curva…
+15. y casi 4 de cada 10 volcaduras mortales, en terreno plano.
+16. Y atravesado en una duna, la norma solo le exige aguantar 33 grados de lado.
+17. Mándaselo a tu compa que maneja el razer sin cinturón,
+18. porque tu razer no se voltea solo.   (loop → la foto)
+
+FUENTES DE LOS DATOS (consultadas el 10-nov-2026)
+- CPSC, «Evaluation of Voluntary Standards for ROVs» (paquete del personal, nov-2016),
+  cpsc.gov/s3fs-public/RecreationalOffHighwayVehiclesTerminationofRulemaking.pdf: de 428 incidentes reportados (2003-2011),
+  291 (68 %) fueron vuelcos y el 52 % pasó en una curva; 56 de 147 vuelcos mortales (38 %) en terreno plano; de 155 víctimas
+  mortales expulsadas con dato de cinturón, 141 (91 %) no lo traían (también en la propuesta de regla, 79 FR 68964,
+  19-nov-2014: «91 percent of fatally ejected victims were not wearing a seat belt»); los que se quedan dentro de la jaula
+  (ROPS) «are less likely to be crushed».
+- Norma voluntaria ANSI/ROHVA 1-2016 y ANSI/OPEI B71.9-2016 (CPSC 2016, p. 8): con 2 ocupantes, mínimo 33° en la mesa
+  inclinada antes de que se levanten las llantas de un lado (la CPSC dice que es «muy bajo»; los modelos probados dieron 36-41°).
+- Manual de Polaris RZR Pro XP 2022 (publications.polaris.com, «Driver Information Warning»): «Do not put any part of your body
+  outside of the vehicle for any reason», «Keep a firm grip on the steering wheel or hand holds and brace yourself»,
+  «Rollovers have caused severe injuries and death, even on flat, open areas», «Avoid sidehilling». En pantalla va traducido.
+- Física: la fuerza para dar la curva es m·v²/r: al doble de velocidad, 4 veces la fuerza (física básica, se marca «ESQUEMA»).
+
+FOTOS (Wikimedia Commons, CC0, ya en el repo desde el reel del 9-nov): «24 Polaris RZR Turbo R Sport.jpg» y
+«23 Polaris RZR Turbo R Sport.jpg» · HJUdall · CC0 (crédito en pantalla). El resto es modelo 3D marcado «ESQUEMA».
+Polaris y RZR son marcas de sus dueños; «razer» es como la comunidad le dice a cualquier side by side.

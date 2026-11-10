@@ -1,0 +1,48 @@
+REEL DIARIO jue 12-nov-2026 10:00 — «Tu tráiler no truena… está frenando.» (freno de motor / «Jake brake»)
+Idea #1 de la cola de estrategia.md (vehículos y comunidades: troqueros). Archivo: kit/nuevo/trailer.py · voz Isaac (eleven_v4) · 71.5 s.
+Inicio tipo 1 (caída desde el espacio): Tierra de alambre → crash zoom a las Cumbres de Maltrata → la cámara cae a la
+carretera y aterriza junto al tráiler con el tronido. Primera transición: golpe. Loop: la última frase regresa a la Tierra.
+Segundo gancho (el error) a los 30 s. «Mándaselo…» solo en la penúltima frase (65.6 s).
+
+GUION (pantalla)
+1. Tu tráiler no truena… está frenando.
+2. Ese tronido en las bajadas es el freno de motor.
+3. En inglés le dicen «Jake brake».
+4. Mira por dentro: el pistón sube y aprieta el aire como un resorte.
+5. Sin freno de motor, ese aire empuja el pistón de regreso y te devuelve la fuerza.
+6. Con freno de motor, la válvula del escape se abre justo arriba…
+7. y el aire sale de golpe.
+8. Ese aire que escapa es el tronido, y la fuerza ya no regresa: frena las llantas.
+9. Y el error que manda tráileres al barranco: bajar la cuesta solo con el pedal.   ← 2.º gancho (30 s)
+10. Las balatas se calientan tanto que dejan de agarrar…
+11. y te quedas sin frenos.
+12. En las Cumbres de Maltrata la carretera baja más de 1 000 metros.
+13. Por eso tiene rampas de frenado.
+14. Con el freno de motor, tu motor se vuelve un compresor…
+15. y frena sin gastar ni una gota de diésel.
+16. Un motor de 15 litros puede frenar con unos 600 caballos de fuerza.
+17. Truena tanto que en algunos pueblos de Estados Unidos hay letreros que lo prohíben.
+18. Por eso el trailero baja en cambio corto y con el freno de motor puesto.
+19. Mándaselo a tu compa trailero,
+20. para que sepa que su tráiler no truena… está frenando.   (loop → la Tierra)
+
+FUENTES DE LOS DATOS (consultadas el 10-nov-2026)
+- Cómo funciona: el freno de compresión abre las válvulas del escape justo antes de que termine la carrera de compresión;
+  el aire comprimido sale y su energía no regresa al pistón; no se inyecta combustible; casi no usa los frenos de servicio:
+  en.wikipedia.org/wiki/Compression_release_engine_brake · truckinginfo.com/articles/engine-brakes-101-part-i-how-engine-brakes-work
+  (HDT, 21-jul-2023: «no fuel is consumed while the engine brake is operating») · cummins.com/components/engine-braking-valvetrain/compression-release-engine-brake
+- «Jake brake»: por Jacobs Vehicle Systems, el primer fabricante (Wikipedia; patente de Clessie Cummins, 1965).
+- 15 litros a 2 200 rpm ≈ 630 hp de frenado (tabla de Jacobs citada por HDT/Truckinginfo); a menos rpm, mucho menos → «unos 600 caballos».
+- Ruido: sin silenciador suena como «ametralladora»; muchos pueblos de EE. UU., Canadá y Australia lo prohíben con letreros
+  («Engine Brakes Prohibited», «No Jake Brakes») (Wikipedia).
+- Error: bajar solo con el pedal sobrecalienta los frenos (pierden agarre); en bajadas largas se usa el freno de motor y un cambio
+  bajo: ttnews.com «Long Downhill Grades Require Engine Braking, Experts Say» · motorpasion.com.mx (7-abr-2026, sobrecalentamiento
+  «debido a un uso excesivo en las pendientes»).
+- Cumbres de Maltrata (autopista Puebla–Orizaba, 150D): punto más alto 2 630 m y baja cerca de Orizaba a 1 300 m; «many braking
+  ramps»; fallas de frenos de vehículos pesados y gente que no sabe hacer el frenado con motor: dangerousroads.org (Mexico 150D).
+- Rampas de frenado: franja a un lado de la carretera para detener vehículos con falla de frenos; de grava/tezontle, de subida:
+  motorpasion.com.mx/industria/rampas-frenado-funcionamiento-costo-mexico · xataka.com.mx (2024); CAPUFE tenía 20 rampas en su
+  red (publimetro.com.mx, 5-mar-2023).
+
+IMÁGENES: todo es recreación en 3D (se marca «RECREACIÓN», «ESQUEMA» e «ILUSTRACIÓN» en el letrero). No se usó foto real:
+no hubo foto libre verificada de un tráiler sin logos (Wikimedia no respondió en esta corrida).

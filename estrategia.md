@@ -42,12 +42,11 @@ Datos del 10-nov-2026 (últimos 30 días). Clasificación de los últimos 7 día
 
 ## Ya programados (no los tomes de la cola)
 Desde el 5-nov-2026 se publican 2 reels al día con 4 de reserva (CLAUDE.md §3); **desde el 8-nov a las 10:00 y 18:00** (antes 8:00 y 19:00). Pendientes en Metricool (los del 10-nov revisados el 10-nov a las 06:45 CDMX: PENDING en las 4 redes; los del 11-nov, confirmados por la tarea del 9-nov):
-- mar 10-nov 10:00 — «Tu agua hierve… *sin llegar a 100.*» (CDMX 92 °C, altitud y olla exprés; post 421255373; tarea del 8-nov; aprobado por Efrén)
 - mar 10-nov 18:00 — «Tu dedo se arruga… *a propósito.*» (dedos arrugados, sistema nervioso; post 421255588; tarea del 8-nov; aprobado por Efrén)
 - mié 11-nov 10:00 — «Tu tele 4K… *no la ves en 4K.*» (Buen Fin: distancia al sillón, TV abierta en HD, 4K solo en Premium; post 422533014; tarea del 9-nov; aprobado por Efrén)
 - mié 11-nov 18:00 — «Tu celular prende… *pero WhatsApp se va.*» (WhatsApp deja iOS 15.1 a 15.4 el 30-nov; post 422533074; tarea del 9-nov; aprobado por Efrén)
 Huecos libres: jue 12-nov 10:00 y 18:00 (los llena la tarea del 10-nov a las 4:35 pm con las ideas #1 y #2).
-(El cargador del 9-nov 18:00, la basura espacial del 9-nov 10:00, el extra del razer del 9-nov 14:00, la tarjeta del 8-nov 18:00 y el QR del 8-nov 8:00 ya salieron en las 4 redes y están en `publicados.md`.)
+(El agua del 10-nov 10:00, el cargador del 9-nov 18:00, la basura espacial del 9-nov 10:00, el extra del razer del 9-nov 14:00, la tarjeta del 8-nov 18:00 y el QR del 8-nov 8:00 ya salieron en las 4 redes y están en `publicados.md`.)
 
 ## Cola de ideas
 **Desde el 10-nov-2026 (decisión de Efrén) toda la cola es de vehículos y comunidades mexicanas por dentro** (ver «Nichos prioritarios»). Cada día la tarea de las 4:35 pm toma la #1 (10:00) y la #2 (18:00); la «Sale» es la fecha esperada si no falla ningún día. Reglas: **la palabra de la comunidad en el gancho** («razer», «troca», «vocho»), **el error que todos cometen** como segundo gancho, **orgullo mexicano y fotos reales** cuando existan, **ciencia o tecnología por dentro** en cada video, comunidades alternadas (no dos días seguidos la misma) y el «mándaselo a tu compa que…» **solo al final**.
