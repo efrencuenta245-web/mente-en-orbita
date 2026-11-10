@@ -117,6 +117,7 @@ Cuando el video hable de algo que existe (un lugar, un objeto, un planeta, un fe
 **Lo que más ve la gente en este formato.** En @alyxianews ganan los temas de **la tecnología que tienes en la mano explicada por dentro**: «Así piensa ChatGPT» (956 K), entrenamiento de IA (468 K), la batería en tu mochila (420 K), SpaceX (320 K) y «Tu pantalla no te siente» (235 K). Los temas de empresa sin conexión con tu vida (ASML, 31 K) rinden mucho menos. En nuestros datos, el espacio retiene más (50–54 % visto) y la tecnología de todos los días se comparte más (fibra óptica: 25.6 compartidos por cada 1 000). La educación es el sector con más interacción en TikTok.
 
 **Nichos que se priorizan:**
+**Desde el 10-nov-2026 (decisión de Efrén): los 2 reels diarios son de vehículos y comunidades mexicanas por dentro** (riders y side by side, troqueros, motos, trocas, autos clásicos, metro, F1, gamers), con la palabra de esa comunidad en el gancho, el error que todos cometen, orgullo mexicano, fotos reales y la ciencia o la tecnología por dentro. Motivo: el razer (9-nov) hizo 6 455 vistas y 73 compartidos en Instagram y 10.7 mil vistas, 72 compartidos y 56 guardados en TikTok en menos de un día. Los 4 nichos de abajo quedan para extras y la reserva de `estrategia.md`.
 1. Tecnología e IA de todos los días por dentro (celular, ChatGPT, baterías, Wi-Fi, pantallas, apps).
 2. Objetos de la casa + física (estufa, microondas, metro, refrigerador).
 3. Espacio y satélites con conexión a tu vida (GPS, Starlink, el clima).
