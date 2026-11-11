@@ -1,7 +1,8 @@
 """Reel diario jue 12-nov-2026 10:00 — «Tu tráiler no truena… está frenando.» (freno de motor / «Jake brake»).
 Comunidad: troqueros y traileros (decisión de Efrén del 10-nov: vehículos y comunidades mexicanas por dentro).
-Inicio tipo 1 (caída desde el espacio): Tierra de alambre → crash zoom a las Cumbres de Maltrata → la cámara cae a la
-carretera → el tráiler bajando con el tronido y el título que se estrella. El final regresa a la Tierra (loop).
+Inicio tipo 2 (el objeto cae y rebota; cambiado el 11-nov: la basura, con el inicio 1 de la Tierra, se quedó en 41 % a
+3 s): el tráiler cae desde arriba en la carretera, rebota, sacudida con el tronido y el título que se estrella.
+El final lo muestra bajando la cuesta y dando un brinco que regresa al primer cuadro (loop).
 Voz Isaac (eleven_v4), 70.7 s. Datos y fuentes: guiones/2026-11-12_trailer.txt.
 Todo es recreación en 3D (no hay foto libre a la mano de un tráiler sin logos): se marca «RECREACIÓN».
 """
@@ -359,7 +360,7 @@ def geo(lat, lon, spin, C, R):
 
 
 UC = 0.6     # corte interno: de la Tierra a la carretera
-UL = 1.05    # la cámara «aterriza» en el tráiler: golpe + título
+UL = 0.1     # el tráiler aterriza en la carretera: golpe + título
 
 
 def _gancho_tierra(t, fi, u):
@@ -392,23 +393,44 @@ def _gancho_tierra(t, fi, u):
 
 
 # ================================================================== escenas
-# 0. gancho (inicio 1: caída desde el espacio) → la cámara cae del cielo a la carretera y aterriza junto al tráiler
+# 0. gancho (inicio 2: el objeto cae y rebota) → el tráiler viene volando desde arriba, cae en la carretera, rebota,
+#    la cámara se sacude con el tronido y el título se estrella. Con u negativo (el loop) el tráiler va en la bajada y
+#    al final da un brinco: su punto más alto es justo el primer cuadro.
+U_PICO, U_ATERRIZA, ALTO = -0.25, 0.1, 1.7
+
+
+def _altura(u):
+    a = U_ATERRIZA - U_PICO
+    if U_PICO - a <= u <= U_ATERRIZA:                       # arco balístico (sube, pico en el cuadro 0, cae)
+        return ALTO * (1 - ((u - U_PICO) / a) ** 2)
+    if U_ATERRIZA < u < U_ATERRIZA + 0.3:                   # rebote chico
+        k = (u - U_ATERRIZA) / 0.3
+        return 0.22 * 4 * k * (1 - k)
+    return 0.0
+
+
 def s_gancho(t, fi, u, d):
-    if u < UC:
-        return _gancho_tierra(t, fi, u)
-    fr, ms = escena_camion(t, u, [K(UC, 13.0, 30, 70, tx=0.0, ty=0.5), K(UL, 8.2, 38, 10, tx=-0.2, ty=1.0),
-                                  K(2.4, 7.4, 30, 8, tx=0.2, ty=1.0), K(4.0, 7.0, 24, 8, tx=0.2, ty=1.0)], cy=0.6, roll=-7)
+    fr, ms = escena_camion(t, u, [K(-4.8, 10.0, 54, 8, tx=0.4, ty=1.0), K(-0.6, 10.2, 32, 3, tx=0.5, ty=1.8),
+                                  K(UL, 7.2, 30, 9, tx=0.1, ty=1.0), K(UL + 0.35, 7.6, 26, 8, tx=0.2, ty=1.0),
+                                  K(4.0, 7.0, 22, 8, tx=0.2, ty=1.0)], cy=0.6, roll=-7)
     M.cristal(fr.base, fr.fx, 'TRUENA', u, t0=-2.3, cy=0.37, entrada='golpe')
+    y = _altura(u)
+    aire = clamp(y / ALTO)
+    sx, sy = fr.cam.proj([(0.0, 0.02, 0.0)])[0][0]
+    D.shadow_blob(fr, sx, sy, 620 * (1 - 0.45 * aire), 90 * (1 - 0.45 * aire), 0.85 * (1 - 0.5 * aire))
+    ms = P.tfk(ms, rz=-7.0 * clamp((u - U_PICO) / (U_ATERRIZA - U_PICO), -1, 1) * (0.3 + 0.7 * aire), t=(0.0, y, 0.0))
     draw_objects(fr, ms)
     cx, cy = chimenea_px(fr)
+    en_piso = y < 0.05
 
     def ui(img, fx):
-        tronido(img, fx, cx, cy, t, k=seg(u, UL - 0.05, UL + 0.1), escala=0.9)
-        kicker(img, 'FRENO DE MOTOR · TRAILEROS', 150, seg(u, UL, UL + 0.3), col=AZULC)
+        if en_piso:
+            tronido(img, fx, cx, cy, t, k=1.0, escala=0.9)
+        kicker(img, 'FRENO DE MOTOR · TRAILEROS', 150, seg(u, UL, UL + 0.25), col=AZULC)
         P.titulo_golpe(img, fx, [('Tu tráiler no truena…', 'sans'), ('está frenando.', 'serif')], 200, seg(u, UL, UL + 0.15), size=76)
         recreacion(img, fx, seg(u, UL + 0.3, UL + 0.6))
     fr.ui.append(ui)
-    return sacudir(finish(fr, fi), t, golpe_k(u, UL + 0.15, 0.4), amp=26)
+    return sacudir(finish(fr, fi), t, golpe_k(u, UL, 0.45), amp=30)
 
 
 # 1. el tronido en la bajada = el freno de motor (pastilla que señala la chimenea)
@@ -871,7 +893,8 @@ def s_final(t, fi, u, d):
     return finish(fr, fi)
 
 
-ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.45), sfx=[(UL + 0.12 + 0.11 * j, 'thud', 0.55) for j in range(7)]),
+ESCENAS = [dict(desde=0, fn=s_gancho, c=(0.5, 0.45), sfx=[(-0.25, 'whoosh', 0.8), (UL, 'sub', 1.0), (UL, 'bass', 0.9), (UL + 0.3, 'thud', 0.6)]
+                + [(UL + 0.35 + 0.11 * j, 'thud', 0.45) for j in range(6)]),
            dict(desde=1, fn=s_tronido, tr='golpe', sfx=[(0.1 + 0.12 * j, 'thud', 0.45) for j in range(6)]),
            dict(desde=2, fn=s_jake, tr='cristal', palabra='JAKE', sfx=[(0.5, 'tick', 0.6)]),
            dict(desde=3, fn=s_piston, tr='zoom', c=(0.62, 0.62), sfx=[(0.6, 'whoosh', 0.7), (1.0, 'click', 0.6)]),
