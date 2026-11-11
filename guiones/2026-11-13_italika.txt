@@ -1,0 +1,50 @@
+REEL DIARIO vie 13-nov-2026 18:00 — «Tu Italika no es… italiana.» (marca mexicana + motor de 4 tiempos + aceite)
+Idea #2 de la cola de estrategia.md (vehículos y comunidades: motos). Archivo: kit/nuevo/italika.py · voz Isaac (eleven_v4,
+1 toma, ~1 098 créditos, flow CO0DGITKJRLSvqXLH0Wc) · 69.7 s. Palabras con Scribe: guiones/2026-11-13_italika_words.json.
+Inicio tipo 6 (pantalla dividida que choca): arriba la moto con «ITALIANA» de cristal y franjas verde-blanco-rojo, abajo
+«MÉXICO»; se estrellan y se tacha la de arriba. Primera transición: rompe. Loop: las mitades separadas.
+Segundo gancho (el error del aceite) a los 30.3 s. «Mándaselo…» solo en la penúltima frase (63.4 s).
+
+GUION (pantalla)
+1. Tu Italika no es… italiana.
+2. Es mexicana: nació en 2004 y es de Grupo Salinas, el de las tiendas Elektra.
+3. Se arma en Toluca, donde sale una moto nueva cada minuto.
+4. Y casi 7 de cada 10 motos que se venden en México son suyas.
+5. Mira por dentro: un cilindro y cuatro tiempos.
+6. Entra aire con gasolina, el pistón lo aprieta, la chispa lo explota y sale por el escape.
+7. A 8 500 vueltas por minuto, eso pasa unas 70 veces por segundo.
+8. Y el error que acaba con ese motor: no cambiarle el aceite a tiempo.   ← 2.º gancho (30.3 s)
+9. El aceite es una capa delgadita entre el pistón y el cilindro.
+10. Viejo, se ensucia y se adelgaza: el metal roza contra metal, se calienta… y el motor se amarra.
+11. Italika pide cambiarlo en cada servicio: cada 3 000 a 6 000 km, según tu modelo.
+12. Eso sí: la mayoría de sus piezas llega de China… pero se arman aquí, con manos mexicanas.
+13. Y desde 2025 también en Jalisco: entre las dos plantas, más de un millón y medio de motos al año.
+14. Mándaselo a tu compa que dice que su Italika es italiana,
+15. porque su Italika no es… italiana.   (loop → la pantalla dividida)
+
+FUENTES DE LOS DATOS (consultadas el 11-nov-2026)
+- Marca de Grupo Salinas (división GS Motos), vendida en tiendas Elektra; empezó a vender a finales de 2004:
+  superbrands.mx/volumen/09/46-47.pdf · expansion.mx/empresas/2023/09/14/italika-grupo-salinas-vende-7-de-10-motos (14-sep-2023)
+  · sdpnoticias.com (9-ene-2025, «fundada el 1 de noviembre de 2004») · expansion.mx/empresas/2026/05/15 (15-may-2026).
+  Wikipedia en inglés dice 2005 en su ficha; se usa 2004 (más fuentes).
+- Planta Ensamblika de Toluca (desde 2008; 1.ª unidad 21-feb-2008): una moto cada 60 s, más de 3 100 trabajadores, capacidad de
+  más de 1.2 millones al año: noticias.autocosmos.com.mx (29-ago-2025). Ensamblika Jalisco (El Salto, marzo de 2025), hasta
+  500 000 al año: clusterindustrial.com.mx (3-mar-2025); entre las dos, más de 1.6 millones al año: elfinanciero.com.mx (17-jun-2026).
+  En pantalla «más de 1.5 millones». La gráfica usa 1.2 / 0.5 / 1.7 (capacidades citadas).
+- Participación: «entre seis y siete» de cada 10 motos vendidas en México: expansion.mx (21-ene-2026 y 15-may-2026) → «casi 7 de 10».
+- Piezas: «la mayoría de los insumos se importan de Shanghái, China», llegan a Lázaro Cárdenas, Michoacán, y van a Toluca:
+  noticias.autocosmos.com.mx (29-ago-2025); Expansión 2023 («la mayor parte llegan de China»).
+- Motor de 4 tiempos: 4 fases y 2 vueltas del cigüeñal por ciclo (motor.es/que-es/ciclo-otto; apuntes de la Universidad Carlos III
+  de Madrid, ocw.uc3m.es). Italika FT150: 149 cc, 4 tiempos, potencia máxima a 8 500 rpm (manual oficial FT150 2021,
+  services.italika.mx) → 8 500 / 60 / 2 ≈ 71 explosiones por segundo («unas 70»). En pantalla «CÁMARA LENTA».
+- Aceite: manual FT150 (2021): servicio y cambio de aceite cada 3 000 km (3 meses); desde el 1-ago-2024, con Liqui Moly, Italika
+  pasó a cada 6 000 km (liqui-moly.com, 5-dic-2024) → «cada 3 000 a 6 000 km, según tu modelo / tu manual».
+  «Se amarra»: sin película de aceite el metal roza, se calienta y el motor se agarrota (explicación general, se marca como recreación).
+
+FOTOS
+- «Italika Scooter in Tulum Mexico.jpg» · Nan Palmero · CC BY 2.0 (Wikimedia Commons, vía Flickr) · crédito en la tarjeta;
+  el logo se difuminó. Archivo: inbox/italika_i_scooter1920.jpg.
+- «Moto Guzzi Stornello Sport 125 engine cutaway.jpg» · CheminduCret · CC0 · recortado al cilindro (sin letreros ni personas).
+  Archivo: inbox/italika_i_corte1920.jpg. Es un motor de un cilindro y 4 tiempos en corte (no es de Italika; se usa como ejemplo).
+TEXTO DEL POST, TÍTULOS Y APROBACIÓN: ver el mensaje a Efrén del 11-nov.
+Música: semilla 8714, 106 BPM · categoría MÉXICO · portada «Tu Italika no es…» / «italiana.».

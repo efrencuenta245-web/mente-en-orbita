@@ -1,0 +1,53 @@
+REEL DIARIO vie 13-nov-2026 10:00 — «Tu camioneta no aguantaría… este brinco.» (59.ª SCORE Baja 1000, Cabo a Cabo)
+Idea #1 de la cola de estrategia.md (vehículos y comunidades: off-road). Archivo: kit/nuevo/baja1000.py · voz Isaac (eleven_v4,
+1 toma, ~1 051 créditos, flow Hu5XfTtOxM57CesE60by) · 66.0 s. Palabras con Scribe: guiones/2026-11-13_baja1000_words.json.
+Inicio tipo 12 (cuenta regresiva): 3-2-1 en la salida de San José del Cabo, el Trophy Truck arranca, vuela del brinco con la
+suspensión colgando y aterriza con sacudida. Primera transición: iris. Loop: el final regresa a la salida con el «3».
+Segundo gancho (el error del público) a los 24.9 s. «Mándaselo…» solo en la penúltima frase (59.6 s).
+OJO: dice «Hoy arranca»: está hecho para publicarse el viernes 13 (día de la salida de autos, camiones y UTV).
+
+GUION (pantalla)
+1. Tu camioneta no aguantaría… este brinco.
+2. Hoy arranca la Baja 1000, y por primera vez es toda en Baja California Sur.
+3. De Cabo a Cabo: más de 1 500 kilómetros de desierto.
+4. Mira por dentro: una pickup de fábrica sube y baja la llanta, cuando mucho, 38 centímetros.
+5. Un Trophy Truck, casi un metro.
+6. Cae del brinco y la suspensión se traga el golpe.
+7. Pero el error más peligroso de la carrera… lo comete el público.   ← 2.º gancho (24.9 s)
+8. Pararse afuera de la curva: justo ahí se sale un camión de más de 800 caballos.
+9. En la Baja 500 de 2016, un camión se salió en una curva y le pegó a tres espectadores.
+10. Por eso SCORE pide verla a más de 30 metros, y nada de hacerle brincos o zanjas al camino.
+11. Y adentro del amortiguador hay otra carrera: cada golpe se vuelve calor.
+12. Tras horas de desierto, el aceite se pone aguadito y deja de frenar el rebote.
+13. Por eso llevan ese tanque con nitrógeno y aletas para enfriarlo.
+14. Mándaselo a tu compa que va a ver la Baja 1000,
+15. porque su camioneta no aguantaría… este brinco.   (loop → la salida)
+
+FUENTES DE LOS DATOS (consultadas el 11-nov-2026)
+- 59.ª SCORE Baja 1000: semana del 9 al 15-nov-2026; salida y meta en San José del Cabo (bulevar Centenario), «Cabo a Cabo»,
+  toda en Baja California Sur por primera vez en su historia; salida el viernes 13 (motos de madrugada; autos, camiones y UTV
+  en la mañana); 40 h de límite; más de 250 equipos esperados: score-international.com/score-news-story.php?newsID=2425
+  (3-oct-2026) · score-international.com (portada) · mexiconewsdaily.com (13-oct-2026) · cyclenews.com (20-sep-2025).
+  Distancia: SCORE da 964.66 mi (≈1 552 km) y 978.6 mi (newsID=2435, 25-oct-2026) → en pantalla «más de 1 500 km» y «casi mil
+  millas». No se dice la hora exacta de salida (SCORE la da en hora del Pacífico y no es clara).
+- Desde 1967 (NORRA Mexican 1000, Tijuana–La Paz): en.wikipedia.org/wiki/Baja_1000.
+- Recorrido de la suspensión: Trophy Truck ≈ 27 in adelante (≈ 69 cm) y 36 in atrás (≈ 91 cm): lasvegassun.com (22-jun-2014);
+  off-road.com «Want some serious suspension travel? Trophy Trucks» (28-30 in / 34-36 in); Brenthel (Spec: 24/30 in).
+  Pickup de fábrica más preparada: Ford Raptor 2024, 14.0 in adelante y 15.0 in atrás (≈ 38 cm): ficha técnica oficial de Ford
+  (fromtheroad.ford.com, 2024 Ford Raptor and Raptor R Tech Specs). En pantalla: «hasta 38 cm» contra «≈ 90 cm».
+- Potencia y peso: «más de 800 HP», ~6 000 lb (≈ 2.7 t): magnaflow.com (20-ago-2020); 800 HP, 140 mph: lasvegassun.com (2014);
+  Brenthel «850 HP». En pantalla «800+ HP · 2.5 toneladas» (redondeado hacia abajo).
+- Calor del amortiguador: al subir la temperatura del aceite baja la viscosidad y se pierde amortiguación («shock fade»): Fox
+  (au.ridefox.com, 13-jun-2024); el depósito con nitrógeno y pistón flotante evita burbujas: stateofspeed.com (4-dic-2021);
+  depósito con aletas de King Shocks (kingshocks.com, «Cooler by Design»). La gráfica es «ESCALA RELATIVA · EJEMPLO».
+- Seguridad del público: guía de espectadores de SCORE (score-international.com/wp-content/uploads/2016/02/SpectatorGuide-2.19-FINAL.pdf):
+  quedarse al menos a 100 pies (30 m) de la ruta y nunca en la parte de afuera de una curva; Guía del corredor 2025 (trampas,
+  rampas y zanjas hechas por espectadores): score-raceinfo.com/wp-content/uploads/2025/08/25-Racer-Guide-8.25.25.pdf;
+  Los Cabos 2026 piden evitar las curvas: thecabosun.com (5-nov-2026).
+- Baja 500 de 2016 (Ensenada, 4-jun-2016): un camión de carreras golpeó a tres espectadores en una curva:
+  racer.com/2016/06/06/deaths-of-spectator-two-competitors-mar-baja-500 (6-jun-2016).
+
+IMÁGENES: todo es recreación en 3D (los Trophy Truck van cubiertos de logos), se marca «RECREACIÓN». La tarjeta del dato de
+2016 es propia (texto nuestro con la fuente). Mapa de BCS dibujado con coordenadas aproximadas.
+TEXTO DEL POST, TÍTULOS Y APROBACIÓN: ver el mensaje a Efrén del 11-nov.
+Música: semilla 6427, 98 BPM · categoría MÉXICO · portada «Tu camioneta no aguantaría…» / «este brinco».
