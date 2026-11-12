@@ -750,7 +750,7 @@ def s_calienta(t, fi, u, d):
 def s_amarra(t, fi, u, d):
     uv = Wp(15, 'valvulas') - 0.1
     ua = Wp(15, 'amarra') - 0.05
-    fr = Frame(camara(u, [K(-0.2, 2.4, -70, 10, tx=0.6, ty=Y0, tz=0.0), K(uv, 1.6, -85, 6, tx=0.75, ty=Y0, tz=0.0),
+    fr = Frame(camara(u, [K(-0.2, 4.4, 20, 20, tx=0.2, ty=Y0 + 0.2, tz=0.0), K(uv, 2.3, 70, 10, tx=0.7, ty=Y0, tz=0.0),
                           K(ua, 3.4, -30, 14, ty=0.8), K(d, 3.3, -26, 14, ty=0.8)], cy=0.55))
     space(fr, t, floor='lines', floor_a=0.5, bokeh=0.8)
     draw_objects(fr, motor(calor=1.0, giro=2.0), xray=0.55 if u < ua else 0.0, keep=('in',))

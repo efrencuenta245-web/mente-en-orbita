@@ -408,11 +408,11 @@ def s_gancho(t, fi, u, d):
                 kicker(img, 'MACRO · FIBRA DE CARBONO', 150, 1 - seg(kz, 0.3, 0.6), col=AZULC)
         kicker(img, 'FÓRMULA 1 · LO QUE NO VES', 150, seg(u, U_Z1, U_Z1 + 0.3), col=AZULC)
         P.titulo_golpe(img, fx, [('Tu alerón no te pega…', 'sans'), ('al piso.', 'serif')], 240,
-                       seg(u, Wp(0, 'al') - 0.05, Wp(0, 'al') + 0.1), size=74)
+                       seg(u, Wp(0, 'al', 1) - 0.05, Wp(0, 'al', 1) + 0.1), size=74)
         pill(img, fx, 540, 1480, 'RECREACIÓN', seg(u, U_Z1, U_Z1 + 0.3), size=20, border=(150, 150, 160), dot=False)
     fr.ui.append(ui)
     out = finish(fr, fi)
-    return sacudir(out, t, golpe_k(u, Wp(0, 'al') + 0.1, 0.3), amp=20)
+    return sacudir(out, t, golpe_k(u, Wp(0, 'al', 1) + 0.1, 0.3), amp=20)
 
 
 # 1. el de un Fórmula 1, sí: el F1 aplastado contra el piso (flechas de carga)
