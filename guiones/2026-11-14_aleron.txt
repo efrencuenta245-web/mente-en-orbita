@@ -1,0 +1,54 @@
+REEL DIARIO sáb 14-nov-2026 18:00 — «Tu alerón no te pega… al piso.» (alerón de F1 = ala al revés + el error del alerón de calle)
+Idea #2 de la cola de estrategia.md (vehículos y comunidades: F1 y tuning). Archivo: kit/nuevo/aleron.py · voz Isaac (eleven_v4,
+1 toma, ~1 122 créditos, flow EKzYoXiuI4SxH8xamPMR) · ~64.3 s. Palabras con Scribe: guiones/2026-11-14_aleron_words.json.
+La voz se RECORTÓ con ffmpeg (corte en la pausa): se quitó «En la recta, un F1 de 768 kilos se aprieta contra el piso con dos a tres
+veces su peso», para que el error caiga a los 26 s (el dato va en el texto del post).
+Inicio tipo 7 (macro extremo que se aleja): la trama de fibra de carbono con el aire marcado se encoge hasta el alerón trasero del F1
+(recreación sin marcas) con «ALERÓN» de cristal detrás. Primera transición: whip. Loop: zoom de regreso al macro.
+Segundo gancho (el error del alerón de calle) a los 26.1 s. «Mándaselo…» solo en la penúltima frase (58.7 s).
+
+GUION (pantalla)
+1. Tu alerón no te pega… al piso.
+2. El de un Fórmula 1, sí: es un ala de avión… al revés.
+3. El aire corre más rápido por abajo, la presión baja y el auto se hunde.
+4. A unos 150 km/h, un F1 ya hace tanta carga como lo que pesa.
+5. Por eso, en teoría, podría ir de cabeza por el techo de un túnel.
+6. Y al doble de velocidad, esa carga se multiplica por 4.
+7. Y aquí está el error: ponerle alerón a tu Tsuru para que «se pegue».   ← 2.º gancho (26.1 s)
+8. A 50 km/h, un alerón de fábrica empuja como un kilo: una botella de agua.
+9. Y uno grande frena el aire: más gasolina, y en curva hasta lo desbalancea.
+10. Por eso los F1 de 2026 mueven sus alas: en la recta se abren y en la curva se cierran.
+11. Así es el Cadillac de Checo Pérez, que en México corrió su carrera número 300.
+12. Y en la CDMX el aire es tan delgado que las alas pierden como la cuarta parte.
+13. Mándaselo a quien le puso alerón a su Tsuru,
+14. porque tu alerón no te pega… al piso.   (loop → el macro de fibra de carbono)
+
+FUENTES DE LOS DATOS (consultadas el 12-nov-2026)
+- Ala de avión al revés que empuja hacia abajo: racer.com/racerpedia/technical-explainers/what-is-downforce · Yahoo Sports UK (2016).
+- Carga = peso «a unos 150 km/h»: Mercedes-AMG F1 («At around 150 km/h, the car generates as much downforce as it weighs»),
+  mercedesamgf1.com/news/feature-downforce-in-formula-one-explained · F1 Chronicle (10-jul-2026, también para los autos de 2026).
+  Otras fuentes dan 145–320 km/h (PlanetF1 200 km/h; U. de Leicester 211 km/h): se dice «a unos 150» y «en teoría».
+  Ir de cabeza en un túnel nunca se ha hecho (PlanetF1, 20-jul-2023): en pantalla «EN TEORÍA · NUNCA SE HA HECHO».
+- La carga crece con el cuadrado de la velocidad (doble = ×4): grassrootsmotorsports.com («aero forces at 60 mph are four times greater
+  than at 30 mph») · F1 Chronicle · PlanetF1.
+- 768 kg de peso mínimo 2026 con piloto (formula1.com, «12 rule changes» 2026) y 2 a 3 veces su peso en recta (F1 Chronicle): quitado de la voz.
+- El error: «At normal speeds around town, wings do absolutely nothing» (torquenews.com/1083/wings-back-cars-performance-or-posing) ·
+  oneshift.com («only come into play at high speeds, typically above 100 km/h»). Número: el alerón de fábrica de un Hyundai Veloster N
+  midió 27.3 lb (12.4 kg) de carga a 100 mph en túnel de viento (occamsracers.com, 15-oct-2024); con la regla del cuadrado,
+  a 50 km/h ≈ 12.4 × (50/161)² ≈ 1.2 kg → «como un kilo» (cálculo nuestro con la física, en pantalla «≈ 1 kg»).
+  Arrastre y gasolina: motor.es/que-es/aleron («aumenta el consumo») · dubhaus.com.au (3-ago-2026, «add drag… costing economy»).
+  Desbalance: mucha carga atrás sin carga adelante → subviraje (dubhaus.com.au; slashgear.com; carglass.es).
+  El Tsuru es un ejemplo (ninguna fuente lo nombra).
+- 2026: alerones delantero y trasero con partes móviles; «Straight Mode» (se abren en la recta, menos arrastre y menos carga) y
+  «Corner Mode» (cerrados, más carga): formula1.com (27-ene-2026, «2026 regulations explained») · williamsf1.com (glosario 2026).
+- Checo Pérez corre con Cadillac en 2026 y el GP de México (1-nov-2026, Autódromo Hermanos Rodríguez) fue su Gran Premio 300:
+  expansion.mx/tendencias/2026/10/29/checo-perez-cadillac-gp-mexico-2026-red-bull · publimetro.com.mx (2-nov-2026).
+- CDMX: el autódromo está a 2 285 m; el aire es ~25 % menos denso y los alerones dan ~25 % menos carga (Mercedes-AMG F1,
+  mercedesamgf1.com/news/what-impact-does-high-altitude-have-on-an-f1-car) → «como la cuarta parte».
+
+FOTOS (sin personas ni logos; el F1 y el sedán son recreaciones 3D sin marcas)
+- «Anim ProfilSym, smokes.gif» · NACA Langley (~1935-38) · dominio público (PD-USGov) · humo alrededor de un perfil de ala (un cuadro).
+  Archivo: inbox/naca_humo_1114.gif.
+- «Model in Vortex Facility - GPN-2000-001288.jpg» · NASA Langley · dominio público (PD-USGov-NASA) · el aire se arremolina detrás
+  de las alas de un modelo. Archivo: inbox/nasa_vortex_1114.jpg.
+Música: semilla 6391, 104 BPM · categoría TECNOLOGÍA · portada «Tu alerón no te pega…» / «al piso.».

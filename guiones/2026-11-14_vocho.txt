@@ -1,0 +1,53 @@
+REEL DIARIO sáb 14-nov-2026 10:00 — «¿Tuviste vocho? El último del mundo… se armó en Puebla.» (motor enfriado por aire + el foco rojo)
+Idea #1 de la cola de estrategia.md (vehículos y comunidades: autos clásicos / vocheros). Archivo: kit/nuevo/vocho.py · voz Isaac
+(eleven_v4, 1 toma, ~1 107 créditos, flow EKzYoXiuI4SxH8xamPMR) · ~67.6 s. Palabras con Scribe: guiones/2026-11-14_vocho_words.json.
+La voz se grabó en el orden de abajo pero se RECORTÓ Y REORDENÓ con ffmpeg (cortes en las pausas entre frases): se quitó «Hoy está en
+un museo de Volkswagen, en Alemania» y la frase «Puebla lo armó 36 años…» se pasó al final, para que el error caiga a los 28.3 s.
+Inicio tipo 11 (pregunta directa): «¿TUVISTE / VOCHO?» gigante en letras de cristal; se rompe en pedazos y deja ver un vocho real
+(foto 3D) con «PUEBLA» de cristal detrás. Primera transición: deslizar. Loop: la última frase regresa a la pregunta.
+Segundo gancho (el error del foco rojo) a los 28.3 s. «Mándaselo…» solo en la penúltima frase (62.6 s).
+
+GUION (pantalla)
+1. ¿Tuviste vocho? El último del mundo… se armó en Puebla.
+2. Salió el 30 de julio de 2003: el número 21 529 464.
+3. Y su secreto va atrás: un motor sin radiador y sin una gota de agua.
+4. Mira por dentro: cuatro cilindros acostados, dos de cada lado, llenos de aletas.
+5. Una turbina sopla aire entre las aletas y se lleva el calor; el aceite ayuda a enfriar.
+6. Y el error que lo amarra en unos kilómetros: seguir manejando con el foco rojo prendido.   ← 2.º gancho (28.3 s)
+7. Una sola banda mueve el generador… y también la turbina.
+8. Si se rompe, prende el foco rojo, la turbina se para y el motor se queda sin aire.
+9. En un par de kilómetros se calienta tanto que se queman las válvulas y el motor se amarra.
+10. Por eso el manual de Volkswagen dice: si prende ese foco, apaga el motor.
+11. Revisa la banda: si está floja o rajada, cámbiala antes de salir.
+12. Puebla lo armó 36 años: casi 1.7 millones de vochos.
+13. Mándaselo a quien tuvo un vocho,
+14. porque el último del mundo… se armó en Puebla.   (loop → la pregunta)
+
+FUENTES DE LOS DATOS (consultadas el 12-nov-2026)
+- Último Sedán clásico: Puebla, 30-jul-2003, serie «Última Edición» (unas 3 000 unidades); total 21 529 464 Tipo 1 en el mundo
+  (también fue el número de ese último): volkswagen-newsroom.com/en/beetle-kaefer-16001600i-19702003-19603 ·
+  history.com/this-day-in-history/july-30/last-classic-vw-beetle-rolls-off-the-line · AP (semissourian.com, 31-jul-2003) ·
+  xataka.com.mx (el vocho «murió mexicano») · eluniversal.com.mx («El último vochito del mundo se fabricó hace 20 años»).
+  Expansión (2-sep-2026) da el 31 de julio según VW de México; se usa el 30 (VW Newsroom, AP, History).
+  Otra página de VW Newsroom dice 21 528 480; se usa 21 529 464 (más fuentes).
+- El último está en un museo de Volkswagen en Wolfsburgo (las fuentes no coinciden en cuál): se quitó de la voz.
+- Puebla: primer vocho el 23-oct-1967 (El Universal; Excélsior «octubre de 1967») → 36 años hasta 2003. Hechos en México:
+  1 691 542 (Excélsior con cifras de VW; también Expansión y México Desconocido) → «casi 1.7 millones».
+- Motor atrás, bóxer (cilindros opuestos), enfriado por aire, sin radiador ni bomba de agua; aire forzado sobre las aletas por una
+  turbina: volkswagen-newsroom (1.6 l bóxer, 46 PS) · mamotorworks.com AirCooledEngine.pdf · history.com.
+  Aceite y aire enfrían; enfriador de aceite; 2.5 litros: manual del propietario VW 1977 (thesamba.com) ·
+  mamotorworks.com/vw/KnowledgeLibrary/engine/air-cooled-vw-engine-technical-tips · heritagepartscentre.com.
+- El error: «The V-belt not only drives the alternator but also the fan that cools the engine» y «If the alternator warning light
+  comes on while you are driving… Turn the engine off!»; «If belt is broken, replace it before driving on because engine cooling fan
+  is no longer working» (manual VW 1977). Seguir manejando: «the engine overheats and seizes, usually within a couple of miles»
+  (mamotorworks.com) → «en un par de kilómetros» / «unos kilómetros». Daños por sobrecalentamiento (válvulas quemadas, cabezas
+  rajadas): ratwell.com/mirror/www.bostonengine.com/articles/finalt.html.
+- No se usó «tapar las rejillas» (solo hay foros).
+- En pantalla «+ 3 km» / «2 km» son ilustrativos de «un par de kilómetros» (escenas de recreación).
+
+FOTOS
+- «Beetles of Campeche.jpg» · Gideon · CC BY 2.0 (Wikimedia Commons, vía Flickr) · vocho amarillo en Campeche; recortado como foto 3D
+  (sin letreros ni personas). Crédito en pantalla y en el post. Archivo: inbox/vocho_campeche_1114.jpg.
+- «1953 Volkswagen 1200 engine.jpg» · TTTNIS · CC0 · motor 1200 con su turbina, generador y poleas; la etiqueta de la bobina
+  (marca) se difuminó. Archivo: inbox/vocho_motor_1114.jpg.
+Música: semilla 5127, 98 BPM · categoría MÉXICO · portada «El último vocho» / «se armó en Puebla.».
