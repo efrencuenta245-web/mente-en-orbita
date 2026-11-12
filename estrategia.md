@@ -43,14 +43,13 @@ Datos del 12-nov-2026 (últimos 30 días). Clasificación de los últimos 7 día
 
 ## Ya programados (no los tomes de la cola)
 Desde el 5-nov-2026 se publican 2 reels al día con 4 de reserva (CLAUDE.md §3); **desde el 8-nov a las 10:00 y 18:00** (antes 8:00 y 19:00). Pendientes en Metricool (revisados el 12-nov a las 06:45 CDMX: PENDING en las 4 redes):
-- jue 12-nov 10:00 — «Tu tráiler no truena… *está frenando.*» (freno de motor; inicio 2 «cae y rebota»; post 425097841; tarea del 11-nov; aprobado por Efrén el 11-nov)
 - jue 12-nov 18:00 — «Tu razer no se voltea solo.» (física del vuelco de un side by side; inicio 10; post 425097878; tarea del 11-nov; aprobado por Efrén el 11-nov)
 
 - vie 13-nov 10:00 — «Tu camioneta no aguantaría… *este brinco.*» (59.ª Baja 1000, dice «Hoy arranca»; inicio 12 cuenta regresiva; post 425156027; tarea del 11-nov; aprobado por Efrén el 11-nov)
 - vie 13-nov 18:00 — «Tu Italika no es… *italiana.*» (marca mexicana, motor de 4 tiempos y el aceite; inicio 6 pantalla dividida; post 425156125; tarea del 11-nov; aprobado por Efrén el 11-nov)
 Reserva completa otra vez: 4 programados (jue 12 y vie 13, 10:00 y 18:00).
 **Huecos libres después:** sáb 14-nov 10:00 y 18:00 (y todo lo que sigue). Ojo con la memoria al renderizar el vuelco (y quizá otros con fotos 3D): el render con `Pool(2)` se pasó de memoria y lo mató el sistema; se hizo por tramos con `render_tramo.py` (procesos nuevos de ~200 cuadros) y se unieron con `ffmpeg -f concat`.
-(El WhatsApp del 11-nov 18:00 ya salió en las 4 redes (revisado el 12-nov a las 06:45 CDMX) y está en `publicados.md`. La tele 4K del 11-nov 10:00, el dedo del 10-nov 18:00, el agua del 10-nov 10:00, el cargador del 9-nov 18:00, la basura espacial del 9-nov 10:00, el extra del razer del 9-nov 14:00, la tarjeta del 8-nov 18:00 y el QR del 8-nov 8:00 también salieron en las 4 redes y están en `publicados.md`.)
+(El tráiler del 12-nov 10:00 ya salió en las 4 redes (revisado el 12-nov a las 16:40 CDMX) y está en `publicados.md`. El WhatsApp del 11-nov 18:00 ya salió en las 4 redes (revisado el 12-nov a las 06:45 CDMX) y está en `publicados.md`. La tele 4K del 11-nov 10:00, el dedo del 10-nov 18:00, el agua del 10-nov 10:00, el cargador del 9-nov 18:00, la basura espacial del 9-nov 10:00, el extra del razer del 9-nov 14:00, la tarjeta del 8-nov 18:00 y el QR del 8-nov 8:00 también salieron en las 4 redes y están en `publicados.md`.)
 
 ## Cola de ideas
 **Desde el 10-nov-2026 (decisión de Efrén) toda la cola es de vehículos y comunidades mexicanas por dentro** (ver «Nichos prioritarios»). Cada día la tarea de las 4:35 pm toma la #1 (10:00) y la #2 (18:00); la «Sale» es la fecha esperada si no falla ningún día (con el jue 12 lleno por el tráiler y el vuelco). Reglas: **la palabra de la comunidad en el gancho** («razer», «troca», «vocho»), **el error que todos cometen** como segundo gancho, **orgullo mexicano y fotos reales** cuando existan, **ciencia o tecnología por dentro** en cada video, comunidades alternadas (no dos días seguidos la misma) y el «mándaselo a tu compa que…» **solo al final**.
