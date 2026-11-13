@@ -1,0 +1,60 @@
+REEL DIARIO sáb 14-nov-2026 10:00 — «Tu moto truena más… pero no corre más.» (escape sin mofle: ruido, truenos, oído y multa)
+Pedido por Efrén el 12-nov («haz el de tu moto truena más»): ocupa el hueco del sáb 14 a las 10:00 en lugar del vocho
+(el vocho se corre). Idea #10 de la cola de estrategia.md (vehículos y comunidades: moteros). Archivo: kit/nuevo/moto.py ·
+voz Isaac (eleven_v4, 1 toma, 1 113 créditos, flow GTKJuurukPnXoEMbUf4t). Palabras con Scribe: guiones/2026-11-14_moto_words.json.
+Inicio tipo 9 (giro 360° con destellos): la moto da una vuelta completa con 3 cortes y un trueno con flamazo en cada corte,
+y queda de frente al título («TRUENA» de cristal detrás). Libres para el sáb 14 10:00: 1, 3, 4, 5, 9, 11 y 13
+(el 11 se queda para el vocho y el 7 para el alerón).
+Segundo gancho (los truenos son gasolina que explota en el tubo) en la frase 8. «Mándaselo…» solo en la penúltima frase.
+Nota de precisión: el gancho dice «no corre más» (no «corre menos»): las fuentes dicen que quitar el mofle no da fuerza
+(casi nula), no que siempre la quite; LaMoto (Argentina) dice que en altas puede ganar algunos caballos.
+
+GUION (pantalla)
+1. Tu moto truena más… pero no corre más.
+2. Le quitaste el mofle para que se oyera brava, ¿verdad?
+3. Pero el escape de fábrica no es un tubo cualquiera: está hecho para tu motor.
+4. Saca el humo de cada explosión para que no se quede atrapado adentro.
+5. Mira la prueba: la misma moto, con mofle y sin mofle.
+6. Sin mofle truena muchísimo más… pero, según ingenieros de Kawasaki, casi no gana fuerza.
+7. Y hasta puede calentar más tu motor.
+8. Y esos truenos que tanto te gustan… son gasolina que explota en el tubo, no en el motor.   ← 2.º gancho
+9. Adentro del cilindro, la explosión empuja el pistón; en el escape, solo hace ruido y gasta gasolina.
+10. Por dentro, el mofle tiene cámaras donde el sonido rebota y se apaga.
+11. Por eso la norma mexicana limita una moto nueva a 86 decibeles, u 89 si es grande.
+12. Y tu oído: con cada 3 decibeles de más, aguanta la mitad del tiempo; a 100, solo 15 minutos al día.
+13. En la Ciudad de México, el escape modificado para hacer ruido es multa de más de 2 000 pesos.
+14. Mándaselo a tu compa que le quitó el mofle a su moto,
+15. porque su moto truena más… pero no corre más.   (loop → el giro de la moto)
+
+FUENTES DE LOS DATOS (consultadas el 12-nov-2026)
+- El escape de fábrica ayuda a que salgan todos los gases y no se queden «presos» en el motor; quitarlo «não entrega
+  vantagens, e é irrisório ou nulo o possível aumento de performance» (especialistas de Kawasaki) y causa «aquecimento
+  excessivo do motor». AutoPapo (Brasil), 29-ene-2024: https://autopapo.com.br/motos/moto-sem-escapamento-maleficios/
+- «Lo único que se gana quitando el silenciador es ruido del motor y nada más»; el motor «se calentará mucho más».
+  Motorpasión México, 21-jun-2026: https://www.motorpasion.com.mx/industria/ponerle-escape-ruidoso-a-tu-auto-suena-divertido-cdmx-multa-no-nada-barata
+- «Los escapes de serie obtienen el mejor rendimiento en cualquier moto» (con matiz: en altas, uno libre puede sumar algunos
+  caballos). LaMoto (Argentina), 12-sep-2022: https://lamoto.com.ar/noticias/moto-cambio-escape-ruido-performance/
+- Truenos: «una detonación en el sistema de escape, que debería suceder en la cámara de combustión» (El Heraldo, 20-feb-2019:
+  https://www.elheraldo.hn/utilidad/motores/por-que-el-escape-de-las-motos-hace-explosiones-y-sus-soluciones-KAEH1260864);
+  la gasolina que se quema en el escape «no genera potencia directa» y «aumenta el consumo»; aparece al rebajar y al soltar
+  el acelerador (IAD, act. 3-nov-2026: https://iad.la/el-fuego-por-el-escape-en-los-autos-de-carrera/).
+- NOM-082-SEMARNAT-1994 (motos y triciclos nuevos en planta, medido acelerando a 7.5 m): hasta 449 cm³, 86 dB(A); 450 cm³
+  o más, 89 dB(A). https://mley.mx/normas/nom-082-semarnat-1994/index.html.md
+- Oído: NIOSH, límite recomendado 85 dBA en 8 h con tasa de intercambio de 3 dB (https://www.cdc.gov/niosh/noise/prevent/understand.html);
+  a 100 dBA, 15 minutos (tabla NIOSH en Engineering ToolBox: https://www.engineeringtoolbox.com/noise-exposure-level-duration-d_717.html).
+  Es un límite laboral: en el video se dice «tu oído aguanta», como referencia.
+- Multa CDMX: Reglamento de Tránsito, art. 43 fr. V («modificaciones al sistema de escape de gases del vehículo con objeto
+  de provocar ruido excesivo»), 20, 25 o 30 UMA = 2 346, 2 932 o 3 519 pesos (Motorpasión México, 21-jun-2026, enlace arriba).
+- La moto, el mofle por dentro, los truenos y la gráfica: RECREACIÓN (sin marcas).
+
+PRODUCCIÓN (12-nov-2026, 18:10 CDMX)
+- Duración final 70.7 s (voz 69.9 s). Video y audio de la misma duración; últimos 3 s a −20.8 dB; 68.4 MB.
+- Música: semilla 7319, 102 BPM · categoría MITO O REALIDAD · portada «Tu moto truena más…» / «pero no corre más.».
+- Transiciones: cubo zoom wipe mosaico deslizar_abajo flash rompe giro remolino golpe rebanadas glitch iris push.
+  Letras de cristal: TRUENA FÁBRICA PRUEBA RUIDO GASOLINA 86 dB 15 MIN MULTA.
+- Fotos: kit/nuevo/img/moto/moto_i_cromo.jpg (Pascal-André, CC0, «Copy honda 125cg.jpg»,
+  https://commons.wikimedia.org/wiki/File:Copy_honda_125cg.jpg; marcas difuminadas, texto quitado, color corregido) y
+  kit/nuevo/img/moto/moto_i_roja.jpg (Urbancowboy89, CC BY-SA 3.0, «Honda CG125 ES4.jpg»,
+  https://commons.wikimedia.org/wiki/File:Honda_CG125_ES4.jpg; logos difuminados). Créditos en pantalla.
+- Video: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/1a86b702f9817b632e729b48c5266b12f21e07f1/moto_final_p.mp4
+- Portada: https://raw.githubusercontent.com/efrencuenta245-web/mente-en-orbita/dfe5b413b160239363896551f865754aa5c2dd1a/portada_moto.jpg
