@@ -1,6 +1,32 @@
 # Plan de YouTube
 
-## Semana del 9 al 15-nov-2026 (yt-semana, dom 8-nov; cazador sin vidIQ)
+## Semana del 16 al 22-nov-2026 (yt-semana, dom 15-nov; cazador sin vidIQ)
+**Esta semana sí lleva largo.** El del tren bala **no se hizo** el 11-nov: la tarea del miércoles falló al arrancar (límite de uso de Claude) y no está en `youtube/publicados.md` ni en Metricool. El último «quincenal» sigue siendo Starlink (28-oct): 21 días antes del mié 18-nov. Se produce el **mié 18**, sale el **jue 19** y sus 2 Shorts **vie 20 y sáb 21 a las 13:00**, solo en YouTube. El siguiente largo: **mié 2 / jue 3-dic** (cada 15 días, contando desde el miércoles de producción como con Starlink).
+
+⚠️ **Publicación:** el plan gratis de Metricool ya usó sus 20 posts de noviembre por red (también YouTube: los reels salen ahí) y se reinicia el 1-dic (ver «Ya programados» de `estrategia.md`). Si Efrén no sube a Starter antes del jueves, `yt-publicador` intenta Metricool una sola vez y, si da «account limit», le manda a Efrén el largo, los 2 Shorts, la miniatura y los textos para que los suba o programe él en YouTube Studio.
+
+| Día | Formato | Tema | Gancho (fórmula #) | Escena principal | Por qué |
+|---|---|---|---|---|---|
+| mié 18 (producción) / jue 19, 17:00 (subida; ofrecer 16:00) | **largo quincenal** (1920×1080, 3–6 min, 6 capítulos) | **¿Qué pasaría si México tuviera tren bala? CDMX–Guadalajara** — 1) la ruta (~581 km) y el tiempo: carretera y camión contra tren bala; 2) por qué puede ir a 300 km/h (curvas abiertas, rieles soldados, corriente por arriba); 3) cómo frena; 4) sismos: detecta la primera onda y corta la corriente antes del golpe fuerte (como tu alerta sísmica); 5) cuánto costaría la obra y el boleto; 6) lo que México sí construye: México–Querétaro (32 %) y el plan a Guadalajara | **Nuevo:** «Cuando un tren bala ya te dejó en Guadalajara, tu camión apenas va llegando a Querétaro.» (8 ¿Qué pasaría si…? + 14 Antes/después) | Mapa de México que se dibuja con la ruta encendida; tren 3D semirrealista contra un camión que avanza en el mismo mapa; dos cronómetros; sismógrafo que se dispara | Cazador #1 (0.88, empate con Starship): «¿Qué pasaría si…?» con país real es el patrón que más rompe (22×), tecnología paga más (RPM 2.0), noticia viva (México–Querétaro en 32 %, 1-nov) y no caduca. Distinto al último largo (Starlink, espacio) y va con la veta de vehículos de los reels. Reels: Metricool no tiene nada programado del 16 al 22-nov (revisado hoy). |
+| vie 20, 13:00 | Short A (1080×1920, 50–70 s, del largo) | **El tren bala frena antes de que llegue el sismo** | «Tu alerta sísmica te da segundos… a un tren bala le bastan para empezar a frenar.» (6 Cuenta regresiva) | Tren 3D a toda velocidad + onda sísmica que avanza por el mapa; la corriente se apaga y el tren frena | Sismos en las noticias esta semana (serie de más de 4.0 en Chiapas, Infobae 15-nov) y la duda de por qué a veces no suena la alerta. |
+| sáb 21, 13:00 | Short B (1080×1920, 50–70 s, del largo) | **El tren que flota: maglev** | «Este tren no toca las vías: flota… y va más rápido que un avión al despegar.» (2 Número imposible) | Tren que se levanta sobre imanes (line-art que brilla) y un avión que despega al lado; velocímetro | Objeto imposible + número en los primeros 2 s (meta de la auditoría: >55 % comprometidas). |
+
+**Por qué cambió el gancho del largo:** el de antes («te dejaría ahí antes de que termine tu película») no cuadra: a ritmo del Nozomi (Tokio–Shin-Osaka, 515 km, ~2 h 21 min) los 581 km serían ~2 h 40 min, más que una película. El nuevo compara con el camión, que es lo que vive la gente.
+
+**Datos a verificar el miércoles (yt-guionista):**
+- México–Querétaro: **32 % de avance** (Sheinbaum, 1-nov-2026: Excélsior, El Heraldo, La Razón) y 180 km/h (Diario Puntual, 1-nov); reemplaza el 30.38 % de septiembre. Confirmar kilómetros, costo y fecha de apertura con la SICT o la ARTF.
+- Ruta CDMX–Guadalajara del plan oficial: ~581 km, ~4 h, 13 estaciones (TV Azteca, act. 22-oct-2026); la velocidad no coincide entre fuentes (200 contra 161 km/h): usar la SICT o la ARTF. Carretera: tiempo real de una ruta (6–8 h según la fuente).
+- **Gancho:** camión CDMX–Querétaro (~2 h 45 min a 3 h; verificar con ETN o Primera Plus) contra ~2 h 40 min del tren bala. Si el camión llega antes, cambia a «tu camión apenas va saliendo de Querétaro».
+- Shinkansen y sismos: **sí se ha descarrilado** (Niigata 2004; Fukushima, 16-mar-2022) sin pasajeros muertos; verificar con JR East o JR Central el récord de 0 pasajeros muertos por choque o descarrilamiento desde el 1-oct-1964, el sistema que detecta el sismo (UrEDAS y sus sucesores) y la distancia de frenado de emergencia a 300 km/h (por eso el Short dice «empezar a frenar», no «frenar»).
+- Maglev: velocidad comercial actual del de Shanghái (300 o 430 km/h) y la de un avión al despegar (~250–290 km/h). El de 600 km/h de China es de pruebas.
+
+**Siguiente largo (mié 2 / jue 3-dic):** candidatos **Starship: la torre que atrapa naves en el aire** (cazador #2, 0.88; gana si hay un vuelo cerca) o **GTA 6 por dentro** con un ángulo distinto al reel de la consola (#3, 0.85; el largo extra de GTA ya habrá cumplido 4 semanas). Lo deja listo el plan del dom 22-nov y lo confirma el del 29-nov con vidIQ (se renueva el 27-nov).
+
+Reserva (en `youtube/ideas.md`): Starship y la torre que atrapa naves, GTA 6 por dentro (otro ángulo) y la Voyager 1 a un día luz.
+Notas: `aprendizajes.md` sigue vacío (el analista del mar 10-nov también falló por límite de uso). En `youtube/publicados.md` Starlink y GTA siguen «pendiente que Efrén lo suba»: si ya salieron, falta anotar el enlace. Si el reel del metro en llantas (#4 de la cola) cae el mismo día que un Short del tren, el Short se mueve un día (la cola del reel no se toca).
+
+## Anterior
+### Semana del 9 al 15-nov-2026 (yt-semana, dom 8-nov; cazador sin vidIQ) — NO SE PRODUJO: la tarea del mié 11-nov falló por límite de uso; pasa a la semana del 16-nov
 **Esta semana sí lleva largo.** El último «quincenal» (Starlink) es del 28-oct: 14 días antes del mié 11-nov, fuera de la ventana de 13 días. Se produce el **mié 11**, sale el **jue 12** y sus 2 Shorts salen **vie 13 y sáb 14 a las 13:00**, solo en YouTube.
 
 | Día | Formato | Tema | Gancho (fórmula #) | Escena principal | Por qué |
@@ -23,7 +49,6 @@
 Reserva (en `youtube/ideas.md`): GTA 6 por dentro, la Voyager 1 a un día luz y tu respiración controla tu cerebro.
 Notas: `aprendizajes.md` sigue vacío (el analista no ha dejado lecciones). En `youtube/publicados.md` Starlink y GTA siguen «pendiente que Efrén lo suba»: si ya salieron, falta anotar el enlace.
 
-## Anterior
 ### Semanas del 2 y del 9-nov-2026 (yt-semana, 2-nov)
 **Esta semana (2–8 nov) no lleva largo:** el quincenal de Starlink fue el 28-oct (hace menos de 13 días). El siguiente largo se produce el **mié 11-nov**.
 
