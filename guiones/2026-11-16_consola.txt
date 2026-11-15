@@ -1,0 +1,49 @@
+Reel diario lun 16-nov-2026 10:00 (propuesto) — «Tu consola no guarda la ciudad… la dibuja.»
+Serie: tecnología por dentro · comunidad gamer (lanzamiento de GTA 6, 19-nov-2026). Idea #1 de la cola de estrategia.md.
+Voz: Isaac (eleven_v4), generada el 13-nov (inbox/narr_consola.mp3, 64.4 s; no gastó créditos hoy). Video final ~65.2 s.
+Inicio tipo 8 (error en pantalla). Escenas: kit/nuevo/consola.py.
+
+GUION (como se dice)
+[curious] Tu consola no guarda la ciudad… la dibuja.
+GTA seis sale el diecinueve de noviembre,
+y la precarga pide hasta doscientos doce gigas.
+Pero tu PS cinco solo tiene dieciséis gigas de memoria:
+trece veces menos.
+Así que la arma en vivo,
+y solo donde ve tu cámara.
+Mira: lo que tienes enfrente se dibuja…
+lo que está a tu espalda, no.
+Un edificio cerca va con todo su detalle;
+el mismo, a lo lejos, con muchos menos triángulos.
+[excited] Y aquí está el error: comprar un disco USB para que te quepa GTA.
+En PS cinco, lo puedes guardar ahí…
+pero no lo puedes jugar desde ahí.
+Tiene que estar en la consola,
+o en un SSD eme punto dos que se instala adentro.
+Porque los juegos de PS cinco están hechos para su disco ultrarrápido:
+mientras manejas, tu consola lee la calle que sigue…
+antes de que llegues.
+Así que cada cuadro que ves es una ciudad nueva,
+dibujada decenas de veces por segundo.
+Mándaselo a tu compa que ya está bajando GTA seis,
+porque su consola no guarda la ciudad… la dibuja.
+
+DATOS Y FUENTES (verificados el 15-nov-2026)
+- GTA 6 sale el 19-nov-2026 en PS5 y Xbox Series; precarga de ~212 GB (Altchar dice 210 GB en PS5):
+  shacknews.com/article/151250/gta-6-pre-load-file-size · ibtimes.co.uk (rockstar-games-reveals-gta-6-pre-load-details-212gb…)
+  · altchar.com/game-news/gta-6-is-210-gb-on-ps5-and-the-preload-starts-november-12 · beebom.com/gta-6-preload-start-date-confirmed
+  En pantalla y voz: «hasta 212 GB».
+- PS5: 16 GB de memoria GDDR6 (especificaciones de Sony, playstation.com). 212 / 16 = 13.25 → «13 veces menos».
+- Almacenamiento USB en PS5: se pueden guardar juegos de PS5 pero para jugarlos hay que moverlos al almacenamiento de la
+  consola o a un SSD M.2: playstation.com/en-id/support/hardware/ps5-extended-storage/ · slashgear.com/1648694 · howtogeek.com/819209
+- SSD M.2 de expansión (PCIe 4.0; Sony recomienda 5 500 MB/s): laptopmag.com (ps5 storage expansion requirements) ·
+  technipages.com/ps5-nvme-requirements… · seagate.com/blog/best-ssds-for-ps5…
+- SSD interno de la PS5: 5.5 GB/s de lectura (dato de Sony; tweaktown.com/news/80869). Puertos USB de la PS5: SuperSpeed 10 Gbps
+  (≈1.25 GB/s como máximo teórico) — la barra «USB 10 Gbps» es ese máximo, no una medición.
+- Cómo dibuja la ciudad un juego de mundo abierto (solo lo que ve la cámara = frustum culling; menos triángulos a lo lejos =
+  nivel de detalle/LOD; ir leyendo el mapa del disco = streaming): kindatechnical.com/game-development/level-of-detail-culling-and-draw-call-optimization.html
+  · cs418.cs.illinois.edu/website/text/nanite.html · developers.meta.com/horizon/documentation/unity/po-assetstreaming/
+- Marcados en pantalla: «RECREACIÓN» (pantalla de error), «ESQUEMA» (cono de la cámara), «EJEMPLO» (número de triángulos y
+  30 cuadros por segundo: la voz dice «decenas de veces por segundo»).
+
+FOTOS: ninguna (la consola es genérica, sin marca ni logo; no hay foto libre sin logos).

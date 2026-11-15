@@ -1,0 +1,44 @@
+Reel diario lun 16-nov-2026 18:00 (propuesto) — «Tu llanta en la duna… va desinflada.»
+Serie: vehículos y comunidades · riders de side by side (misma comunidad del razer viral del 9-nov). Idea #2 de la cola.
+Voz: Isaac (eleven_v4), generada el 13-nov (inbox/narr_duna.mp3, 60.0 s; no gastó créditos hoy). Video final 61.3 s.
+Inicio tipo 2 (cae y rebota). Escenas: kit/nuevo/duna.py.
+
+GUION (como se dice)
+[curious] Tu llanta en la duna… va desinflada.
+No está ponchada:
+en Samalayuca, los riders le sacan aire a propósito.
+Mira la prueba: la misma llanta, inflada y desinflada.
+Inflada, queda redonda y dura:
+pisa con un cachito… y se entierra.
+Desinflada, se aplasta:
+su huella se hace más larga y más ancha.
+Mismo peso, repartido en más arena…
+y en vez de hundirse, flota.
+Como en la nieve: con zapato te hundes;
+con raqueta, caminas encima.
+[excited] Pero aquí está el error: salir de la duna y agarrar el pavimento así.
+En el pavimento, la llanta baja se dobla en cada vuelta,
+se calienta y puede tronar de golpe.
+Y hasta se puede zafar del rin y dejarte sin aire de un jalón.
+Por eso, con rines que la amarran,
+hay guías que la bajan a seis u ocho libras en la duna…
+y antes de salir al camino, se vuelve a inflar a su presión normal.
+Mándaselo a tu compa que siempre se atasca en la duna,
+porque su llanta en la duna… va desinflada.
+
+DATOS Y FUENTES (verificados el 15-nov-2026)
+- Menos presión = más superficie de contacto = la llanta «flota» en lugar de enterrarse; en dunas «6-8 PSI» con rines de amarre
+  (beadlock) en un side by side; a baja presión la ceja se puede salir del rin si no hay amarre:
+  drivingline.com/articles/correct-utv-tire-pressure-air-up-or-air-down (tabla: arena 6 PSI en rin beadlock; «in the dunes,
+  you could drop as low as 6-8 PSI»).
+- Otra guía da 8-12 PSI en dunas y recomienda rines de amarre para que no se salga la llanta:
+  sidebysidesports.com/utv-tire-pressure-guide-by-terrain.html
+- Con presión baja a velocidad de carretera la llanta se flexiona de más, se calienta y se daña por dentro; hay que volver a
+  inflar antes del pavimento: off-road.ca/blogs/off-road-blogs/airing-down-off-road-tires-explained-choosing-the-right-psi-for-sand-mud-rocks-and-trails
+- Médanos de Samalayuca: dunas al sur de Ciudad Juárez, Chihuahua (área natural protegida).
+- En pantalla: «ESQUEMA» en la llanta 3D, la huella y las flechas (tamaños ilustrativos); «TEMPERATURA DE EJEMPLO» en el
+  termómetro; «UNA GUÍA DE MANEJO EN DUNAS» y «SOLO CON RINES DE AMARRE · EN LA ARENA» junto al 6-8; «PRESIÓN DEL MANUAL» al inflar.
+
+FOTO (Wikimedia Commons, CC0; sin personas ni logos de agencia):
+- Side by side: «canam_i_rzr23.jpg» · Hjudall · CC0 (ya usada en el reel del vuelco; recortada y en 3D con foto3d.py).
+CRÉDITOS PARA LA DESCRIPCIÓN: Foto: Hjudall (CC0) vía Wikimedia Commons.
