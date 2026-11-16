@@ -629,7 +629,7 @@ def s_error(t, fi, u, d):
     upu = Wp(8, 'puertas') - 0.1
     rebote = 0.55 + 0.45 * abs(math.sin(max(0.0, u - 0.3) * 5.0)) if u > 0.3 else 1 - 0.45 * seg(u, 0.0, 0.3)
     fr = Frame(camara(u, [K(-0.3, 6.0, 20, 6, ty=1.4), K(0.4, 5.0, 8, 4, ty=1.4), K(upu - 0.3, 4.6, 4, 4, ty=1.4),
-                          K(upu, 3.2, 0, 2, ty=1.5), K(d, 3.1, -2, 2, ty=1.5)], cy=0.55))
+                          K(upu, 4.4, 0, 2, ty=1.45), K(d, 4.3, -2, 2, ty=1.45)], cy=0.58))
     space(fr, t, floor='lines', floor_a=0.6, bokeh=0.8, beam=0.5)
     M.cristal(fr.base, fr.fx, 'PUERTAS', u, t0=upu, cy=0.24, entrada='golpe')
     ms = vagon(puertas=rebote * 0.86)
@@ -638,8 +638,9 @@ def s_error(t, fi, u, d):
     rojo = 0.5 + 0.5 * math.sin(t * 12)
 
     def ui(img, fx):
-        texto(img, fx, 540, 250, 'EL ERROR', 110, RED, eout(seg(u, 0.0, 0.12)), glow=0.8)
-        kicker(img, 'QUE NOS RETRASA A TODOS', 370, seg(u, uer, uer + 0.3), col=(255, 160, 150))
+        ko = 1 - seg(u, upu - 0.15, upu + 0.05)
+        texto(img, fx, 540, 250, 'EL ERROR', 110, RED, eout(seg(u, 0.0, 0.12)) * ko, glow=0.8)
+        kicker(img, 'QUE NOS RETRASA A TODOS', 370, seg(u, uer, uer + 0.3) * ko, col=(255, 160, 150))
         if u > 0.6:
             pill(img, fx, 540, 1400, 'PUERTA ABIERTA', 1.0, size=30, border=M.mixc((120, 40, 40), RED, rojo))
     fr.ui.append(ui)
