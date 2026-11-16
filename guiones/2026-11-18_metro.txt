@@ -1,0 +1,49 @@
+Reel diario mié 18-nov-2026 18:00 (propuesto) — «Tu metro anda… en llantas.»
+Serie: vehículos y comunidades · chilangos que se suben diario al metro. Idea #2 de la cola de estrategia.md.
+Voz: Isaac (eleven_v4, voice_id QmPfzE500cXXHM9uQKGc), generada el 16-nov (inbox/narr_metro.mp3, 66.7 s; ~1 069 créditos).
+Tiempos por palabra: Scribe (guiones/2026-11-18_metro_words.json). Video final 67.4 s.
+Inicio tipo 4 (barra de búsqueda). Escenas: kit/nuevo/metro.py.
+
+GUION (como se dice; cada línea es una escena)
+[curious] Tu metro anda… en llantas.
+Diez de sus doce líneas ruedan sobre neumáticos;
+solo la Línea A y la Doce van en acero.
+La idea vino de París: los primeros trenes llegaron de Francia en mil novecientos sesenta y nueve.
+Mira la prueba: rueda de acero contra llanta de hule.
+El hule hace menos ruido y aguanta mejor las subidas.
+Ahora mira debajo de un vagón: cada eje lleva dos llantas.
+Y por dentro de cada llanta, escondida, hay una rueda de acero.
+[excited] Pero aquí está el error que nos retrasa a todos: detener las puertas.   (segundo gancho, 29.9 s)
+Si una puerta no cierra, el tren no sale…
+y los que vienen atrás se amontonan.
+¿Y la rueda escondida? Si una llanta se poncha,
+esa rueda de acero carga el peso del vagón.
+A los lados, unas llantitas guía tocan una barra que lleva setecientos cincuenta voltios.
+Su punto débil es la lluvia: con vías y llantas mojadas,
+en los tramos elevados baja de setenta a treinta y cinco kilómetros por hora.
+Y así mueve más de mil doscientos millones de viajes al año.
+Mándaselo a quien se sube diario al metro,
+porque su metro anda… en llantas.
+
+DATOS Y FUENTES (verificados el 16-nov-2026)
+- 10 líneas neumáticas y 2 férreas: chilango.com/ciudad/20-datos-sobre-el-metro («diez líneas neumáticas y 2 férreas»); Línea A
+  y Línea 12 de rodadura férrea: eluniversal.com.mx (modernización de la Línea A: «al igual que el material rodante de Línea 12»).
+- Alsthom (Francia) contratada en 1968, tomó como referencia su MP 59 del metro de París; inauguración 4-sep-1969 (Zaragoza–Chapultepec);
+  trenes MP-68: chilango.com/ocio/historia-trenes-del-metro-cdmx; El Universal «Los inicios del Metro capitalino»; Infobae 4-sep-2023.
+- Carretillas de dos ejes con dos llantas portadoras; por dentro de cada una, una rueda de seguridad de acero; cuatro ruedas guía que se apoyan
+  en la barra guía: chilango.com/noticias/metro-cdmx-sorprende-extranjero-video (17-ene-2024, cita al STC).
+- La rueda de seguridad sostiene el peso del vehículo si se poncha o falla un neumático: Quadratín 31-mar-2015
+  (mexico.quadratin.com.mx/Adquiere-SCT-3-mil-ruedas-de-seguridad-para-el-Metro).
+- La barra guía suministra 750 volts de corriente continua: La Crónica 21-oct-2026 (cronica.com.mx/metropoli/2026/10/21/…).
+- Neumáticos: menos ruido (chilango, historia de los trenes) y soportan mejor las pendientes (N+ 17-ene-2024).
+- Puertas: el STC pide permitir el libre cierre de puertas para agilizar la salida de los trenes (adn40 8-sep-2025; Publimetro 25-nov-2025);
+  forzar u obstruir puertas es infracción (adn40 3-feb-2026). No hay cifra de segundos: se dice sin número.
+- Lluvia: marcha de seguridad en líneas superficiales y elevadas, de 70 a 35 km/h, porque con vías y llantas mojadas es más difícil frenar
+  (adn40 5-oct-2021; UnoTV 29-may-2025). También aplica en la A y la 12 (Por Esto 12-may-2026), por eso no se dice que sea solo por el hule.
+- 1 241 582 324 pasajeros en 2025 (La Crónica 16-ene-2026: «mil 241 millones 582 mil 324 pasajeros») → «más de 1 200 millones».
+- El vagón, el carretón y el mapa de líneas son ESQUEMAS (sin logotipos del STC).
+
+FOTOS (Wikimedia Commons, CC BY 4.0; recortadas sin personas, sin anuncios y sin logotipos):
+- «MP-68 Ciudad de México 01.jpg» · Gobierno de la Ciudad de México · CC BY 4.0 (kit/nuevo/img/metro/metro_i_mp68a.jpg).
+- «NM-16 Ciudad de México 01.jpg» · Gobierno de la Ciudad de México · CC BY 4.0 (kit/nuevo/img/metro/metro_i_nm16a.jpg).
+CRÉDITOS PARA LA DESCRIPCIÓN: Fotos: Gobierno de la Ciudad de México (CC BY 4.0) vía Wikimedia Commons.

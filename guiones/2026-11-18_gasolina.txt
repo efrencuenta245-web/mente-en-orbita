@@ -1,0 +1,48 @@
+Reel diario mié 18-nov-2026 10:00 (propuesto) — «Tu gasolina Premium… no tiene más fuerza.»
+Serie: vehículos y comunidades · automovilistas (todo el que carga gasolina). Idea #1 de la cola de estrategia.md.
+Voz: Isaac (eleven_v4, voice_id QmPfzE500cXXHM9uQKGc), generada el 16-nov (inbox/narr_gasolina.mp3, 62.2 s; ~998 créditos).
+Tiempos por palabra: Scribe (guiones/2026-11-18_gasolina_words.json). Video final 62.9 s.
+Inicio tipo 5 (número gigante). Escenas: kit/nuevo/gasolina.py.
+
+GUION (como se dice; cada línea es una escena)
+[curious] Tu gasolina Premium… no tiene más fuerza.
+Ese número de octanos no mide energía: mide aguante.
+Mira el pistón: aprieta el aire con gasolina,
+y la bujía lo prende justo a tiempo.
+Si la gasolina no aguanta tanto apretón,
+explota sola antes de tiempo.
+Ese es el cascabeleo: el golpeteo metálico del motor.
+Ahora la prueba: un motor normal con Magna,
+y el mismo motor con Premium.
+Empatan: casi la misma energía por litro y la misma fuerza.
+[excited] Pero aquí está el error: pagar Premium en un carro que pide Magna.   (segundo gancho, 29.6 s)
+En noviembre, el litro de Premium cuesta casi cinco pesos más.
+En un tanque de cuarenta litros, son casi doscientos pesos… por nada.
+Y al revés también falla: un motor turbo que pide Premium,
+con Magna, cascabelea.
+Su computadora lo oye con un sensor, atrasa la chispa para protegerlo… y le quita fuerza.
+¿Cuál le toca al tuyo? Viene en el manual o en la tapa del tanque.
+Mándaselo a quien le pone Premium para que corra más,
+porque su gasolina Premium… no tiene más fuerza.
+
+DATOS Y FUENTES (verificados el 16-nov-2026)
+- Octanaje mínimo en México (NOM-016-CRE-2016): índice de octano (R+M)/2 de 87 en la regular (Magna) y 91 en la Premium:
+  transportpolicy.net/standard/mexico-fuels-diesel-and-gasoline (tabla 2). Medios: Expansión 16-may-2023 («En México es de 91»),
+  grupoanimal.mx/explicaciones/gasolina-magna-premium-danos-motor (Magna 87, Premium mínimo 91).
+- El octanaje mide la resistencia a la detonación (cascabeleo), no la energía: Vanguardia 9-abr-2026 (vanguardia.com.mx … EI19888963),
+  Criterio Hidalgo 9-abr-2026, Motor1 («Octane rating doesn't measure … energy content»), Consumer Reports 9-sep-2026.
+- Misma energía química en todos los grados: MIT School of Engineering, Ahmed Ghoniem (engineering.mit.edu/ask-an-engineer/whats-the-difference-between-premium-grade-and-regular-gasoline).
+- Premium en un motor que pide regular no da más potencia ni rendimiento: AAA 2016 (newsroom.aaa.com, hoja de datos; «did not produce more
+  horsepower, result in better fuel economy»); Consumer Reports 2026 («In most engines, high-octane gas is simply a waste of money»);
+  Vanguardia («no causa daño, pero tampoco ofrece beneficios significativos»). En pantalla: «EN UN MOTOR QUE PIDE MAGNA · PRUEBAS DE AAA (EE. UU.)».
+- Magna en un motor que pide Premium: el sensor de detonación hace que la computadora atrase el encendido; baja la potencia y el rendimiento
+  y puede dañarse si sigue cascabeleando: CarPro, 13-oct-2025 (carpro.com/blog/do-you-really-need-premium-fuel); Consumer Reports vía Fox News.
+  Los grados de la chispa en pantalla son de EJEMPLO.
+- Precio promedio nacional del 15-nov-2026: Magna 23.695 $/L, Premium 28.586 $/L (CNE y Profeco, vía Infobae 16-nov-2026:
+  infobae.com/mexico/2026/11/16/precio-de-la-gasolina-en-mexico-este-15-de-noviembre). Diferencia 4.89 $/L → 40 L × 4.89 = 195.6 ≈ 196 pesos.
+- El octanaje que pide tu auto viene en el manual o en la tapa del tanque: Expansión 16-may-2023, Criterio Hidalgo, El Imparcial 12-ene-2025.
+  La etiqueta de la tapa en pantalla dice «ETIQUETA DE EJEMPLO».
+
+FOTO (Wikimedia Commons, CC0; sin personas ni logos):
+- Motor de un cilindro en corte: «italika_i_corte1920.jpg» · CheminduCret · CC0 (ya usada en el reel de la Italika; recortada sin letreros).
+CRÉDITOS PARA LA DESCRIPCIÓN: Foto del motor en corte: CheminduCret (CC0) vía Wikimedia Commons.
