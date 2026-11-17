@@ -1,0 +1,45 @@
+Reel diario jue 19-nov-2026 10:00 (propuesto) — «Tu escape no tira humo… lo cocina.»
+Serie: vehículos y comunidades · automovilistas CDMX/Edomex (verificación). Idea #1 de la cola de estrategia.md.
+Voz: Isaac (eleven_v4, voice_id QmPfzE500cXXHM9uQKGc), generada el 17-nov (flow 80S3WJhrYu7rdeD0WTGX; ~1 064 créditos).
+Tiempos por palabra: Scribe (guiones/2026-11-19_catalizador_words.json). Escenas: kit/nuevo/catalizador.py.
+Inicio tipo 10 (rayos X de golpe): el escape se vuelve de cristal y aparece el panal brillando.
+
+GUION (como se dice; cada línea es una escena; el texto con cifras está en TXT de catalizador.py)
+[curious] Tu escape no tira humo… lo cocina.
+Ese bulto en el tubo es el catalizador, y por dentro es un panal de cerámica.
+Miles de canalitos, cubiertos de platino, paladio y rodio.
+Al pasar por ahí, el gas sucio se transforma.
+El monóxido de carbono, que envenena, sale como dióxido de carbono.
+La gasolina sin quemar, como agua.
+Y los óxidos de nitrógeno… como el nitrógeno del aire.
+Pero solo cocina caliente: arriba de unos doscientos sesenta grados.
+La prueba: con el motor frío, casi todo pasa directo.
+Por eso, en un arranque en frío, hasta el ochenta por ciento de lo que contamina sale en el primer minuto y medio.
+Ya caliente, quita casi el noventa por ciento.
+[excited] Pero aquí está el error: quitarlo o vaciarlo para que corra más.   (segundo gancho)
+Tu computadora lo nota con un sensor y prende el foco del motor.
+Y en la verificación te rechazan: un catalizador quitado o vaciado es una pieza alterada.
+Y si una bujía falla, la gasolina cruda se quema adentro… y lo puede derretir.
+Mándaselo a quien no pasó la verificación,
+porque su escape no tira humo… lo cocina.
+
+DATOS Y FUENTES (verificados el 17-nov-2026)
+- Panal de cerámica (cordierita) con cientos de celdas por pulgada cuadrada (miles de canalitos en total), recubierto de platino,
+  paladio y rodio; Pt y Pd oxidan CO e hidrocarburos, el Rh reduce los NOx; salen CO2, agua y nitrógeno:
+  open-exam-prep.com/study-guides/ase-l1/emission-controls/catalyst (guía ASE L1) · knowhow.napaonline.com/how-a-catalytic-converter-works
+  («made predominantly of a ceramic material called cordierite») · thedrive.com/guides-and-gear/what-is-a-catalytic-converter
+  («hundreds of "cells" per square inch»).
+- Temperatura de encendido («light-off») ~260 °C (500 °F): guía ASE L1 (open-exam-prep). Trabaja de 260 a 650 °C (500–1 200 °F): NAPA.
+- Arranque en frío: «60-80% of regulated tailpipe emissions» salen en los primeros 90 s después de un arranque en frío, antes del
+  light-off: guía ASE L1 → «hasta el 80 % … en el primer minuto y medio».
+- Eficiencia ya caliente: «nearly 90% efficient at removing nitrogen oxides and carbon monoxide» (NAPA) → «quita casi el 90 %»
+  (en pantalla: CO y NOx).
+- Error: un catalizador retirado o vaciado es un componente de control de emisiones alterado; en la revisión visual de la NOM-047
+  (numeral 4.2.3.8) es motivo de rechazo antes de la prueba de gases; el monitor OBD marca P0420/P0430 y prende el foco del motor
+  (MIL); en el Edomex el foco encendido es rechazo: todosobreautos.com/catalizador-auto-que-es-cuanto-dura-verificacion (6-nov-2026).
+  «Quitar el catalizador no es una forma de "pasar" la verificación».
+- Bujía que falla → gasolina sin quemar que se quema dentro del catalizador y lo sobrecalienta (puede fundir el panal): guía ASE L1
+  (diagnóstico del catalizador). Se dice «lo puede derretir», sin cifra.
+- El escape, el panal, las moléculas y el sensor son ESQUEMAS; sin marcas. No se muestra cómo se quita ni se habla de robos.
+
+FOTOS: ver al final (Wikimedia Commons, solo PD/CC0/CC BY, sin personas ni logos), o ninguna si no hay una libre que sirva.

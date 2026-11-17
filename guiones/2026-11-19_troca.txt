@@ -1,0 +1,45 @@
+Reel diario jue 19-nov-2026 18:00 (propuesto) — «Tu troca 4x4… no siempre es 4x4.»
+Serie: vehículos y comunidades · trocas (norte y campo). Idea #2 de la cola de estrategia.md.
+Voz: Isaac (eleven_v4, voice_id QmPfzE500cXXHM9uQKGc), generada el 17-nov (flow EBWCSSlwaHQJDRRRrBhM; ~1 131 créditos).
+Tiempos por palabra: Scribe (guiones/2026-11-19_troca_words.json). Escenas: kit/nuevo/troca.py.
+Inicio tipo 6 (pantalla dividida que choca): arriba la troca atascada en 2H, abajo la misma saliendo en 4H; chocan.
+
+GUION (como se dice; cada línea es una escena; el texto con cifras está en TXT de troca.py)
+[curious] Tu troca cuatro por cuatro… no siempre es cuatro por cuatro.
+Si es de tiempo parcial, casi siempre anda en dos: solo empujan las de atrás.
+Las de adelante van de paseo, girando libres.
+Al meter la palanca o el botón, la caja de transferencia amarra los dos ejes.
+Y las cuatro jalan parejo, a la misma velocidad.
+La prueba en el lodo: en dos, las de atrás patinan y se entierran.
+En cuatro, las de adelante la jalan… y sale.
+[excited] Pero aquí está el error: traerla metida en el pavimento.   (segundo gancho)
+En una curva, las llantas de adelante recorren más camino que las de atrás.
+Pero amarradas tienen que girar igual… y algo tiene que ceder.
+En el lodo, la llanta resbala tantito y no pasa nada.
+En pavimento seco no resbala: la troca brinca, rechina y la dirección se pone dura.
+Esa tensión castiga la caja de transferencia, las crucetas y los ejes.
+Por eso el manual dice: cuatro por cuatro solo en tierra, lodo, arena o nieve.
+Y en cuatro baja, muchos manuales piden no pasar de cuarenta por hora.
+Mándaselo a quien trae la cuatro por cuatro metida en la ciudad,
+porque su troca cuatro por cuatro… no siempre es cuatro por cuatro.
+
+DATOS Y FUENTES (verificados el 17-nov-2026)
+- 4x4 de tiempo parcial: «funciona de manera predeterminada como un vehículo de tracción en dos ruedas»; «no utiliza un diferencial
+  central. En su lugar, el sistema bloquea los ejes delantero y trasero»: jeep.com/sub-region/es/4x4/faq-and-glossary.html.
+  «In 2WD, only the rear axle is driven»; «the transfer case mechanically locks the front and rear output shafts together»:
+  open-exam-prep.com/study-guides/ase-g1/manual-drivetrain/four-wheel-drive-transfer-case (guía ASE G1).
+- La segunda palanca controla la caja de transferencia; 2H es el modo habitual para carretera y ciudad; 4H para terracería, grava,
+  nieve o lluvia intensa; 4L para subidas y bajadas muy inclinadas, lodo profundo, arena blanda y nieve espesa:
+  expansion.mx/tendencias/2026/07/09/por-que-algunas-camionetas-tienen-dos-palancas (9-jul-2026).
+- En pavimento seco: «se producirá bloqueo (salto de rana) y ruido en la transmisión»; «puede provocar sobrecalentamiento y un desgaste
+  prematuro de las piezas»; el «salto de cuervo» trae un «bang», vibración y rozamiento de llantas (Jeep FAQ). «Part-time 4WD must not be
+  used on dry, high-traction pavement»; al girar las llantas «scrub», «binding, shudder, tire wear» y «stress on the transfer case,
+  U-joints, and axles» (guía ASE G1). Dirección dura: freeasestudyguides.com/drivetrain-windup.html («Hard steering»).
+- En una curva las ruedas de adelante y de atrás necesitan girar a distinta velocidad (Jeep FAQ: el diferencial central «permite que las
+  ruedas delanteras y traseras giren a diferentes velocidades al tomar una curva»). Sin cifra: se dice «más camino», sin número.
+- 4H y 4L solo en superficies sueltas o resbalosas («intended for loose, slippery road surfaces only»): manual Ram 2500 2021
+  (manualslib.com/manual/2156962/Ram-2500-2021.html?page=178). En 4L no pasar de 40 km/h (25 mph): Jeep FAQ y manual Ram →
+  «muchos manuales piden no pasar de cuarenta».
+- La troca, el chasis, los ejes y la caja de transferencia son ESQUEMAS sin marca. El lodo de la prueba es una recreación.
+
+FOTOS: ver al final (Wikimedia Commons, solo PD/CC0/CC BY, sin personas ni logos), o ninguna si no hay una libre que sirva.
