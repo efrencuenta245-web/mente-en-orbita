@@ -5,8 +5,30 @@
  "voz": "plan B: Chatterbox (workflow voz_hq, ref ald) porque el conector de ElevenLabs no respondió (timeouts, Service Unavailable, Bad Request)",
  "elevenlabs_flow_intento": "PXTK2NNa6XHleZCWWoQu",
  "atempo": "1.1 en el largo y el Short A; Short B a velocidad normal",
- "largo": {"dur": 359.39, "archivo": "trenbala_largo_final.mp4"},
- "shortA": {"dur": 70.48},
- "shortB": {"dur": 53.92},
- "estado": "renderizando"
+ "largo": {
+  "dur": 359.38,
+  "archivo": "trenbala_largo_final.mp4",
+  "peso_mb": 89.9,
+  "musica": {
+   "semilla": 4718,
+   "bpm": 104
+  }
+ },
+ "shortA": {
+  "dur": 70.5,
+  "archivo": "trenbala_shorta_final_p.mp4",
+  "musica": {
+   "semilla": 6131,
+   "bpm": 102
+  }
+ },
+ "shortB": {
+  "dur": 53.92,
+  "archivo": "trenbala_shortb_final_p.mp4",
+  "musica": {
+   "semilla": 7243,
+   "bpm": 96
+  }
+ },
+ "estado": "listo, esperando aprobación"
 }

@@ -218,8 +218,9 @@ if __name__ == '__main__':
         # video a la tasa que deja el archivo en ≤ 92 MB (YOUTUBE.md): bitrate = 92·8/dur − 0.2 Mbps
         br = 92 * 8 / DUR - 0.25
         vb = f'{OUT}/{TEMA}_vb.mp4'
-        subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', v, '-c:v', 'libx264', '-preset', 'medium', '-b:v', f'{br:.2f}M',
-                        '-maxrate', f'{br * 1.3:.2f}M', '-bufsize', f'{br * 2:.2f}M', '-pix_fmt', 'yuv420p', '-an', vb], check=True)
+        if not os.path.exists(vb):   # (si el render se hizo por tramos, vb ya viene unido y codificado)
+            subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', v, '-c:v', 'libx264', '-preset', 'medium', '-b:v', f'{br:.2f}M',
+                            '-maxrate', f'{br * 1.3:.2f}M', '-bufsize', f'{br * 2:.2f}M', '-pix_fmt', 'yuv420p', '-an', vb], check=True)
         fin = f'{OUT}/{TEMA}_final.mp4'
         subprocess.run(['bash', os.path.join(KIT, 'mix_musica.sh'), vb, f'{OUT}/narr_{TEMA}_pad.wav', fx, mu, fin], check=True, cwd=KIT)
         import re
