@@ -1,0 +1,53 @@
+Reel diario vie 20-nov-2026 18:00 (propuesto) — «Tu casco de media calabaza… no es casco.»
+Serie: vehículos y comunidades · motos (noticia de la semana: en la CDMX casi la mitad de las muertes viales son de
+motociclistas y el gobierno prepara un plan). Idea #2 de la cola de estrategia.md.
+Voz: PLAN B (Chatterbox Multilingual, workflow voz_hq, referencia «ald», seed 22) porque el conector de ElevenLabs
+pidió volver a iniciar sesión el 18-nov a las 16:35 y no dejó usar a Isaac. Tiempos por palabra: reparto por letras
+dentro de cada línea (no hay Scribe). Escenas: kit/nuevo/casco.py.
+Inicio tipo 3 (se arma solo): la cáscara, el unicel, el forro y la correa vuelan y se juntan con clic; el de media
+calabaza se arma… y le falta el unicel («CASCO» de cristal detrás).
+
+GUION (como se dice; las frases de pantalla con cifras están en TXT de casco.py)
+Tu casco de media calabaza... no es casco.
+En la Ciudad de México, casi la mitad de los muertos del tránsito iban en moto.
+Uno de verdad trae por dentro una capa de unicel firme.
+Mide como dos centímetros y medio, y se aplasta a propósito.
+Así tu cabeza frena en seis milésimas de segundo y no en una: el golpe llega más suave.
+El de adorno trae pura esponja, o nada, y pesa medio kilo; el bueno, casi kilo y medio.
+Pero el error de casi todos no es el casco... es la correa.          (segundo gancho)
+En un estudio europeo, casi siete de cada diez cascos que salieron volando iban mal abrochados.
+Floja o colgando, en el golpe el casco se va antes que tu cabeza.
+Y si ya se golpeó, cámbialo: el unicel aplastado no regresa, aunque se vea bien.
+Bien abrochado, según la OMS, baja hasta setenta y cuatro por ciento las lesiones del cerebro.
+Mándaselo a tu compa que anda en moto con el casco colgando.
+Y antes de subirte, revisa el tuyo por dentro...                       (loop → «Tu casco de media calabaza… no es casco.»)
+
+DATOS Y FUENTES (verificados el 18-nov-2026)
+- CDMX: «En 2025, el 49 % de las personas fallecidas por hechos de tránsito en CDMX eran motociclistas» (Grupo Animal,
+  grupoanimal.mx/sociedad/cdmx-motociclistas-muertes-transito-salud); «5 de cada 10 muertes por hechos de tránsito son de
+  motociclistas en CDMX» (Expansión Política, 23-ene-2026). → «casi la mitad».
+- Capa de unicel: «Helmets meeting the minimum Federal safety standard have an inner liner usually about one-inch thick of
+  firm polystyrene foam» (NHTSA, «How to Identify Unsafe Motorcycle Helmets», DOT HS 807 880,
+  nhtsa.gov/document/how-identify-unsafe-motorcycle-helmets). 1 pulgada ≈ 2.5 cm. El poliestireno expandido es el unicel.
+- Casco de adorno: «normally contain only soft foam padding or a bare plastic shell with no padding at all»; «weigh only
+  one pound or less. Helmets meeting FMVSS 218 generally weigh about three pounds» (NHTSA, misma hoja) → medio kilo contra
+  casi kilo y medio (1 lb = 0.45 kg; 3 lb = 1.36 kg).
+- Cómo frena: la espuma «slows the stopping process»: «the head stops in about six milliseconds rather than one millisecond
+  or less» (helmets.org/liners.htm, Bicycle Helmet Safety Institute; mismo principio en cascos de moto).
+- Un solo golpe: «the helmet has to be replaced after a single impact»; el daño de la espuma aplastada «is not apparent in
+  a casual inspection» (helmets.org/liners.htm).
+- Correa: «The major cause of ejection was established as improper fastening or alteration (68%)» (estudio europeo MAIDS
+  citado por TRL, «Helmet Retention Report», PPR689, 2014, trl.co.uk/uploads/trl/documents/PPR689.pdf) → «casi siete de
+  cada diez cascos que salieron volando iban mal abrochados».
+- OMS: «los cascos seguros y de calidad reducen el riesgo de muerte en más de seis veces y el de lesiones cerebrales hasta
+  en un 74 por ciento»; «los cascos que no están bien abrochados también aumentan el riesgo de muerte y lesiones»
+  (Europa Press en Redacción Médica, 5-abr-2023, sobre el manual de la OMS: redaccionmedica.com/ultimas-noticias/20230405/
+  la-oms-reclama-impulsar-el-uso-de-cascos-en-motoristas/102036_0.html).
+- Solo ciencia y seguridad: sin fotos de accidentes ni personas. La cabeza es una horma de prueba (forma metálica sin cara).
+  El casco, el unicel, la correa y la horma son ESQUEMAS sin marca.
+
+FOTOS: ver al final (si se consiguieron con licencia libre).
+- «2026-05-16 Moscow motorcycle parade, helmet 01.jpg» · Retired electrician · CC0 (Wikimedia Commons,
+  commons.wikimedia.org/wiki/File:2026-05-16_Moscow_motorcycle_parade,_helmet_01.jpg), recortada solo al casco (sin
+  personas ni marcas) → kit/nuevo/img/casco/casco_i_real.jpg — escena 9 («el bueno»).
+CRÉDITOS PARA LA DESCRIPCIÓN: Foto del casco: Retired electrician (CC0) vía Wikimedia Commons.

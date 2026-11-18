@@ -1,0 +1,48 @@
+Reel diario vie 20-nov-2026 10:00 (propuesto) — «Tu control no vibra… gira.»
+Serie: vehículos y comunidades · gamers (semana de GTA 6: sale el jueves 19-nov). Idea #1 de la cola de estrategia.md.
+Voz: PLAN B (Chatterbox Multilingual, workflow voz_hq, referencia «ald», seed 21) porque el conector de ElevenLabs
+pidió volver a iniciar sesión el 18-nov a las 16:35 y no dejó usar a Isaac. Tiempos por palabra: reparto por letras
+dentro de cada línea (no hay Scribe). Escenas: kit/nuevo/control.py.
+Inicio tipo 9 (giro 360° con destellos): el control da una vuelta completa con 3 cortes de destello, se vuelve de
+cristal y se ve el peso chueco girando, con «GIRA» de cristal detrás.
+
+GUION (como se dice; cada línea es una línea de la voz; las frases de pantalla con cifras están en TXT de control.py)
+Tu control no vibra... gira.
+Adentro trae un motorcito con un peso chueco.
+Si el peso estuviera centrado, giraría liso y no sentirías nada.
+Chueco, en cada vuelta jala el control de un lado al otro.
+Por eso trae dos: uno pesado para los golpes y uno ligero para el zumbido.
+El de PlayStation cinco ya no gira: trae bobinas con imán, como una bocina.
+Mueven una pesita de ida y vuelta, y sientes hasta la lluvia.
+Pero lo que de verdad descompone tu control... es el palito.          (segundo gancho)
+Debajo de cada stick, unos contactos de metal tallan una pista.
+Con el uso y el polvo se gasta, y el control cree que lo mueves aunque no lo toques.
+Eso es el drift: tu personaje camina solo... y no es culpa del juego.
+Los sticks con imanes, de efecto Hall, no se tocan y casi no se gastan.
+Mándaselo a tu compa que le echa la culpa al control.
+Y la próxima vez que tiemble en tus manos, acuérdate...                (loop → «Tu control no vibra… gira.»)
+
+DATOS Y FUENTES (verificados el 18-nov-2026)
+- Vibración clásica = motor de masa excéntrica (ERM): «an Eccentric Rotating Mass (ERM) motor that spins an asymmetrical
+  weight at high speed» (thesixthaxis.com/2020/05/21/dualsense-ps5-haptic-feedback-adaptive-triggers-next-gen/).
+  Los controles viejos «generated movement via eccentric masses» (eeworldonline.com/?p=498149, desarmado del DualSense).
+- Dos motores distintos: «The left motor is the low-frequency rumble motor. The right motor is the high-frequency rumble
+  motor. The two motors are not the same» (Microsoft, devdocs.xbox.com/reference/input/xinputongameinput/structs/
+  xinput_vibration). «two motors, one for lighter vibrations and another for more intense feedback»
+  (precisionmicrodrives.com/haptic-feedback-applications-with-vibration-motors).
+- PS5 DualSense: «Dual actuators replace the rumble motors used on previous versions»; «linear resonance actuators (LRAs)
+  made by Foster in Japan»; «LRAs use a movable mass, permanent magnets, a voice coil and wave springs»; «LRAs act more
+  like the cone of a loudspeaker» (eeworldonline.com/?p=498149). → «bobinas con imán, como una bocina; mueven una pesita
+  de ida y vuelta». «La lluvia» es un ejemplo de lo que dibuja la vibración háptica (sin cifra).
+- Drift: «As you tilt the stick, small conductive wipers move over an electrically resistive pad»; «Over time, this
+  resistive material wears away»; «Debris could be trapped and not allowing the stick to return to a neutral position»
+  (iFixit, ifixit.com/Troubleshooting/DualSense/Controller+Stick+Drift/538813). «Once the resistance value of the neutral
+  position changes—boom, joystick drift» (iFixit, ifixit.com/Wiki/Hall-Effect_Joysticks).
+- Efecto Hall: «a Hall-Effect joystick uses a contactless alternative: magnets»; «without physical contact eliminating any
+  chance of friction wear to the sensor» (iFixit, ifixit.com/Wiki/Hall-Effect_Joysticks) → «no se tocan y casi no se gastan».
+- El control, el motor, el peso, las bobinas y el stick son ESQUEMAS sin marca (sin logos). El personaje que camina solo es
+  una flecha/punto en un mapa de alambre (sin personas).
+
+FOTOS: ver al final (si se consiguieron con licencia libre).
+- No se usó foto real: en Wikimedia Commons no hubo fotos libres (CC0/CC BY/dominio público) de motores de vibración ni de
+  controles sin logos de marca (búsquedas del 18-nov: «vibration motor», «incategory:Vibration_motors», «Gamepads»).
