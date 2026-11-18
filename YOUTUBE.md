@@ -10,6 +10,7 @@ Este archivo y las skills `yt-*` son para el **video largo de YouTube y los Shor
   - Reutiliza funciones de `kit/nuevo/demo_estilo.py` y `kit/nuevo/norte.py` (celular, Tierra, imán, gráficas, foto que cae…), pero cada video lleva escenas y arco nuevos (regla de YouTube).
 - **Tiempos:** `kit/timeline.py` sigue sirviendo para la voz por capítulo: da `narr_TEMA_MODO.wav` y `tl_TEMA_MODO.json` (`phrases[]` con `a`, `b`, `text` y `words`). Las escenas leen esos tiempos.
 - **Voz: Isaac** (ElevenLabs `QmPfzE500cXXHM9uQKGc`, `eleven_v4`), la misma del reel, una llamada por capítulo.
+- **Orden del largo (analista, 17-nov-2026):** en los primeros 20 s adelanta el capítulo más fuerte; el capítulo 2 debe ser de los fuertes y cada capítulo abre volviendo a la promesa del título. En el largo de GTA la vista media (38 %, ~1:32) terminó en la razón 2, que hablaba de otro juego, y lo mejor (el hackeo) empezaba en 2:10.
 - **Publicación con Metricool** (brandId `7735731`), solo a YouTube y solo con el «sí» de Efrén (skill `yt-publicador`). Ya no hace falta que Efrén suba nada a mano, salvo que el archivo no se pueda alojar (más de 95 MB).
 - **vidIQ:** 0 créditos hasta el 27-nov-2026; luego 150 al mes. Antes de cada llamada que cueste, `vidiq_balance`: si no alcanza, usa el plan sin vidIQ que dice cada skill (Metricool + WebSearch). El reel diario ya no usa vidIQ, así que YouTube puede usar todos los créditos (máximo ~100 al mes).
 
