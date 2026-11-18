@@ -171,14 +171,14 @@ TAGS = {('c0', 0): '[curious]', ('c2', 7): '[excited]', ('c2', 9): '[curious]', 
 
 # Lista de edición: video completo y 2 Shorts (skill yt-shorts)
 EDITS = {
-    'full': [('gap', 0.25), ('c0', 0, 5), ('gap', 1.4), ('c1', 0, 8), ('gap', 1.4), ('c2', 0, 17), ('gap', 1.4),
-             ('c3', 0, 9), ('gap', 1.4), ('c4', 0, 10), ('gap', 1.4), ('c5', 0, 8), ('gap', 1.4), ('c6', 0, 8),
-             ('gap', 1.2), ('c7', 0, 4), ('gap', 2.0)],
+    'full': [('gap', 0.25), ('c0', 0, 5), ('gap', 0.9), ('c1', 0, 7), ('gap', 0.9), ('c2', 0, 16), ('gap', 0.9),
+             ('c3', 0, 8), ('gap', 1.0), ('c4', 0, 8), ('gap', 1.0), ('c5', 0, 8), ('gap', 1.0), ('c6', 0, 7),
+             ('gap', 0.9), ('c7', 0, 3), ('gap', 1.3)],
     # Short A: el tren bala frena antes de que llegue el sismo
     'reelA': [('gap', 0.15), ('out', 0, 0), ('gap', 0.35), ('c2', 3, 8), ('gap', 0.35), ('c2', 9, 10),
-              ('gap', 0.35), ('c2', 15, 17), ('gap', 0.45), ('out', 1, 2), ('gap', 1.2)],
+              ('gap', 0.35), ('c2', 14, 16), ('gap', 0.45), ('out', 1, 2), ('gap', 1.2)],
     # Short B: el tren que flota (maglev)
-    'reelB': [('gap', 0.15), ('out', 3, 3), ('gap', 0.35), ('c4', 2, 10), ('gap', 0.45), ('out', 4, 5), ('gap', 1.2)],
+    'reelB': [('gap', 0.15), ('out', 3, 3), ('gap', 0.35), ('c4', 2, 8), ('gap', 0.45), ('out', 4, 5), ('gap', 1.2)],
 }
 
 SPOKEN = {'km': 1, 'km/h': 3, 'CDMX': 3, 'P': 1, 'S': 1, '32': 3, '%': 2, '2011,': 3, 'traca-traca': 2,

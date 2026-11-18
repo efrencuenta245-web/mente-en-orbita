@@ -1,0 +1,225 @@
+¿QUÉ PASARÍA SI MÉXICO TUVIERA TREN BALA? CDMX–GUADALAJARA — video largo quincenal de YouTube (18-nov-2026)
+Formato: largo horizontal 1920x1080 · 6 partes · estilo nuevo (ESTILO.md, motor2) · voz: ver jobs/trenbala.json
+Shorts: A «Tu alerta sísmica te da segundos… a un tren bala le basta uno» (Parte 2) · B «Este tren no toca las vías: flota» (Parte 4)
+
+GANCHOS (fórmulas de .claude/skills/yt-guionista/formulas.md)
+#1 · Fórmula 8+14 (¿Qué pasaría si…? + Antes/después) · "Cuando un tren bala ya te dejó en Guadalajara… tu camión apenas va llegando a Querétaro." · seg 0: la Tierra de alambre cae a México; en el mapa el tren ya está en GDL y el camión en Querétaro
+#2 · Fórmula 2 (Número imposible) · "De la CDMX a Guadalajara en 2 horas y media." · seg 0: tren que cruza el mapa con un reloj
+#3 · Fórmula 6 (Cuenta regresiva) · "Tu alerta sísmica te da segundos… a un tren bala le basta uno." · seg 0: celular con la alerta que cuenta 60…1
+#4 · Fórmula 5 (Contradicción) · "Un tren bala no necesita un tren rápido: necesita curvas de 4 km." · seg 0: curva gigante vista desde arriba
+#5 · Fórmula 9 (Duelo) · "Tren bala contra camión: salen juntos de la CDMX." · seg 0: los dos arrancan lado a lado
+
+| # | Concreto 20 | Sorpresa 20 | Tú 15 | Acción 15 | Curiosidad 20 | Cercanía 10 | Total |
+|---|---|---|---|---|---|---|---|
+| 1 | 18 | 17 | 15 | 14 | 18 | 10 | 92 |
+| 2 | 18 | 15 | 5 | 13 | 14 | 10 | 75 |
+| 3 | 16 | 17 | 15 | 12 | 17 | 10 | 87 |
+| 4 | 14 | 15 | 3 | 10 | 15 | 5 | 62 |
+| 5 | 17 | 12 | 5 | 15 | 15 | 10 | 74 |
+Elegido: #1 (92). El #3 abre el Short A. Regla del analista (17-nov): en los primeros 20 s se adelanta el capítulo más fuerte (el sismo) y la Parte 2 es la del sismo.
+
+GUION (pantalla / voz)
+
+
+== Gancho
+- Cuando un tren bala ya te dejó en Guadalajara…
+    voz: Cuando un tren bala ya te dejó en Guadalajara...
+- …tu camión apenas va llegando a Querétaro.
+    voz: tu camión apenas va llegando a Querétaro.
+- Hoy, de la CDMX a Guadalajara haces unas 7 horas en camión.
+    voz: Hoy, de la Ciudad de México a Guadalajara haces unas siete horas en camión.
+- Un tren bala como el de Japón lo haría en unas 2 horas y media.
+    voz: Un tren bala como el de Japón lo haría en unas dos horas y media.
+- Y si tiembla, detecta el sismo antes del golpe fuerte… y empieza a frenar solo.
+    voz: Y si tiembla, detecta el sismo antes del golpe fuerte... y empieza a frenar solo.
+- ¿Qué pasaría si México tuviera uno? Lo armamos en 6 partes.
+    voz: ¿Qué pasaría si México tuviera uno? Lo armamos en seis partes.
+
+== Parte 1 · El viaje
+- Parte 1: el viaje.
+    voz: Parte uno: el viaje.
+- Si México tuviera tren bala, saldrías de la CDMX a Guadalajara: unos 540 km.
+    voz: Si México tuviera tren bala, saldrías de la Ciudad de México a Guadalajara: unos quinientos cuarenta kilómetros.
+- En auto, sin parar, haces 5 horas y 20 minutos… y pagas 10 casetas.
+    voz: En auto, sin parar, haces cinco horas y veinte minutos... y pagas diez casetas.
+- En camión, unas 7 horas.
+    voz: En camión, unas siete horas.
+- Ahora mira Japón: el Nozomi va de Tokio a Osaka, 515 km, en 2 horas y 21 minutos.
+    voz: Ahora mira Japón: el Nozomi va de Tokio a Osaka, quinientos quince kilómetros, en dos horas y veintiún minutos.
+- A ese ritmo, Guadalajara te quedaría a unas 2 horas y media.
+    voz: A ese ritmo, Guadalajara te quedaría a unas dos horas y media.
+- Desayunas en la CDMX… y almuerzas una torta ahogada en Guadalajara.
+    voz: Desayunas en la Ciudad de México... y almuerzas una torta ahogada en Guadalajara.
+- Mientras, tu camión apenas va llegando a Querétaro.
+    voz: Mientras, tu camión apenas va llegando a Querétaro.
+
+== Parte 2 · Cuando tiembla
+- Parte 2: cuando tiembla.
+    voz: Parte dos: cuando tiembla.
+- Un tren bala en México tendría que aguantar sismos, igual que en Japón.
+    voz: Un tren bala en México tendría que aguantar sismos, igual que en Japón.
+- Por eso Japón puso sismógrafos junto a la vía y en la costa.
+    voz: Por eso Japón puso sismógrafos junto a la vía, y en la costa.
+- Cuando empieza un sismo, primero sale una onda rápida y débil: la onda P.
+    voz: Cuando empieza un sismo, primero sale una onda rápida y débil: la onda Pe.
+- Después llega la fuerte: la onda S, la que tira cosas.
+    voz: Después llega la fuerte: la onda Ese, la que tira cosas.
+- El sistema detecta la onda P en un segundo y corta la corriente.
+    voz: El sistema detecta la onda Pe en un segundo, y corta la corriente.
+- Sin corriente, el tren frena solo.
+    voz: Sin corriente, el tren frena solo.
+- En 2011, con el sismo más fuerte en la historia de Japón, cortó la corriente de 12 a 15 segundos antes del golpe fuerte.
+    voz: En dos mil once, con el sismo más fuerte en la historia de Japón, cortó la corriente de doce a quince segundos antes del golpe fuerte.
+- En esa línea iban 19 trenes en marcha. Ninguno se descarriló.
+    voz: En esa línea iban diecinueve trenes en marcha. Ninguno se descarriló.
+- Pero ojo: frenar no es inmediato.
+    voz: Pero ojo: frenar no es inmediato.
+- A 360 km/h, un tren de pruebas de Japón necesitó unos 4 km para detenerse.
+    voz: A trescientos sesenta kilómetros por hora, un tren de pruebas de Japón necesitó unos cuatro kilómetros para detenerse.
+- Y eso, abriendo unas aletas en el techo, como orejas de gato.
+    voz: Y eso, abriendo unas aletas en el techo, como orejas de gato.
+- En la CDMX, tu alerta sísmica te da unos 60 segundos si el sismo viene de la costa.
+    voz: En la Ciudad de México, tu alerta sísmica te da unos sesenta segundos si el sismo viene de la costa.
+- Al tren bala le basta uno para empezar a frenar.
+    voz: Al tren bala le basta uno para empezar a frenar.
+- ¿Y nunca se ha descarrilado? Sí. En 2004, un sismo sacó de la vía 8 de 10 vagones…
+    voz: ¿Y nunca se ha descarrilado? Sí. En dos mil cuatro, un sismo sacó de la vía ocho de diez vagones...
+- …con 154 personas a bordo. Nadie salió herido.
+    voz: con ciento cincuenta y cuatro personas a bordo. Nadie salió herido.
+- En 62 años, ningún pasajero ha muerto por un choque o un descarrilamiento del tren bala.
+    voz: En sesenta y dos años, ningún pasajero ha muerto por un choque o un descarrilamiento del tren bala.
+
+== Parte 3 · El secreto de los 300 km/h
+- Parte 3: el secreto de los 300 km/h.
+    voz: Parte tres: el secreto de los trescientos kilómetros por hora.
+- Para cruzar México a esa velocidad, la vía es la mitad del truco.
+    voz: Para cruzar México a esa velocidad, la vía es la mitad del truco.
+- Primero, las curvas. En las líneas nuevas de Japón, el radio mínimo es de 4 km.
+    voz: Primero, las curvas. En las líneas nuevas de Japón, el radio mínimo es de cuatro kilómetros.
+- Si cerraras esa curva en un círculo, daría una vuelta de 25 km.
+    voz: Si cerraras esa curva en un círculo, daría una vuelta de veinticinco kilómetros.
+- Así, a 300 por hora, la curva no te avienta contra la ventana.
+    voz: Así, a trescientos por hora, la curva no te avienta contra la ventana.
+- Segundo: los rieles van soldados. Casi no hay juntas… y casi no hay traca-traca.
+    voz: Segundo: los rieles van soldados. Casi no hay juntas... y casi no hay traca traca.
+- Tercero: no cruza ni una calle. Cero cruces con autos, con gente o con vacas.
+    voz: Tercero: no cruza ni una calle. Cero cruces con autos, con gente, o con vacas.
+- Cuarto: no quema diésel. La energía baja de un cable a 25 mil volts.
+    voz: Cuarto: no quema diésel. La energía baja de un cable a veinticinco mil volts.
+- Hasta la nariz larga tiene su razón: corta el aire y evita un trueno al entrar a los túneles.
+    voz: Hasta la nariz larga tiene su razón: corta el aire, y evita un trueno al entrar a los túneles.
+
+== Parte 4 · El tren que flota
+- Parte 4: el tren que flota.
+    voz: Parte cuatro: el tren que flota.
+- Y si México quisiera ir más rápido, hay un tren que no toca las vías.
+    voz: Y si México quisiera ir más rápido, hay un tren que no toca las vías.
+- Se llama maglev: levitación magnética.
+    voz: Se llama maglev: levitación magnética.
+- Sus imanes lo levantan y lo mantienen a cerca de 1 cm del riel.
+    voz: Sus imanes lo levantan, y lo mantienen a cerca de un centímetro del riel.
+- Y la vía misma es el motor: un campo magnético que corre y lo va jalando.
+    voz: Y la vía misma es el motor: un campo magnético que corre, y lo va jalando.
+- El de Shanghái lleva más de 20 años en servicio y hoy va a 300 km/h.
+    voz: El de Shanghái lleva más de veinte años en servicio, y hoy va a trescientos kilómetros por hora.
+- Más rápido que un avión comercial al despegar, que va a unos 250 a 290.
+    voz: Más rápido que un avión comercial al despegar, que va a unos doscientos cincuenta a doscientos noventa.
+- En pruebas, China ya pasó de los 600 km/h. Pero ninguno así está en servicio.
+    voz: En pruebas, China ya pasó de los seiscientos kilómetros por hora. Pero ninguno así está en servicio.
+- El problema: no puede usar ni un metro de vía normal. Todo se construye desde cero.
+    voz: El problema: no puede usar ni un metro de vía normal. Todo se construye desde cero.
+
+== Parte 5 · ¿Cuánto costaría?
+- Parte 5: ¿cuánto costaría?
+    voz: Parte cinco: ¿cuánto costaría?
+- Un tren bala a Guadalajara no tiene precio: nadie lo ha presupuestado.
+    voz: Un tren bala a Guadalajara no tiene precio: nadie lo ha presupuestado.
+- Pero hay una pista: el tren México–Querétaro.
+    voz: Pero hay una pista: el tren México Querétaro.
+- Son 232 km, y Hacienda calcula una inversión de más de 206 mil millones de pesos.
+    voz: Son doscientos treinta y dos kilómetros, y Hacienda calcula una inversión de más de doscientos seis mil millones de pesos.
+- Casi 900 millones de pesos por cada kilómetro.
+    voz: Casi novecientos millones de pesos por cada kilómetro.
+- Y ese ni siquiera es tren bala.
+    voz: Y ese ni siquiera es tren bala.
+- Uno de alta velocidad pide curvas enormes, túneles y puentes.
+    voz: Uno de alta velocidad pide curvas enormes, túneles y puentes.
+- Al precio del México–Querétaro, solo los 540 km a Guadalajara rondarían 480 mil millones de pesos.
+    voz: Al precio del México Querétaro, solo los quinientos cuarenta kilómetros a Guadalajara rondarían cuatrocientos ochenta mil millones de pesos.
+- ¿Y el boleto? Todavía no hay precio oficial.
+    voz: ¿Y el boleto? Todavía no hay precio oficial.
+
+== Parte 6 · Lo que México sí está construyendo
+- Parte 6: lo que México sí está construyendo.
+    voz: Parte seis: lo que México sí está construyendo.
+- Un tren bala no viene pronto… pero sí trenes rápidos.
+    voz: Un tren bala no viene pronto... pero sí trenes rápidos.
+- El México–Querétaro ya va en 32 % de avance.
+    voz: El México Querétaro ya va en treinta y dos por ciento de avance.
+- Saldrá de Buenavista, irá a unos 160 km/h y llegará a Querétaro en 1 hora y 40 minutos.
+    voz: Saldrá de Buenavista, irá a unos ciento sesenta kilómetros por hora, y llegará a Querétaro en una hora y cuarenta minutos.
+- Casi una hora menos que tu camión. Debe arrancar en 2027.
+    voz: Casi una hora menos que tu camión. Debe arrancar en dos mil veintisiete.
+- Y sigue: Querétaro–Irapuato ya está en obra, y el tramo a Guadalajara pondría su primera piedra en diciembre.
+    voz: Y sigue: Querétaro Irapuato ya está en obra, y el tramo a Guadalajara pondría su primera piedra en diciembre.
+- Jalisco calcula unas 4 horas de la CDMX a Guadalajara, hacia 2030.
+    voz: Jalisco calcula unas cuatro horas de la Ciudad de México a Guadalajara, hacia dos mil treinta.
+- No es tren bala… pero serían 3 horas menos que el camión.
+    voz: No es tren bala... pero serían tres horas menos que el camión.
+
+== Cierre (loop)
+- Curvas de kilómetros, rieles soldados y un tren que frena solo cuando tiembla: eso haría falta.
+    voz: Curvas de kilómetros, rieles soldados, y un tren que frena solo cuando tiembla: eso haría falta.
+- ¿Tú te subirías a un tren bala aquí? Sí o no, en los comentarios.
+    voz: ¿Tú te subirías a un tren bala aquí? Sí o no, en los comentarios.
+- Mándaselo a alguien que hace el viaje a Guadalajara en camión.
+    voz: Mándaselo a alguien que hace el viaje a Guadalajara en camión.
+- Porque cuando un tren bala ya te dejó en Guadalajara…
+    voz: Porque cuando un tren bala ya te dejó en Guadalajara...
+
+== Ganchos y cierres propios de los Shorts (narr_trenbala_out)
+- Tu alerta sísmica te da segundos… a un tren bala le basta uno.
+    voz: Tu alerta sísmica te da segundos... a un tren bala le basta uno.
+- Mándaselo a alguien que siempre corre cuando suena la alerta.
+    voz: Mándaselo a alguien que siempre corre cuando suena la alerta.
+- Porque tu alerta sísmica te da segundos…
+    voz: Porque tu alerta sísmica te da segundos...
+- Este tren no toca las vías: flota… y va más rápido que un avión al despegar.
+    voz: Este tren no toca las vías: flota... y va más rápido que un avión al despegar.
+- Mándaselo a alguien que cree que los trenes son lentos.
+    voz: Mándaselo a alguien que cree que los trenes son lentos.
+- Porque este tren no toca las vías…
+    voz: Porque este tren no toca las vías...
+
+
+FUENTES (verificadas el 18-nov-2026)
+- Autobús CDMX–Guadalajara ~7 h, 540 km (ETN): https://etn.com.mx/routes/cdmx-to-guadalajara.html
+- Auto CDMX–Guadalajara 541 km, 5 h 20 min sin paradas, 10 casetas (consulta SICT, 17-oct-2026): https://www.todosobreautos.com/mexico/calculadora-viaje/cdmx-guadalajara/
+- Autobús CDMX (Norte)–Querétaro 2.5 a 3 h (ETN): https://etn.com.mx/bus-travel/queretaro.html
+- Nozomi Tokio–Shin-Osaka 515.4 km en 2 h 21 min, 285 km/h (JR Central): https://global.jr-central.co.jp/en/company/about_shinkansen
+- «2 h 30 a Guadalajara»: ESTIMACIÓN propia a la velocidad media del Nozomi (515 km / 2 h 21 min ≈ 219 km/h; 540 km ≈ 2 h 28 min). Se dice «unas 2 horas y media» y en pantalla «ESTIMACIÓN».
+- UrEDAS (1992) y Compact UrEDAS: detecta la onda P ~1 s y corta la corriente (Nakamura, 14 WCEE 2008): https://iitk.ac.in/nicee/wcee/article/14_S05-03-007.PDF
+- 11-mar-2011: corte de corriente 12–15 s antes del golpe fuerte; ningún tren en servicio se descarriló (JR East, Annual Report 2011): https://www.jreast.co.jp/e/investor/ar/2011/pdf/ar_2011_08.pdf
+- 19 trenes en marcha en la línea Tohoku (27 en la línea) el 11-mar-2011 (JSCE, 2013): https://www.jstage.jst.go.jp/article/journalofjsce/1/1/1_322/_article/-char/ja/
+- FASTECH 360 de JR East: ~4 000 m para frenar desde 360 km/h con aletas de aire en el techo («orejas de gato»): https://www.jreast.co.jp/e/development/tech/pdf%5F12/Tec-12-12-15eng.pdf
+- SASMEX: unos 60 s de aviso en la CDMX para sismos lejanos de la costa (Eje Central, 17-feb-2024): https://www.ejecentral.com.mx/la-carrera-contra-el-tiempo-mitos-y-verdades-de-la-alerta-sismica
+- Toki 325, 23-oct-2004: 8 de 10 vagones descarrilados, 154 personas, ningún herido (JR East, Annual Report 2005): https://www.jreast.co.jp/e/investor/ar/2005/pdf/ar2005_17.pdf
+- 16-mar-2022 (Shiroishi, Miyagi): 16 de 17 vagones, 75 pasajeros, sin heridos (Japan Times): https://japantimes.co.jp/news/2022/03/18/national/tohoku-train-derailment-shinkansen
+- Cero pasajeros muertos por choque o descarrilamiento desde el 1-oct-1964 (Guinness): https://www.guinnessworldrecords.com/world-records/safest-high-speed-rail-network
+- Radio mínimo de curva 4 000 m (Sanyo y Tohoku; Tokaido 2 500 m), 25 kV CA (Taniguchi, 1992): https://escholarship.org/content/qt5s48m11f/qt5s48m11f.pdf · 2π×4 km ≈ 25 km (cálculo).
+- Vía exclusiva sin cruces a nivel: https://www.hsrail.org/?p=14984 · riel soldado continuo: https://ledicoferroviaire.mediarail.be/high-speed-line-in-japan-en/
+- Maglev de Shanghái: 300 km/h desde mayo de 2021, ~30 km en ~8 min: https://en.wikipedia.org/wiki/Shanghai_maglev_train
+- Transrapid: los imanes lo mantienen a ~10 mm del riel y la vía es el motor lineal: https://en.wikipedia.org/wiki/Transrapid
+- Despegue de un avión comercial ~250–290 km/h (737 ~130 kt, A320 ~150 kt): https://aerospaceweb.org/question/performance/q0088.shtml
+- Maglev chino de 600 km/h solo en pruebas (Yicai Global, jul-2025): https://www2.yicaiglobal.com/news/china-made-super-fast-maglev-train-debuts-at-modern-railways-2025-in-beijing
+- México–Querétaro: 232 km; inversión 206 785 millones de pesos según Hacienda (Publimetro, 6-abr-2026): https://www.publimetro.com.mx/queretaro/2026/04/06/vuelve-a-subir-costo-del-tren-mexico-queretaro/ · 206 785 / 232 ≈ 891 mdp por km; ×540 km ≈ 481 mil millones (CÁLCULO APROXIMADO).
+- México–Querétaro: 32 % de avance (Excélsior, 31-oct-2026): https://www.excelsior.com.mx/nacional/tren-mexico-queretaro-avance-32-por-ciento
+- 160 km/h de operación y 1 h 40 min (N+, 5-jul-2026): https://www.nmas.com.mx/movilidad/tren-mexico-queretaro-2027-que-ciudades-puedes-visitar-menos-2-horas-mapa-zonas-clave/ · arranque en 2027 (N+, 19-feb-2026): https://www.nmas.com.mx/nacional/politica/cuando-es-inauguracion-tren-cdmx-aifa-mexico-queretaro-sheinbaum-fechas-inicio-operacion/
+- Irapuato–Guadalajara: primera piedra planeada para diciembre de 2026 (Crónica Jalisco, 11-nov-2026): https://www.cronica.com.mx/jalisco/guadalajara/2026/11/11/colocaran-en-diciembre-primera-piedra-del-tren-irapuato-guadalajara/
+- ~4 h CDMX–Guadalajara hacia 2030 (estimación del gobierno de Jalisco; Publimetro, 12-nov-2026): https://www.publimetro.com.mx/jalisco/2026/11/12/tren-mexico-guadalajara-estaciones-en-jalisco-y-fecha-prevista/
+- Boleto México–Querétaro: sin tarifa oficial (solo estimaciones no definitivas).
+
+FOTOS (licencia libre, sin personas ni logos)
+- N700S en Kikugawa (Tokaido) · CC0 · MaedaAkihiko · https://commons.wikimedia.org/wiki/File:Tokaido-Shinkansen_N700S_Kikugawa.jpg
+- Maglev saliendo del aeropuerto de Pudong, Shanghái · Dominio público · Alex Needham · https://commons.wikimedia.org/wiki/File:A_maglev_train_coming_out,_Pudong_International_Airport,_Shanghai.jpg (se tapó el logotipo del frente)
+- E5 en Omiya · CC0 · Toshinori baba · https://commons.wikimedia.org/wiki/File:JRE-TEC-E5_omiya.JPG
