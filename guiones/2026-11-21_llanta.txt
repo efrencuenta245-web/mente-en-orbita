@@ -1,0 +1,42 @@
+Reel diario sáb 21-nov-2026 18:00 (propuesto) — «Tu llanta no está ponchada… tiene frío.»
+Serie: vehículos y comunidades · automovilistas (temporada de frentes fríos). Idea #2 de la cola de estrategia.md (19-nov).
+Voz: PLAN B (Chatterbox Multilingual, workflow voz_hq, referencia «ald», seed 24) porque el conector de ElevenLabs
+sigue pidiendo volver a iniciar sesión. Tiempos por palabra: reparto por letras (planb_words.py).
+Escenas: kit/nuevo/llanta.py. Inicio tipo 5 (número gigante): el contador baja a «−4 PSI», se clava con sacudida y se
+revela la llanta escarchada a las 7 am con «FRÍO» de cristal detrás.
+
+GUION (como se dice)
+Tu llanta no está ponchada... tiene frío.
+Mídela a las siete de la mañana y a las tres de la tarde: no marca lo mismo.
+Adentro, billones de billones de moléculas de aire chocan contra la llanta.
+Cada golpe empuja tantito, y todos juntos la sostienen: eso es la presión.
+Con frío se mueven más lento, pegan más suave... y la presión baja.
+Por cada cinco grados y medio menos, pierde más o menos una libra.
+Si ayer hizo veinticinco grados y amaneció a tres, son casi cuatro libras menos.
+Y aquí viene el error: inflarla con el número que trae la llanta.          (segundo gancho)
+Ese número es lo máximo que aguanta, no lo que pide tu carro.
+La presión correcta viene en una etiqueta, en la puerta del conductor.
+Y se mide en frío, antes de manejar, porque al rodar se calienta y marca de más.
+Baja, se gasta de las orillas, se calienta y te cobra más gasolina.
+Y el foquito del tablero a veces prende hasta que le falta una cuarta parte.
+Mándaselo a quien infla las llantas al ojo.
+Y si mañana amanece baja, acuérdate... no está ponchada.                    (loop → «tiene frío»)
+
+DATOS Y FUENTES (verificados el 19-nov-2026)
+- «Tire pressure decreases about 1 PSI for every 10-degree Fahrenheit drop in temperature» (AAA Club Alliance, 2-jun-2026,
+  cluballiance.aaa.com/the-extra-mile/advice/car/how-temperature-changes-affect-your-tire-pressure). 10 °F = 5.56 °C
+  → «cinco grados y medio». De 25 °C a 3 °C = 22 °C = 39.6 °F ≈ 4 psi («casi cuatro libras»; cifras de EJEMPLO).
+- «The sidewall lists the tire's maximum pressure, not the manufacturer's recommended pressure»; la recomendada está en la
+  etiqueta del marco de la puerta del conductor (AAA, misma página). El «44 PSI» y el «32 PSI» en pantalla son EJEMPLO.
+- Medir en frío: «when tires are 'cold,' meaning the vehicle hasn't been driven for at least three hours» (AAA).
+- Llanta baja: desgaste en las orillas de la banda, calor excesivo, más riesgo de reventón y peor rendimiento (AAA).
+  «Under-inflated tires can lower gas mileage by about 0.2% for every 1 psi drop in the average pressure of all tires»
+  (fueleconomy.gov/feg/maintain.jsp, Departamento de Energía de EE. UU.).
+- Testigo del tablero (TPMS): «typically doesn't alert you until a tire is already about 25 percent below the
+  recommended PSI» (AAA) → «a veces prende hasta que le falta una cuarta parte».
+- «Billones de billones»: una llanta de auto tiene del orden de 10^24 moléculas de aire (ley de los gases ideales:
+  ~0.03 m³ a ~3 atm y 20 °C ≈ 3.7 mol ≈ 2 × 10^24) = billones de billones en escala larga (10^12 × 10^12).
+- Contexto: frente frío 7 y masa de aire frío sobre casi todo México esta semana (N+ y SMN, citado en estrategia.md, 19-nov).
+
+FOTOS: no se usó foto real (en Wikimedia solo hubo manómetros con marca visible o licencias que no sirven). Todo es
+esquema sin marca («ESQUEMA» / «EJEMPLO»).

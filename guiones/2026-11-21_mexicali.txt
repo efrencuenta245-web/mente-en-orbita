@@ -1,0 +1,52 @@
+Reel diario sáb 21-nov-2026 10:00 (propuesto) — «Tu tráiler gringo… nació en Mexicali.»
+Serie: vehículos y comunidades · traileros. Idea #1 de la cola de estrategia.md (19-nov).
+Voz: PLAN B (Chatterbox Multilingual, workflow voz_hq, referencia «ald», seed 23) porque el conector de ElevenLabs
+sigue pidiendo volver a iniciar sesión (19-nov, 16:40). Tiempos por palabra: reparto por letras (planb_words.py).
+Escenas: kit/nuevo/mexicali.py. Inicio tipo 11 (pregunta directa): «¿TU TRÁILER / ES GRINGO?» gigante de cristal se
+rompe y deja ver el tractocamión con «MEXICALI» de cristal detrás.
+
+GUION (como se dice; cada línea es una línea de la voz; las frases de pantalla con cifras están en TXT de mexicali.py)
+Tu tráiler gringo... nació en Mexicali.
+Kenworth arma tractocamiones en Mexicali desde mil novecientos cincuenta y nueve.
+Ya salieron más de cuatrocientos mil, y algunos se van a Estados Unidos.
+Y su motor guarda un secreto: no tiene bujías de chispa.
+Uno de gasolina aprieta la mezcla y la prende con una chispa.
+El diésel solo aprieta aire, unas veinte veces, y lo calienta a más de quinientos grados.
+Ahí le inyectan el diésel... y se enciende solito.
+Pero hay un error que mata al turbo... y casi todos lo cometen.        (segundo gancho)
+Llegas de una subida con carga y lo apagas de volada.
+El turbo venía girando a más de cien mil vueltas por minuto, hirviendo.
+Al apagar, el aceite deja de correr y se cocina en los baleros.
+Déjalo en marcha mínima de uno a tres minutos, y el aceite lo enfría.
+Ese ratito sale mucho más barato que un turbo nuevo.
+Mándaselo a tu compa trailero que apaga en cuanto llega.
+Y la próxima vez que oigas ese motor... acuérdate de Mexicali.        (loop → «¿Tu tráiler es gringo?»)
+
+DATOS Y FUENTES (verificados el 19-nov-2026)
+- Planta de Mexicali fundada en 1959 (ampliada en 1970): El Financiero, 21-nov-2025
+  (elfinanciero.com.mx/transporte-y-movilidad/2025/11/21/kenworth-mexicana-recibe-certificacion-hecho-en-mexico-y-consolida-su-liderazgo-manufacturero/);
+  Cluster Industrial, 25-nov-2025 (clusterindustrial.com.mx/kenworth-fortalece-su-liderazgo-al-obtener-la-certificacion-hecho-en-mexico/);
+  El Imparcial, 30-sep-2025 («establecida en Mexicali desde 1959»); SlashGear, 15-jun-2025 (slashgear.com/1883505/kenworth-trucks-who-owns-where-made/).
+- «Unidad número 400,000» producida en julio de 2025; más de 3 000 trabajadores directos (El Financiero; Cluster Industrial).
+- «Cerca del 20 %» de su producción va al mercado de EE. UU. (El Imparcial, 30-sep-2025,
+  elimparcial.com/mxl/mexicali/2025/09/30/arancel-del-25-a-camiones-amenaza-con-sacudir-la-planta-de-kenworth-en-mexicali/).
+  La planta también arma Peterbilt (SlashGear).
+- Diésel: relación de compresión típica de 14:1 a 22:1; el aire comprimido pasa de 526 °C; la combustión empieza por el
+  aire caliente, no por una chispa eléctrica (Britannica, britannica.com/technology/diesel-engine). Jalopnik
+  (jalopnik.com/1932457/why-diesel-engines-dont-have-spark-plugs/, 9-ago-2025): 14:1 a 25:1; usa bujías de
+  precalentamiento (glow plugs) solo para arrancar en frío → por eso el guion dice «bujías de CHISPA».
+  «Unas veinte veces» = dentro del rango 14–22.
+- Turbo: los modernos pasan de 100 000 rpm (Diesel Hub, dieselhub.com/tech/warm-up-cool-down.html). Si se apaga caliente,
+  el aceite atrapado en el balero se «cocina» (oxida y deja depósitos) (Chevron vía Truck Parts & Service,
+  truckpartsandservice.com/maintenance/service-and-repair/article/14980242/; SlashGear, 10-oct-2026,
+  slashgear.com/2273699/how-long-to-idle-turbocharged-engine/). Marcha mínima antes de apagar: 1 a 3 min después de
+  remolcar o cargar (Diesel Hub; Chevron: «from 1 to 3 minutes»).
+- «Casi todos lo cometen» y «sale más barato que un turbo nuevo»: frases de enganche sin cifra (no se da precio).
+
+FOTOS (dominio público, NASA; sin personas ni logos)
+- kit/nuevo/img/mexicali/mxl_i_iss.jpg — «Mexicali, Baja California (153234).jpg», Wikimedia Commons. Astronaut photograph
+  ISS071-E-131092 (25-may-2024), ISS Crew Earth Observations / NASA JSC. Dominio público. Se ve la frontera con los campos
+  de EE. UU. Crédito en pantalla: «FOTO: NASA · ESTACIÓN ESPACIAL · 2024».
+- kit/nuevo/img/mexicali/mxl_i_turbo.jpg — «Turbocharger.jpg», Wikimedia Commons, Quentin Schwinn (NASA Glenn Research
+  Center, C-2003-1451). Dominio público. Turbo en corte. Crédito: «FOTO: NASA GLENN · TURBO EN CORTE».
+- El tractocamión, el cilindro, la bujía y el turbo animados son esquemas sin marca («RECREACIÓN» / «ESQUEMA»).
