@@ -1,0 +1,32 @@
+REEL DIARIO · dom 22-nov-2026 10:00 (propuesto) · «Tu scooter no es juguete… ya es moto.»
+Serie: vehículos y comunidades mexicanas por dentro · comunidad: scooters y repartidores · inicio 6 (pantalla dividida que choca)
+Voz: plan B (Chatterbox, workflow voz_hq): el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (voz)
+Tu scooter no es juguete... ya es moto.
+En la Ciudad de México, el que pasa de veinticinco kilómetros por hora ya necesita placa.
+¿Y quién lo empuja? En una bici, tu pierna jala la cadena.
+En el scooter no hay cadena: el motor va escondido dentro de la rueda.
+Las bobinas van fijas en el eje, y los imanes giran pegados a la llanta.
+Un controlador prende las bobinas una por una, y los imanes las persiguen sin parar.
+Y un chip decide hasta dónde te deja correr: eso es el limitador.
+Y aquí viene el error: quitarle el limitador para que corra más.            ← segundo gancho
+De veinticinco a treinta y cinco, la energía del golpe casi se duplica.
+Y para frenar necesitas casi el doble de distancia, con los mismos frenitos.
+Además, si pasa de veinticinco o su motor es de doscientos cincuenta watts o más, ya es otro vehículo.
+Lleva placa, tarjeta de circulación y licencia tipo A, como una moto.
+Sin papeles, te toca multa y hasta corralón.
+Mándaselo a tu compa que anda en scooter sin placa.                          ← cierre (penúltima frase)
+Porque si ya le quitó el limitador... su scooter no es juguete.             ← loop
+
+DATOS Y FUENTES (verificados el 20-nov-2026)
+- CDMX: Vehículo Eléctrico Personal = no pasa de 25 km/h, motor de menos de 250 W y menos de 35 kg (sin placa ni licencia; con holograma de la Semovi). VEMEPE = pasa de 25 km/h, motor de hasta 1 000 W o de 35 a 350 kg: placas, tarjeta de circulación y licencia tipo A1 (motos y VEMEPE) o A2 (auto y moto).
+  POSTA, 16-jul-2026: https://www.posta.com.mx/cdmx/manejas-scooters-o-bici-electrica-en-cdmx-tramita-esta-licencia-para-evitar-el-corralon/vl2232555
+- El plazo original vencía el 20-nov-2026; la Semovi lo amplió «hasta nuevo aviso». Multa de 10 a 20 UMA (≈ 1 173 a 2 346 pesos) y posible corralón (la voz NO dice fechas ni montos porque cambian).
+  Grupo Animal, 17-nov-2026: https://grupoanimal.mx/estados/semovi-prorroga-registrar-scooters-bicicletas-electricas-cdmx
+  (Proceso, 17-nov-2026, citada en estrategia.md: https://www.proceso.com.mx/nacional/cdmx/2026/11/17/amplian-el-plazo-para-registrar-scooters-monopatines-y-bicis-electricas-en-cdmx-383906.html)
+- Motor de buje: motor sin escobillas (BLDC) metido en el cubo de la rueda; bobinas que crean el campo e imanes permanentes en el rotor que gira con la rueda; sin engranes, cadena ni banda.
+  Levy Electric: https://www.levyelectric.com/resources/understanding-the-mechanics-of-electric-scooter-hub-motors
+- Física (cálculo propio): energía cinética ½·m·v² → (35/25)² = 1.96 (≈ ×2). Con la misma desaceleración (mismos frenos), distancia de frenado d = v²/2a → también ≈ ×2. En pantalla: «EJEMPLO · d = v² ÷ 2a».
+
+FOTOS: ninguna en esta corrida (Wikimedia Commons no se pudo consultar desde aquí para revisar licencias). El scooter, el motor en corte, el chip, la placa, la tarjeta y la licencia son esquemas sin marca marcados EJEMPLO/ESQUEMA.
