@@ -1,0 +1,33 @@
+REEL DIARIO · lun 23-nov-2026 18:00 (propuesto) · «Tu tractor trae las llantas… llenas de agua.»
+Serie: vehículos y comunidades mexicanas por dentro · comunidad: rancheros y campo · inicio 1 (caída desde el espacio)
+Voz: plan B (Chatterbox, workflow voz_hq): el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (voz)
+Tu tractor trae las llantas... llenas de agua.
+No es una fuga: a muchos tractores les meten agua a propósito en las llantas de atrás.
+En una llanta grande caben más de quinientos litros: más de media tonelada en cada una.
+Mira la prueba: el mismo tractor jalando el arado con puro aire... patina y se entierra.
+Con agua, ese peso aprieta la llanta contra la tierra, y agarra.
+Y en la ladera, el peso va abajo, pegado al suelo: así es más difícil que se voltee.
+Por dentro, la válvula se pone arriba, a las doce, y se llena hasta ahí: tres cuartas partes.
+Y aquí está el error: llenarla hasta el tope.                                  ← segundo gancho
+Sin aire, la llanta se pone dura como piedra: no amortigua, rebota y castiga la llanta, el rin y el eje.
+Ese aire de arriba es el colchón.
+Y donde hiela, el agua sola se congela, crece y puede botar la llanta del rin.
+Por eso le echan anticongelante o cloruro de calcio... aunque el cloruro oxida el rin si no lo cuidas.
+Es física de rancho: más peso abajo, más agarre y menos vuelcos.
+Mándaselo a tu compa del rancho que jura que las llantas del tractor van con puro aire.   ← cierre (penúltima frase)
+Y dile que no... van llenas de agua.                                           ← loop
+
+DATOS Y FUENTES (verificados el 21-nov-2026)
+- Trelleborg, «Liquid ballasting» (guía técnica): «Maximum permitted filling volume is 75% of the total tire volume» (50 % en forestales); el líquido vuelve la llanta «more rigid and less flexible», sube la resistencia a la rodadura y el riesgo de daño «to tires, rims and axles»; «Check tire pressure frequently as the quantity of air remaining in the tire is low». Con riesgo de helada: agua + cloruro de calcio, glicol etilénico o alcohol (en llanta con cámara) o agua + glicol (sin cámara); el cloruro de calcio es corrosivo (lavar las piezas metálicas). Tabla: 710/60R34 al 75 % = 150 gal ≈ 568 L de solución, masa ≈ 644 kg (hasta −20 °C).
+  https://www.trelleborg-tires.com/-/media/wheels-us/technical-info-us/trelleborgliquidballastingusa.pdf?rev=-1
+  (Por eso la voz dice «en una llanta grande caben más de quinientos litros: más de media tonelada en cada una».)
+- Countryside, «Ballast: The Tractor Tire Fluids Rundown» (act. 13-nov-2025): los líquidos sirven para «add traction weight, counterbalance and to lower their center of gravity to reduce the possibility of tipping»; «fill to the industry standard of 75%, place the stem at 12 o'clock and fill to the stem»; el agua sola «freezes» y «when ice expands it can push the tire off the rim»; el cloruro de calcio es «notorious for rusting wheels».
+  https://www.iamcountryside.com/tractors-farm-equipment/tractor-tire-fluids-rundown/
+- SAE J884, tabla de lastre líquido para llantas motrices de tractores agrícolas: https://saemobilus.sae.org/standards/j884_199103-liquid-ballast-table-drive-tires-agricultural-tractors
+
+FOTOS (dominio público, NASA)
+- Campos de riego (pivotes circulares y parcelas) de Nuevo Casas Grandes, Chihuahua, desde la Estación Espacial: fotografía de astronauta ISS062-E-151785 (16-abr-2020), ISS Crew Earth Observations Facility / Earth Science and Remote Sensing Unit, NASA Johnson Space Center. NASA Earth Observatory, «Agriculture in Mexico's Chihuahuan Desert» (6-nov-2022): https://science.nasa.gov/earth/earth-observatory/agriculture-in-mexicos-chihuahuan-desert-150563/
+  Archivo: https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/150000/150563/ISS062-E-151785_lrg.jpg (recortes sin letreros en kit/nuevo/img/tractor/). Crédito en pantalla: «FOTO: NASA · ESTACIÓN ESPACIAL · CHIHUAHUA, 2020». Sin personas ni logos.
+- El tractor es un esquema sin marca (rojo, sin logos).

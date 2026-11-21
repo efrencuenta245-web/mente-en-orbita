@@ -1,0 +1,32 @@
+REEL DIARIO · lun 23-nov-2026 10:00 (propuesto) · «Tu carro no es… de donde crees.»
+Serie: vehículos y comunidades mexicanas por dentro · comunidad: automovilistas y compradores de usados · inicio 4 (barra de búsqueda)
+Voz: plan B (Chatterbox, workflow voz_hq): el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (voz)
+Tu carro no es... de donde crees.
+Abre la puerta del conductor: en el marco hay una etiqueta con diecisiete letras y números.
+Es el NIV, y casi siempre también está en el tablero, junto al parabrisas.
+El primer carácter dice en qué país se armó tu carro.
+Si empieza con tres, nació en México; con uno, cuatro o cinco, en Estados Unidos; con jota, en Japón.
+Dos carros de la misma marca pueden venir de países distintos: solo cambia ese primer carácter.
+El décimo es el año modelo, y el noveno es un candado: una cuenta matemática con los otros dieciséis.
+Y aquí está el error: comprar un carro usado sin revisar ese número.          ← segundo gancho
+Si alguien lo inventa o lo cambia, la cuenta del noveno casi nunca cuadra.
+Antes de pagar, el número del tablero, el de la puerta y el de la factura tienen que ser idénticos.
+Y en la página del REPUVE lo consultas gratis: te dice si tiene reporte de robo.
+Ah, y nunca vas a ver una I, una O ni una Q: así nadie las confunde con uno y cero.
+Mándaselo a tu compa que va a comprar carro usado.                             ← cierre (penúltima frase)
+Y que antes cheque de dónde es... porque tu carro no es de donde crees.       ← loop
+
+DATOS Y FUENTES (verificados el 21-nov-2026)
+- El primer carácter del VIN indica el país donde se fabricó: 1, 4 o 5 = Estados Unidos; 2 = Canadá; 3A–3W = México; J = Japón; KL–KR = Corea del Sur; L = China; 9A–9E y 93–99 = Brasil. Motorpasión México (15-jul-2020): https://www.motorpasion.com.mx/industria/como-saber-que-pais-se-fabrico-mi-auto
+  (Por eso la voz dice «si empieza con tres»: casi todo el bloque 3 es México; no se mencionan Corea ni Brasil para no dar códigos de 2 letras.)
+- NOM-001-SSP-2008 (NIV en México): 17 caracteres, letras A–Z excepto I, O y Q, y números; dígito verificador en la posición 9; año modelo en la posición 10; el NIV va en un lugar visible y otro oculto. Resumen: https://www.normasoficiales.mx/nom/nom-001-ssp-2008 · texto oficial: https://dof.gob.mx/normasOficiales/3939/SSP/SSP.htm
+- Dónde está: «generalmente sobre el tablero o en el marco de la puerta del conductor»; antes de 1998 se llamaba «serie». La consulta del REPUVE es gratuita con placa, NIV o NCI. Expansión Política (5-jun-2025): https://politica.expansion.mx/mexico/2025/06/05/guia-para-saber-si-un-auto-tiene-reporte-de-robo
+- REPUVE, consulta ciudadana: gratuita; se captura el NIV, las placas o el folio de la constancia; muestra la situación legal, «incluido si tiene o no reporte de robo», y si está vinculado a algún proceso judicial. Uno TV (21-ago-2026): https://www.unotv.com/autos-y-vehiculos/vas-a-comprar-un-auto-usado-revisa-gratis-si-tiene-reporte-de-robo-antes-de-pagar/
+- Dígito verificador (cómo se calcula, para la animación): cada letra se cambia por un número (A=1 … H=8, J=1 … N=5, P=7, R=9, S=2 … Z=9), se multiplica por su peso (8 7 6 5 4 3 2 10 · 9 8 7 6 5 4 3 2; la posición 9 pesa 0) y la suma se divide entre 11: lo que sobra es el dígito (10 = X). Es el método de la norma de EE. UU. 49 CFR 565 que comparte la NOM.
+  «Casi nunca cuadra»: si alguien cambia un carácter al azar, la cuenta solo coincide por casualidad ~1 de cada 11 veces.
+- El NIV de la animación (3XYAB12C2SM004217 y JXYAB12C6SJ004217) es un EJEMPLO inventado, con su dígito verificador bien calculado; el carro es un sedán sin marca. «S» = año modelo 2025.
+
+FOTOS
+- Ninguna foto real (no hay foto libre de un NIV que no muestre un número real); todo es animación con la etiqueta «EJEMPLO».
