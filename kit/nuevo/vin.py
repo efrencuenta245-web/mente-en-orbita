@@ -196,12 +196,12 @@ def carro(col=VINO, puerta=0.0, sticker=1.0, giro=0.0):
 
 def vin_tira(img, fx, cx, cy, vin, size, k=1.0, marcas=None, glitch=0.0, t=0.0, apagar=0.0, sep=1.0):
     """Los 17 caracteres en cajitas (monoespaciada). marcas = {índice: color} resalta cajas; apagar baja los demás."""
-    if k <= 0.01:
-        return []
-    d, df = ImageDraw.Draw(img), ImageDraw.Draw(fx)
-    f = M.font('mono', size)
     cw = size * 0.78 * sep
     x0 = cx - cw * 17 / 2
+    if k <= 0.01:
+        return [(x0 + cw * (i + 0.5), cy) for i in range(17)]
+    d, df = ImageDraw.Draw(img), ImageDraw.Draw(fx)
+    f = M.font('mono', size)
     marcas = marcas or {}
     rng = np.random.RandomState(int(t * 20))
     pos = []
