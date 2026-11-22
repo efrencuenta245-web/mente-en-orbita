@@ -1,0 +1,46 @@
+REEL DIARIO · mar 24-nov-2026 18:00 (propuesto) · «Tu velocímetro… te miente.»
+Serie: vehículos por dentro · comunidad: automovilistas (cualquiera que maneja y trae GPS en el celular) · inicio 8 (error en pantalla)
+Voz: plan B (Chatterbox, workflow voz_hq): el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (voz)
+Tu velocímetro... te miente.                                                                ← gancho
+Pon el GPS del celular junto a la aguja: el carro dice cien y el GPS, noventa y seis.      ← prueba con el celular
+No está descompuesto: lo hicieron así a propósito.
+Una regla de la ONU, la número treinta y nueve, dice que nunca puede marcar menos de lo que vas.
+Pero sí puede marcar de más: hasta el diez por ciento, más cuatro kilómetros por hora.
+A cien de verdad, la aguja puede decir hasta ciento catorce y sigue siendo legal.
+Y aquí está el error: ponerle rines y llantas más grandes sin recalibrarlo.                 ← segundo gancho (~27-29 s)
+El velocímetro no ve el piso: cuenta las vueltas de la llanta y supone su tamaño.           ← zoom: tablero → llanta → sensor
+Si la llanta es más grande, cada vuelta avanza más... y tú vas más rápido de lo que dice la aguja.   ← caso 1 contra caso 2
+Con una llanta tres por ciento más grande, la aguja dice cien y tú vas a ciento tres.
+Y el odómetro se queda corto: cuenta menos kilómetros de los que ya hiciste.
+¿Y el GPS? Mide tu posición con satélites, y en una recta es el más exacto.
+Mándaselo a quien jura que su velocímetro es exacto.                                         ← cierre (penúltima frase)
+Y que cheque el GPS... porque tu velocímetro te miente.                                     ← loop
+
+DATOS Y FUENTES (verificados el 22-nov-2026)
+- Reglamento n.º 39 de la CEPE/ONU (velocímetros), punto 5.3: «The speed indicated shall not be less than the true speed
+  of the vehicle»; entre la velocidad indicada V1 y la real V2: 0 ≤ (V1 − V2) ≤ 0,1 V2 + 4 km/h.
+  A 100 km/h reales: hasta 100 × 0.1 + 4 = 14 → la aguja puede marcar hasta 114 y cumple.
+  EUR-Lex, Reglamento n.º 39 (Rev. 1, DO L 120 del 13-may-2010): https://eur-lex.europa.eu/eli/reg/2010/39(2)/oj/eng
+  (Para la conformidad de la producción el anexo 3 da un margen un poco mayor (+6 km/h en autos); la voz usa el del punto 5.3.)
+- Ejemplo real 100 contra 95-97: «el velocímetro marca 100 km/h y el GPS suele marcar entre 95 y 97 km/h», es «una
+  diferencia intencional»; en varios mercados no puede marcar menos de la velocidad real y puede marcar más dentro de un
+  margen «generalmente del 10 % + 4 km/h»; la velocidad se calcula con las vueltas de la rueda, el diámetro de la llanta y la
+  relación de la transmisión. Motorpasión México (7-ago-2026):
+  https://www.motorpasion.com.mx/industria/velocimetro-tu-carro-nunca-marca-su-velocidad-real-hay-motivo-detras-forma-saber-dato-verdadero
+- Prueba de más de 1 000 autos: el velocímetro marca en promedio 4-5 % de más (100 en el tablero ≈ 95 en GPS); estudio de
+  la Universidad de Málaga: el 100 % de más de 100 autos marcaba de más. Diariomotor, «Error del velocímetro»:
+  https://www.diariomotor.com/que-es/error-velocimetro/
+- Llantas más grandes: el velocímetro supone el diámetro de fábrica; con un diámetro 3 % mayor, cada vuelta avanza 3 % más
+  (circunferencia = π × diámetro): la aguja marca 100 y vas a ~103; el odómetro cuenta ~3 % menos kilómetros. Diariomotor
+  cita que en España el diámetro solo puede cambiar 3 % sin homologar y que si cambia sin recalibrar «la velocidad será
+  errónea» (misma fuente).
+- GPS: calcula la velocidad con el cambio de tu posición medida con satélites; en recta y con buena señal es más exacto que
+  el tablero (Motorpasión México y Diariomotor; en curvas, túneles o entre edificios pierde precisión, por eso la voz dice
+  «en una recta»).
+- En pantalla: «EJEMPLO» en los números del celular y del odómetro; «ESQUEMA» en la llanta y el sensor; el documento del
+  reglamento es una ilustración con el texto traducido (sin logos).
+
+FOTOS
+- Ninguna foto real: tablero, celular, carro (sedán sin marca) y llantas son modelos y line-art marcados «ESQUEMA»/«EJEMPLO».

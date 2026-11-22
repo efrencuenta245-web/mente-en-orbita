@@ -1,0 +1,58 @@
+REEL DIARIO · mar 24-nov-2026 10:00 (propuesto) · «Tu razer no tiene velocidades… tiene una banda.»
+Serie: vehículos y comunidades mexicanas por dentro · comunidad: riders (side by side) · inicio 7 (macro extremo)
+Voz: plan B (Chatterbox, workflow voz_hq): el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (voz)
+Tu razer no tiene velocidades... tiene una banda.                                          ← gancho
+Una bici de cambios brinca de engrane en engrane; tu razer nunca brinca.                   ← prueba, caso 1 contra caso 2
+Junto al motor hay una tapa: adentro, dos poleas en forma de cono y una banda.             ← zoom: razer → tapa → poleas
+Al arrancar, la banda va abajo en la polea del motor y arriba en la de las llantas: es tu primera.
+Aceleras, unas pesas aprietan la polea y la banda sube sola, como rampa y no como escalera.
+Y aquí está el error: andar en alta en el lodo, en la arena o subiendo despacio.            ← segundo gancho (~25-28 s)
+A vuelta de rueda, la banda patina contra el metal, se calienta y se quema.
+El manual de Polaris lo dice: atascado, con remolque o subiéndolo a la troca, siempre en baja.
+En baja, el motor da más vueltas por cada vuelta de llanta y la banda ya no patina.
+De cerca, la banda tiene dientes para doblarse; el calor la deja lisa como vidrio.          ← zoom a la pieza más pequeña
+Si cruzas un charco hondo, el agua se mete a la caja y la banda patina hasta que la secas.
+Honda, en cambio, no le puso banda al Talon: usa doble embrague, como un carro de cambios.
+Mándaselo a tu compa que ya quemó la banda en la duna.                                     ← cierre (penúltima frase)
+Y que la meta en baja... porque su razer no tiene velocidades: tiene una banda.            ← loop
+
+DATOS Y FUENTES (verificados el 22-nov-2026)
+- CVT = transmisión continuamente variable: «a pulley system to move seamlessly through an endless ratio of gears»; cada
+  polea es un sistema de conos unidos por una banda; los conos cambian de tamaño, cambia el diámetro donde va la banda y
+  con eso la relación. Es «by far the most common transmission type in UTVs today»: la usan Polaris (RZR y General),
+  Can-Am Maverick (X3), Kawasaki Teryx, Yamaha Wolverine y CFMOTO ZForce. La banda es «basically a consumable item».
+  SuperATV, Off-Road Atlas, «DCT vs. CVT» (7-feb-2024, act. 22-may-2025): https://www.superatv.com/offroad-atlas/dct-vs-cvt
+  (Ojo: el Can-Am Maverick R nuevo ya usa doble embrague; por eso la voz no dice que «todos» tienen banda.)
+- Manual del dueño de Polaris, tabla «Drive Belt Wear/Burn» (causas de banda quemada y solución):
+  · «Driving onto a pickup or tall trailer in high range» → «Use low range during loading.»
+  · «Starting out going up a steep incline» → «Use low range.»
+  · «Driving at low RPM or ground speed – 3–7 mph (4.8–11.3 kph)» → «Drive at a higher speed or use low range more frequently.»
+  · «Towing/pushing at low RPM/low ground speed» → «Use low range only.»
+  · «Stuck in mud or snow» → «Shift the transmission to low range…»
+  · «Belt slippage from water or snow ingestion into the PVT system» → «Dry out the PVT. Prevent water from entering the PVT intake duct.»
+  · Con frío: calentar el motor al menos 5 minutos; «The belt will become more flexible and prevent belt burning.»
+  https://publications.polaris.com/owner/owners-manuals/0000867967.xml/$/0000346592
+  (La voz dice «subiéndolo a la troca» = subirlo a la caja de una pickup o a un remolque alto; «a vuelta de rueda» = 5 a 11 km/h.)
+- Honda Talon: «Dual-Clutch Transmission (DCT)… two different clutches: one for odd-numbered gears and another for
+  even-numbered gears… In contrast to a belt-driven continuously variable transmission (CVT) commonly found in other SxS
+  vehicles». Honda Powersports, «The Talon advantage» (act. 20-mar-2025):
+  https://powersports.honda.com/articles/tech-corner/honda-talon-sxs-tech
+- Cómo cambia la relación (para la animación): en la polea del motor unas pesas centrífugas salen con las vueltas y empujan
+  la cara móvil; la polea se cierra, la banda sube, y en la polea de las llantas baja (se abre contra su resorte). Al
+  arrancar es al revés (banda abajo en la del motor y arriba en la de las llantas = relación corta, «primera»).
+- Dientes de la banda: las bandas de CVT son dentadas por dentro para doblarse alrededor de la polea y disipar calor;
+  cuando patina se calienta y la cara se pone lisa y brillosa («cristalizada»). La pieza de repuesto de Mercado Libre para
+  Maverick X3 anuncia «improve heat-dissipation for cooler belt operation»:
+  https://www.mercadolibre.com.mx/clutch-drive-belt-for-can-am-maverick-x3-r-4x4-max-turbo-dps/p/MLM2002624580
+- «En baja el motor da más vueltas por cada vuelta de llanta»: la baja es una reducción extra en la caja; a la misma
+  velocidad el motor gira más rápido, el embrague aprieta la banda de lleno y deja de patinar (lo que pide el manual).
+- En pantalla: «ESQUEMA» en las poleas y la banda 3D (tamaños ilustrativos); «EJEMPLO» en los contadores de vueltas;
+  «MANUAL DE POLARIS · TRADUCCIÓN» en la hoja que cae.
+
+FOTOS (Wikimedia Commons; sin personas ni logos de agencia; ya en el repo desde el reel del 9-nov)
+- Polaris RZR (azul y negro): «24 Polaris RZR Turbo R Sport.jpg» y «23 Polaris RZR Turbo R Sport.jpg» · HJUdall · CC0.
+- Can-Am Maverick (de lado): «Can-Am Maverick Seite.JPG» · KarleHorn · CC BY 3.0.
+CRÉDITOS PARA LA DESCRIPCIÓN: Fotos: HJUdall (CC0) y KarleHorn (CC BY 3.0) vía Wikimedia Commons. Polaris, RZR, Can-Am,
+Maverick, Honda y Talon son marcas de sus dueños; el video no está patrocinado.
