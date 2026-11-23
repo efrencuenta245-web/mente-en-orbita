@@ -1,0 +1,58 @@
+REEL DIARIO · mié 25-nov-2026 18:00 (propuesto) — «Tu tráiler no es el tráiler… es el que lo jala.»
+Producido el 23-nov-2026 (tarea de las 4:35 pm). Comunidad: traileros y automovilistas. Serie: Respuestas.
+Palanca: corregir la palabra de la comunidad (como el razer). Inicio tipo 11 (pregunta directa): «¿LE DICES TRÁILER?» gigante
+sobre el tractocamión completo; se rompe en pedazos, la caja se suelta y se va para atrás («CAJA» de cristal detrás) y el título
+se estrella. El final («…su tráiler no es el tráiler: es el que lo jala») regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu tráiler no es el tráiler... es el que lo jala.
+2. Tráiler, en inglés, es la caja; lo que manejas es el tractocamión: el tracto.
+3. La norma mexicana le dice semirremolque: no tiene eje adelante y se recarga en el tracto.
+4. Se engancha en la quinta rueda: un plato con grasa donde se traba el perno rey de la caja.
+5. Ahí se apoya y gira, como una carretilla: el tracto carga parte del peso y por eso sus llantas agarran.
+6. Pero en la vuelta, las llantas de la caja no siguen al tracto: cortan la curva por dentro.
+7. Y aquí está el error: meterte por la derecha cuando el tráiler da vuelta.     ← segundo gancho (~28 s)
+8. El trailero abre hacia la izquierda para librar la esquina, y ese hueco parece libre.
+9. Si te metes, la caja se cierra sobre ti, y ahí casi no te ve.
+10. Regla de oro: si no ves su cara en el espejo, él tampoco te ve a ti.
+11. Con la direccional prendida, nunca te metas entre el tráiler y la banqueta.
+12. Y entre más larga la caja, más corta la curva: un tracto con caja mide hasta veintitrés metros.
+13. Y un full, con dos cajas, hasta treinta y uno: como un edificio de diez pisos acostado.
+14. Mándaselo a quien se mete por la derecha cuando el tráiler da vuelta.       ← «mándaselo» solo en la penúltima frase
+15. Y que se acuerde: su tráiler no es el tráiler... es el que lo jala.   (loop)
+
+DATOS VERIFICADOS (23-nov-2026)
+- NOM-012-SCT-2-2017 (DOF 26-dic-2017): 4.35 Tractocamión «Vehículo automotor destinado a soportar y arrastrar
+  semirremolques»; 4.28 Semirremolque «Vehículo sin eje delantero, destinado a ser acoplado a un tractocamión de manera que sea
+  jalado y parte de su peso sea soportado por éste»; 4.36 tractocamión articulado (T-S) = tractocamión + semirremolque;
+  4.37 doblemente articulado (T-S-R, «full») = tractocamión + semirremolque + remolque; 4.12 convertidor (dolly).
+  Largo máximo en caminos ET/A: T3-S2 23.0 m y T3-S2-R4 31.0 m (tabla de largos de la norma).
+  https://dof.gob.mx/nota_detalle_popup.php?codigo=5508944
+  https://platiica.economia.gob.mx/wp-content/uploads/sites/2/PDF_Normas_Publicas/012-SCT-2-2017.pdf
+  (31 m ≈ 10 pisos de ~3.1 m.)
+- «Trailer» en inglés = remolque (la caja jalada); en México «tráiler» se usa para todo el tractocamión.
+- Quinta rueda (fifth wheel) = plato de acoplamiento engrasado del tracto; el perno rey (kingpin) de la caja entra a su ranura
+  y lo traban las quijadas. Foto real del perno rey abajo.
+- FMCSA, «Tips for Driving Safely Around Large Trucks or Buses»: «Buses and trucks require extra turning room – they swing
+  wide, or may even initiate a turn from a middle lane»; «If a truck or bus has its turn signal on, never try to squeeze by it
+  or get between the vehicle and the curb»; «Large trucks and buses have huge blind spots… around the front, back and sides»;
+  «If you can't see the driver in the truck's side mirror, assume that the driver can't see you.»
+  https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/docs/ourroads/80251/driving-safely-around-cmvs.pdf
+  https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/docs/Tips%20for%20Driving%20Safely%20Around%20Large%20Trucks%20and%20Buses_10-10-16.pdf
+- La caja corta la curva por dentro (off-tracking) y corta más entre más larga: la animación es un esquema con la cinemática de
+  un remolque (rumbo de la caja: dθ/ds = sen(φ − θ) / L).
+
+FOTOS
+- kit/nuevo/img/caja/caja_kingpin.jpg — «Kingpin.jpg», Wikimedia Commons, autor Sterkebak, licencia CC BY 3.0
+  (https://commons.wikimedia.org/wiki/File:Kingpin.jpg). Recortada para dejar solo el perno rey (sin la marca de la caja).
+  Crédito en pantalla: «PERNO REY · FOTO: STERKEBAK · CC BY 3.0». Va también en la descripción del post.
+- Tractocamión, caja, carro, espejo y calle son esquemas sin marca («ESQUEMA»).
+
+TEXTO PARA IG/FB (propuesto)
+¿Le dices tráiler a todo el camión? 🚛 «Trailer», en inglés, es la caja; lo que se maneja es el tractocamión.
+La caja se engancha en la quinta rueda con el perno rey y en la vuelta corta la curva por dentro: por eso nunca te metas por la
+derecha cuando un tráiler da vuelta. Si no ves al chofer en su espejo, él no te ve.
+Mándaselo a quien se mete por la derecha cuando el tráiler da vuelta.
+#curiosidades #ciencia #mexico #menteenorbita #traileros
+Foto del perno rey: Sterkebak, Wikimedia Commons, CC BY 3.0.

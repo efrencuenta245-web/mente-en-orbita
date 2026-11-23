@@ -1,0 +1,53 @@
+REEL DIARIO · mié 25-nov-2026 10:00 (propuesto) — «Tu acumulador no se murió… se entumió.»
+Producido el 23-nov-2026 (tarea de las 4:35 pm). Comunidad: automovilistas. Serie: Respuestas.
+Inicio tipo 12 (cuenta regresiva o reloj): el termómetro del tablero baja de 25 a 0 °C sobre el acumulador, se congela con
+destello en 0 y la marcha solo hace «clic»; «ENTUMIDO» de cristal detrás. El final regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu acumulador no se murió... se entumió.
+2. Adentro hay placas de plomo en ácido: la corriente sale de una reacción química.
+3. Con frío, esa reacción se hace lenta, como la miel en el refri.
+4. A cero grados pierde como treinta y cinco por ciento de su fuerza; a dieciocho bajo cero, sesenta.
+5. Y justo ahí, el aceite frío está espeso y el motor pide hasta el doble de corriente.
+6. Misma batería: a veinticinco grados arranca a la primera; a cero, solo hace clic.
+7. Y aquí está el error: pasar corriente y poner el último cable negro en la batería muerta.   ← segundo gancho (~27 s)
+8. Una batería descargada suelta hidrógeno, y esa última chispa lo puede encender.
+9. El orden es: rojo a la muerta, rojo a la buena y negro a la buena.
+10. Y el último negro, a un tornillo sin pintar del motor muerto, lejos de la batería.
+11. Deja prendido el carro bueno unos minutos antes de dar marcha.
+12. Si al tercer intento no prende, ya no da; un acumulador dura de tres a cinco años.
+13. Ya que arrancó, manéjalo unos veinte minutos para que se recargue.
+14. Mándaselo a quien pasa corriente a lo ahí se va.            ← «mándaselo» solo en la penúltima frase
+15. Y que no lo dé por muerto... porque su acumulador no se murió: se entumió.   (loop)
+
+DATOS VERIFICADOS (23-nov-2026)
+- «At 32ºF, a car's battery loses about 35 percent of its strength» y «When temperatures plummet to 0ºF, it loses about 60
+  percent of its power» (AAA Automotive Research Center). «It may need up to twice the amount of current than normal to start
+  the engine». «The average lifespan of an automotive battery is three to five years.»
+  AAA Hudson Valley (22-ene-2026): https://www.hudsonvalley.aaa.com/?p=10824
+  AAA Oregon/Idaho (8-oct-2025): https://info.oregon.aaa.com/winter-battery-preparation/
+  (0 °F = −17.8 °C → «dieciocho bajo cero»; 32 °F = 0 °C.)
+- Por qué: «As temperatures drop, that reaction slows…» y «As oil thickens in the cold, the starter must work harder to rotate
+  the engine». ALLDATAdiy (14-feb-2026): https://www.alldata.com/diy-us/en/why-batteries-die-in-winter
+  (ALLDATA da cifras de capacidad más bajas, 20 % y 40-50 %; se usan las de la AAA porque hablan de «fuerza» al arrancar.)
+- Orden de los cables (AAA, Edmunds y Midtronics coinciden): rojo al + de la descargada, rojo al + de la buena, negro al − de
+  la buena y el último negro «to a clean, unpainted piece of metal on the car with the dead battery» (un tornillo del motor),
+  porque «a faulty battery can vent explosive hydrogen gas» y la última chispa queda lejos.
+  AAA: https://www.aaa.com/autorepair/articles/how-to-jump-a-battery-and-get-yourself-back-on-the-road
+  Edmunds: https://www.edmunds.com/how-to/jump-start.html (lejos de la batería: «at least several inches away»)
+  Midtronics: https://www.midtronics.com/blog/whats-the-right-way-to-jump-start-a-battery/ («Lead-acid batteries emit hydrogen
+  gas, especially when discharged»; «A spark at the dead battery terminal can ignite that gas»)
+- Esperar: AAA «Give it a solid three to five minutes before you attempt to start» y «A car that still won't start after a
+  third try likely has a completely failed battery». Después, manejar al menos 20 minutos (Edmunds «at least 20 minutes»;
+  AAA y Midtronics 20 a 30 min).
+
+FOTOS
+- Sin fotos reales en este reel (batería, carros y motor son esquemas sin marca: «ESQUEMA» / «EJEMPLO»).
+
+TEXTO PARA IG/FB (propuesto)
+¿Tu carro no prende en la mañana fría? 🥶 No siempre está muerto el acumulador.
+Con frío su reacción química se hace lenta: a 0 °C pierde como 35 % de fuerza y el motor pide hasta el doble. Si vas a pasar
+corriente, el último cable negro va a un tornillo sin pintar del motor, no a la batería: la descargada suelta hidrógeno.
+Mándaselo a quien pasa corriente a lo ahí se va.
+#curiosidades #ciencia #mexico #menteenorbita #autos
