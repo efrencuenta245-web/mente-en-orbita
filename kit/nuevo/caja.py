@@ -651,7 +651,7 @@ def s_derecha(t, fi, u, d):
         x, y, _ = fr.cam.p1((xc, 0.6, ZK - 0.32))
         pill(img, fx, x, y - 90, 'TÚ', eout(seg(u, 0.2, 0.5)), size=32, border=CYAN)
         xd, yd, _ = fr.cam.p1((q[0] + 1.9, 0.45, q[1] + 0.47))
-        texto(img, fx, 540, 380, '➜ DERECHA', 60, AMBAR, seg(u, 0.4, 0.6), f='sansx', glow=0.5)
+        texto(img, fx, 540, 380, 'POR LA DERECHA', 60, AMBAR, seg(u, 0.4, 0.6), f='sansx', glow=0.5)
     fr.ui.append(ui)
     return finish(fr, fi)
 
