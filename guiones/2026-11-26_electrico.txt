@@ -1,0 +1,54 @@
+REEL DIARIO · jue 26-nov-2026 10:00 (propuesto) — «Tu carro eléctrico frena… y se carga.»
+Producido el 24-nov-2026 (tarea de las 4:35 pm). Comunidad: automovilistas. Serie: Lo que no ves.
+Inicio tipo 10 (rayos X de golpe): el carro azul rueda normal con «CARGA» de cristal detrás; en el primer golpe se vuelve de
+cristal, se ve la batería del piso y el motor del eje de atrás, y los puntos de energía corren de la llanta a la batería.
+Título: «Tu carro eléctrico frena… / y se carga.» El final («Porque tu carro eléctrico frena… y se carga») regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu carro eléctrico frena... y se carga.
+2. Sueltas el acelerador y el motor se vuelve generador: frena las llantas y manda energía de regreso a la batería.
+3. Se llama frenado regenerativo, y es el mismo truco de la dinamo de la bici que prende el foco.
+4. Mira la diferencia en una bajada: el carro de gasolina frena con las balatas, y esa energía se va en puro calor.
+5. El eléctrico baja la misma cuesta... y la batería sube.
+6. Por dentro, los imanes siguen girando frente a las bobinas, y ese giro empuja la corriente al revés.
+7. En el tráfico de ciudad, con tanto alto y siga, regresa cerca de un tercio de la energía.
+8. Y aquí está el error: cargarlo al cien por ciento justo antes de bajar la sierra.      ← segundo gancho (~28-32 s)
+9. Con la batería llena ya no le cabe nada: el frenado regenerativo se limita y frenas casi puro con balatas.
+10. Con la batería muy fría pasa lo mismo: los manuales lo advierten.
+11. Y el frenón de último segundo también se desperdicia: el motor solo frena hasta cierto punto, lo demás lo hacen las balatas.
+12. Por eso, soltar el acelerador con tiempo es frenar cargando.
+13. Y en México ya viene el Olinia, un eléctrico de ciudad para dos mil veintisiete: justo en la ciudad es donde este truco rinde más.
+14. Mándaselo a quien dice que los eléctricos no sirven en México.          ← «mándaselo» solo en la penúltima frase
+15. Porque tu carro eléctrico frena... y se carga.   (loop)
+
+DATOS VERIFICADOS (24-nov-2026)
+- fueleconomy.gov, «Where the Energy Goes: Electric Cars»: en ciudad, «Net Regenerative Braking Energy Returned to the Battery
+  and Subsequently to the Road (32%)»; combinado ciudad/carretera 22 %; los eléctricos son más eficientes en ciudad («especially
+  in stop-and-go traffic»). https://fueleconomy.gov/feg/atv-ev.shtml
+- DOE, FOTW #1360 (16-sep-2024): «A typical EV is 87%–91% efficient (after taking regenerative braking into account)… net
+  regenerative braking recovers about 22%» (ciclo combinado EPA).
+  https://www.energy.gov/cmei/vehicles/articles/fotw-1360-sept-16-2024-typical-ev-87-91-efficient-compared-30-conventional
+- DOE, Fact #884 (3-ago-2015): regenerativo −32 % ciudad, −6 % carretera, −17 % combinado (Nissan Leaf 2012).
+  https://www.energy.gov/node/1139266
+- Manual del propietario Hyundai 2026 (NX4 PHEV), «Regenerative braking system limitations»: «Regenerative braking is
+  temporarily limited to protect the battery because the high voltage battery is fully charged»; «Depending on the charging
+  state of the battery and motor (overcharge, high/low temperature), the use of the system may be limited»; la limitación dura
+  más si la batería está muy fría o muy caliente. En pantalla va traducido y sin marca («MANUAL DEL PROPIETARIO · ELÉCTRICO 2026»).
+  https://ownersmanual.hyundai.com/full_webhelp/NX4PHEV/2026/en_US/topic_zg4_xft_t5b.html
+- Frenón: el par de frenado del motor-generador tiene un máximo; lo que pasa de ese límite lo hacen los frenos de fricción
+  (frenado combinado). Física general; en pantalla es un esquema sin cifras.
+- Olinia 1 (El Imparcial, 16-ago-2026): «desde 150 mil pesos, IVA incluido», «más de 125 kilómetros por carga», primeras
+  entregas en verano de 2027; versiones finales aún sin definir. Solo se menciona como dato; no se opina del proyecto.
+  https://www.elimparcial.com/mexico/2026/08/16/olinia-1-costara-desde-150-mil-pesos-tendra-mas-de-125-km-de-autonomia-y-llegara-en-2027/
+- Dinamo de bici = generador: el mismo principio (girar un imán frente a una bobina induce corriente; Faraday).
+
+FOTOS: ninguna real (carro, motor, disco, bici, pila, sierra y ciudad son esquemas sin marca; el Olinia va como «ESQUEMA · NO ES
+EL OLINIA REAL»). Los porcentajes de batería (50 → 70 %, 60 → 80 %) dicen «EJEMPLO».
+
+TEXTO PARA IG/FB (propuesto)
+¿Sabías que tu carro eléctrico se carga cuando frenas? ⚡ Al soltar el acelerador, el motor se vuelve generador y regresa
+energía a la batería: en ciudad, cerca de un tercio (DOE). El error: cargarlo al 100 % justo antes de bajar la sierra; con la
+batería llena (o muy fría) el frenado regenerativo se limita y frenas casi puro con balatas.
+Mándaselo a quien dice que los eléctricos no sirven en México.
+#curiosidades #ciencia #mexico #menteenorbita #autoselectricos

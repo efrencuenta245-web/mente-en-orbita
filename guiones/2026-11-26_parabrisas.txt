@@ -1,0 +1,55 @@
+REEL DIARIO · jue 26-nov-2026 18:00 (propuesto) — «Tu parabrisas no es vidrio… es sándwich.»
+Producido el 24-nov-2026 (tarea de las 4:35 pm). Comunidad: automovilistas (temporada de heladas). Serie: Lo que no ves.
+Inicio tipo 2 (cae y rebota): la piedrita cae, rebota en el parabrisas y deja la estrellita con sacudida; el título se estrella
+(«SÁNDWICH» de cristal detrás). El final («Porque tu parabrisas no es vidrio… es sándwich») regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu parabrisas no es vidrio... es sándwich.
+2. Son dos vidrios con una capa de plástico transparente en medio, el PVB, pegados con calor y presión.
+3. Por eso, cuando le pega una piedra, queda una estrellita... pero no se cae en pedazos.
+4. Ahora mira la ventana de un lado: esa es de vidrio templado, y con un golpe se hace cubitos.
+5. Y es a propósito: cubitos sin filo que cortan menos, y por ahí puedes salir en una emergencia.
+6. El parabrisas, en cambio, aguanta: el plástico agarra los pedazos y te mantiene adentro en un choque.
+7. Y uno de los que los fabrica es mexicano: Vitro, de Nuevo León, los vende en México, Estados Unidos, Canadá y Europa.
+8. Y aquí está el error: echarle agua caliente al parabrisas congelado.        ← segundo gancho (~30 s)
+9. Por fuera el vidrio se calienta y se estira de golpe, pero por dentro sigue helado... y truena.
+10. Si ya tenía una estrellita, el frío de una noche la puede volver una grieta de lado a lado.
+11. Y la calefacción a todo, directo al vidrio helado, hace lo mismo.
+12. Mejor prende el carro, calefacción suave, y quita el hielo despacio.
+13. Y la estrellita, repárala pronto: un daño de menos de quince centímetros todavía se puede reparar sin cambiar el parabrisas.
+14. Mándaselo a quien le echa agua caliente al parabrisas congelado.        ← «mándaselo» solo en la penúltima frase
+15. Porque tu parabrisas no es vidrio... es sándwich.   (loop)
+
+DATOS VERIFICADOS (24-nov-2026)
+- Parabrisas laminado contra ventanas templadas (Jalopnik): «they are made of laminated glass, while other car windows are
+  typically tempered glass panels»; las otras ventanas están «designed to shatter into glass pebbles for emergency egress and to
+  reduce the chances of serious lacerations»; el plástico (PVB) «enables the glass pieces to stay attached»; «Laminated glass
+  keeps occupants from flying through the windshield in a crash» (cita una evaluación de la NHTSA de 1985).
+  https://www.jalopnik.com/2059403/why-car-windows-shatter-into-glass-pebbles-but-windshields-dont/
+- Motor.es, «Cristal laminado»: dos vidrios unidos por una lámina intermedia de polímero transparente; no estalla ni se
+  esparce por el habitáculo, se agrieta en telaraña. https://www.motor.es/que-es/cristal-laminado
+- NHTSA (carta de interpretación aiam2224): el templado en el parabrisas casi no retiene al romperse y aumenta la probabilidad
+  de que el ocupante salga despedido; el laminado «possesses significant retentive capability even after initial cracking».
+  https://www.nhtsa.gov/interpretations/aiam2224
+- «Pegados con calor y presión»: así se lamina el vidrio con PVB (autoclave); proceso estándar de la industria.
+- Vitro (vitro.com, act. 24-jul-2025): «high-performance laminated, tempered, and encapsulated OEM glass»; mercados «Mexico,
+  the United States, Canada, Europe, and South America»; más de 130 sucursales de reparación en México. Vitro es de San Pedro
+  Garza García, Nuevo León (fundada en Monterrey en 1909). https://www.vitro.com/en/automotive-glass/
+- Agua caliente (Motor1): la capa de afuera «heats up and rapidly expands» y, como el vidrio conduce mal el calor, la de adentro
+  «remains frozen solid» → se fractura, más si ya hay estrellita o grieta. https://www.motor1.com/news/785656/hot-water-icy-windshield/
+- Safelite (2-abr-2026), «Does Cold Weather Make Windshield Cracks Worse?»: «A chip that has been sitting unrepaired for weeks
+  can spread into a full-length crack overnight when temperatures drop»; «Blasting the defroster: Pointing high heat directly at a
+  cold windshield creates an intense temperature gradient across the glass»; reparar de inmediato y quitar el hielo con cuidado.
+  https://espanol.safelite.com/resource-center/auto-experts/cold-weather-windshield-cracks
+- Safelite, ayuda de reparación: «If your windshield damage is smaller than six inches, we may be able to repair it» (6 pulgadas
+  ≈ 15 cm). https://www.safelite.com/help-center/repair
+
+FOTOS: ninguna real (frente del carro, puerta, cubitos, martillo, tetera, corte del vidrio y globo son esquemas sin marca).
+
+TEXTO PARA IG/FB (propuesto)
+¿Sabías que tu parabrisas es un sándwich? 🚗 Dos vidrios con una capa de plástico (PVB) en medio: por eso una piedra deja una
+estrellita y no se cae en pedazos. Las ventanas de los lados son templadas: se hacen cubitos sin filo a propósito. El error con
+las heladas: echarle agua caliente al parabrisas congelado (por fuera se estira, por dentro sigue helado… y truena).
+Mándaselo a quien le echa agua caliente al parabrisas congelado.
+#curiosidades #ciencia #mexico #menteenorbita #autos
