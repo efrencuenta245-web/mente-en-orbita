@@ -1,0 +1,53 @@
+REEL DIARIO · vie 27-nov-2026 18:00 (propuesto) — «Tu refacción no es llanta… es galleta.»
+Producido el 25-nov-2026 (tarea de las 4:35 pm). Comunidad: automovilistas. Serie: Lo que no ves.
+Inicio tipo 5 (número gigante): el «80» sube, se clava con sacudida y se revela que es lo máximo de la galleta, que
+aparece con «GALLETA» de cristal detrás. El final («Porque tu refacción no es llanta… es galleta») regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+Orden de la voz: la frase de las capas se movió después de «puede tronar» para que el error caiga antes de los 30 s.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu refacción no es llanta... es galleta.
+2. Ochenta. Es lo más rápido que puedes ir con ella: ochenta kilómetros por hora.
+3. Y no es para quedarse: aguanta unos ochenta kilómetros, lo justo para llegar a la llantera.
+4. Ponla junto a tu llanta: es como la mitad de ancha, y mucho más ligera.
+5. Para cargar el carro con tan poquito hule, va inflada a unas sesenta libras: casi el doble que tus llantas.
+6. Y como pisa menos piso, con lluvia agarra menos y puede patinar.
+7. Y aquí está el error: traerla puesta semanas... o meterle ciento veinte en la autopista.        ← segundo gancho
+8. Se calienta, se gasta rapidísimo y puede tronar justo cuando más la necesitas.
+9. Por dentro trae menos capas, costados más delgados y un dibujo sencillo.
+10. Y manejar lejos con ella castiga otras piezas del carro, hasta la transmisión.
+11. La otra trampa: pasa años olvidada en la cajuela... y pierde aire.
+12. Revísale el aire cuando revises las otras.
+13. Mándaselo a quien trae la galleta puesta desde hace un mes.        ← «mándaselo» solo en la penúltima frase
+14. Porque tu refacción no es llanta... es galleta.   (loop)
+
+DATOS VERIFICADOS (25-nov-2026)
+- AAA: «You should not drive over 50 mph and no more than 50 miles with a donut-type spare tire» (50 mph ≈ 80 km/h;
+  50 millas ≈ 80 km); manejar mucho con ella «can potentially cause damage to other car parts, including the
+  transmission». https://www.aaa.com/autorepair/articles/how-long-can-you-drive-on-a-spare-tire
+- AAA Club Alliance (25-mar-2026): no más de 50 millas y 50 mph; «These types of spares have thinner sidewalls and a
+  simpler tread pattern». https://cluballiance.aaa.com/the-extra-mile/advice/car/how-far-can-you-drive-on-a-spare-tire
+- Manual Kia 2027 («Important - use of compact spare tire»): «inflated to 60 psi (420 kPa)»; «Under no circumstances
+  should you exceed 50 mph (80 km/h)»; uso continuo: «tire failure, loss of vehicle control, and personal injury».
+  https://ownersmanual.kia.com/full_webhelp/SG2/2027/en_US/topics/t00723.html
+- Motor1 (Space saver): «Many temporary spares are limited to 50 mph (80 km/h)»; «Some T-type spares… 60 psi»; se hizo
+  para ahorrar espacio y peso; puede cambiar «handling, stability, braking performance».
+  https://www.motor1.com/features/808998/how-to-use-a-space-saver-tire/
+- Motorpasión México (14-nov-2026): máximo 80 km/h; recorre entre 80 y 112 km (blog de Ford México); «el ancho se reduce a
+  la mitad»; en lluvia «podría llegar a patinar»; «menos capas de caucho y mallas»; revisar la presión porque guardada
+  «pudo haber perdido presión».
+  https://www.motorpasion.com.mx/industria/desechable-duradera-cuantos-km-puedes-recorrer-realidad-llanta-refaccion
+- «Casi el doble»: 60 psi contra los ~30–35 psi típicos de un auto (la del tuyo viene en la etiqueta de la puerta; en
+  pantalla dice EJEMPLO). Las capas del corte son un ESQUEMA.
+
+FOTOS: ninguna real (galleta, llantas, carro, calendario y engranes son esquemas sin marca).
+
+TEXTO PARA IG/FB (propuesto)
+¿Traes la galleta puesta desde hace semanas? 🛞 La llanta de refacción temporal es para llegar a la llantera: máximo
+80 km/h y unos 80 km. Es como la mitad de ancha, va inflada a unas 60 libras y con lluvia agarra menos. Si la traes semanas
+o le metes 120 en la autopista, se calienta, se gasta y puede tronar. Y revísale el aire: en la cajuela también se baja.
+Mándaselo a quien trae la galleta puesta desde hace un mes.
+#curiosidades #ciencia #mexico #menteenorbita #autos
+
+TÍTULO TIKTOK: Tu refacción no es llanta… es galleta 🛞 #autos #llantas #curiosidades
+TÍTULO YOUTUBE SHORTS: La llanta de refacción (galleta): máximo 80 km/h y el error que la revienta 🛞 #Shorts

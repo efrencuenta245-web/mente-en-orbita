@@ -1,0 +1,58 @@
+REEL DIARIO · vie 27-nov-2026 10:00 (propuesto) — «Tu derrape no es descontrol.»
+Producido el 25-nov-2026 (tarea de las 4:35 pm). Comunidad: drift y tuning. Serie: Lo que no ves.
+Inicio tipo 9 (giro 360° con destellos): el carro de drift da un trompo completo con 3 cortes de destello y humo, y queda
+de frente al título («CONTROL» de cristal detrás). El final («Porque tu derrape no es descontrol») regresa al inicio (loop).
+Voz: PLAN B (Chatterbox, workflow voz_hq) porque el conector de ElevenLabs pide volver a iniciar sesión.
+
+GUION (lo que dice la voz; en pantalla las cifras van con número)
+1. Tu derrape no es descontrol.
+2. Una llanta que rueda agarra más que una que se arrastra.
+3. Mira: si se traban las de adelante, el carro se va derecho... y ya no da vuelta.
+4. Si se traban las de atrás, la cola se adelanta... y das trompo.
+5. Por eso existe el ABS: suelta y aprieta el freno para que la llanta siga rodando y puedas girar.
+6. El piloto de drift suelta las de atrás a propósito, con el acelerador, y las de adelante siguen rodando.
+7. Con el contravolante apunta el carro, y con el pie derecho decide qué tanto se abre la cola.
+8. Y aquí está el error: jalar el freno de mano en la calle.        ← segundo gancho (~28-30 s)
+9. Traba las de atrás, la cola se suelta... y en la calle no hay muro de llantas: hay postes, banquetas y gente.
+10. Y apagar el control de estabilidad con lluvia es peor: el agarre baja casi a la mitad.
+11. Ese control frena una llanta por ti antes del trompo: en Estados Unidos bajó más de un tercio los choques mortales de un solo carro.
+12. El drift se aprende en pista, con casco y con permiso.
+13. Mándaselo a tu compa que se siente piloto en la glorieta.        ← «mándaselo» solo en la penúltima frase
+14. Porque tu derrape no es descontrol.   (loop)
+
+DATOS VERIFICADOS (25-nov-2026)
+- Rueda contra trabada (Harvard Lecture Demonstrations, «Locked Brakes»): «the static friction of the rolling rear wheels
+  is greater than the kinetic friction of the sliding front wheels»; con las de adelante trabadas el carro «simply slides to
+  a stop» y con las de atrás trabadas «the car goes into a dramatic tailspin»; la demostración sirve para explicar el ABS.
+  https://sciencedemonstrations.fas.harvard.edu/presentations/locked-brakes
+- HyperPhysics (GSU), «Friction and Automobile Tires»: coeficientes de unos 0.7 en piso seco y 0.4 en mojado (Jones y
+  Childers); rodando se obtiene más frenado si la fricción estática supera a la dinámica.
+  https://hyperphysics.gsu.edu/hbase/Mechanics/frictire.html
+- Cómo se controla el drift (Popular Science, 11-abr-2023, curso con pilotos de fábrica de Toyota): «the driver
+  intentionally causes the rear end of the vehicle to rotate outward»; «the car's direction of travel is controlled by
+  counter-steering» y se ajusta con acelerador y freno; los autos de competencia usan freno de mano hidráulico para trabar
+  las de atrás y empezar el derrape; «Drifting on public streets or other public places is dangerous and illegal».
+  https://www.popsci.com/technology/car-drifting-explained/
+- DGT (20-jul-2026), sobreviraje: no frenar de golpe; el ESP «frena una o varias ruedas y reduce la potencia del motor para
+  devolver al vehículo a la trayectoria correcta», pero no supera los límites de la física.
+  https://www.dgt.es/comunicacion/noticias/20260720-reaccion-frenadas-de-emergencia/
+- Semana (2023): el control de estabilidad «por nada del mundo se debe desactivar» mientras se maneja.
+  https://www.semana.com/tecnologia/articulo/cuidado-las-opciones-que-nunca-debe-activar-en-su-carro-cuando-llueve/202345/
+- NHTSA, DOT HS 810 794 (2007): con ESC los choques mortales de un solo vehículo bajaron 36 % en autos y 63 % en camionetas
+  y vans (LTV); el ESC actúa con lluvia, nieve o hielo. https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/810794
+- NHTSA, DOT HS 812 391 (2017): el ESC salvó más de 7 000 vidas de 2011 a 2015.
+  https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/12980-rn-est_lives_saved_esc_2011-2015_032917_v2_tag_0.pdf
+- «Casi a la mitad»: de ~0.7 a ~0.4 (HyperPhysics) es −43 %. Los ángulos del drift en pantalla dicen «EJEMPLO».
+
+FOTOS: ninguna real (carro, llantas, volante, freno de mano, postes y glorieta son esquemas sin marca).
+
+TEXTO PARA IG/FB (propuesto)
+¿Crees que derrapar es perder el control? 🏁 Es al revés: una llanta que rueda agarra más que una que se arrastra. El
+piloto de drift suelta las de atrás a propósito con el acelerador y apunta el carro con el contravolante. El error: jalar
+el freno de mano en la calle o apagar el control de estabilidad con lluvia (NHTSA: con él bajaron 36 % los choques mortales
+de un solo carro). El drift se aprende en pista.
+Mándaselo a tu compa que se siente piloto en la glorieta.
+#curiosidades #ciencia #mexico #menteenorbita #drift
+
+TÍTULO TIKTOK: Tu derrape no es descontrol 🏁 #drift #autos #curiosidades
+TÍTULO YOUTUBE SHORTS: ¿Derrapar es perder el control? La física del drift y el error del freno de mano 🏁 #Shorts
